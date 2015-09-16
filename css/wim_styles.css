@@ -1,0 +1,1278 @@
+/*
+	wim_styles.css
+
+	Leading stylesheet for USGS WiM Website
+	Developed by Mitch Samuels, msamuels@usgs.gov
+*/
+
+body{
+	margin: 0 auto;
+	padding: 0;
+	width:100%;	max-width: 100%;
+	overflow-x:hidden;
+	background-image: url("../img/madison.jpg");
+	background-position: center left;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgba(141,155,185,0.45);
+	background-blend-mode:screen;
+	/*color:#BADA55;*/
+}
+
+a{
+	text-decoration: none;
+}
+/*All Headers*/
+h1, h2, h3. h4, h5, h6{
+    padding:10px;
+    margin: 0 auto;
+}
+/*h1, h2, h3 - oswald headers*/
+h1,h2,h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+/*Header sizes*/
+h1{font-size: 28pt;}h2{font-size: 20pt;}h3{font-size: 14pt;}
+/*h4, h5, h6 - Slab headers */
+h4,h5,h6{
+    margin: 0  auto;
+    font-family: 'Oswald', 'Lato', Century Gothic, CenturyGothic, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color:rgba(0,0,0,0.7);
+}
+/*Header sizes*/
+h4{font-size: 20pt;}h5{font-size: 16pt;}h6{font-size: 12pt;}
+
+.lowercase{
+	text-transform: lowercase !important;
+}
+
+.show720{display: none;}
+#mobile_menu{
+	display: none;
+}
+.showxs{
+	display: none;
+}
+/*
+____________________________________________________________________________________________________
+    /$$           /$$$$$$$      /$$    $$   /$$$$$$$$     /$$     $$    /$$$$$$$$
+   | $$          /$$     $$    | $$    $$  | $$    $$    | $$     $$    |_  $$
+   | $$         | $$$$$$$$$    \  $$$$$$   | $$    $$    | $$     $$      | $$
+   | $$         | $$___  $$      \  $$     | $$    $$    | $$     $$      | $$
+   | $$$$$$$$$  | $$   | $$       | $$     | $$$$$$$$     \ $$$$$$$       | $$
+   |_________/  |__/   |__/       |__/     |________/      \______/       |__/
+____________________________________________________________________________________________________
+*/
+/*For USGS Header/Footer so it's not suppppperrrrrr wide*/
+.max_wrap{
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.width_control{
+	width:960px;
+	position:relative;  left:50%;
+	margin-left: -540px;
+
+	padding-left: 60px; padding-right: 60px;
+}
+
+#navigation_bar{
+	height:45px;
+	width:100%;
+	background-color: #181D27;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+	.navigation_fixed{
+		width:100%;
+		position: fixed;
+		left:0; top: 0;
+		z-index: 50000;
+	}
+	#navigation_bar img{
+		float:left;
+		height:37px;
+		transition:0.2s;
+		/*background-color: #FF220C;*/
+		/*background-color: #343454;*/
+		padding-left: 40px; padding-right: 40px;
+		padding-top: 4px; padding-bottom: 4px;
+	}
+		#navigation_bar #wim_logo:hover{
+			transition:0.2s;
+			opacity: 0.8;
+			cursor: pointer;
+		}
+		#wim_logo{display: block;}
+		#wim_logo_xs{display: none;}
+
+	#navigation_bar ul{
+		float: right;
+		list-style-type: none;
+		margin-right: 25px;
+	}
+		#navigation_bar ul li{
+			display: inline;
+			height:45px;
+			line-height: 20px;
+		}
+			#navigation_bar ul li a{
+				margin-left: 15px;
+				font-size: 13px;
+				color:#fff;
+				letter-spacing: 1px;
+				padding-left: 15px; padding-right: 15px;
+				padding-top: 15px; padding-bottom: 14px;
+				transition: 0.3s;
+				text-transform: uppercase;
+				font-weight: 400;
+				letter-spacing: 4px;
+			}
+				#navigation_bar ul li a:hover{
+					/*border-bottom:4px solid #3399CC;*/
+					transition:0.3s;
+					background-color: rgba(255,255,255,0.08);
+				}
+
+				#navigation_bar ul .active_link a{
+					background-color: rgba(255,255,255,0.08);
+				}
+
+
+
+
+
+.featurette{
+	width:100%;
+	background-color: #f2f2f2;
+	/*border-bottom: 1px solid #ddd;*/
+	box-sizing:border-box;
+	padding-top: 50px; padding-bottom: 50px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03);
+	position: relative;
+	/*z-index:5000;*/
+}
+	.featurette h1{
+		font-family: 'Oswald', 'Lato', sans-serif;
+		font-size: 25px;
+		letter-spacing: 2px;
+		font-weight: 300;
+		color:rgba(0,0,0,0.8);
+		width:100%;
+		text-align: center;
+	}
+	.featurette p{
+		color:rgba(0,0,0,0.55);
+		font-size: 16px;
+		line-height: 1.6em;
+		letter-spacing: 1px;
+		font-family: 'Lato', sans-serif;
+		text-align: justify;
+	}
+
+
+
+.body_content{
+	box-sizing:border-box;
+	width:100%;
+	padding-top: 55px; padding-bottom: 55px;
+	color:rgba(0,0,0,0.7);
+}
+	.body_content p{
+		font-size: 14pt;
+		line-height: 1.6em;
+		letter-spacing: 1px;
+		font-weight: 400;
+		font-family: 'Lato', sans-serif;
+	}
+	.body_content ul{
+		list-style-type: bullet;
+	}
+		.body_content ul li{
+			font-family: 'Lato', sans-serif;
+			font-size: 13pt;
+			font-weight: 400 !important;
+			letter-spacing: 1px;
+			padding-top: 5px; padding-bottom: 5px;
+		}
+
+#usgsfooter{
+	background-color: #fff;
+}
+.footer{
+	width:100%;
+	background-color: #181D27;
+	box-sizing:border-box;
+	padding-top: 55px; padding-bottom: 55px;
+	background-image: url('../img/cartographer.png');
+	background-size: auto 90%;
+	background-color: rgba(0,0,0,0.5);
+	background-blend-mode: darken;
+	z-index:5000; position: relative;
+}
+.third{
+	width:33%;
+	display: inline-block;
+	color:#fff;
+	font-size: 13px;
+	font-weight: 300 !important;
+	line-height: 1.4em;
+	letter-spacing: 2px;
+}
+	.third a{
+		color:rgba(255,255,255,0.5);
+	}
+	.third b{
+		font-weight: 700;
+		position: relative; top:-5px;
+	}
+	.third:nth-child(1){
+		text-align: left;
+	}
+	.third:nth-child(2){
+		text-align: center;
+	}
+	.third:nth-child(3){
+		text-align: right;
+		float: right;
+	}
+
+
+.split50{
+	width:50%;
+	display: inline-block;
+	font-size:12pt;
+	line-height: 1.6em;
+	box-sizing:border-box;
+	padding: 10px;
+	float: left;
+}
+	.split50 a{
+		color:inherit;
+		color:#FF220C;
+		opacity: 0.5;
+	}
+	.split50_spacer{height:100px;}
+
+
+/*
+_______________________________________________________________________________________________________________________
+      /$$$$$$$$     /$$$$$$$$     /$$$$$$$$     /$$$$$$$$     /$$$$$$$$     /$$$$$$$$     /$$$$$$$$     /$$$$$$$$
+     | $$          | $$___/$$    | $$_____/    | $$_____/     |_  $$__/    | $$_____/     |_  $$__/    | $$_____/
+     |/$$$$$$$$    | $$$$$$$$    | $$$$$       | $$             | $$       | $$$$$          | $$       | $$
+           | $$    | $$_____/    | $$__/       | $$             | $$       | $$__/          | $$       | $$
+      /$$$$$$$$    | $$          | $$$$$$$$    | $$$$$$$$     /$$$$$$$$    | $$           /$$$$$$$$    | $$$$$$$$
+     |________/    |__/ 		 |________/    |________/    |________/    |__/          |________/    |________/
+_______________________________________________________________________________________________________________________
+*/
+/*Home Slider*/
+/*Spacing to float actual slides*/
+#hero_spacer{
+	width:100%;
+	height:390px;
+	color:#B000B5;
+}
+
+
+
+	/*#about_hero, #hero_link{
+        text-transform: uppercase;
+        font-size: 18pt;
+        letter-spacing: 2px;
+        position: relative;
+        top:-1px;
+        float: right;
+        color:#fff;
+        font-weight: 300;
+        width: 100%;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 14px;
+        padding-top: 14px;
+        box-sizing:border-box;
+        padding-right: 85px; padding-left: 85px;
+        font-weight: 400;
+        z-index: 500;
+        display: none;
+    }
+  		#hero_link{
+  			top:235px;
+  			font-size: 12pt;
+  		}
+  			#hero_link a{
+  				color:#fff;
+  			}*/
+
+
+
+
+
+
+
+/*Actual slide styling*/
+.hero_item{
+    width: 1080px;
+    height:390px;
+    max-height: 390px;
+    position: absolute;
+    left:50%; margin-left: -540px;
+    z-index: 5000;
+    margin-top: -335px;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(255,255,255,0.2);
+    background-blend-mode: screen;
+    text-align: right !important;
+    font-size: 38pt;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color:rgba(255,255,255,1);
+    line-height: 380px;
+    clear: both;
+    /*border-bottom: 8px solid #fff;*/
+}
+	.long_hero{
+		font-size:29pt
+	}
+	.hero_item:hover{
+		cursor: pointer;
+	}
+	.hero_item_inner{
+		width:100%;
+		height:100%;
+		/*background-color: rgba(49,53,61,0.6);*/
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.55)), color-stop(50%,rgba(0,0,0,0.0)));
+		color:#fff;
+		float: left;
+		text-align: left;
+		box-sizing:border-box;
+		padding:25px;
+		line-height: 1em;
+		font-size: 34pt;
+		padding-top: 130px;
+		padding-left: 55px;
+		letter-spacing: 1px;
+		/*background-color:rgba(255,255,255,0.8);*/
+		/*background-blend-mode:screen;*/
+	}
+		.hero_item_inner small{
+			font-size:12pt;
+			display: block;
+			letter-spacing: 1px;
+		}
+		.hero_item_inner img{
+			float: right;
+			height:180px; width: auto;
+			position: relative;
+			top:-70px;
+			margin-right: 30px;
+			box-shadow: 0px 0px 0px 5px rgba(255,255,255,1), 0px 0px 15px 10px rgba(0,0,0,0.65);
+		}
+	.hero_item a{
+        color:#fff;
+        letter-spacing: 2px;
+    }
+
+    .hero_item b{
+    	width: 100%;
+    	max-width: 100%;
+    	font-size:14pt;
+    	float: left;
+    	position: relative;
+    	text-align: center;
+    	top:-250px;
+    	left:0px;
+    	color:#fff;
+    	z-index: 5000;
+    	letter-spacing: 2px;
+    }
+/*	.hero_item img{
+    	height:200px;
+    	float: right;
+    	margin-right: 35px; margin-left: 35px;
+    	position: relative; top:50%;
+    	margin-top: -100px;
+    	opacity: 0.9;
+	}*/
+	#slide_1{background-image: url("../img/hero/water1.jpg");}
+	#slide_2{background-image: url("../img/hero/flood2.jpg");}
+	#slide_3{background-image: url("../img/hero/wetlands3.jpg");}
+	#slide_4{background-image: url("../img/hero/animal1.jpg");}
+	#slide_5{background-image: url("../img/hero/open_pit.jpg");}
+	#slide_6{background-image: url("../img/hero/fish2.jpg");}
+
+
+.app_wrapper{
+	width:100%;
+	display: inline-block;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #e6e6e6;
+}
+	.app_wrapper:last-child{
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		border-bottom: none;
+	}
+	.app_wrapper img{
+		width:32%;
+		float: left;
+		display: inline-block;
+		padding-top: 5px;
+		transition:0.3s;
+	}
+		.app_wrapper img:hover{
+			cursor: pointer;
+			transition:0.3s;
+			opacity: 0.8;
+		}
+		.app_loader{
+			width:45px !important;
+			position: fixed; right: 10px; bottom: 10px;
+			opacity: 0.75;
+		}
+
+
+
+
+
+
+
+
+
+
+	.app_wrapper .app_information{
+		width:68%;
+		float: left;
+		display: inline-block;
+		box-sizing:border-box;
+		padding-left: 40px;
+	}
+		.app_wrapper .app_information h1{
+			font-size: 25px;
+			letter-spacing: 2px;
+			font-weight: 300;
+			color:rgba(0,0,0,0.8);
+			padding-bottom: 10px;
+		}
+		.app_wrapper .app_information p{
+			padding-top: 0;
+			margin: 0 auto;
+			color:rgba(0,0,0,0.75);
+			font-size: 15px;
+			line-height: 1.6em;
+			letter-spacing: 1px;
+			font-weight: 400;
+		}
+		.app_wrapper .app_information a{
+			color:#3399cc;
+			border:1px solid #3399cc;
+			padding: 6px;
+			text-transform: uppercase;
+			font-size: 12px;
+			margin-left: 15px;
+			margin-top: 8px;
+			float: right;
+			transition:0.3s;
+		}
+			.app_wrapper .app_information a:hover{
+				background-color: #3399cc;
+				transition:0.3s;
+				color:#fff;
+			}
+
+
+		#app_sorter{
+			width:100%;
+			color:rgba(0,0,0,0.85);
+			font-size: 16px;
+			line-height: 1.6em;
+			letter-spacing: 1px;
+			font-family: 'Lato', sans-serif;
+		}
+			#app_sorter select{
+				background-color: transparent;
+				outline:none;
+				color:rgba(0,0,0,0.85);
+				font-size: 14px;
+				line-height: 1.6em;
+				letter-spacing: 1px;
+				font-family: 'Lato', sans-serif;
+				padding-bottom: 3px;
+				border:1px solid #353535;
+				font-weight: bold;
+				text-transform: uppercase;
+				background-color: #fff;
+			}
+				#app_sorter select option{
+					padding: 5px;
+				}
+				#app_sorter select:active{
+					outline:none;
+				}
+
+
+
+
+.team_wrapper{
+	width:100%;
+	display: inline-block;
+	line-height: 100%;
+	/*color:#EB01A5;*/
+}
+.team_header{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 34px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding-bottom: 20px; margin-bottom: 15px;
+	text-align: center;
+	color:#000;
+	font-family: 'Oswald', sans-serif;
+}
+hr{
+	margin-top: 15px; margin-bottom: 15px;
+	opacity: 0.2;
+}
+	.team_wrapper:last-child{
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		border-bottom: none;
+	}
+	.team_wrapper img{
+		width: 230px;
+		height: 230px;
+		float: left;
+		display: inline-block;
+		padding-top: 5px;
+		border-radius: 50%;
+		line-height: 100%;
+	}
+		.team_right img{
+			float:right;
+		}
+	.team_wrapper .team_information{
+		width:730px;
+		float: left;
+		display: inline-block;
+		box-sizing:border-box;
+		padding-left: 40px;
+		padding-top: 50px; padding-bottom: 50px;
+	}
+		.team_right .team_information{
+			float: left;
+			padding-left: 0px;
+			padding-right: 40px;
+			text-align: right;
+		}
+
+		.team_wrapper .team_information h1{
+			font-size: 23px;
+			letter-spacing: 2px;
+			font-weight: 400;
+			color:rgba(0,0,0,0.8);
+			line-height: 1.6em;
+		}
+			.team_wrapper .team_information i{
+				opacity: 0.7;
+				font-style: normal;
+				font-weight: 300;
+			}
+		.team_wrapper .team_information p{
+			margin: 0 auto;
+			color:rgba(0,0,0,0.75);
+			font-size: 15px;
+			line-height: 1.5em;
+			letter-spacing: 1px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-weight: 400;
+		}
+		.team_wrapper .team_information b{
+			position: relative; left:-3px;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 1.6em;
+		}
+			.team_wrapper .team_information b i{
+				font-size:150%;
+				position: relative;
+				top:2px;
+			}
+		.team_wrapper .team_information a{
+			color:#3399cc;
+			transition:0.3s;
+			padding: 2px;
+			padding-left: 5px; padding-right: 5px;
+			font-weight: 300;
+			font-size: 12px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			/*background-color: #f2f2f3;*/
+			border:1px solid #3399cc;
+		}
+			.team_wrapper .team_information a:hover{
+				color:#fff;
+			}
+
+				#gary_pic{margin-top: 50px;}
+				#hans_pic{margin-top: 70px;}
+				#bruce_pic{margin-top: 35px;}
+				#blake_pic{margin-top: 60px;}
+				#nick_pic{margin-top: 25px;}
+				#veni_pic{margin-top: 15px;}
+				#erik_pic{margin-top: 40px;}
+				#jeremy_pic{margin-top: 50px;}
+				#tonia_pic{margin-top: 70px;}
+				#mitch_pic{margin-top: 20px;}
+				#marty_pic{margin-top: 35px;}
+				#aaron_pic{margin-top: 50px;}
+				#jeff_pic{margin-top: 15px;}
+				#moon_pic{margin-top: 25px;}
+				#sydney_pic{margin-top: 15px;}
+				#marie_pic{margin-top: 95px;}
+				#scott_pic{margin-top: 15px;}
+
+
+
+/*
+_______________________________________________________________________________________________________________________
+      / $$$$$$$$     /$$      $$    /$$$$$$$$$    /$$$$$$$$$    /$$      $$
+     | $$      $$   | $$      $$   | $$______/   | $$_____/$$   \ $$    $$
+     | $$      $$   | $$      $$   | $$$$$       | $$ $$$$$$     \ $$$$$$
+     | $$      $$   | $$      $$   | $$__/       | $$   $$         | $$
+      \ $$$$$$$$$$  |  $$$$$$$$    | $$$$$$$$$   | $$    $$        | $$
+        \________/   \________/    |_________/   |__/   /__/       |__/
+_______________________________________________________________________________________________________________________
+*/
+@media (min-width: 1380px) {
+	.hero_item_inner{
+		padding-left: 10%; padding-right: 10%;
+	}
+}
+
+@media (max-width: 1100px) {
+
+	/*Remove hero screenshots, center all text*/
+	.hero_item_inner{
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.45)), color-stop(100%,rgba(0,0,0,0.45)));
+		text-align: center;
+		padding-left: 25px;
+	}.hero_item_inner img{display: none;}
+
+}
+@media (max-width: 1100px) {
+	/*
+		===========================
+		  LAYOUT    MODIFICATIONS
+		===========================
+	*/
+	/*Switch Logos to Mobile friendly Logo*/
+	#wim_logo{display: none;}
+	#wim_logo_xs{display: block;}
+
+	/*Shrink Width Control to 560 max px wide*/
+	.width_control{
+		width:650px;
+		position:relative;  left:50%;
+		margin-left: -385px;
+	}
+	/*Shrink Footer padding*/
+	.footer{padding-top: 35px; padding-bottom: 35px;}
+	/*Shrink letter spacing for Footer*/
+	.third{
+		width:32%;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+
+	/*
+		===========================
+		HOME SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.hero_item{
+		width:770px;
+		margin-left: -385px;
+	}
+	#about_hero, #hero_link{top:44px;}
+  		#hero_link{top:245px;}
+
+
+
+	/*
+		===========================
+		APPS SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.app_wrapper img{width:50%;}
+	.app_wrapper .app_information{width:50%;}
+		.app_wrapper .app_information h1{
+			font-size: 22px;
+			padding-bottom: 5px;
+		}
+		.app_wrapper .app_information p{
+			font-size: 13px;
+			line-height: 1.5em;
+		}
+
+
+	/*
+		===========================
+		TEAM SPECIFIC MODIFICATIONS
+		===========================
+	*/
+
+
+	.team_wrapper img{
+		width: 160px;
+		height: 160px;
+	}
+	.team_wrapper .team_information{
+		width:490px;
+		padding-left: 20px;
+		padding-top: 30px; padding-bottom: 30px;
+	}
+		.team_right .team_information{
+			padding-right: 20px;
+		}
+		.team_wrapper .team_information h1{
+			font-size: 16px;
+			letter-spacing: 1px;
+		}
+		.team_wrapper .team_information p{
+			font-size: 12px;
+			padding-bottom: 8px;
+			padding-top: 5px;
+		}
+			#gary_pic{margin-top: 45px;}
+			#hans_pic{margin-top: 65px;}
+			#bruce_pic{margin-top: 45px;}
+			#blake_pic{margin-top: 55px;}
+			#nick_pic{margin-top: 40px;}
+			#veni_pic{margin-top: 15px;}
+			#erik_pic{margin-top: 45px;}
+			#jeremy_pic{margin-top: 55px;}
+			#tonia_pic{margin-top: 80px;}
+			#mitch_pic{margin-top: 15px;}
+			#marty_pic{margin-top: 45px;}
+			#aaron_pic{margin-top: 50px;}
+			#jeff_pic{margin-top: 15px;}
+			#moon_pic{margin-top: 25px;}
+			#sydney_pic{margin-top: 25px;}
+			#marie_pic{margin-top: 85px;}
+			#scott_pic{margin-top: 25px;}
+
+		.team_wrapper .team_information b{
+			font-size: 12px;
+		}
+
+}
+
+@media (max-width: 800px) {
+	/*
+		===========================
+		  LAYOUT    MODIFICATIONS
+		===========================
+	*/
+	.hide720{display: none;}
+	.show720{display: block;}
+	/*Switch Logos to Mobile friendly Logo*/
+	#wim_logo{display: block;}
+	#wim_logo_xs{display: none;}
+	/*Shrink Width Control to 560 max px wide*/
+	.width_control{
+		width:420px;
+		position:relative;  left:50%;
+		margin-left: -270px;
+	}
+
+	/*ENABLE MOBILE MENU*/
+	#enable_mobile_menu{
+		float: right !important;
+		display: inline;
+		color:#fff;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 20px;
+		height:40px;
+		line-height: 35px;
+		transition:0.3s;
+	}
+		#enable_mobile_menu img{
+			margin-top: 2px;
+			height:32px;
+			float: right;
+		}
+			#enable_mobile_menu:hover{
+				opacity: 0.7;
+				transition:0.3s;
+			}
+				.mobile_enabled{
+					opacity: 0.7;
+					transition:0.3s;
+					-ms-transform: rotate(90deg); /* IE 9 */
+    				-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    				transform: rotate(90deg);
+    				position: relative; top:2px;
+				}
+					.mobile_enabled:hover{
+						opacity:1;
+						transition:0.3s;
+					}
+			/*Actual mobile menu*/
+			#mobile_menu{
+				z-index: 10000;
+				width:100%;
+				position: absolute;
+				top:134px;
+				background-color: #1f2532;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+				display: none;
+			}
+				.mobile_navigation_fixed{
+					position: fixed !important;
+					left:0; top: 40px !important;
+				}
+			#mobile_menu ul{
+				list-style-type: none;
+				text-align: center;
+				margin: 0 auto; padding: 0;
+				padding-top: 10px; padding-bottom: 10px;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+				.mobile_active{
+					border-left:5px solid #3399cc;
+					border-right:5px solid #3399cc;
+					background-color: rgba(255,255,255,0.02);
+				}
+				#mobile_menu ul li{
+					font-size: 22px;
+					padding-top: 10px; padding-bottom: 10px;
+				}
+				/*#mobile_menu ul li:nth-child(even){*/
+					/*background-color: rgba(255,255,255,0.03);*/
+				/*}*/
+					#mobile_menu ul li a{
+						color:#fff;
+						transition:0.3s;
+						padding-top: 10px; padding-bottom: 10px;
+					}
+						#mobile_menu ul li a:hover{
+							opacity: 0.6;
+							transition:0.3s;
+						}
+
+	/*Shrink Footer padding*/
+	.footer{padding-top: 35px; padding-bottom: 35px;}
+	/*Shrink letter spacing for Footer*/
+	.third{width:50%;}
+	.third:nth-child(2){float: right;text-align: right;}
+	.third:nth-child(3){display: none;}
+
+
+
+	/*
+		===========================
+		HOME SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.hero_item{
+	    height:230px;
+	    max-height: 230px;
+	    margin-top: -175px;
+	    width:540px;
+	    left:50%; margin-left: -270px;
+	}
+		.hero_item_inner{
+			font-size: 28pt;
+			padding-top: 72px;
+		}
+			.long_hero{font-size:22pt}
+			.hero_item_inner small{font-size:12pt;}
+
+		/*Home page, shrink hero image*/
+		#hero_spacer{height:230px;}
+
+		/*Half width extends to full width*/
+		.split50{
+			width:100%;
+			float: none;
+			padding-bottom: 0px;
+		}.split50_spacer{display:none;}
+
+
+
+
+	/*
+		===========================
+		APPS SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.app_wrapper img{width:90%; padding-left: 5%;}
+	.app_wrapper .app_information{width:100%; padding-left: 0; padding-top: 15px;}
+		.app_wrapper .app_information h1{
+			font-size: 22px;
+			padding-bottom: 5px;
+		}
+		.app_wrapper .app_information p{
+			font-size: 13px;
+			line-height: 1.5em;
+		}
+	#app_sorter{
+		width: 100%;
+		text-align: center;
+	}
+
+
+	/*
+		===========================
+		TEAM SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.team_wrapper img{
+		width: 250px;
+		height: 250px;
+		margin-left: 85px;
+	}
+	.team_wrapper .team_information{
+		width:420px;
+		padding-left: 0px;
+		padding-top: 30px; padding-bottom: 30px;
+	}
+		.team_right .team_information{
+			padding-right: 0px;
+			text-align: left;
+		}
+		.team_right img{
+			float:none;
+		}
+		.team_wrapper .team_information h1{
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+		.team_wrapper .team_information p{
+			font-size: 13px;
+			padding-bottom: 8px;
+		}
+			#gary_pic{margin-top: 5px;}
+			#hans_pic{margin-top: 5px;}
+			#bruce_pic{margin-top: 5px;}
+			#aaron_pic{margin-top: 5px;}
+			#blake_pic{margin-top: 5px;}
+			#erik_pic{margin-top: 5px;}
+			#jeff_pic{margin-top: 5px;}
+			#jeremy_pic{margin-top: 5px;}
+			#marty_pic{margin-top: 5px;}
+			#mitch_pic{margin-top: 5px;}
+			#moon_pic{margin-top: 5px;}
+			#nick_pic{margin-top: 5px;}
+			#sydney_pic{margin-top: 5px;}
+			#tonia_pic{margin-top: 5px;}
+			#veni_pic{margin-top: 5px;}
+			#marie_pic{margin-top: 5px;}
+			#scott_pic{margin-top: 5px;}
+		.team_wrapper .team_information b{
+			font-size: 12px;
+		}
+
+}
+
+
+/*Shrink at 580 just to go back to smaller logo, and shrink hero text size to fit on one line*/
+@media (max-width: 580px){
+	/*Switch Logos again*/
+	#wim_logo{display: none;}
+	#wim_logo_xs{display: block;}
+
+	/*Shrink hero font size*/
+		.hero_item_inner{
+			font-size: 18pt;
+			padding-top: 75px;
+			letter-spacing: 0px;
+		}
+			.hero_item_inner small{
+				font-size:9pt;
+			}
+}
+
+
+@media (max-width: 580px) {
+	/*
+		===========================
+		  LAYOUT    MODIFICATIONS
+		===========================
+	*/
+	.hidexs{display: none;}
+	.showxs{display: block;}
+	/*Hide top usgs links*/
+	#usgsccsabox{display: none;}
+
+	#usgsidentifier{
+		position: absolute;
+		left:50%; margin-left: -86px;
+	}
+
+	.hide720{display: none;}
+	.show720{display: block;}
+
+	/*Shrink Width Control to 560 max px wide*/
+	.width_control{
+		width:300px;
+		margin-left: -210px;
+	}
+
+	/*Shrink Footer padding*/
+	.footer{padding-top: 35px; padding-bottom: 35px;}
+	/*Shrink letter spacing for Footer*/
+	.third{width:100%; text-align: center;}
+	.third:nth-child(1){text-align: center;}
+	.third:nth-child(2){
+		float: none;
+		text-align: center;
+		margin-top: 25px;
+	}
+	.third:nth-child(3){display: none;}
+
+
+	/*Shrink main text*/
+	.body_content p{font-size: 10pt;}
+		.body_content ul li{font-size: 10pt;}
+	h1{font-size:18pt;}
+	h2{font-size: 14pt}
+
+
+
+	/*
+		===========================
+		HOME SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	/*Home page, shrink hero image*/
+	#hero_spacer{height:230px;}
+	.hero_item{
+	    height:230px;
+	    max-height: 230px;
+	    margin-top: -175px;
+	    text-align: center !important;
+	    font-size: 16pt;
+	    color:rgba(255,255,255,0.8);
+	    line-height: 220px;
+
+	    width:420px;
+	    margin-left:-210px;
+	}
+		.long_hero{
+			font-size:17pt;
+		}
+		.hero_item_inner{
+			padding-top: 85px;
+		}
+	.split50{font-size:10pt;}
+
+
+
+
+
+	/*
+		===========================
+		APPS SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.app_wrapper img{width:90%; padding-left: 5%;}
+	.app_wrapper .app_information{width:100%; padding-left: 0; padding-top: 15px;}
+		.app_wrapper .app_information h1{
+			font-size: 22px;
+			padding-bottom: 5px;
+		}
+		.app_wrapper .app_information p{
+			font-size: 13px;
+			line-height: 1.5em;
+		}
+
+
+
+	/*
+		===========================
+		TEAM SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.team_wrapper img{
+		width: 200px;
+		height: 200px;
+		margin-left: 50px;
+	}
+	.team_wrapper .team_information{
+		width:100%;
+		padding-top: 30px; padding-bottom: 30px;
+		padding-left: 5px; padding-right: 5px;
+	}
+		.team_right .team_information{
+			padding-right: 0px;
+			text-align: left;
+			padding-left: 5px; padding-right: 5px;
+		}
+		.team_right img{
+			float:none;
+		}
+		.team_wrapper .team_information h1{
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+		.team_wrapper .team_information p{
+			font-size: 13px;
+			padding-bottom: 8px;
+
+		}
+			#gary_pic{margin-top: 5px;}
+			#hans_pic{margin-top: 5px;}
+			#bruce_pic{margin-top: 5px;}
+			#aaron_pic{margin-top: 5px;}
+			#blake_pic{margin-top: 5px;}
+			#erik_pic{margin-top: 5px;}
+			#jeff_pic{margin-top: 5px;}
+			#jeremy_pic{margin-top: 5px;}
+			#marty_pic{margin-top: 5px;}
+			#mitch_pic{margin-top: 5px;}
+			#moon_pic{margin-top: 5px;}
+			#nick_pic{margin-top: 5px;}
+			#sydney_pic{margin-top: 5px;}
+			#tonia_pic{margin-top: 5px;}
+			#veni_pic{margin-top: 5px;}
+			#marie_pic{margin-top: 5px;}
+			#scott_pic{margin-top: 5px;}
+
+}
+
+
+@media (max-width: 440px) {
+	/*
+		===========================
+		  LAYOUT    MODIFICATIONS
+		===========================
+	*/
+	.hidexs{display: none;}
+	.showxs{display: block;}
+	/*Hide top usgs links*/
+	#usgsccsabox{display: none;}
+
+	#usgsidentifier{
+		position: absolute;
+		left:50%; margin-left: -86px;
+	}
+
+	.hide720{display: none;}
+	.show720{display: block;}
+
+	/*Shrink Width Control to 560 max px wide*/
+	.width_control{
+		width:100%;
+		margin-left: 0px;
+		left:0%;
+		box-sizing:border-box;
+		padding-left: 15px; padding-right: 15px;
+	}
+
+	.hero_item{
+		margin-top: -130px;
+	}
+
+
+	/*
+		===========================
+		HOME SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	/*Home page, shrink hero image*/
+	#hero_spacer{height:230px;}
+	.hero_item{
+	    margin-top: -202px;
+	    width:100%;
+	    left: 0; margin-left: 0px;
+	}
+
+	#body_content{
+		padding-top: 0px;
+	}
+
+	/*
+		===========================
+		APPS SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.app_wrapper img{width:90%; padding-left: 5%;}
+	.app_wrapper .app_information{width:100%; padding-left: 0; padding-top: 15px;}
+		.app_wrapper .app_information h1{
+			font-size: 22px;
+			padding-bottom: 5px;
+		}
+		.app_wrapper .app_information p{
+			font-size: 13px;
+			line-height: 1.5em;
+		}
+
+
+
+	/*
+		===========================
+		TEAM SPECIFIC MODIFICATIONS
+		===========================
+	*/
+	.team_wrapper img{
+		width: 200px;
+		height: 200px;
+		margin-left: 50px;
+	}
+	.team_wrapper .team_information{
+		width:100%;
+		padding-top: 30px; padding-bottom: 30px;
+		padding-left: 5px; padding-right: 5px;
+	}
+		.team_right .team_information{
+			padding-right: 0px;
+			text-align: left;
+			padding-left: 5px; padding-right: 5px;
+		}
+		.team_right img{
+			float:none;
+		}
+		.team_wrapper .team_information h1{
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+		.team_wrapper .team_information p{
+			font-size: 13px;
+			padding-bottom: 8px;
+
+		}
+			#gary_pic{margin-top: 5px;}
+			#hans_pic{margin-top: 5px;}
+			#bruce_pic{margin-top: 5px;}
+			#aaron_pic{margin-top: 5px;}
+			#blake_pic{margin-top: 5px;}
+			#erik_pic{margin-top: 5px;}
+			#jeff_pic{margin-top: 5px;}
+			#jeremy_pic{margin-top: 5px;}
+			#marty_pic{margin-top: 5px;}
+			#mitch_pic{margin-top: 5px;}
+			#moon_pic{margin-top: 5px;}
+			#nick_pic{margin-top: 5px;}
+			#sydney_pic{margin-top: 5px;}
+			#tonia_pic{margin-top: 5px;}
+			#veni_pic{margin-top: 5px;}
+			#marie_pic{margin-top: 5px;}
+			#scott_pic{margin-top: 5px;}
+
+}

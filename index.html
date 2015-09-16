@@ -1,0 +1,297 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="theme-color" content="#000">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>WiM &ndash; Wisconsin Internet Mapping - USGS Wisconsin Water Science Center</title>
+
+        <meta name="description" content="Wisconsin Internet Mapping (WiM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
+
+        <meta name="author" content="Melanie McCalmont">
+        <meta name="publisher" content="U.S. Geological Survey">
+        <meta name="created" content="20150223">
+        <meta name="revised" content="20150223">
+
+		<link rel="shortcut icon" type="image/ico" href="src/rainbow.ico" />
+
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+        <!-- Stylesheets -->
+		<link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/wim_styles.css">
+        <link rel="stylesheet" href="css/hover-min.css">
+
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"> <!-- Ionicons CDN -->
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'> <!-- Oswald -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> <!-- Lato -->
+
+        <!--This script is required for all USGS sites -->
+        <script type="text/javascript" src="http://www.usgs.gov/scripts/analytics/usgs-analytics.js"></script>
+
+    </head>
+    <body>
+
+    	<!-- USGS top bar, universal for USGS sites -->
+        <div id="usgscolorband">
+            <div id="usgsbanner">
+
+                <div class="max_wrap">
+
+                    <div id="usgsidentifier"><a href="http://www.usgs.gov/"><img src="img/usgslogo.png" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page" width="178" height="72" /></a></div>
+                    <div id="usgsccsabox">
+                        <div id="usgsccsa" style="text-align:right;">
+                        	<br /><a href="http://www.usgs.gov/">USGS Home</a>
+                        	<br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
+                        	<br /><a href="http://search.usgs.gov/">Search USGS</a>
+                    		<br />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+        <div id="navigation_bar">
+
+            <div class="max_wrap">
+
+                <img src="img/wimvector.png" onclick="location.href='index.html'" id="wim_logo">
+            	<img src="img/wimvectorxs.png" onclick="location.href='index.html'" id="wim_logo_xs">
+    	    	<ul class="hide720">
+        			<li class="active_link"><a href="index.html" alt="Home Page" title="Home Page">Home</a></li>
+        			<li><a href="applications.html" alt="Applications Page" title="Applications Page">Applications</a></li>
+     	   			<li><a href="team.html" alt="Team Page" title="Team Page">Team</a></li>
+        		</ul>
+        		<a  id="enable_mobile_menu" class="show720"><img src="img/menu.png"></a>
+
+            </div>
+
+        </div>
+
+        <div id="mobile_menu">
+        	<div class="width_control">
+        		<ul>
+        			<li class="mobile_active"><a href="index.html" alt="Home Page" title="Home Page">Home</a></li>
+        			<li><a href="applications.html" alt="View Our Applications" title="View Our Applications">Applications</a></li>
+        			<li><a href="team.html" alt="View Our Team" title="View Our Team">Team</a></li>
+        		</ul>
+        	</div>
+        </div>
+
+<!-- START HERO -->
+        <!-- <div id="about_hero">
+            In support of the USGS Mission Areas
+        </div> -->
+        <!-- <div id="hero_link">
+            <a href="applications.html" alt="View Related Maps" title="View Related Maps">View related maps</a>
+        </div> -->
+        <!-- Home page slides - Must edit main.js also -->
+
+<!-- <div class="width_control" style="background-color: rgba(255,255,255,0.85); box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); padding-left:0px; padding-right:0px; width:1080px; margin-top:55px; "> -->
+
+
+        <div id="hero_spacer"></div>
+
+        <div class="hero_item" id="slide_1" onclick="location.href='applications.html#water'">
+            <div class="hero_item_inner">
+                <a href="applications.html#water">
+                    <small>In support of the USGS Mission Areas</small>
+                    Water
+                    <img src="img/applications/nomac/fishvis.png">
+                </a>
+            </div>
+	        <!-- <a>Water <img src="img/applications/fishvis.png"></a> -->
+	    </div>
+
+	    <div class="hero_item" id="slide_2" onclick="location.href='applications.html#hazards'">
+            <div class="hero_item_inner">
+                <a href="applications.html#hazards">
+                    <small>In support of the USGS Mission Areas</small>
+                    Hazards
+                    <img src="img/applications/nomac/fim.png">
+                </a>
+            </div>
+	        <!-- <a>Hazards <img src="img/applications/fim.png"></a> -->
+	    </div>
+
+	    <div class="hero_item" id="slide_3" onclick="location.href='applications.html#ecosystems'">
+            <div class="hero_item_inner">
+                <a href="applications.html#ecosystems">
+                    <small>In support of the USGS Mission Areas</small>
+                    Ecosystems
+                    <img src="img/applications/nomac/sigl.png">
+                </a>
+            </div>
+	        <!-- <a>Ecosystems <img src="img/applications/badriver.png"></a> -->
+	    </div>
+
+	    <div class="hero_item" id="slide_4" onclick="location.href='applications.html#environment'">
+            <div class="hero_item_inner">
+                <a href="applications.html#environment">
+                    <small>In support of the USGS Mission Areas</small>
+                    Environmental Health
+                    <img src="img/applications/nomac/sfbay.png">
+                </a>
+            </div>
+	        <!-- <a>Environmental Health <img src="img/applications/sfbay.png"></a> -->
+	    </div>
+	    <div class="hero_item" id="slide_5" onclick="location.href='applications.html#energy'">
+            <div class="hero_item_inner">
+                <a href="applications.html#energy">
+                    <small>In support of the USGS Mission Areas</small>
+                    Energy & Minerals
+                    <img src="img/applications/nomac/brgm.png">
+                </a>
+            </div>
+	        <!-- <a>Energy & Minerals <img src="img/applications/wetlands.png"></a> -->
+	    </div>
+	    <div class="hero_item" id="slide_6" onclick="location.href='applications.html#climate'">
+            <div class="hero_item_inner">
+                <a href="applications.html#climate">
+                    <small>In support of the USGS Mission Areas</small>
+                    <span class="long_hero">Climate Change & Land Use</span>
+                    <img src="img/applications/nomac/sparrow.png">
+                </a>
+            </div>
+	        <!-- <a>Climate Change & Land Use</a><img src="img/applications/sparrow.png"> -->
+	    </div>
+
+<!-- </div> -->
+
+	    <!-- Main content, white bg -->
+        <div class="body_content">
+	       <div class="width_control" style="background-color: rgba(255,255,255,0.85); box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); padding-top:55px; padding-bottom:55px;">
+
+		    	<h1>What is W<span class="lowercase">i</span>M?</h1>
+                <p>Wisconsin Internet Mapping (WiM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations. WiM team members combine collective expertise in cartography, science, and web technology to create custom products that are practical, intuitive, and focused on our cooperators’ needs.<br/><br/><b>WiM’s work includes:</b></p>
+                <ul>
+                    <li>Digital cartography</li>
+                    <li>Data visualization</li>
+                    <li>Data management</li>
+                    <li>Data analysis</li>
+                    <li>Decision Support</li>
+                </ul>
+
+                <br/>
+                <h2>Who are our cooperators?</h2>
+                <p>WiM works regularly with individual USGS scientists as well as with the following agencies and programs:</p>
+                <ul>
+                    <li>U.S. Fish & Wildlife Service</li>
+                    <li>U.S. Environmental Protection Agency</li>
+                    <li>U.S. Department of Interior</li>
+                    <li>National Oceanic and Atmospheric Administration</li>
+                    <li>Great Lakes Restoration Initiative (GLRI)</li>
+                    <li>National Water-Quality Assessment (NAWQA) Program</li>
+                    <li>Landscape Conservation Cooperatives</li>
+                </ul>
+                <br/>
+
+                <hr/>
+
+                <br/>
+                <h2>How Do I work with W<span class="lowercase">i</span>M?</h2>
+                <p>
+					Our projects vary widely in scale, scope, and budget. To work with us or find out more about the individualized services we offer, please contact us.
+					<br/><br/>
+                </p>
+                 <div class="split50">
+                        <b>Gary Latzke, WiM Program Manager</b>
+                        <br/>
+                        Email: <a href="mailto:gdlatzke@usgs.gov" alt="Email Gary Latzke" title="Email Gary Latzke">gdlatzke@usgs.gov</a>
+                        <br/>
+                        Telephone: 608.821.3805
+                    </div>
+                    <div class="split50">
+                        <b>Bruce Droster, Administrative Coordinator</b>
+                        <br/>
+                        Email: <a href="mailto:bdroster@usgs.gov" alt="Email Bruce Droster" title="Email Bruce Droster">bdroster@usgs.gov</a>
+                        <br/>
+                        Telephone: 608.821.3907
+                    </div>
+					<div class="split50">
+                        <b>Hans Vraga, Project Manager</b>
+                        <br/>
+                        Email: <a href="mailto:hvraga@usgs.gov" alt="Email Hans Vraga" title="Email Hans Vraga">hvraga@usgs.gov</a>
+                        <br/>
+                        Telephone: 703.648.5670
+                    </div>
+					<br/><br/><br/><br/>
+                    <div class="split50_spacer"></div>
+		    </div>
+		</div>
+
+
+	    <!-- WiM Footer -->
+	    <div class="footer">
+	    	<div class="width_control">
+		    	<div class="third">
+		    		<b>WiM</b><br/>
+	    			U.S. Geological Survey<br/>
+	    			<span style="letter-spacing:0px">Wisconsin Water Science Center</span><br/>
+	    			8505 Research Way<br/>
+	  	  			Middleton WI 53562<br/><br/>
+	   			</div>
+		   		<div class="third">
+		   			Gary Latzke<br/>
+		   			Program Director<br/>
+		   			608.821.3805<br/>
+					<br/>
+					Hans Vraga<br/>
+					Project Manager</br>
+					703.648.5670
+		   		</div>
+		   		<div class="third">
+		   			<b>Links</b><br/>
+		   			<a href="applications.html" title="WiM Applications" alt="WiM Applications">Applications</a><br/>
+		   			<a href="team.html" title="WiM Team" alt="WiM Team">Team</a><br/>
+		   			<a href="http://usgs.gov" target="_blank" alt="USGS Home Page" title="USGS Home Page">USGS Home</a><br/>
+		   			<a href="http://wi.water.usgs.gov/" target="_blank" alt="Wiscon Water Science Center Home Page" title="Wisconsin Water Science Center Home Page">WI WSC</a>
+					<br/><br/>
+				</div>
+		   	</div>
+	    </div>
+
+
+
+
+	<!-- BEGIN USGS Footer Template -->
+    <div id="usgsfooter">
+        <p id="usgsfooterbar">
+            <a href="http://www.usgs.gov/laws/accessibility.html" target="_blank" title="Accessibility Policy (Section 508)">Accessibility</a>
+            <a href="http://www.usgs.gov/foia/" target="_blank" title="Freedom of Information Act">FOIA</a>
+            <a href="http://www.usgs.gov/laws/privacy.html" target="_blank" title="Privacy policies of the U.S. Geological Survey.">Privacy</a>
+            <a href="http://www.usgs.gov/laws/policies_notices.html" target="_blank" title="Policies and notices that govern information posted on USGS Web sites.">Policies and Notices</a>
+        </p>
+
+        <p id="usgsfootertext">
+            <a href="http://www.takepride.gov/" target="_blank"><img src="img/footer_graphic_takePride.jpg" alt="Take Pride in America logo" title="Take Pride in America Home Page" width="60" height="58" /></a>
+            <a href="http://usa.gov/" target="_blank"><img src="img/footer_graphic_usagov.jpg" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" /></a>
+            <a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
+            <a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a><br />
+
+            URL: http://www.wi.water.usgs.gov/wim/index.html<br />
+
+            Page Contact Information: <a href="mailto:">Webmaster</a><br />
+
+            Page Last Modified: Thursday, 14-August-2014 12:37:15 EDT
+        </p>
+    </div>
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/main.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,380 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#000">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>WiM &ndash; Wisconsin Internet Mapping - USGS Wisconsin Water Science Center</title>
+
+        <meta name="description" content="Wisconsin Internet Mapping (WiM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited scope data visualizations.">
+
+        <meta name="author" content="Melanie McCalmont">
+        <meta name="publisher" content="U.S. Geological Survey">
+        <meta name="created" content="20150223">
+        <meta name="revised" content="20150223">
+
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/wim_styles.css">
+        <link rel="stylesheet" href="css/hover-min.css">
+
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"> <!-- Ionicons CDN -->
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'> <!-- Oswald -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> <!-- Lato -->
+
+        <!--This script is required for all USGS sites -->
+        <script type="text/javascript" src="http://www.usgs.gov/scripts/analytics/usgs-analytics.js"></script>
+
+    </head>
+    <body>
+
+    	<!-- USGS top bar, universal for USGS sites -->
+        <div id="usgscolorband">
+            <div id="usgsbanner">
+
+                <div class="max_wrap">
+
+                    <div id="usgsidentifier"><a href="http://www.usgs.gov/"><img src="img/usgslogo.png" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page" width="178" height="72" /></a></div>
+                    <div id="usgsccsabox">
+                        <div id="usgsccsa" style="text-align:right;">
+                            <br /><a href="http://www.usgs.gov/">USGS Home</a>
+                            <br /><a href="http://answers.usgs.gov/cgi-bin/gsanswers?tmplt=2">Contact USGS</a>
+                            <br /><a href="http://search.usgs.gov/">Search USGS</a>
+                            <br />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div id="navigation_bar">
+
+            <div class="max_wrap">
+
+                <img src="img/wimvector.png" onclick="location.href='index.html'" id="wim_logo">
+                <img src="img/wimvectorxs.png" onclick="location.href='index.html'" id="wim_logo_xs">
+                <ul class="hide720">
+                    <li><a href="index.html" alt="Home Page" title="Home Page">Home</a></li>
+                    <li><a href="applications.html" alt="Applications Page" title="Applications Page">Applications</a></li>
+                    <li class="active_link"><a href="team.html" alt="Team Page" title="Team Page">Team</a></li>
+                </ul>
+                <a  id="enable_mobile_menu" class="show720"><img src="img/menu.png"></a>
+
+            </div>
+
+        </div>
+
+        <div id="mobile_menu">
+            <div class="width_control">
+                <ul>
+                    <li><a href="index.html" alt="Home Page" title="Home Page">Home</a></li>
+                    <li><a href="applications.html" alt="View Our Applications" title="View Our Applications">Applications</a></li>
+                    <li class="mobile_active"><a href="team.html" alt="View Our Team" title="View Our Team">Team</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+	    <!-- Featurette -->
+	    <div class="featurette">
+            <div class="width_control">
+    	    	<h1>Meet the W<span class="lowercase">i</span>M Team</h1>
+	           	<p>WiM is comprised of geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build  products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways.</p>
+            </div>
+	    </div>
+
+
+	    <!-- Main content, white bg -->
+	    <div class="body_content">
+            <div class="width_control" style="background-color:rgba(255,255,255,0.85);  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); padding-top:55px; padding-bottom:55px;">
+
+                <h3 class="team_header">Administration</h3>
+
+                <!-- Gary Latzke -->
+                    <div class="team_wrapper">
+        	    		<img src="img/team/gary_p.jpg" id="gary_pic">
+        	    		<div class="team_information">
+        	    			<h1>Gary Latzke<i>, Program Director</i></h1>
+        	    			<p>Gary has his degree in Cartography from Northern Illinois University and 27 years of cartographic experience in the USGS. His specialties include cartographic design and communication, digital application design, and implementation of cloud infrastructures for geospatial applications. In addition WiM, Gary serves on the staff of the Information and Technology Management Director for the Department of the Interior, leading and assisting in special projects for the Department. Outside of work Gary enjoys golfing, writing music and making unique cocktails with his wife in their home lounge.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:gdlatzke@usgs.gov" title="Email Gary Latzke" alt="Email Gary Latzke" target="_blank"><i class="ion-ios-email"></i> gdlatzke@usgs.gov</a> <a class="hvr-sweep-to-right" href="tel:6088213805" title="Call Gary Latzke" alt="Call Gary Latzke" target="_blank"><i class="ion-ios-telephone"></i> 608.821.3805</a></b>
+        	    		</div>
+        	    	</div>
+
+                    <hr/>
+
+                <!-- Hans Vraga -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/hans_p.jpg" id="hans_pic">
+                        <div class="team_information">
+                            <h1 class="hide720"><i>Project Manager, </i>Hans Vraga</h1>
+                            <h1 class="show720">Hans Vraga<i>, Project Manager</i></h1>
+                            <p>Hans got his start as a fearless Super Stallion Helicopter Crew Chief from the USMC '772 Hustlers, callsign: "Wedgie." He turned ITIL disciple at the UW-Madison Division of Information Technology by way of a student position held while earning a BS in Computer Engineering and Computer Science at the university. After a few years full time working with the System’s Engineering and Operations group at DoIT wearing Configuration, Incident, and Change Management hats, Hans moved to WiM to head up Project Management duties. Hans is currently living near our Nation's Capital, representing WiM at USGS HQ as well as attempting to keep up with Marie’s enthusiasm. Outside of work, Hans enjoys a good game of ultimate, hiking, camping and the occasional novel.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:hvraga@usgs.gov" title="Email Hans Vraga" alt="Email Hans Vraga" target="_blank"><i class="ion-ios-email"></i> hvraga@usgs.gov</a> <a class="hvr-sweep-to-right" href="tel:7036485670" title="Call Hans Vraga" alt="Call Hans Vraga" target="_blank"><i class="ion-ios-telephone"></i> 703.648.5670</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Bruce Droster -->
+                    <div class="team_wrapper">
+                        <img src="img/team/bruce_p.jpg" id="bruce_pic">
+                        <div class="team_information">
+                            <h1>Bruce Droster<i>, Administrative & Operations Coordinator</i></h1>
+                            <p>Bruce began as a traditional cartographer working on the USGS Ground Water Atlas of the United States. He considers himself fortunate that he was able to experience both the traditional methods of map making (scribing and darkrooms) and modern GIS and digital mapping. He is currently the administrative and operations coordinator for WiM. Bruce enjoys many outside activities including being a volunteer firefighter, volunteer ski patroller, SCUBA diver, wilderness camper, cyclist, and many other outdoor activities.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:bdroster@usgs.gov" title="Email Bruce Droster" alt="Email Bruce Droster" target="_blank"><i class="ion-ios-email"></i> bdroster@usgs.gov</a> <a class="hvr-sweep-to-right" href="tel:6082389333" title="Call Bruce Droster" alt="Call Bruce Droster" target="_blank"><i class="ion-ios-telephone"></i> 608.821.3907</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+<!--DEVELOPERS-->
+                    <h3 class="team_header">Developers</h3>
+
+                <!-- Blake Draper -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/blake_p.jpg" id="blake_pic">
+                        <div class="team_information">
+                            <h1 class="hide720"><i>Software Developer,</i> Blake Draper</h1>
+                            <h1 class="show720">Blake Draper<i>, Software Developer</i></h1>
+                            <p>Blake is a software developer for WiM. He has a B.A. and M.A. from Florida State University and a GIS/Cartography certificate from the University of Wisconsin-Madison. Blake works primarily client-side, developing web apps in JavaScript, but also enjoys working with Python whenever the need arises. He also spends a lot of time configuring server environments and preparing GIS data for use in web services. His main professional goal is to create useful, intuitive, geographically focused data products that advance USGS science. Outside of work, Blake enjoys cooking good food, woodworking, and spending time in the woods hiking and canoe camping.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:bdraper@usgs.gov" title="Email Blake Draper" alt="Email Blake Draper" target="_blank"><i class="ion-ios-email"></i> bdraper@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Nick Estes -->
+                    <div class="team_wrapper">
+                        <img src="img/team/nick_p.jpg" id="nick_pic">
+                        <div class="team_information">
+                            <h1>Nick Estes<i>, Software Developer</i></h1>
+                            <p>Nick is a senior developer with WiM. He received his B.S. in mechanical engineering from Purdue University in 2001. His work with the USGS was initially focused on publishing, but has since developed an interest in and a knack for developing mapping applications and optimizing GIS services used by those applications.  While most of his free time is spent with his family, he finds time here and there to write and record music.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:njestes@usgs.gov " title="Email Nick Estes" alt="Email Nick Estes" target="_blank"><i class="ion-ios-email"></i> njestes@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Veni Kunche -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/veni_p.jpg" id="veni_pic">
+                        <div class="team_information">
+                            <h1 class="hide720"><i>Software Developer, </i>Veni Kunche</h1>
+                            <h1 class="show720">Veni Kunche<i>, Software Developer</i></h1>
+                            <p>Veni Kunche is a esnior software developer residing in Northern Virginia. She has over 10 years of experience in software and web development, and has worked in several industries such as financial, governmental, and bio-medical. She loves to travel with friends and explore new cuisines.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:kkunche@usgs.gov " title="Email Veni Kunche" alt="Email Veni Kunche" target="_blank"><i class="ion-ios-email"></i> kkunche@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Erik Myers -->
+                    <div class="team_wrapper">
+                        <img src="img/team/erik_p.jpg" id="erik_pic">
+                        <div class="team_information">
+                            <h1>Erik Myers<i>, Software Developer</i></h1>
+                            <p>Erik is a software developer for WiM. He earned bachelor’s degrees in geography and Asian studies from Augustana College in Illinois, and a master’s degree in geography from Ohio University. He also holds a GIS Certificate from the University of Wisconsin-Madison. In addition to Erik’s work developing web applications for WiM, his major areas of interest are cartographic and user experience design. Erik enjoys travel, photography, and outdoor sports. In his free time, he can usually be found rock climbing, skiing, cycling, canoeing, or kayak touring.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:emyers@usgs.gov " title="Email Erik Myers" alt="Email Erik Myers" target="_blank"><i class="ion-ios-email"></i> emyers@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Jeremy Newson -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/jeremy_p.jpg" id="jeremy_pic">
+                        <div class="team_information">
+                            <h1 class="hide720"><i>Software Developer, </i>Software Developer</h1>
+                            <h1 class="show720">Jeremy Newson<i>, Software Developer</i></h1>
+                            <p>Jeremy Newson has been working as a hydrologic engineer for the United States Geological Survey for the past 8 years. He is currently a lead developer for WiM, developing hydrologic mapping applications. His programming skills include Javascript, HTML5, Typescript, C#, VB.net, Python, Action script, Flash/Flex and Fortran. He earned his master’s degree in biological and agricultural engineering, emphasizing in sediment fluxes in fluvial systems, and a bachelor’s degree in biological systems engineering from the University of Idaho. When he is not staring aimlessly at his computer monitors, he enjoys spending time with his family, fly-fishing, and camping.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:jknewson@usgs.gov " title="Email Jeremy Newson" alt="Email Jeremy Newson" target="_blank"><i class="ion-ios-email"></i> jknewson@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Tonia Roddick -->
+                    <div class="team_wrapper">
+                        <img src="img/team/tonia_p.jpg" id="tonia_pic">
+                        <div class="team_information">
+                            <h1>Tonia Roddick<i>, Software Developer</i></h1>
+                            <p>Tonia earned a bachelor's degree in Geography at the University of Wisconsin—Parkside and a GIS Certificate at the University of Wisconsin—Madison. She worked as a GIS Analyst in the private sector for several years before returning to school to earn another 2-year degree in programming from Madison Area Technical College. Tonia works on the back end and front end side of things — Oracle databases, RESTful services and building web applications that allow the user to communicate with their data. She also still dabbles with GIS by making interactive maps to accompany her web applications. Her languages of choice are C#, JavaScript, and HTML5, but she's also familiar with VB.net, Oracle SQL, and Ajax. In her free time, she enjoys spending time with her family, mountain biking, cross country skiing, or reading a good novel.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:troddick@usgs.gov " title="Email Tonia Roddick" alt="Email Tonia Roddick" target="_blank"><i class="ion-ios-email"></i> troddick@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Mitch Samuels -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/mitch_p.jpg" id="mitch_pic">
+                        <div class="team_information">
+                            <h1 class="show720">Mitch Samuels<i>, Software Developer</i></h1>
+                            <h1 class="hide720"><i>Software Developer, </i>Mitch Samuels</h1>
+                            <p>Mitch is currently enrolled at the University of Wisconsin—Madison where he will earn his bachelor's degree in computer science with certificates in entrepreneurship and German. He is a front end developer desigining WiM and other websites. Outside of work and school, he enjoys traveling, snowboarding, and hiking.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:msamuels@usgs.gov " title="Email Mitch Samuels" alt="Email Mitch Samuels" target="_blank"><i class="ion-ios-email"></i> msamuels@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Marty Smith -->
+                    <div class="team_wrapper">
+                        <img src="img/team/marty_p.jpg" id="marty_pic">
+                        <div class="team_information">
+                            <h1>Martyn Smith<i>, Software Developer</i></h1>
+                            <p>Marty is a software developer with WiM. He received his M.A. in geography from the University of Connecticut. While his work with the USGS initially centered around GIS and Cartography, his main focus now is internet mapping, and he is committed to improving the mapping presence of the USGS. Within the internet mapping application realm, he is primarily focused on open-source solutions. Most of his free time is spent with his family and german shorthair, or with a chainsaw.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:marsmith@usgs.gov" title="Email Martyn Smith" alt="Email Martyn Smith" target="_blank"><i class="ion-ios-email"></i> marsmith@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Aaron Stephenson -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/aaron_p.jpg" id="aaron_pic">
+                        <div class="team_information">
+                            <h1 class="show720">Aaron Stephenson<i>, Solutions Architect</i></h1>
+                            <h1 class="hide720"><i>Solutions Architect, </i>Aaron Stephenson</h1>
+                            <p>Aaron Stephenson is a full stack developer and solutions architect at WiM, but essentially he is their jack-of-all-trades. He has a decade of experience in system administration, database administration, information management, systems analysis, as well as back end and front end development, almost all of which have been in support of GIS data, services, and applications. Currently, most of his time is engaged in supporting WIM's migration to a service-oriented architecture and cloud computing. In his free time, Aaron loves reading, getting outdoors to hike and canoe, and attempting to become a decent cook.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:astephenson@usgs.gov " title="Email Aaron Stephenson" alt="Email Aaron Stephenson" target="_blank"><i class="ion-ios-email"></i> astephenson@usgs.gov </a></b>
+                        </div>
+                    </div>
+
+                    <hr style="margin-top:35px;" />
+<!--GIS Analysits-->
+                    <h3 class="team_header">GIS Analysts</h3>
+
+                <!-- Jeff Ingebritsen -->
+                    <div class="team_wrapper">
+                        <img src="img/team/jeff_p.jpg" id="jeff_pic">
+                        <div class="team_information">
+                            <h1>Jeff Ingebritsen<i>, Software Developer</i></h1>
+                            <p>Jeff Ingebritsen is a 2007 graduate of the University of Wisconsin—Madison with a degree in anthropology and a GIS certificate. His professional interests include GIS modeling, cartographic design, and Python. In his free time, Jeff is a pianist, cook, avid board game player, and loves to read.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:jingebritsen@usgs.gov" title="Email Jeff Ingebritsen" alt="Email Jeff Ingebritsen" target="_blank"><i class="ion-ios-email"></i> jingebritsen@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Moon Kim -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/moon_p.jpg" id="moon_pic">
+                        <div class="team_information">
+                            <h1 class="show720">Moon Kim<i>, FIM Library Manager</i></h1>
+                            <h1 class="hide720"><i>FIM Library Manager, </i>Moon Kim</h1>
+                            <p>Moon is currently the lead hydrologist for the Flood Inundation Mapping Program. Located at the Indiana Water Science Center, his current technical interests include 1D/2D hydraulic modeling, dynamic flood inundation mapping, and utilization of GIS applications. His hobbies include tennis, soccer, bicycling, and binge-viewing classic samurai, sci-fi, and martial arts flicks movies online.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:mkim@usgs.gov" title="Email Moon Kim" alt="Email Moon Kim" target="_blank"><i class="ion-ios-email"></i> mkim@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr style="margin-top:35px;" />
+
+                    <h3 class="team_header">Advisors</h3>
+
+                <!-- Marie Peppler -->
+                    <div class="team_wrapper ">
+                        <img src="img/team/marie_p.jpg" id="marie_pic">
+                        <div class="team_information">
+                            <h1>Marie Peppler<i>, FIM Coordinator</i></h1>
+                            <p>Marie C. Peppler works in the Office of Surface Water as the Federal Agency Liaison and the National USGS Flood Inundation Mapping Coordinator. Marie guides the development, publication and communication of USGS Flood Inundation Mapping projects. As the Federal Agency Liaison, Marie coordinates the activities of the USGS Streamgage Network and other programs with our federal partners, such as the National Weather Service and the US Army Corps of Engineers. She also works on geospatial data coordination and communication for other programs, including the USGS flooding and hurricane responses. Marie started her career with the USGS Wisconsin Water Science Center in 2002 as a geomorphologist and graduated with a Master’s Degree in Geography in 2006 from the University of Wisconsin – Madison.  In her spare time, Marie likes to travel, sew, quilt, knit, make furniture, volunteer, and take long walks to the neighborhood bar with her dogs, Indy and Zoe.</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:mpeppler@usgs.gov " title="Email Marie Peppler" alt="Email Marie Peppler" target="_blank"><i class="ion-ios-email"></i> mpeppler@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                <!-- Scott Morlock -->
+                    <div class="team_wrapper team_right">
+                        <img src="img/team/scott_f.jpg" id="scott_pic">
+                        <div class="team_information">
+                            <h1 class="hide720"><i>Science Coordinator, </i>Scott Morlock</h1>
+                            <h1 class="show720">Scott Morlock<i>, Science Coordinator</i></h1>
+                            <p>SScott Morlock is the USGS Midwest Region Science Coordinator for the Midwest Region. He has been with the USGS for 23 years and has held positions including hydrologist, supervisory hydrologist, center deputy director, and acting center director. He drives his wife crazy, because (among other things) no matter where they go on vacation, he manages to find a streamgage!</p>
+                            <b><a class="hvr-sweep-to-right" href="mailto:smorlock@usgs.gov " title="Email Scott Morlock" alt="Email Scott Morlock" target="_blank"><i class="ion-ios-email"></i> smorlock@usgs.gov</a></b>
+                        </div>
+                    </div>
+
+
+
+
+            </div>
+	    </div>
+
+
+	    <!-- WiM Footer -->
+        <div class="footer">
+	    	<div class="width_control">
+		    	<div class="third">
+		    		<b>WiM</b><br/>
+	    			U.S. Geological Survey<br/>
+	    			<span style="letter-spacing:0px">Wisconsin Water Science Center</span><br/>
+	    			8505 Research Way<br/>
+	  	  			Middleton WI 53562<br/><br/>
+	   			</div>
+		   		<div class="third">
+		   			Gary Latzke<br/>
+		   			Program Director<br/>
+		   			608.821.3805<br/>
+					<br/>
+					Hans Vraga<br/>
+					Project Manager</br>
+					703.648.5670
+		   		</div>
+		   		<div class="third">
+		   			<b>Links</b><br/>
+		   			<a href="applications.html" title="WiM Applications" alt="WiM Applications">Applications</a><br/>
+		   			<a href="team.html" title="WiM Team" alt="WiM Team">Team</a><br/>
+		   			<a href="http://usgs.gov" target="_blank" alt="USGS Home Page" title="USGS Home Page">USGS Home</a><br/>
+		   			<a href="http://wi.water.usgs.gov/" target="_blank" alt="Wiscon Water Science Center Home Page" title="Wisconsin Water Science Center Home Page">WI WSC</a>
+					<br/><br/>
+				</div>
+		   	</div>
+	    </div>
+
+
+
+
+	<!-- BEGIN USGS Footer Template -->
+    <div id="usgsfooter">
+        <p id="usgsfooterbar">
+            <a href="http://www.usgs.gov/laws/accessibility.html" target="_blank" title="Accessibility Policy (Section 508)">Accessibility</a>
+            <a href="http://www.usgs.gov/foia/" target="_blank" title="Freedom of Information Act">FOIA</a>
+            <a href="http://www.usgs.gov/laws/privacy.html" target="_blank" title="Privacy policies of the U.S. Geological Survey.">Privacy</a>
+            <a href="http://www.usgs.gov/laws/policies_notices.html" target="_blank" title="Policies and notices that govern information posted on USGS Web sites.">Policies and Notices</a>
+        </p>
+
+        <p id="usgsfootertext">
+            <a href="http://www.takepride.gov/" target="_blank"><img src="img/footer_graphic_takePride.jpg" alt="Take Pride in America logo" title="Take Pride in America Home Page" width="60" height="58" /></a>
+            <a href="http://usa.gov/" target="_blank"><img src="img/footer_graphic_usagov.jpg" alt="USA.gov logo" title="USAGov: Government Made Easy" width="90" height="26" /></a>
+            <a href="http://www.doi.gov/" target="_blank">U.S. Department of the Interior</a> |
+            <a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a><br />
+
+            URL: http://www.wi.water.usgs.gov/wim/index.html<br />
+
+            Page Contact Information: <a href="mailto:">Webmaster</a><br />
+
+            Page Last Modified: Thursday, 14-August-2014 12:37:15 EDT
+        </p>
+    </div>
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/main.js"></script>
+
+    </body>
+
+</html>
