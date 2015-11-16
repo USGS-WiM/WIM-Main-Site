@@ -134,9 +134,11 @@ $(document).ready(function() {
 	$("#jeff_pic").mouseover(function() { $(this).attr("src", "img/team/jeff_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/jeff_p.jpg");});
 	$("#jeremy_pic").mouseover(function() { $(this).attr("src", "img/team/jeremy_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/jeremy_p.jpg");});
 	$("#mitch_pic").mouseover(function() { $(this).attr("src", "img/team/mitch_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/mitch_p.jpg");});
+	$("#jamie_pic").mouseover(function() { $(this).attr("src", "img/team/jamie_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/jamie_p.jpg");});
 	$("#sydney_pic").mouseover(function() { $(this).attr("src", "img/team/sydney_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/sydney_p.jpg");});
 	$("#tonia_pic").mouseover(function() { $(this).attr("src", "img/team/tonia_f.png");}).mouseout(function() {$(this).attr("src", "img/team/tonia_p.jpg");});
 	$("#veni_pic").mouseover(function() { $(this).attr("src", "img/team/veni_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/veni_p.jpg");});
+	$("#luke_pic").mouseover(function() { $(this).attr("src", "img/team/luke_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/luke_p.jpg");});
 	$("#marie_pic").mouseover(function() { $(this).attr("src", "img/team/marie_f.jpg");}).mouseout(function() {$(this).attr("src", "img/team/marie_p.jpg");});
 
 
