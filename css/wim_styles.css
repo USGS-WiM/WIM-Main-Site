@@ -85,7 +85,7 @@ ________________________________________________________________________________
 #navigation_bar{
 	height:45px;
 	width:100%;
-	background-color: #181D27;
+	background-color: #0071bc;
 	box-sizing: border-box;
 	font-family: 'Oswald', sans-serif;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -191,6 +191,10 @@ ________________________________________________________________________________
 		letter-spacing: 1px;
 		font-weight: 400;
 		font-family: 'Lato', sans-serif;
+
+	}
+	.body_content p a{
+		color: #0071BC;
 	}
 	.body_content ul{
 		list-style-type: bullet;
