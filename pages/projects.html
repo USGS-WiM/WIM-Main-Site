@@ -1,0 +1,28 @@
+<div class="projects-intro">
+    <h3>Explore our projects</h3>
+    <p>
+        Discover some of the tools we've developed. Click a thumbnail to learn more. All applications listed here are publicly available and have links to their product websites and additional information.
+    </p>
+
+</div>
+
+<div class="projects-body">
+
+
+    <!-- <h1 class="projects-header">
+        Administration
+    </h1> -->
+    <br><br>
+
+    <div class="project-item" style="background-image:url(../visuals/projects/storymaps.png)" ng-click="go('/geonarratives/')">
+        <div class="project-item-body">
+            <h1>Geonarratives</h1>
+        </div>
+    </div><!--
+    --><div class="project-item" ng-repeat="project in projects" style="background-image:url(../visuals/projects/{{project.image}})" ng-click="go('/'+project.slug+'/'+$index+'/')">
+        <div class="project-item-body">
+            <h1>{{project.title}}</h1>
+        </div>
+    </div>
+
+</div>

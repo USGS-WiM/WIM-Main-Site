@@ -1,0 +1,39 @@
+<div class="team-individual" ng-if="category=='admin'">
+    <img src="../visuals/team/{{teamAdmin[memberNumber].firstname | lowercase}}_p.jpg">
+    <h3>{{teamAdmin[memberNumber].firstname}} {{teamAdmin[memberNumber].lastname}}</h3>
+    <h5>{{teamAdmin[memberNumber].title}}</h5>
+    <h4><b><a href="mailto:{{teamAdmin[memberNumber].email}}">{{teamAdmin[memberNumber].email}}</a></b><b>{{teamAdmin[memberNumber].phone}}</b></h4>
+    <p>
+        {{teamAdmin[memberNumber].bio}}
+    </p>
+</div>
+
+<div class="team-individual" ng-if="category=='developers'">
+    <img src="../visuals/team/{{teamDevelopers[memberNumber].firstname | lowercase}}_p.jpg">
+    <h3>{{teamDevelopers[memberNumber].firstname}} {{teamDevelopers[memberNumber].lastname}}</h3>
+    <h5>{{teamDevelopers[memberNumber].title}}</h5>
+    <h4><b><a href="mailto:{{teamDevelopers[memberNumber].email}}">{{teamDevelopers[memberNumber].email}}</a></h4>
+    <p>
+        {{teamDevelopers[memberNumber].bio}}
+    </p>
+</div>
+
+<div class="team-individual" ng-if="category=='gis'">
+    <img src="../visuals/team/{{gisAnalysts[memberNumber].firstname | lowercase}}_p.jpg">
+    <h3>{{gisAnalysts[memberNumber].firstname}} {{gisAnalysts[memberNumber].lastname}}</h3>
+    <h5>{{gisAnalysts[memberNumber].title}}</h5>
+    <h4><b><a href="mailto:{{gisAnalysts[memberNumber].email}}">{{gisAnalysts[memberNumber].email}}</a></h4>
+    <p>
+        {{gisAnalysts[memberNumber].bio}}
+    </p>
+</div>
+
+<div class="team-individual" ng-if="category=='advisors'">
+    <img src="../visuals/team/{{advisors[memberNumber].firstname | lowercase}}_p.jpg">
+    <h3>{{advisors[memberNumber].firstname}} {{advisors[memberNumber].lastname}}</h3>
+    <h5>{{advisors[memberNumber].title}}</h5>
+    <h4><b><a href="mailto:{{advisors[memberNumber].email}}">{{advisors[memberNumber].email}}</a></h4>
+    <p>
+        {{advisors[memberNumber].bio}}
+    </p>
+</div>

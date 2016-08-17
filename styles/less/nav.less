@@ -1,0 +1,169 @@
+//out: ../css/nav.css, sourcemap: false, compress: true
+
+@import 'variables.less';
+
+
+// USGS HEADER RESPONSIVENESS
+#usgsidentifier{
+    @media only screen and (max-width : 450px) {
+        display: block !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+}
+#usgsccsabox{
+    @media only screen and (max-width : 450px) {
+        display: none !important;
+    }
+}
+
+nav.nav-main{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    background-color: @nav;
+    // background-color: #0071BC;
+    // background-color: transparent;
+    // background-color: #2C3642;
+    // background-color: #161E20;
+
+    img.nav-branding{
+        height: 50px;
+        display: inline-block;
+        margin: 0 auto;
+        vertical-align: middle;
+        margin-right: 35px;
+        box-sizing: border-box;
+        padding: 0 0 5px 0;
+    }
+
+    span.nav-brand{
+        color: @white;
+        font-size: 18pt;
+        font-family: @montserrat;
+        letter-spacing: -1px;
+        margin: 0 auto;
+        padding: 0;
+        vertical-align: middle;
+        font-weight: 300;
+        box-sizing: border-box;
+        display: inline-block;
+
+        img{
+            display: inline-block;
+            vertical-align: middle;
+            height: 42px;
+            margin-right: 10px;
+        }
+    }
+
+    i.mobile-menu-btn{
+        color: @white;
+        // font-size: 32pt;
+        height: 62px;
+        line-height: 62px;
+        font-size: 30pt;
+        float: right;
+        position: absolute;
+        top: 90px;
+        right: 45px;
+    }
+    div.nav-links{
+        display: inline-block;
+        float: right;
+        vertical-align: middle;
+        margin-top: 4px;
+
+        @media only screen and (max-width : 700px) {
+            display: none;
+            position: absolute;
+            top: 147px;
+            left: 0;
+            width: 100%;
+            background-color: @bluegrey;
+            box-sizing: border-box;
+            padding: 25px 0;
+            a{
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px 0;
+                text-align: center;
+                float: none;
+                text-transform: uppercase;
+                font-size: 14pt !important;
+                font-weight: bolder !important;
+                font-family: @montserrat !important;
+                letter-spacing: 3px !important;
+            }
+    	}
+
+        a{
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 10px 0 10px 15px;
+            color: @white;
+            font-family: @muli;
+            font-size: 11pt;
+            font-weight: 500;
+            // text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+
+
+footer.footer{
+    display: block;
+    width: 100%;
+    background-color: @nav;
+    box-sizing: border-box;
+    padding: 45px 5%;
+
+    div.links{
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (max-width : 600px) {
+            display: block;
+            text-align: center;
+        }
+
+        a{
+            box-sizing: border-box;
+            padding: 10px 20px;
+            color: @white;
+            font-family: @montserrat;
+            font-weight: bolder;
+            font-size: 12pt;
+            letter-spacing: 4px;
+            display: inline-block;
+            text-transform: uppercase;
+            @media only screen and (max-width : 600px) {
+                font-size: 10pt;
+            }
+        }
+
+
+    }
+
+    p.address{
+        box-sizing: border-box;
+        padding: 25px 0 0 0;
+        display: block;
+        text-align: center;
+        font-family: @muli;
+        font-size: 10pt;
+        letter-spacing: 1px;
+        line-height: 1.6em;
+        font-weight: bolder;
+        text-transform: uppercase;
+        color: fade(@white, 90%);
+        @media only screen and (max-width : 520px) {
+            font-size: 8pt;
+            letter-spacing: 0;
+        }
+    }
+}

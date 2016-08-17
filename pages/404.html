@@ -1,0 +1,56 @@
+<div class="team-intro">
+    <h3>Meet the WiM Team</h3>
+    <p>
+        WiM is comprised of geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways.
+    </p>
+
+</div>
+
+<div class="team-body">
+
+
+    <h1 class="team-header">
+        Administration
+    </h1>
+
+    <div class="team-member" ng-repeat="person in teamAdmin" style="background-image:url(../visuals/team/{{person.firstname}}_p.jpg)" ng-click="go('/admin/'+$index+'/'+person.firstname)">
+        <div class="team-member-body">
+            <h1>{{person.firstname}} {{person.lastname}}</h1>
+            <h2>{{person.title}}</h2>
+        </div>
+    </div>
+
+    <h1 class="team-header">
+        Developers
+    </h1>
+
+    <div class="team-member" ng-repeat="person in teamDevelopers" style="background-image:url(../visuals/team/{{person.firstname}}_p.jpg)" ng-click="go('/developers/'+$index+'/'+person.firstname)">
+        <div class="team-member-body">
+            <h1>{{person.firstname}} {{person.lastname}}</h1>
+            <h2>{{person.title}}</h2>
+        </div>
+    </div>
+
+    <h1 class="team-header">
+        GIS Analysts
+    </h1>
+
+    <div class="team-member" ng-repeat="person in gisAnalysts" style="background-image:url(../visuals/team/{{person.firstname}}_p.jpg)"  ng-click="go('/gis/'+$index+'/'+person.firstname)">
+        <div class="team-member-body">
+            <h1>{{person.firstname}} {{person.lastname}}</h1>
+            <h2>{{person.title}}</h2>
+        </div>
+    </div>
+
+    <h1 class="team-header">
+        Advisors
+    </h1>
+
+    <div class="team-member" ng-repeat="person in advisors" style="background-image:url(../visuals/team/{{person.firstname}}_p.jpg)"  ng-click="go('/advisors/'+$index+'/'+person.firstname)">
+        <div class="team-member-body">
+            <h1>{{person.firstname}} {{person.lastname}}</h1>
+            <h2>{{person.title}}</h2>
+        </div>
+    </div>
+
+</div>
