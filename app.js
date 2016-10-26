@@ -277,15 +277,16 @@ wimApp.controller('homeController', function($scope, $location) {
             'learn' : '',
             'image' : 'fev.png',
             'slug' : 'fev'
-        },{
-            'title' : 'Western Lake Erie Restoration Assessment - WLERA',
-            'body' : 'The Western Lake Erie Restoration Assessment (WLERA) model was co-developed by investigators in the Environmental Studies Program at the New College of Florida in Sarasota, Florida and the USGS - Great Lakes Science Center in Ann Arbor, Michigan. The WLERA is a geodesign framework for measuring the potential to restore coastal wetlands in the Great Lakes basin. This framework is based on the expert coupling of multiple criteria decision analysis and geographic information systems. Experts included regional wetland ecologists, biologists, planners and geographers from federal, state, academic and non- governmental organizations. Criteria include historical water levels, topography, soils, mapped wetlands, managed lands, and impervious and non-impervious development on the landscape. The WLERA data and kernel analysis are organized in ArcGIS 10.3 geodatabases and python applications.',
-            'view' : 'http://wlera.wim.usgs.gov/WLERA/',
-            'learn' : '',
-            'image' : 'wlera.png',
-            'slug' : 'wlera'
         }
     ];
+    // ,{
+    //     'title' : 'Western Lake Erie Restoration Assessment - WLERA',
+    //     'body' : 'The Western Lake Erie Restoration Assessment (WLERA) model was co-developed by investigators in the Environmental Studies Program at the New College of Florida in Sarasota, Florida and the USGS - Great Lakes Science Center in Ann Arbor, Michigan. The WLERA is a geodesign framework for measuring the potential to restore coastal wetlands in the Great Lakes basin. This framework is based on the expert coupling of multiple criteria decision analysis and geographic information systems. Experts included regional wetland ecologists, biologists, planners and geographers from federal, state, academic and non- governmental organizations. Criteria include historical water levels, topography, soils, mapped wetlands, managed lands, and impervious and non-impervious development on the landscape. The WLERA data and kernel analysis are organized in ArcGIS 10.3 geodatabases and python applications.',
+    //     'view' : 'http://wlera.wim.usgs.gov/WLERA/',
+    //     'learn' : '',
+    //     'image' : 'wlera.png',
+    //     'slug' : 'wlera'
+    // }
 
 // Mercury
 //http://wim.usgs.gov/MercuryMapper/MercuryMapper.html#app=66e3&5600-selectedIndex=1
