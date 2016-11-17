@@ -222,6 +222,13 @@ wimApp.controller('homeController', function($scope, $location) {
             'image' : 'wetlands.png',
             'slug' : 'wetlands'
         },{
+            'title' : 'FishVis',
+            'body' : 'Fish Vis Mapper presents possible changes in fish species occurrence in response to global climate change. Global climate change effects on fish species occurrence in streams were evaluated by means of a number of linked general circulation, groundwater recharge, stream temperature, and streamflow exceedance models. General circulation models (GCMs):  Fish Vis Mapper results are based on a emissions scenario known as “A1B”, developed by the Intergovernmental Panel on Climate Change. The A1B emissions scenario assumes a balanced approach to energy production is followed (fossil versus non-fossil) for the remainder of this century. The A1B emissions scenario was used as input to 13 general circulation models that provide potential air temperature and precipitation patterns to the remaining models.',
+            'view' : 'https://ccviewer.wim.usgs.gov/FishVis/',
+            'learn' : 'https://greatlakesinform.org/dynamic-maps/661',
+            'image' : 'fishvis.png',
+            'slug' : 'fishvis'
+        },{
             'title' : 'National Water Quality Assessment - NAWQA Trends',
             'body' : 'About 140 million people—almost one-half of the Nation\'s population—rely on groundwater for drinking water, and the demand for groundwater for irrigation and agriculture continues to increase. This mapper shows how concentrations of pesticides, nutrients, metals, and organic contaminants in groundwater are changing during decadal periods across the Nation. Tracking changes in groundwater quality and investigating the reasons for these changes is crucial for informing management decisions to protect and sustain our valuable groundwater resources.',
             'view' : 'http://nawqatrends.wim.usgs.gov/Decadal/',
