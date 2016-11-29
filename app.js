@@ -129,7 +129,7 @@ wimApp.controller('homeController', function($scope, $location) {
             'lastname' :  'Samuels',
             'title' : 'Frontend Developer',
             'email' : 'msamuels@usgs.gov',
-            'bio' : 'Mitch is currently enrolled at the University of Wisconsin—Madison where he will earn his bachelor\'s degree in computer science with certificates in entrepreneurship and German. He is a front end developer desigining WiM and other websites. Outside of work and school, he enjoys traveling, snowboarding, and hiking.'
+            'bio' : 'Mitch is currently enrolled at the University of Wisconsin - Madison where he will earn his bachelor\'s degree in computer science with certificates in entrepreneurship and German. He is a front end developer desigining WiM and other websites. Outside of work and school, he enjoys traveling, snowboarding, and hiking.'
         },{
             'firstname' : 'Martyn',
             'lastname' :  'Smith',
@@ -202,7 +202,7 @@ wimApp.controller('homeController', function($scope, $location) {
             'image' : 'badriver.png',
             'slug' : 'badriver'
         },{
-            'title' : 'Costal Barrier Resources Act - CBRA',
+            'title' : 'Coastal Barrier Resources Act - CBRA',
             'body' : 'The Coastal Barrier Resources Act (CBRA) of 1982 designated areas of relatively undeveloped coastal barriers along the Atlantic and Gulf coasts as part of the John H. Chafee Coastal Barrier Resources System (CBRS), and made these areas ineligible for most new federal expenditures and financial assistance.The CBRA mapper assists property owners, local, state, and federal stakeholders to identify those areas included in the Coastal Barrier Resources Act.',
             'learn' : 'http://www.fws.gov/cbra/',
             'image' : 'cbra.png',
