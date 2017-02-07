@@ -119,6 +119,12 @@ wimApp.controller('homeController', function($scope, $location) {
             'email' : 'jknewson@usgs.gov',
             'bio' : 'Jeremy Newson has been working as a hydrologic engineer for the United States Geological Survey for the past 8 years. He is currently a lead developer for WiM, developing hydrologic mapping applications. His programming skills include Javascript, HTML5, Typescript, C#, VB.net, Python, Action script, Flash/Flex and Fortran. He earned his master\'s degree in biological and agricultural engineering, emphasizing in sediment fluxes in fluvial systems, and a bachelor\'s degree in biological systems engineering from the University of Idaho. When he is not staring aimlessly at his computer monitors, he enjoys spending time with his family, fly-fishing, and camping.'
         },{
+            'firstname' : 'Lauren',
+            'lastname' :  'Privette',
+            'title' : 'Software Developer',
+            'email' : 'lprivette@usgs.gov',
+            'bio' : 'Lauren is a software developer with WiM. She received her B.S in Geographic Science from James Madison University. While she enjoys work centered around GIS and cartography, her interests have expanded into the world of open source internet mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren enjoys snowboarding and ultimate frisbee.'
+        },{
             'firstname' : 'Tonia',
             'lastname' :  'Roddick',
             'title' : 'Software Developer',
@@ -157,7 +163,7 @@ wimApp.controller('homeController', function($scope, $location) {
             'lastname' : 'Ingebritsen',
             'title' : 'Software Developer',
             'email' : 'jingebritsen@usgs.gov',
-            'bio' : 'Jeff Ingebritsen is a 2007 graduate of the University of Wisconsin—Madison with a degree in anthropology and a GIS certificate. His professional interests include GIS modeling, cartographic design, and Python. In his free time, Jeff is a pianist, cook, avid board game player, and loves to read.'
+            'bio' : 'Jeff Ingebritsen is a 2007 graduate of the University of Wisconsin\u2013Madison with a degree in anthropology and a GIS certificate. His professional interests include GIS modeling, cartographic design, and Python. In his free time, Jeff is a pianist, cook, avid board game player, and loves to read.'
         },{
             'firstname' : 'Moon',
             'lastname' : 'Kim',
