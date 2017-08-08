@@ -101,6 +101,12 @@ wimApp.controller('homeController', function($scope, $location) {
             'email' : 'njestes@usgs.gov',
             'bio' : 'Nick is a senior developer with WiM. He received his B.S. in mechanical engineering from Purdue University in 2001. His work with the USGS was initially focused on publishing, but has since developed an interest in and a knack for developing mapping applications and optimizing GIS services used by those applications. While most of his free time is spent with his family, he finds time here and there to write and record music.'
         },{
+            'firstname' : 'Eric',
+            'lastname' : 'Haberman',
+            'title' : 'Software Developer',
+            'email' : 'ehaberman@usgs.gov',
+            'bio' : 'Coming soon.'
+        },{
             'firstname' : 'Veni',
             'lastname' :  'Kunche',
             'title' : 'Software Developer',
@@ -201,6 +207,34 @@ wimApp.controller('homeController', function($scope, $location) {
     //
     $scope.projects = [
         {
+            'title' : 'SWTrends',
+            'body' : 'This mapper provides results from the largest-ever assessment of water-quality changes in the Nation\'s streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment. Tracking changes in stream quality and investigating the reasons for these changes is crucial for informing management decisions to protect and sustain our valuable water resources. The mapper shows stream trends in water chemistry (nutrients, pesticides, sediment, carbon, and salinity) and aquatic ecology (fish, invertebrates, and algae) for four time periods: 1972-2012, 1982-2012, 1992-2012, and 2002-2012. ',
+            'view' : 'https://nawqatrends.wim.usgs.gov/swtrends/',
+            'learn' : '',
+            'image' : 'swtrends.png',
+            'slug' : 'swtrends'
+        },{
+            'title' : 'StreamStats',
+            'body' : 'StreamStats is a Web-based Geographic Information Systems (GIS) application that provides users with access to an assortment of analytical tools that are useful for a variety of water-resources planning and management purposes, and for engineering and design purposes. StreamStats users can select USGS data-collection station locations shown on a map and obtain previously published information for the stations. Users also can select any location along a stream and obtain the drainage-basin boundary, basin characteristics, and estimates of streamflow statistics for the location. The streamflow statistics that StreamStats can provide for data-collection stations and for user-selected ungaged sites vary among the implemented states and among data-collection stations within states.',
+            'view' : 'https://streamstats.usgs.gov/ss/',
+            'learn' : '',
+            'image' : 'streamstats.png',
+            'slug' : 'streamstats'
+        },{
+            'title' : 'Great Lakes Coastal Wetland Restoration Assessment',
+            'body' : 'This website provides access to a series of tools and data to support the Great Lakes Coastal Wetland Restoration Assessment (GLCWRA) models. The GLCWRA uses principles of geodesign to identify areas along U.S. coast of the Great Lakes that have the most potential to restore coastal wetland habitat. This site seeks to promote wide­spread, yet regionally- focused use of the GLCWRA products by managers and decision makers. Users may freely access dynamic, interactive, and user friendly geospatial applications for each restoration assessment. These first three GLCWRA models focus on a pilot area identified by the Upper Midwest and Great Lakes LCC coastal working group and highlighted as part of the Resilient Lands and Waters Initiative. As funding allows, additional assessments will be conducted for priority restoration assessment areas identified by the LCC. These GLCWRA project data are documented and available via the USGS ScienceBase repository and are closely aligned with the Great Lakes Coastal Wetland Monitoring Program and its developing decision support tool.',
+            'view' : 'https://glcwra.wim.usgs.gov/',
+            'learn' : '',
+            'image' : 'glcwra.png',
+            'slug' : 'glcwra'
+        },{
+            'title' : 'National Water Information System',
+            'body' : 'The National Water Information System (NWIS) provides access to data at over 1.5 million sites. There are 56 possible site types used in the NWIS data base, including 14 primary types and 42 secondary types. To simplify mapping of the site locations for most practical applications, the site types are displayed in 5 groups that include the following primary and secondary types. The full list of site types can be found here.',
+            'view' : 'https://maps.waterdata.usgs.gov/mapper/index.html',
+            'learn' : '',
+            'image' : 'nwis.png',
+            'slug' : 'nwis'
+        },{
             'title' : 'Bad River Groundwater Model',
             'body' : 'The Bad River Groundwater Model Mapper is a companion product to the USGS report “Groundwater-Surface Water Interactions in the Bad River Watershed, Wisconsin" (in review). This project consists of three map applications that display information from a regional groundwater-flow model developed for this study. The "Inputs Mapper" displays inputs to the model such as estimates of recharge and hydraulic conductivity. The "Results Mapper" displays model outputs including simulated water-table elevations, groundwater-flow directions, baseflows in streams, and comparisons of model outputs to field measurements. The third map, the "New Data Worth Mapper" displays the results of an analysis of potential monitoring well locations, which were evaluated for their ability to increase confidence in model predictions, under the condition of simulated dewatering from a proposed open-pit iron mine.',
             'view' : '',
@@ -216,8 +250,8 @@ wimApp.controller('homeController', function($scope, $location) {
         },{
             'title' : 'Flood Inundation Mapper - FIM',
             'body' : 'The USGS Flood Inundation Mapper combines flood inundation map libraries with real-time USGS river-level data and National Weather Service flood forecasts into a powerful tool that helps communicate when and where flooding may occur and bettter inform local responses that can protect lives and property.',
-            'view' : 'http://wimcloud.usgs.gov/apps/FIM/FloodInundationMapper.html',
-            'learn' : 'http://water.usgs.gov/osw/flood_inundation/',
+            'view' : 'https://fim.wim.usgs.gov/fim/',
+            'learn' : '',
             'image' : 'fim.png',
             'slug' : 'fim'
         },{
@@ -266,23 +300,9 @@ wimApp.controller('homeController', function($scope, $location) {
             'title' : 'Spatially Referenced Regressions on Watershed Attributes - SPARROW',
             'body' : 'SPARROW (SPAtially Referenced Regressions on Watershed attributes) is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WiM has partnered with SPARROW scientists to provide several map applications depicting SPARROW models for different regions of the U.S. These interactive applications provide flexible and customizable visualizations of SPARROW model results. There are several SPARROW Mappers available at the link above.',
             'view' : '',
-            'learn' : 'http://wi.water.usgs.gov/nutrients/sparrow/',
+            'learn' : 'https://www.usgs.gov/centers/wisconsin-water-science-center/science/sparrow-watershed-modeling-estimation-nutrient-and?qt-science_center_objects=3#qt-science_center_objects',
             'image' : 'sparrow.png',
             'slug' : 'sparrow'
-        },{
-            'title' : 'U.S. EPA Bulletins Live Two - BLT',
-            'body' : 'U.S. EPA\'s Endangered Species Protection Program (ESPP) helps promote the recovery of listed species by determining whether pesticide use in a certain geographic area may affect any listed species. The BLT application relys on the current EPA limitations on pesticide use that are necessary to protect the endangered species in that area.',
-            'view' : 'https://www.epa.gov/endangered-species/bulletins-live-two-view-bulletins/',
-            'learn' : 'https://www.epa.gov/endangered-species/endangered-species-protection-bulletins',
-            'image' : 'blt.png',
-            'slug' : 'bulletinslive'
-        },{
-            'title' : 'U.S. EPA San Francisco Bay',
-            'body' : 'In 2007, the Center for Biological Diversity filed a lawsuit in the U.S. District Court alleging that U.S. EPA had failed to comply with section 7(a)(2) of the Endangered Species Act (ESA) in regard to 47 pesticides and 11 species that are listed as endangered or threatened. 75 pesticides came to be at issue in this case. This mapping application shows the court ordered restrictions put in place for these 75 pesticides protecting the 11 species listed under the lawsuit.',
-            'view' : 'http://sfbmap.epa.gov/sfbMap/',
-            'learn' : '',
-            'image' : 'sfbay.png',
-            'slug' : 'sfbay'
         },{
             'title' : 'USGS Flood Event Viewer',
             'body' : 'The USGS Flood Event Viewer is a map-based data discovery tool for public access to the USGS Short-Term Network database. Users view a map of the sensors and high-water marks deployed and collected during large-scale flood events. Users can also access detailed information about each sensor and high-water marks, including site photos and data files.',
