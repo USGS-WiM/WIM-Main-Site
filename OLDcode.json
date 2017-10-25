@@ -1,0 +1,30 @@
+{
+  "name": "wim-main-site",
+  "organization": "U.S. Geological Survey",
+  "description": "Main webpage for the USGS Web Informatics team",
+  "status": "Production",
+  "homepage": "https://wim.usgs.gov",
+  "downloadURL": "https://github.com/USGS-WiM/WiM-Main-Site/archive/master.zip",
+
+  "license": "https://github.com/USGS-WiM/WiM-Main-Site/LICENSE.md",
+  "vcs": "git",
+  "repository": "https://github.com/USGS-WiM/WiM-Main-Site.git",
+
+  "tags": [
+    "wim",
+    "MaaS"
+  ],
+  "languages": [
+    "JavaScript",
+    "less",
+    "HTML"
+  ],
+
+  "contact": {
+    "name": "Mitch Samuels",
+    "email": "msamuels@usgs.gov"
+  },
+  "updated": {
+    "metadataLastUpdated": "2017-10-25"
+  }
+}
