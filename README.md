@@ -3,7 +3,7 @@
 
 # WIM Website
 
-WiM Main website - info on WIM projects, staff, and contacts 
+WIM Main website. About, team, projects, and contact info. 
 
 ## Getting Started
 
@@ -11,21 +11,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Simple webserver to run locally
+Node, npm, & gulp installed.
 
 ## Building and testing
 
-No build protocol; simple javscript/HTML.
+Run with:
+```
+gulp
+```
+
+Build to /public with: 
+```
+gulp build
+```
 
 
 ## Deployment
 
-Upload to wim.usgs.gov AWS S3 bucket
+Upload build (/public/ folder) to wim.usgs.gov AWS S3 bucket
 
 ## Built With
 
-* [AngularJS](https://angularjs.org/) - The main web framework used
+* HTML
 * [{less}](http://lesscss.org/) - Styling
+* [Gulp](https://gulpjs.com/) - Workflow Toolkit
+* [Browsersync](https://www.browsersync.io/) - Local server with live refresh
 
 ## Contributing
 

@@ -1,0 +1,134 @@
+// main: main.less
+
+// Import colors
+@import 'colors.less';
+
+//Define project name for use within CSS Pseudo elements
+@project: 'WIM';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Source+Sans+Pro:400,,600,700');
+@sans: 'Source Sans Pro';
+@serif: 'Merriweather';
+@monospace: monospace;
+
+// Font presets
+@bold_weight: 700;
+@light_weight: 400;
+@letter_spacing: -0.5px;
+
+// Font Awesome
+@font_awesome: 'Font Awesome 5 Pro';
+@font_awesome_brands: 'Font Awesome 5 Brands';
+
+// Measurements
+@standard_width: 1200px;
+@border_radius: 3px;
+@border_radius_lg: 6px;
+@border_radius_xl: 16px;
+
+// Misc
+@transition: 0.15s;
+@transition_fast: 0.05s;
+@focus_outline: 2px dotted @grey_darker;
+
+// Shadows
+@shadow: 0 5px 25px -5px rgba(30, 16, 84, .1);
+@shadow_lg: 0 10px 35px -2px rgba(30, 16, 84, .1);
+@shadow_sm: 0 1px 2px 0 rgba(10, 16, 64, .225);
+
+///////////////////////////
+// Responsive Variables //
+/////////////////////////
+@screen_sm: 480px;
+@screen_md: 768px;
+@screen_lg: 992px;
+@screen_xl: 1600px;
+// Define mobile
+@screen_mobile: @screen_md;
+
+
+/////////////////////////
+// Element Dimensions //
+///////////////////////
+@input_height: 34px;
+@input_sm_height: 26px;
+@input_sidepadding: 8px;
+
+// Buttons
+@button_fs: 14.5px;
+@button_ls: -0.1px;
+@button_height: 28px;
+
+@button_sm_height: 22px;
+@button_sm_sidepadding: 4px;
+@button_sm_lh: 22px;
+
+
+//////////////////////////
+// Font Size Variables //
+////////////////////////
+// xl
+@xl_fs: 42px;
+@xl_lh: 44px;
+@xl_ls: -1px;
+    // mobile
+    @xl_fs_m: 27px;
+    @xl_lh_m: 36px;
+    @xl_ls_m: -1px;
+// Large
+@lg_fs: 28px;
+@lg_lh: 32px;
+@lg_ls: -0.75px;
+    // mobile
+    @lg_fs_m: 24px;
+    @lg_lh_m: 28px;
+    @lg_ls_m: -0.75px;
+// Mediun
+@md_fs: 24px;
+@md_lh: 30px;
+@md_ls: -0.5px;
+    // mobile
+    @md_fs_m: 21px;
+    @md_lh_m: 28px;
+    @md_ls_m: -0.5px;
+// Small
+@sm_fs: 20px;
+@sm_lh: 24px;
+@sm_ls: -0.5px;
+    // mobile
+    @sm_fs_m: 16px;
+    @sm_lh_m: 24px;
+    @sm_ls_m: -0.6px;
+// Header
+@hd_fs: 16px;
+@hd_lh: 24px;
+@hd_ls: -0.5px;
+    // mobile
+    @hd_fs_m: 17px;
+    @hd_lh_m: 24px;
+    @hd_ls_m: -0.5px;
+// Subheader
+@sh_fs: 12px;
+@sh_lh: 16px;
+@sh_ls: -0.25px;
+    // mobile
+    @sh_fs_m: 13px;
+    @sh_lh_m: 16px;
+    @sh_ls_m: -0.25px;
+// Body Text
+@bt_fs: 14px;
+@bt_lh: 20px;
+@bt_ls: 0px;
+    // mobile
+    @bt_fs_m: 15px;
+    @bt_lh_m: 20px;
+    @bt_ls_m: 0px;
+// Caption
+@cp_fs: 12px;
+@cp_lh: 16px;
+@cp_ls: 0px;
+    // mobile
+    @cp_fs_m: 13px;
+    @cp_lh_m: 16px;
+    @cp_ls_m: 0px;

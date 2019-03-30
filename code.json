@@ -2,7 +2,7 @@
   {
     "name": "wim-main-site",
     "organization": "U.S. Geological Survey",
-    "description": "(Old) Main webpage for the USGS Web Informatics team",
+    "description": "Main website for the USGS Web Informatics & Mapping team",
     "version": "v1.0.0",
     "status": "Production",
 
@@ -22,17 +22,16 @@
     "repositoryUrl": "https://github.com/USGS-WiM/WiM-Main-Site",
     "vcs": "git",
 
-    "laborHours": 40,
+    "laborHours": null,
 
     "tags": [
-      "WIM",
-      "MaaS"
+      "Static Site"
     ],
 
     "languages": [
       "Javascript",
       "HTML",
-      "less"
+      "LESS/CSS"
     ],
 
     "contact": {
@@ -41,7 +40,7 @@
     },
 
     "date": {
-      "metadataLastUpdated": "2017-10-25"
+      "metadataLastUpdated": "2019-03-30"
     }
   }
 ]

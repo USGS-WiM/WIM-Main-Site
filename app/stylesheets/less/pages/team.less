@@ -1,0 +1,56 @@
+.team-display{
+    width: 100%;
+    width: calc(~'100% + 20px');
+    position: relative;
+    left: calc(~'0% - 10px');
+
+    .member{
+        background-color: @grey_light;
+        height: 230px;
+        width: 48%;
+        width: calc(~'50% - 20px');
+        margin: 10px;
+        border-radius: @border_radius_lg;
+        background-size: cover;
+        background-position: center;
+        box-shadow: @shadow_lg;
+
+        &.gary{background-image:url('/assets/team/gary_p.jpg')}
+        &.bruce{background-image:url('/assets/team/bruce_p.jpg')}
+        &.hans{background-image:url('/assets/team/hans_p.jpg')}
+        &.blake{background-image:url('/assets/team/blake_p.jpg')}
+        &.nick{background-image:url('/assets/team/nick2.jpg')}
+        &.katrin{background-image:url('/assets/team/katrin_p.jpg'); display:none;}
+        &.dan{background-image:url('/assets/team/dan_p.jpg'); display:none;}
+        &.veni{background-image:url('/assets/team/veni_p.jpg')}
+        &.erik{background-image:url('/assets/team/erik_p.jpg')}
+        &.jeremy{background-image:url('/assets/team/jeremy_p.jpg')}
+        &.lauren{background-image:url('/assets/team/lauren_p.jpg')}
+        &.mitch{background-image:url('/assets/team/mitch_p.jpg')}
+        &.martyn{background-image:url('/assets/team/martyn_p.jpg')}
+        &.aaron{background-image:url('/assets/team/aaron_p.jpg')}
+        &.moon{background-image:url('/assets/team/moon_p.jpg')}
+        &.jeff{background-image:url('/assets/team/jeff_p.jpg')}
+        &.luke{background-image:url('/assets/team/luke_p.jpg')}
+        &.marie{background-image:url('/assets/team/marie_p.jpg')}
+
+        // Hide photo so only screenreaders can see it
+        .member-image-element{
+            opacity: 0;
+            height: 1px;
+            width: 1px;
+        }
+
+
+        @media (min-width: @screen_md) {
+            width: 31.5%;
+            width: calc(~'33.33% - 20px');
+        }
+        @media (min-width: @screen_lg) {
+            width: 23.5%;
+            width: calc(~'25% - 20px');
+            height: 260px;
+        }
+
+    }
+}

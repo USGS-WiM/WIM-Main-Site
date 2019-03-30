@@ -1,0 +1,154 @@
+.tags{
+                
+    span{
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 4px 8px;
+        background-color: @primary_xlight;
+        color: @primary;
+        font-size: 11.5px;
+        border-radius: 30px;
+        margin: 4px 4px 4px 0;
+        letter-spacing: 0;
+        font-weight: 600;
+
+        &.map{
+            background-color: @primary_xlight;
+            color: @primary;
+        }
+        &.data{
+            background-color: lighten(@secondary, 60%);
+            color: @secondary;
+        }
+        &.static{
+            background-color: lighten(@orange, 27%);
+            color: @orange_darker;
+        }
+    }
+}
+
+///////////////////////////////
+// List of featured projects //
+///////////////////////////////
+.project-list{
+
+    .project{
+        flex-wrap: wrap;
+        position: relative;
+
+        @media (min-width: @screen_mobile) {
+            flex-wrap: nowrap;
+        }
+
+        .project-image{
+            display: block;
+            flex-grow: 3;
+            height: 100%;
+            min-height: 230px;
+            background-color: @grey; 
+            border-radius: @border_radius;
+            background-position: center;
+            background-size: cover;
+            box-shadow: @shadow_lg;
+
+            @media (min-width: @screen_mobile) {
+                min-width: 39%;
+                max-width: 39%;
+                height: 100%;
+                min-height: 100%;
+                position: absolute;
+                left: 0;
+            }
+            @media (min-width: @screen_lg) {
+                min-width: 34%;
+                max-width: 34%;
+                height: 100%;
+                min-height: 100%;
+            }
+
+            &.fim{background-image: url('/assets/projects/fim.png');}
+            &.sparrow{background-image: url('/assets/projects/sparrow.png');}
+            &.wetlands{background-image: url('/assets/projects/wetlands.png');}
+            &.nawqa{background-image: url('/assets/projects/nawqa.png');}
+            &.streamstats{background-image: url('/assets/projects/streamstats.png');}
+            &.whispers{
+                background-image: url('/assets/projects/whispers.png');
+                background-position: top left;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .project-info{
+            flex-grow: 3;
+            box-sizing: border-box;
+
+            @media (min-width: @screen_mobile) {
+                padding-left: 43%;
+            }
+            @media (min-width: @screen_lg) {
+                padding-left: 37%;
+            }
+
+            .project-links{
+
+            }
+        }
+    }
+}
+
+////////////////////////
+// Full Project Table //
+////////////////////////
+.projects-compact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .project-item{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 8px;
+        border-radius: @border_radius;
+        background-color: @white;
+        transition: @transition;
+        box-shadow: @shadow;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        height: auto;
+
+        @media (min-width: @screen_sm) {
+            width: 48%;
+        }
+        @media (min-width: @screen_lg) {
+            width: 31%;
+        }
+
+        .caption{
+            flex-grow: 3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tags{
+            padding-top: 2px;
+            text-align: right;
+            span{
+                margin: 2px 0 2px 4px;
+            }
+        }
+
+        &:hover{
+            cursor: pointer;
+            color: @ink;
+            box-shadow: @shadow_lg;
+            transition: @transition;
+
+            .heading,
+            .caption{
+                text-decoration: underline;
+            }
+        }
+    }
+}
