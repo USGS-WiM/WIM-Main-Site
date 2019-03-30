@@ -13,16 +13,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 Node, npm, & gulp installed.
 
+Install with npm
+
+```bash
+npm install
+```
+
 ## Building and testing
 
-Run with:
-```
+Serve project from /app/ with
+```bash
 gulp
 ```
-
-Build to /public with: 
-```
+Build it with
+```bash
 gulp build
+```
+Serve project from build folder with
+```bash
+gulp serve-build
 ```
 
 
