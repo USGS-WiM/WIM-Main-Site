@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USGS-WiM/WIM-Main-Site.git"
+    "url": "git+https://github.com/USGS-WIM/WIM-Main-Site.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/USGS-WiM/WIM-Main-Site/issues"
+    "url": "https://github.com/USGS-WIM/WIM-Main-Site/issues"
   },
-  "homepage": "hthttps://github.com/USGS-WiM/WIM-Main-Site#readme",
+  "homepage": "hthttps://github.com/USGS-WIM/WIM-Main-Site#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",

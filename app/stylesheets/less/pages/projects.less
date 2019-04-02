@@ -24,6 +24,10 @@
             background-color: lighten(@orange, 27%);
             color: @orange_darker;
         }
+        &.webapp{
+            background-color: lighten(@purple, 24%);
+            color: @purple_darker;
+        }
     }
 }
 
@@ -90,7 +94,9 @@
             }
 
             .project-links{
-
+                a{
+                    margin-bottom: 5px;
+                }
             }
         }
     }
@@ -102,7 +108,10 @@
 .projects-compact{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: calc(~'100% + 20px');
+    position: relative;
+    left: calc(~'0% - 10px');
+
 
     .project-item{
         display: flex;
@@ -117,15 +126,22 @@
         height: 100%;
         text-decoration: none;
         height: auto;
+        margin: 10px;
 
         @media (min-width: @screen_sm) {
             width: 48%;
+            width: calc(~'50% - 20px');
+        }
+        @media (min-width: @screen_md) {
+            width: 31%;
+            width: calc(~'33.33% - 20px');
         }
         @media (min-width: @screen_lg) {
-            width: 31%;
+            width: 23.5%;
+            width: calc(~'25% - 20px');
         }
 
-        .caption{
+        .text-body{
             flex-grow: 3;
             display: flex;
             flex-direction: column;

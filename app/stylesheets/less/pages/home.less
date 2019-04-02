@@ -1,8 +1,7 @@
 
 
-
-// Who we work with //
 //////////////////////
+// Who we work with //
 //////////////////////
 .cooperator-logos{
     img{
@@ -15,6 +14,49 @@
 
         @media (min-width: @screen_mobile) {
             margin: 0 10px 10px 10px;
+        }
+    }
+}
+
+//////////
+// Hero //
+//////////
+.home-hero{
+    display: flex;
+    
+    .hero-image{
+        display: block;
+        min-width: 100%;
+        height: auto;
+        border-radius: @border_radius;
+        background-image: url('/assets/map_2.jpg');
+        background-color: rgba(255,255,255,0.75);
+        background-blend-mode: screen;
+        background-size: cover;
+        background-position: center;
+
+        @media (min-width: @screen_lg) {
+            min-width: 50%;
+        }
+    }
+
+    .hero-text{
+        box-sizing: border-box;
+        position: relative;
+        left: -95%;
+        min-width: 95%;
+        width: 90%;
+        
+
+        @media (min-width: @screen_md) {
+            left: -80%;
+            min-width: 60%;
+            width: 60%;
+        }
+        @media (min-width: @screen_lg) {
+            left: -25%;
+            min-width: 60%;
+            width: 60%;
         }
     }
 }

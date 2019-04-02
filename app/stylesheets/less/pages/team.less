@@ -6,7 +6,7 @@
 
     .member{
         background-color: @grey_light;
-        height: 230px;
+        height: 240px;
         width: 48%;
         width: calc(~'50% - 20px');
         margin: 10px;
@@ -14,25 +14,29 @@
         background-size: cover;
         background-position: center;
         box-shadow: @shadow_lg;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
 
-        &.gary{background-image:url('/assets/team/gary_p.jpg')}
-        &.bruce{background-image:url('/assets/team/bruce_p.jpg')}
-        &.hans{background-image:url('/assets/team/hans_p.jpg')}
-        &.blake{background-image:url('/assets/team/blake_p.jpg')}
-        &.nick{background-image:url('/assets/team/nick2.jpg')}
-        &.katrin{background-image:url('/assets/team/katrin_p.jpg'); display:none;}
-        &.dan{background-image:url('/assets/team/dan_p.jpg'); display:none;}
-        &.veni{background-image:url('/assets/team/veni_p.jpg')}
-        &.erik{background-image:url('/assets/team/erik_p.jpg')}
-        &.jeremy{background-image:url('/assets/team/jeremy_p.jpg')}
-        &.lauren{background-image:url('/assets/team/lauren_p.jpg')}
-        &.mitch{background-image:url('/assets/team/mitch_p.jpg')}
-        &.martyn{background-image:url('/assets/team/martyn_p.jpg')}
-        &.aaron{background-image:url('/assets/team/aaron_p.jpg')}
-        &.moon{background-image:url('/assets/team/moon_p.jpg')}
-        &.jeff{background-image:url('/assets/team/jeff_p.jpg')}
-        &.luke{background-image:url('/assets/team/luke_p.jpg')}
-        &.marie{background-image:url('/assets/team/marie_p.jpg')}
+        &#gary{background-image:url('/assets/team/gary.png')}
+        &#bruce{background-image:url('/assets/team/bruce.png')}
+        &#hans{background-image:url('/assets/team/hans.png')}
+        &#blake{background-image:url('/assets/team/blake.png')}
+        &#nick{background-image:url('/assets/team/nick.png')}
+        &#katrin{background-image:url('/assets/team/katrin.png');}
+        &#dan{background-image:url('/assets/team/dan.png');}
+        &#veni{background-image:url('/assets/team/veni.png')}
+        &#erik{background-image:url('/assets/team/erik.png')}
+        &#jeremy{background-image:url('/assets/team/jeremy.png')}
+        &#lauren{background-image:url('/assets/team/lauren.png')}
+        &#mitch{background-image:url('/assets/team/mitch.png')}
+        &#martyn{background-image:url('/assets/team/martyn.png')}
+        &#aaron{background-image:url('/assets/team/aaron.png')}
+        &#moon{background-image:url('/assets/team/moon_p.jpg')}
+        &#jeff{background-image:url('/assets/team/jeff_p.jpg')}
+        &#luke{background-image:url('/assets/team/luke_p.jpg')}
+        &#marie{background-image:url('/assets/team/marie_p.jpg')}
 
         // Hide photo so only screenreaders can see it
         .member-image-element{
@@ -42,15 +46,92 @@
         }
 
 
-        @media (min-width: @screen_md) {
+        @media (min-width: @screen_sm) {
             width: 31.5%;
             width: calc(~'33.33% - 20px');
+            height: 240px;
+        }
+        @media (min-width: @screen_md) {
+            width: 23%;
+            width: calc(~'25% - 20px');
+            height: 270px;
         }
         @media (min-width: @screen_lg) {
-            width: 23.5%;
-            width: calc(~'25% - 20px');
-            height: 260px;
+            width: 19%;
+            width: calc(~'20% - 20px');
+            height: 300px;
+        }
+
+
+        // Meta, name & title
+        .member-meta{
+            display: block;
+            color: @white;
+            font-size: 14px;
+            background-color: fade(@ink_dark, 80%);
+            padding: 4px 8px 6px 8px;
+            border-bottom-left-radius: @border_radius;
+            border-bottom-right-radius: @border_radius;
+
+            b{  
+                display: block;
+            }
         }
 
     }
+
+
+
+    .member-about{
+        display: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        background-color: fade(@ink_darker, 50%);
+
+        @media (min-width: @screen_mobile) {
+            justify-content: center;
+        }
+
+        &.show{
+            display: flex;
+        }
+
+        .member-about-content{
+            display: block;
+            height: auto;
+            width: 100%;
+            margin: 0 auto;
+            border-top-left-radius: @border_radius_lg;
+            border-top-right-radius: @border_radius_lg;
+            background-color: @white;
+            box-sizing: border-box;
+            position: relative;
+
+            @media (min-width: @screen_mobile) {
+                max-width: 520px;
+                border-bottom-left-radius: @border_radius_lg;
+                border-bottom-right-radius: @border_radius_lg;
+            }
+
+            .modal-buttons{
+                display: flex;
+                justify-content: center;
+
+                button{
+                    padding: 5px 14px;
+                }
+                @media (min-width: @screen_mobile) {
+
+                }
+
+            }
+        }
+    }
+
 }

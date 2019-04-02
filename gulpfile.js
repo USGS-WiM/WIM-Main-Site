@@ -41,7 +41,10 @@ gulp.task('clean:dist', function() {
 ///////////////////////
 var filesToMove = [
         './app/assets/**/**/*',
-        './app/manifest.json'
+        './app/manifest.json',
+        './app/error/**/**/*',
+        './app/team/**/**/*',
+        './app/projects/**/**/*'
     ];
 gulp.task('static', function(){
     gulp.src(filesToMove, { base: './app/' })
