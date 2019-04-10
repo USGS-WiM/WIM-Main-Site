@@ -3,23 +3,23 @@
   "name": "WIM",
   "description": "Web Informatics and Mapping (WIM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.",
   "icons": [{
-    "src": "/assets/branding/meta/touch48.png",
+    "src": "/src/branding/meta/touch48.png",
     "type": "image/png",
     "sizes": "48x48"
   }, {
-    "src": "/assets/branding/meta/touch96.png",
+    "src": "/src/branding/meta/touch96.png",
     "type": "image/png",
     "sizes": "96x96"
   }, {
-    "src": "/assets/branding/meta/touch114.png",
+    "src": "/src/branding/meta/touch114.png",
     "type": "image/png",
     "sizes": "114x114"
   }, {
-    "src": "/assets/branding/meta/touch128.png",
+    "src": "/src/branding/meta/touch128.png",
     "type": "image/png",
     "sizes": "128x128"
   }, {
-    "src": "/assets/branding/meta/touch192.png",
+    "src": "/src/branding/meta/touch192.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
