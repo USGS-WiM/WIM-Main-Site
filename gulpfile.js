@@ -11,6 +11,10 @@ var reload = browserSync.reload;
 var newer = require('gulp-newer');
 var imagemin = require('gulp-imagemin');
 var twig = require('gulp-twig');
+var minify = require('gulp-minify');
+var cleanCSS = require('gulp-clean-css');
+var inject = require('gulp-inject-string');
+
 
 var folder = {
     src: 'app/',
@@ -24,14 +28,10 @@ var folder = {
 // Development
 // Development
 // Development
-// Dev
-// Dev
-// Dev
-// Dev
 
 // Clean Dev Folder
 gulp.task('clean:dev', function () {
-    return del.sync('folder.dev');
+    return del.sync(folder.dev);
 })
 
 // Move static files
@@ -42,7 +42,7 @@ var devFiles = [
     folder.src + 'manifest.json'
 ];
 gulp.task('staticdev', function () {
-    gulp.src(devFiles, { base: folder.src })
+    return gulp.src(devFiles, { base: folder.src })
         .pipe(gulp.dest(folder.dev));
 });
 
@@ -56,15 +56,15 @@ gulp.task('twigdev', function () {
 
 // Compile less
 gulp.task('lessdev', function () {
-    gulp.src(folder.src + 'src/less/main.less')
+    return gulp.src(folder.src + 'src/less/main.less')
         .pipe(less())
-        .pipe(gulp.dest(folder.dev))
+        .pipe(gulp.dest(folder.dev + 'src/'))
         .pipe(browserSync.stream());
 });
 
-// Move JS on Change
-gulp.task('jsdev', function () {
-    gulp.src(folder.src + 'src/js/**/*', { base: folder.src })
+// Changes to JS or other (image) files in /src folder
+gulp.task('staticchange', function () {
+    gulp.src(folder.src + 'src/**/*', { base: folder.src })
         .pipe(gulp.dest(folder.dev));
 });
 
@@ -74,17 +74,17 @@ gulp.task('browsersync', function () {
     browserSync.init({
         server: folder.dev
     });
+
     gulp.watch(folder.src + "src/less/**/*.less", ['lessdev']);
     gulp.watch(folder.src + "**/*.html", ["twigdev"]);
-    gulp.watch(folder.src + "**/*.js", ["jsdev"]).on("change", reload);
+    gulp.watch(folder.src + "**/*", ["staticchange"]).on("change", reload);
 });
 
 // Default serve sequence
 gulp.task('serve', function (callback) {
     runSequence(
-        'staticdev',
-        'twigdev',
-        'lessdev',
+        'clean:dev',
+        ['lessdev', 'staticdev', 'twigdev'],
         'browsersync',
         callback
     )
@@ -107,10 +107,8 @@ gulp.task('clean:build', function () {
     return del.sync(folder.build);
 })
 
-// Move static files
+// Move any static files over
 var staticFiles = [
-    folder.src + '/src/js/**/*',
-    folder.src + 'styleguide.css',
     folder.src + 'manifest.json'
 ];
 gulp.task('buildstatic', function () {
@@ -118,13 +116,28 @@ gulp.task('buildstatic', function () {
         .pipe(gulp.dest(folder.build));
 });
 
+// Build LESS
 gulp.task('lessbuild', function () {
     gulp.src(folder.src + 'src/less/main.less')
         .pipe(less())
-        .pipe(gulp.dest(folder.build))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(gulp.dest(folder.build + 'src/'))
 });
 
-// image processing
+// Minify JS
+gulp.task('minifyjs', function () {
+    gulp.src(folder.src + 'src/js/**/*')
+        .pipe(minify({
+            nosource: true,
+            ext: {
+                src: '',
+                min: '.js'
+            }
+        }))
+        .pipe(gulp.dest(folder.build + 'src/js/'))
+});
+
+// Compress Images
 gulp.task('images', function () {
     var out = folder.build + 'src/images/';
     return gulp.src(folder.src + 'src/images/**/*')
@@ -133,20 +146,26 @@ gulp.task('images', function () {
         .pipe(gulp.dest(out));
 });
 
-
 // Compile Twig templates to HTML
 gulp.task('twigbuild', function () {
     return gulp.src([folder.src + '**/*.html'])
         .pipe(twig())
+        .pipe(inject.replace('/styleguide.css', 'https://wim.usgs.gov/styleguide/css/main.css'))
         .pipe(gulp.dest(folder.build))
 });
+
+// Replace local styleguide css with wim/styleguide.csss
+gulp.task('styleguidecss', function () {
+    gulp.src(folder.build + '**/*.html')
+        .pipe(gulp.dest('build'));
+}); 
 
 // Clean first, then the rest
 gulp.task('build', function (callback) {
     runSequence(
         'clean:build',
-        ['buildstatic', 'lessbuild'],
-        // 'images',
+        ['buildstatic', 'lessbuild', 'minifyjs'],
+        'images',
         'twigbuild',
         callback
     )
