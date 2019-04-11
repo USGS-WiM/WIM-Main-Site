@@ -1,5 +1,5 @@
 query:
-  'query {organization(login:"USGS-WiM") {
+  'query($order:String!) {organization(login:"USGS-WiM") {
     id
     name
     repositories($order:100) {
