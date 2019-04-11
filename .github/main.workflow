@@ -1,6 +1,6 @@
 workflow "Repo Workflow" {
   resolves = ["GitHub Action for AWS"]
-  on = "schedule(4 19 * * *)"
+  on = "schedule(22 19 * * *)"
 }
 
 action "GraphQL query" {
@@ -18,6 +18,6 @@ action "GraphQL query2" {
 action "GitHub Action for AWS" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
   needs = ["GraphQL query", "GraphQL query2"]
-  args = "s3 cp $GITHUB_WORKSPACE/output/ s3://test.wim.usgs.gov/src/ --recursive"
+  args = "s3 cp output/ s3://test.wim.usgs.gov/src/ --recursive"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
