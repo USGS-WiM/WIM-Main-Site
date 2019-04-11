@@ -8,11 +8,11 @@ query:
                           name
                           createdAt
                           description
-                        object(expression: "master:code.json") {
-                          ... on Blob {
-                            text
+                          object(expression: "master:code.json") {
+                            ... on Blob {
+                              text
+                            }
                           }
-                        }
                       }
                   }
               }
