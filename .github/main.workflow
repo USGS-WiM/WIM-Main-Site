@@ -6,13 +6,13 @@ workflow "Repo Workflow" {
 action "GraphQL query" {
   uses = "helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3"
   secrets = ["GITHUB_TOKEN"]
-  args = "--query .github/graph-ql.query.yaml --output repos1.json --order first"
+  args = "--query .github/graph-ql.query.yaml --output repos1.json"
 }
 
 action "GraphQL query2" {
   uses = "helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3"
   secrets = ["GITHUB_TOKEN"]
-  args = "--query .github/graph-ql.query.yaml --output repos2.json --order last"
+  args = "--query .github/graph-ql.query2.yaml --output repos2.json"
 }
 
 action "GitHub Action for AWS" {
