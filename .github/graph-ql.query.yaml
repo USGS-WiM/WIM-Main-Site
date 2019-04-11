@@ -1,0 +1,19 @@
+query:
+  query {organization(login:"USGS-WiM") {
+                  id
+                  name
+                  repositories(first:100) {
+                      nodes {
+                          id
+                          name
+                          createdAt
+                          description
+                        object(expression: "master:code.json") {
+                          ... on Blob {
+                            text
+                          }
+                        }
+                      }
+                  }
+              }
+      }
