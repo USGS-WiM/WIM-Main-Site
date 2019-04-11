@@ -6,12 +6,18 @@ workflow "Repo Workflow" {
 action "GraphQL query" {
   uses = "helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3"
   secrets = ["GITHUB_TOKEN"]
-  args = "--query .github/graph-ql.query.yaml --output repos.json"
+  args = "--query .github/graph-ql.query.yaml --output output\\repos1.json --order first"
+}
+
+action "GraphQL query2" {
+  uses = "helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3"
+  secrets = ["GITHUB_TOKEN"]
+  args = "--query .github/graph-ql.query.yaml --output output\\repos2.json --order last"
 }
 
 action "GitHub Action for AWS" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
-  needs = ["GraphQL query"]
-  args = "s3 cp $GITHUB_WORKSPACE/repos.json s3://test.wim.usgs.gov/src/repos.json"
+  needs = ["GraphQL query", "GraphQL query2"]
+  args = "s3 cp $GITHUB_WORKSPACE/output/ s3://test.wim.usgs.gov/src/ --recursive"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
