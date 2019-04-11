@@ -1,0 +1,28 @@
+<!-- 
+    USGS Header, USA Banner, and Nav
+    -->
+{% include "../includes/usa-banner.html" %}
+{% include "../includes/nav.html" %}
+
+<!-- Main Content -->
+<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
+
+    
+
+    <h1>{{ project_name }}</h1>
+    
+    {% for paragraph in description %}
+        <div class="text-body xs-pt-15 lg-pt-25">
+            {{ paragraph }}
+        </div>
+    {% endfor %}
+
+
+</div>
+
+
+<!-- 
+Footer
+-->
+{% include "../includes/footer.html" %}
+

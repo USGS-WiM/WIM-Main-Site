@@ -5,44 +5,26 @@
     left: calc(~'0% - 10px');
 
     .member{
-        background-color: @grey_light;
         height: 240px;
         width: 48%;
         width: calc(~'50% - 20px');
         margin: 10px;
-        border-radius: @border_radius_lg;
-        background-size: cover;
-        background-position: center;
-        box-shadow: @shadow_lg;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
 
-        &#gary{background-image:url('/src/images/team/gary.png')}
-        &#bruce{background-image:url('/src/images/team/bruce.png')}
-        &#hans{background-image:url('/src/images/team/hans.png')}
-        &#blake{background-image:url('/src/images/team/blake.png')}
-        &#nick{background-image:url('/src/images/team/nick.png')}
-        &#katrin{background-image:url('/src/images/team/katrin.png');}
-        &#dan{background-image:url('/src/images/team/dan.png');}
-        &#veni{background-image:url('/src/images/team/veni.png')}
-        &#erik{background-image:url('/src/images/team/erik.png')}
-        &#jeremy{background-image:url('/src/images/team/jeremy.png')}
-        &#lauren{background-image:url('/src/images/team/lauren.png')}
-        &#mitch{background-image:url('/src/images/team/mitch.png')}
-        &#martyn{background-image:url('/src/images/team/martyn.png')}
-        &#aaron{background-image:url('/src/images/team/aaron.png')}
-        &#moon{background-image:url('/src/images/team/moon_p.jpg')}
-        &#jeff{background-image:url('/src/images/team/jeff_p.jpg')}
-        &#luke{background-image:url('/src/images/team/luke_p.jpg')}
-        &#marie{background-image:url('/src/images/team/marie_p.jpg')}
-
-        // Hide photo so only screenreaders can see it
+        // Size photo element and fit dimensions
         .member-image-element{
-            opacity: 0;
-            height: 1px;
-            width: 1px;
+            width: 100%;
+            flex-grow: 3;
+            object-fit: cover;
+            object-position: 50% 5%;
+            height: 0;
+            border-radius: @border_radius;
+            box-shadow: @shadow_lg;
+            transition: 0.3s;
+            transform: scale(1);
         }
 
 
@@ -66,15 +48,31 @@
         // Meta, name & title
         .member-meta{
             display: block;
-            color: @white;
+            color: @ink_darker;
             font-size: 14px;
-            background-color: fade(@ink_dark, 80%);
-            padding: 4px 8px 6px 8px;
+            padding: 4px 0 6px 0;
             border-bottom-left-radius: @border_radius;
             border-bottom-right-radius: @border_radius;
 
             b{  
                 display: block;
+            }
+        }
+
+
+        // Member Hover State
+        &:focus,
+        &:hover{
+            cursor: pointer;
+
+            .member-image-element{
+                transition: 0.3s;
+                transform: scale(1.02);
+
+            }
+
+            .member-meta b{
+                text-decoration: underline;
             }
         }
 

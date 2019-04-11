@@ -27,7 +27,18 @@
     {% include "../includes/nav.html" %}
     
     <!-- Main Content -->
-    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50" id="app">
+    <!-- 
+        __   __ _   _   ___      (_) ___ 
+        \ \ / /| | | | / _ \     | |/ __|
+        \ V / | |_| ||  __/ _   | |\__ \
+        \_/   \__,_| \___|(_) _/ ||___/
+                            |__/      
+        Vue wimProjects app starts here
+        Vue tags are wrapped with ${ TAG } instead of double brackets
+     -->
+    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50" id="wimProjects">
+
+        
     
         <h1>Exlore Our Projects ${ message }</h1>
         <div class="text-body xs-pt-15 lg-pt-25">
@@ -158,58 +169,35 @@
             View our full list of public projects on the table below or on our <a href="https://github.com/usgs-wim" target="_blank">GitHub</a>.
         </div>
 
+            <input type="text" v-model="projectSearch" placeholder="Search for something.." />
+
         <div class="projects-compact xs-mt-20 lg-mt-40">
 
+
+            <!-- 
+                Ideas:
+                Exclude list?
+                Approved list?
+             -->
+
+            <!-- All Projects Loop -->
+            <a v-bind:href="repo.html_url" target="_blank" class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList" v-if="!repo.archived">
+                <div class="heading">${ repo.name }</div>
+                <div class="text-body">${ repo.description }</div>
+                <div class="tags">
+                    <span class="map">${ repo.language }</span>
+                </div>
+            </a>
+
+
             <!-- FIM -->
-            <a href="https://github.com/usgs-wim/fim-js" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <!-- <a href="https://github.com/usgs-wim/fim-js" target="_blank" class="project-item xs-mb-20 lg-mb-25">
                 <div class="heading">fim-js</div>
                 <div class="text-body">Flood inundation map libraries with real-time USGS river-level data.</div>
                 <div class="tags">
                     <span class="map">Interactive Map</span>
                 </div>
-            </a>
-            <!-- NAWQA -->
-            <a href="https://github.com/usgs-wim/NAWQATrends" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-                <div class="heading">NaWQATrends</div>
-                <div class="text-body">NaWQA Decadal Trends in Groundwater.</div>
-                <div class="tags">
-                    <span class="map">Interactive Map</span>
-                </div>
-            </a>
-            <!-- Whispers -->
-            <a href="https://github.com/usgs-wim/whispers" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-                <div class="heading">whispers</div>
-                <div class="text-body">Wildlife Health Information Sharing Partnership event reporting system v2.</div>
-                <div class="tags">
-                    <span class="map">Interactive Map</span>
-                    <span class="data">Data Management</span>
-                </div>
-            </a>
-            <!-- NAWQA -->
-            <a href="https://github.com/usgs-wim/whispers" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-                <div class="heading">whispers</div>
-                <div class="text-body">Wildlife Health Information Sharing Partnership event reporting system v2.</div>
-                <div class="tags">
-                    <span class="map">Interactive Map</span>
-                    <span class="data">Data Management</span>
-                </div>
-            </a>
-            <!-- Marker Creator -->
-            <a href="https://github.com/USGS-WiM/marker-creator" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-                <div class="heading">marker-creator</div>
-                <div class="text-body">A tool to generate CSS map markers.</div>
-                <div class="tags">
-                    <span class="webapp">Webapp</span>
-                </div>
-            </a>
-            <!-- Marker Creator -->
-            <a href="https://github.com/USGS-WiM/WIM-Main-Site" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-                <div class="heading">WIM-Main-Site</div>
-                <div class="text-body">WIM's website at wim.usgs.gov.</div>
-                <div class="tags">
-                    <span class="static">Static Site</span>
-                </div>
-            </a>
+            </a> -->
 
         </div>
 
@@ -223,7 +211,7 @@
     {% include "../includes/footer.html" %}
 
 
-    <script src="/src/js/app.js"></script>
+    <script src="/src/js/projects.js"></script>
 
   
 </body>

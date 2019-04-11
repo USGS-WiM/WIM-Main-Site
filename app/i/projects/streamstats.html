@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {% set page_title = "Projects: Web Informatics & Mapping" %}
+    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = "Our Projects: Web Informatics & Mapping" %}
+    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
+    {% set share_url = "https://wim.usgs.gov/i/projects" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/branding/meta/Facebook.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/branding/meta/Twitter.png" %}
+
+
+    <!-- 
+        Project Specific Variables
+     -->
+    {% set project_repo_name = "StreamStats" %}
+    {% set project_name = "StreamStats" %}
+    {% set project_desc = "StreamStats" %}
+
+    <!-- Images and Captions -->
+    {% set screenshot_main = "streamstats_1.png" %}
+    {% set caption_main = "Primary StreamStats Client Interface showing large basin in IA." %}
+
+    {% set screenshots = ["streamstats_2.png", "streamstats_3.png", "streamstats_4.png"] %}
+    {% set captions = [
+        "API documentation for National Streamflow Statistics.", 
+        "Upstream flow trace from pourpoint in an OH basin.", 
+        "Flow Statistics available in Streamstats report."
+    ] %}
+
+    <!-- Description Paragraphs -->
+    {% set description = [
+        "StreamStats is a Web-based Geographic Information Systems (GIS) application that provides users with access to an assortment of analytical tools that are useful for a variety of water-resources planning and management purposes, and for engineering and design purposes. StreamStats users can select USGS data-collection station locations shown on a map and obtain previously published information for the stations. Users also can select any location along a stream and obtain the drainage-basin boundary, basin characteristics, and estimates of streamflow statistics for the location. The streamflow statistics that StreamStats can provide for data-collection stations and for user-selected ungaged sites vary among the implemented states and among data-collection stations within states.", 
+        "Cooperator & WIM involvement: WIM began collaborating with the USGS Water Mission Area StreamStats development team since 2014, and has since taken the technical and architecture lead in web development. To keep StreamStats on the forefront of web technology, WIM has moved StreamStats away from a proprietary monolithic application to an ecosystem of web applications and services allowing for more flexibility and extensibility. Adapting an industry-standard Database, Web Service, and Client architecture model has allowed development of numerous APIs and clients to allow for external development on this key system as well better integration possibilities within the USGS.  WIM looks forward to continued involvement in the project, adding additional features and functionality to StreamStats as well as integrating with other Water Mission Area systems and services."
+    ] %}
+
+    <!-- Cooperator Logo -->
+    {% set cooperator_logo = "streamstats_cooperator.png" %}
+
+
+    <!-- Related Repos -->
+    {% set related_repos = [
+        "StreamStatsWebserviceDocumentation", 
+        "StreamStatsServices", 
+        "TravelTimeService",
+        "StreamStatsNationalServices",
+        "StreamStats-Setup",
+        "FlowDirectionTraceServices",
+        "StreamStats-Tools",
+        "StreamStatsIntegrationTest"
+    ] %}
+    
+    {% include "../includes/header.html" %}
+    
+    <!-- Vue required only on projects page -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <!-- 
+        Include Project Page include file
+    -->
+    {% include "project.html" %}
+
+
+    <!-- <script src="/src/js/projects.js"></script> -->
+
+  
+</body>
+</html>

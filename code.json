@@ -29,9 +29,8 @@
     ],
 
     "languages": [
-      "Javascript",
-      "HTML",
-      "LESS/CSS"
+      "VueJS",
+      "TwigJS"
     ],
 
     "contact": {

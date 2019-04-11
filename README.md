@@ -37,11 +37,13 @@ gulp serve-build
 
 ## Deployment
 
-Upload build (/public/ folder) to wim.usgs.gov AWS S3 bucket
+Upload build (/public/ folder) to server.
 
 ## Built With
 
 * HTML
+* [Twig.js](https://github.com/twigjs) - Templating
+* [Vue.js](https://vuejs.org) - Data binding
 * [{less}](http://lesscss.org/) - Styling
 * [Gulp](https://gulpjs.com/) - Workflow Toolkit
 * [Browsersync](https://www.browsersync.io/) - Local server with live refresh
