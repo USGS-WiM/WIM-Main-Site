@@ -1,6 +1,6 @@
 workflow "Repo Workflow" {
   resolves = ["GitHub Action for AWS"]
-  on = "schedule(48 4 * * *)"
+  on = "schedule(52 16 * * *)"
 }
 
 action "GraphQL query" {
