@@ -21,6 +21,7 @@ action "GitHub Action for AWS" {
   args = "s3 cp $GITHUB_WORKSPACE/repos1.json s3://test.wim.usgs.gov/src/repos1.json"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
+
 action "GitHub Action for AWS2" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
   needs = ["GraphQL query2"]
