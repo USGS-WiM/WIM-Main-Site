@@ -1,8 +1,8 @@
 query:
-  'query($order:String!) {organization(login:"USGS-WiM") {
+  'query($order:String!) {organization(login:"USGS-WiM",order:$order) {
     id
     name
-    repositories($order:100) {
+    repositories(order:100) {
         nodes {
             id
             name
