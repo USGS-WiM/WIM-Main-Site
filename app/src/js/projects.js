@@ -33,7 +33,7 @@ var scanRepos = function(){
     for (var i = 0; i < wimProjects.allRepos.length; i++) {
 
         $.ajax({
-            url: "https://raw.githubusercontent.com/USGS-WiM/" + wimProjects.allRepos[i].name + "/staging/code.json",
+            url: "https://raw.githubusercontent.com/USGS-WIM/" + wimProjects.allRepos[i].name + "/staging/code.json",
             method: "GET",
             dataType: "json",
             success: function (res) {
@@ -60,14 +60,15 @@ var getRepos = function(page){
         dataType: "json",
         success: function (res) {
 
-            // Add page of repos to vue wimProjects.allRepos
+            // Concat page of results to the wimProjects.allRepos array
             wimProjects.allRepos = wimProjects.allRepos.concat(res);
 
             // If there are more repos, run the call again
             if(res.length > 99){
                 apiPage++;
                 getRepos(apiPage);
-            }else{
+            }else{ 
+                // Otherwise 
                 wimProjects.repoCount = wimProjects.allRepos.length;
                 scanRepos();
             }
@@ -76,3 +77,4 @@ var getRepos = function(page){
 }
 
 getRepos(apiPage);
+

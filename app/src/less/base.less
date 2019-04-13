@@ -1,6 +1,7 @@
 // Site Base
 body{
-    background-color: @grey_lighter;
+    // background-color: @grey_lighter;
+
     @media (max-width: @screen_mobile) {
         padding-bottom: 85px;
     }
@@ -37,28 +38,62 @@ body{
 // Logo & Navigation  //
 ////////////////////////
 .wim-header{
+    background-color: white;
+    box-shadow: @shadow;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
 
     // Logo
-    .wim-header-logo{
+    .wim-header-branding{
         width: 100%;
         text-align: center;
+        display: flex;
+        box-sizing: border-box;
+        padding: 5px 0;
+        text-decoration: none;
 
         @media (min-width: @screen_mobile) {
             text-align: left;
             width: auto;
         }
 
-        img{
-            width: auto;
-            height: auto;
-            max-height: 70px;
-            margin: 15px auto;
-
-            @media (min-width: @screen_mobile) {
-                max-height: 54px;
-                margin: 0 auto;
+        // Pin Logo
+        .logo{
+            img{
+                width: auto;
+                height: auto;
+                max-height: 70px;
+                margin: 15px auto;
+    
+                @media (min-width: @screen_mobile) {
+                    max-height: 38px;
+                    margin: 0 auto;
+                }
             }
         }
+
+        // Web Informatics & Mapping
+        .name{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 20px;
+            font-family: @sans;
+            font-weight: bold;
+            padding-left: 6px;
+            letter-spacing: -0.54px;
+            color: @ink_darker;
+        }
+
+        // Hover logo
+        &:hover{
+            .name{
+                text-decoration: underline;
+                color: @ink_darker;
+            }
+        }
+
     }
 
     // Navigation Links
@@ -83,15 +118,14 @@ body{
             right: auto;
             bottom: auto;
             width: auto;
-            background-color: transparent;
             box-shadow: none;
             padding: 0;
             border-top: none;
         }
         
         a{
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: normal;
             box-sizing: border-box;
             box-sizing: border-box;
             padding: 4px 16px 4px 16px;
@@ -101,8 +135,7 @@ body{
             height: 40px;
             font-family: @sans;
             transition: @transition;
-            color: @primary_dark;
-            letter-spacing: -0.2px;
+            color: @ink_dark;
             margin: 2px 6px;
 
             @media (min-width: @screen_mobile) {
@@ -120,9 +153,10 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 font-family: @font_awesome;
-                font-weight: 300;
+                font-weight: 400;
                 margin-right: 6px;
                 font-size: 18px;
+                display: none;
 
                 @media (min-width: @screen_mobile) {
                     font-size: 16px;
@@ -227,7 +261,7 @@ a.btn-icon i{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: @ink_dark;
+    background-color: @ink_darker;
 
     .footer-content{
         color: @white;

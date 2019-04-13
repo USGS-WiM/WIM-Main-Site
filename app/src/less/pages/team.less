@@ -1,3 +1,106 @@
+// Hero text
+.team-hero-header{
+    background-image: url('/src/images/map_hero.jpg');
+    text-align: center;
+    color: @white;
+    font-family: @serif;
+    font-weight: 700;
+    font-size: 55px;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-color: fade(@primary_darker, 50%);
+    background-blend-mode: multiply;
+}
+.team-hero{
+    display: block;
+    width: 100%;
+    background-color: @accent_bg;
+
+    h1,h2{
+        margin: 0 auto;
+        max-width: 570px;
+        margin: 30px auto;
+        color: @ink_light;
+    }
+    h1{
+        font-weight: 300;
+        font-family: @serif;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    h2{
+        font-weight: normal;
+        line-height: 34px;
+    }
+}
+
+// Footer at bottom of team page
+.team-photo{
+    display: block;
+    width: 100%;
+    
+    img{
+        display: block;
+        max-width: 80%;
+        max-width: 800px;
+        width: auto;
+        margin: 0 auto 20px auto;
+        filter: sepia(60%) saturate(50%);
+    }
+
+}
+.team-footer{
+    display: block;
+    box-sizing: border-box;
+    background-color: @accent_bg;
+
+    // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23eef0f3' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23d9dde4'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    
+    h2{
+        margin: 0 auto;
+        max-width: 570px;
+        margin: 30px auto 50px auto;
+        color: @ink_light;
+        font-weight: normal;
+        line-height: 34px;
+    }
+
+    img{
+        display: block;
+        max-width: 80%;
+        max-width: 1050px;
+        width: auto;
+        margin: 0 auto 0 auto;
+    }
+}
+
+
+// Member about modal lightbox
+.member-about-lightbox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: fade(@ink_dark, 50%);
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.22s ease-in-out, visibility 0s 0.3s, z-index 0s 0.3s;
+    
+    &.show{
+        pointer-events: all;
+        transition: opacity 0.2s 0s ease-in-out;
+        z-index: 95;
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Team Member Display
 .team-display{
     width: 100%;
     width: calc(~'100% + 20px');
@@ -5,7 +108,7 @@
     left: calc(~'0% - 10px');
 
     .member{
-        height: 240px;
+        height: 280px;
         width: 48%;
         width: calc(~'50% - 20px');
         margin: 10px;
@@ -15,33 +118,50 @@
         position: relative;
 
         // Size photo element and fit dimensions
-        .member-image-element{
-            width: 100%;
+        .member-image{
+            display: block;
             flex-grow: 3;
-            object-fit: cover;
-            object-position: 50% 5%;
-            height: 0;
+            width: 100%;
+            height: auto;
+            position: unset;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             border-radius: @border_radius;
-            box-shadow: @shadow_lg;
-            transition: 0.3s;
-            transform: scale(1);
+            background-size: cover;
+            background-position: center 5%;
+            background-blend-mode: luminosity;
+            transition: @transition;
+            background-color: fade(@primary_darker, 30%);
+            box-sizing: border-box;
+            border: 8px solid @white;
+            box-shadow: @shadow;
+
+            .member-image-element{
+                width: 100%;
+                object-fit: cover;
+                object-position: 50% 5%;
+                max-height: 100%;
+                border-radius: @border_radius;
+                pointer-events: none;
+                opacity: 0;
+            }
         }
+        
 
 
         @media (min-width: @screen_sm) {
-            width: 31.5%;
-            width: calc(~'33.33% - 20px');
-            height: 240px;
+            height: 340px;
         }
         @media (min-width: @screen_md) {
-            width: 23%;
-            width: calc(~'25% - 20px');
-            height: 270px;
+            width: 31.5%;
+            width: calc(~'33.33% - 20px');
+            height: 380px;
         }
         @media (min-width: @screen_lg) {
-            width: 19%;
-            width: calc(~'20% - 20px');
-            height: 300px;
+            width: 23%;
+            width: calc(~'25% - 20px');
+            height: 370px;
         }
 
 
@@ -53,8 +173,10 @@
             padding: 4px 0 6px 0;
             border-bottom-left-radius: @border_radius;
             border-bottom-right-radius: @border_radius;
+            text-align: center;
 
-            b{  
+            b{
+                font-weight: bold;  
                 display: block;
             }
         }
@@ -65,11 +187,12 @@
         &:hover{
             cursor: pointer;
 
-            .member-image-element{
-                transition: 0.3s;
-                transform: scale(1.02);
-
+            .member-image{
+                transition: @transition;
+                box-shadow: @shadow_sm;
+                background-position: center 0%;
             }
+
 
             .member-meta b{
                 text-decoration: underline;
@@ -78,58 +201,138 @@
 
     }
 
-
-
+    // Team member modal
     .member-about{
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: flex-end;
         position: fixed;
-        top: 0;
+        bottom: -140vh;
         left: 0;
-        height: 100%;
+        height: 100vh;
         width: 100%;
         z-index: 100;
-        background-color: fade(@ink_darker, 50%);
+        background-color: transparent;
+        pointer-events: none;
+        visibility: hidden;
+        transition: bottom 0.25s ease-in, visibility 0s 0.4s;
 
         @media (min-width: @screen_mobile) {
             justify-content: center;
         }
 
+        // Show modal
         &.show{
-            display: flex;
+            pointer-events: all;
+            transition: bottom 0.21s ease-out;
+            bottom: 0;
+            visibility: visible;
         }
 
+        // Content of team member modal
         .member-about-content{
             display: block;
             height: auto;
             width: 100%;
             margin: 0 auto;
-            border-top-left-radius: @border_radius_lg;
-            border-top-right-radius: @border_radius_lg;
+            border-top-left-radius: 36px;
+            border-top-right-radius: 36px;
             background-color: @white;
             box-sizing: border-box;
             position: relative;
+            box-shadow: @shadow_lg;
 
             @media (min-width: @screen_mobile) {
                 max-width: 520px;
+                border-top-left-radius: @border_radius_lg;
+                border-top-right-radius: @border_radius_lg;
                 border-bottom-left-radius: @border_radius_lg;
                 border-bottom-right-radius: @border_radius_lg;
             }
 
-            .modal-buttons{
+
+            // Floating close modal button
+            .close-bio-icon{
+                background-color: fade(@white, 15%);
+                box-sizing: border-box;
+                padding: 10px;
+                border-radius: 15px;
+                margin: 0;
+                float: right;
+                margin-right: 25px;
+                height: 50px;
+                width: 50px;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
+                position: absolute;
+                top: -75px;
+                right: 0;
+                text-align: center;
+                font-size: 28px;
+                color: @white;
+                box-sizing: border-box;
 
-                button{
-                    padding: 5px 14px;
+                @media (min-width: @screen_mobile), (max-height: 500px) {
+                    right: -25px;
+                    top: 0;
+                    color: @ink_lighter;
+                    background-color: transparent;
                 }
+
+                &:focus,
+                &:hover{
+                    border: 3px solid @white;
+                    cursor: pointer;
+                    transition: @transition;
+
+                    @media (min-width: @screen_mobile), (max-height: 500px) {
+                        border: none;
+                        color: @red;
+                    }
+                }
+            }
+
+            // Scroll Content if max height
+            .member-about-scroll{
+                max-height: 75vh;
+                overflow-y: scroll;
+            }
+
+
+            // Member modal image
+            .member-about-image{
+                display: block;
+                width: 43%;
+                height: 160px;
+                background-size: cover;
+                background-position: center 20%;
+                border-radius: @border_radius_xl;
+                // box-shadow: 5px 5px fade(@grey, 100%);
+
                 @media (min-width: @screen_mobile) {
-
+                    border-radius: @border_radius;
+                    width: 32%;
+                    height: 135px;
                 }
+            }
 
+            // Member modal name, title, contact
+            .member-about-header{
+                flex-grow: 3;
+                position: relative;
+                box-sizing: border-box;
+                padding-left: 15px;
+
+                h3, h4, .text-body, a{
+                    // background-color: fade(@white, 50%);
+                    width: fit-content;
+                    box-sizing: border-box;
+                }
+                h3{
+                    font-weight: 600;
+                }
             }
         }
     }
-
 }

@@ -38,6 +38,7 @@ gulp.task('clean:dev', function () {
 var devFiles = [
     folder.src + 'src/js/**/*',
     folder.src + 'src/images/**/*',
+    folder.src + 'src/publicsans/**/*',
     folder.src + 'styleguide.css',
     folder.src + 'manifest.json'
 ];
@@ -77,7 +78,11 @@ gulp.task('browsersync', function () {
 
     gulp.watch(folder.src + "src/less/**/*.less", ['lessdev']);
     gulp.watch(folder.src + "**/*.html", ["twigdev"]);
-    gulp.watch(folder.src + "**/*", ["staticchange"]).on("change", reload);
+    gulp.watch([
+        folder.src + "src/js/**/*",
+        folder.src + "src/images/**/*"
+    ] ["staticchange"]).on("change", reload);
+
 });
 
 // Default serve sequence
@@ -85,8 +90,7 @@ gulp.task('serve', function (callback) {
     runSequence(
         'clean:dev',
         ['lessdev', 'staticdev', 'twigdev'],
-        'browsersync',
-        callback
+        'browsersync'
     )
 })
 
