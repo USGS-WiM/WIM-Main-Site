@@ -17,24 +17,30 @@
         Project Specific Variables
     -->
     {% set project_name = "NAWQA" %}
-    {% set project_slug = "NAWQA" %}
-    {% set short_desc = "NAWQA's Short Description." %}
+    {% set project_slug = "nawqa" %}
+    {% set short_desc = "NAWQA Short Description." %}
 
     <!-- Images & Captions -->
-    {% set screenshot_main = "nawqa_1.png" %}
-    {% set caption_main = "NAWQA Screenshot 1 Caption" %}
-
-    {% set screenshots = ["nawqa_1.png", "nawqa_1.png", "nawqa_1.png"] %}
-    {% set captions = [
-        "NAWQA Screenshot 2 Caption", 
-        "NAWQA Screenshot 3 Caption", 
-        "NAWQA Screenshot 4 Caption"
+    {% set screenshots = [
+        {
+            file: "nawqa_1.png",
+            description: "NAWQA Screenshot 1 Caption"
+        },{
+            file: "nawqa_1.png",
+            description: "NAWQA Screenshot 2 Caption"
+        },{
+            file: "nawqa_1.png",
+            description: "NAWQA Screenshot 3 Caption"
+        },{
+            file: "nawqa_1.png",
+            description: "NAWQA Screenshot 4 Caption"
+        }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
         "NAWQA Description paragraph 1.",
-        "NAWQA Description paragraph 2" 
+        "NAWQA Description paragraph 2."
     ] %}
 
     <!-- Cooperator Logo -->
@@ -43,23 +49,25 @@
 
     <!-- Related Repos -->
     {% set related_repos = [
-        "nawqa" 
+        {
+            name: "NAWQATrends",
+            description: "NaWQA Decadal Trends in Groundwater."
+        }
     ] %}
 
-    <!-- Related Repos -->
-    {% set project_links = [
-        "https://github.com/usgs-wim/nawqa"
+    <!-- Repo Links -->
+    {% set repo_links = [
+        {
+            link: "https://github.com/usgs-wim/",
+            text: "View on GitHub",
+            link_icon: "fab fa-github"
+        }
     ] %}
-    {% set project_links_text = [
-        "View on GitHub"
-    ] %}
+
 
 
 
     {% include "../includes/header.html" %}
-
-    <!-- Vue required only on projects page -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 

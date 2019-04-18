@@ -18,23 +18,29 @@
     -->
     {% set project_name = "FIM" %}
     {% set project_slug = "fim" %}
-    {% set short_desc = "FIM Short Description." %}
+    {% set short_desc = "FIM's Short description." %}
 
     <!-- Images & Captions -->
-    {% set screenshot_main = "fim_1.png" %}
-    {% set caption_main = "FIM Screenshot 1 Caption" %}
-
-    {% set screenshots = ["fim_1.png", "fim_1.png", "fim_1.png"] %}
-    {% set captions = [
-        "FIM Screenshot 2 Caption", 
-        "FIM Screenshot 3 Caption", 
-        "FIM Screenshot 4 Caption"
+    {% set screenshots = [
+        {
+            file: "fim_1.png",
+            description: "FIM Screenshot 1 Caption"
+        },{
+            file: "fim_1.png",
+            description: "FIM Screenshot 2 Caption"
+        },{
+            file: "fim_1.png",
+            description: "FIM Screenshot 3 Caption"
+        },{
+            file: "fim_1.png",
+            description: "FIM Screenshot 4 Caption"
+        }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
         "FIM Description paragraph 1.",
-        "FIM Description paragraph 2" 
+        "FIM Description paragraph 2."
     ] %}
 
     <!-- Cooperator Logo -->
@@ -43,25 +49,29 @@
 
     <!-- Related Repos -->
     {% set related_repos = [
-        "fim-js" 
+        {
+            name: "fim-js",
+            description: "Flood inundation map libraries with real-time USGS river-level data."
+        }
     ] %}
 
-    <!-- Related Repos -->
-    {% set project_links = [
-        "https://github.com/usgs-wim/fim-js", 
-        "https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools"
+    <!-- Repo Links -->
+    {% set repo_links = [
+        {
+            link: "https://github.com/usgs-wim/fim-js",
+            text: "View on GitHub",
+            link_icon: "fab fa-github"
+        },{
+            link: "https://www.usgs.gov/mission-areas/water-resources/science/flood-inundation-mapping-fim-program?qt-science_center_objects=0#qt-science_center_objects",
+            text: "View Project Page",
+            link_icon: "fas fa-external-link-square"
+        }
     ] %}
-    {% set project_links_text = [
-        "View on GitHub", 
-        "View Project Page"
-    ] %}
+
 
 
 
     {% include "../includes/header.html" %}
-
-    <!-- Vue required only on projects page -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 

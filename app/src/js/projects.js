@@ -42,6 +42,7 @@ var getRepos = function(jsonFile){
 
             var loadRepos = res.data.organization.repositories.nodes;
 
+
             // Parse JSON and remove empty code.json repos
             for (var i = 0; i < loadRepos.length; i++) {
 
@@ -64,14 +65,13 @@ var getRepos = function(jsonFile){
 
             }
 
-            wimProjects.allRepos = allRepos;
-            wimProjects.repoCount = allRepos.length;
 
             // Do it all again with 2nd 100 repos
             if(jsonFile == 'repos.json'){
                 getRepos('repos2.json')
             }else{
-                console.log(allRepos[5]);
+                wimProjects.allRepos = allRepos;
+                wimProjects.repoCount = allRepos.length;
             }
         }
     });

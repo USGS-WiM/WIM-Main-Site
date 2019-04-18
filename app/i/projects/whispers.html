@@ -17,24 +17,30 @@
         Project Specific Variables
     -->
     {% set project_name = "WHISPers" %}
-    {% set project_slug = "WHISPers" %}
-    {% set short_desc = "WHISPers' Short Description." %}
+    {% set project_slug = "whispers" %}
+    {% set short_desc = "WHISPers Short Description." %}
 
     <!-- Images & Captions -->
-    {% set screenshot_main = "sparrow_1.png" %}
-    {% set caption_main = "WHISPers Screenshot 1 Caption" %}
-
-    {% set screenshots = ["whispers_1.png", "whispers_1.png", "whispers_1.png"] %}
-    {% set captions = [
-        "WHISPers Screenshot 2 Caption", 
-        "WHISPers Screenshot 3 Caption", 
-        "WHISPers Screenshot 4 Caption"
+    {% set screenshots = [
+        {
+            file: "whispers_1.png",
+            description: "WHISPers Screenshot 1 Caption"
+        },{
+            file: "whispers_1.png",
+            description: "WHISPers Screenshot 2 Caption"
+        },{
+            file: "whispers_1.png",
+            description: "WHISPers Screenshot 3 Caption"
+        },{
+            file: "whispers_1.png",
+            description: "WHISPers Screenshot 4 Caption"
+        }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
         "WHISPers Description paragraph 1.",
-        "WHISPers Description paragraph 2" 
+        "WHISPers Description paragraph 2."
     ] %}
 
     <!-- Cooperator Logo -->
@@ -43,23 +49,25 @@
 
     <!-- Related Repos -->
     {% set related_repos = [
-        "whispers" 
+        {
+            name: "WHISPers",
+            description: "WHISPers Repos go here."
+        }
     ] %}
 
-    <!-- Related Repos -->
-    {% set project_links = [
-        "https://github.com/usgs-wim/whispers"
+    <!-- Repo Links -->
+    {% set repo_links = [
+        {
+            link: "https://github.com/usgs-wim/",
+            text: "View on GitHub",
+            link_icon: "fab fa-github"
+        }
     ] %}
-    {% set project_links_text = [
-        "View on GitHub"
-    ] %}
+
 
 
 
     {% include "../includes/header.html" %}
-
-    <!-- Vue required only on projects page -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 

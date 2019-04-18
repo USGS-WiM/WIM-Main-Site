@@ -206,4 +206,27 @@
     @media (min-width: @screen_mobile) {
         top: -10vh;
     }
+
+    .project-thumbnails{
+
+        @media (max-width: @screen_mobile) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .thumbnail{
+            width: 33%;
+
+            @media (max-width: @screen_mobile) {
+                width: 42%;
+            }
+
+            img{
+                height: 180px;
+                width: 100%;
+                object-fit: cover;
+                object-position: top left;
+            }
+        }
+    }
 }

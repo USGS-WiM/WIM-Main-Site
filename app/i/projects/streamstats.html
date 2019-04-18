@@ -20,14 +20,20 @@
     {% set short_desc = "StreamStats provides access to spatial analytical tools providing USGS water science-backed information that are useful for water-resources planning and management, and for engineering and design purposes." %}
     
     <!-- Images & Captions -->
-    {% set screenshot_main = "streamstats_1.png" %}
-    {% set caption_main = "Primary StreamStats Client Interface showing large basin in IA" %}
-
-    {% set screenshots = ["streamstats_2.png", "streamstats_3.png", "streamstats_4.png"] %}
-    {% set captions = [
-        "API documentation for National Streamflow Statistics", 
-        "Upstream flow trace from pourpoint in an OH basin", 
-        "Flow Statistics available in Streamstats report"
+    {% set screenshots = [
+        {
+            file: "streamstats_1.png",
+            description: "Primary StreamStats Client Interface showing large basin in IA"
+        },{
+            file: "streamstats_2.png",
+            description: "API documentation for National Streamflow Statistics"
+        },{
+            file: "streamstats_3.png",
+            description: "Upstream flow trace from pourpoint in an OH basin"
+        },{
+            file: "streamstats_4.png",
+            description: "Flow Statistics available in Streamstats report"
+        }
     ] %}
 
     <!-- Description Paragraphs -->
@@ -49,21 +55,22 @@
     ] %}
 
     <!-- Repo Links -->
-    {% set project_links = [
-        "https://github.com/usgs-wim/StreamStats", 
-        "https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools"
+    {% set repo_links = [
+        {
+            link: "https://github.com/usgs-wim/StreamStats",
+            text: "View on GitHub",
+            link_icon: "fab fa-github"
+        },{
+            link: "https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools",
+            text: "View Project Page",
+            link_icon: "fas fa-external-link-square"
+        }
     ] %}
-    {% set project_links_text = [
-        "View on GitHub", 
-        "View Project Page"
-    ] %}
+
 
 
     
     {% include "../includes/header.html" %}
-    
-    <!-- Vue required only on projects page -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 <body>

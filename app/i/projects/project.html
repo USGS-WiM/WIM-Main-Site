@@ -13,15 +13,41 @@
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
 
     
-
-    <h1>{{ project_name }}</h1>
     
+    
+    
+    <!-- 
+        Description
+    -->
     {% for paragraph in description %}
-        <div class="text-body xs-pt-15 lg-pt-25">
-            {{ paragraph }}
-        </div>
+    <div class="text-body xs-pt-15 lg-pt-25">
+        {{ paragraph }}
+    </div>
     {% endfor %}
-
+    
+    <!-- 
+        Screenshots
+    -->
+    <div class="project-thumbnails xs-f-btw xs-mt-25">
+        {% for item in screenshots %}
+        <div class="thumbnail xs-p-15">
+            <img src="/src/images/projects/{{ item.file }}"/>
+            <div class="caption">{{ item.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+    <!-- Repo Links -->
+    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+        {% for item in repo_links %}
+        <a href="{{ item.link }}" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
+            <i class="{{ item.link_icon }}"></i>
+            <span>{{ item.text }}</span>
+        </a>
+        {% endfor %}
+    </div>
+    
 
     <!-- 
         Related Projects

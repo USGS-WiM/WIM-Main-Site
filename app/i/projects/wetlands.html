@@ -18,23 +18,29 @@
     -->
     {% set project_name = "Wetlands" %}
     {% set project_slug = "wetlands" %}
-    {% set short_desc = "Wetlands' Short Description." %}
+    {% set short_desc = "Wetlands Short Description." %}
 
     <!-- Images & Captions -->
-    {% set screenshot_main = "wetlands_1.png" %}
-    {% set caption_main = "Wetlands Screenshot 1 Caption" %}
-
-    {% set screenshots = ["wetlands_1.png", "wetlands_1.png", "wetlands_1.png"] %}
-    {% set captions = [
-        "Wetlands Screenshot 2 Caption", 
-        "Wetlands Screenshot 3 Caption", 
-        "Wetlands Screenshot 4 Caption"
+    {% set screenshots = [
+        {
+            file: "wetlands_1.png",
+            description: "Wetlands Screenshot 1 Caption"
+        },{
+            file: "wetlands_1.png",
+            description: "Wetlands Screenshot 2 Caption"
+        },{
+            file: "wetlands_1.png",
+            description: "Wetlands Screenshot 3 Caption"
+        },{
+            file: "wetlands_1.png",
+            description: "Wetlands Screenshot 4 Caption"
+        }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
         "Wetlands Description paragraph 1.",
-        "Wetlands Description paragraph 2" 
+        "Wetlands Description paragraph 2."
     ] %}
 
     <!-- Cooperator Logo -->
@@ -43,23 +49,25 @@
 
     <!-- Related Repos -->
     {% set related_repos = [
-        "fws" 
+        {
+            name: "Wetlands",
+            description: "Wetlands Repos go here."
+        }
     ] %}
 
-    <!-- Related Repos -->
-    {% set project_links = [
-        "https://github.com/usgs-wim/fws"
+    <!-- Repo Links -->
+    {% set repo_links = [
+        {
+            link: "https://github.com/usgs-wim/",
+            text: "View on GitHub",
+            link_icon: "fab fa-github"
+        }
     ] %}
-    {% set project_links_text = [
-        "View on GitHub"
-    ] %}
+
 
 
 
     {% include "../includes/header.html" %}
-
-    <!-- Vue required only on projects page -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 
