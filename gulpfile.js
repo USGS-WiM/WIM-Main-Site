@@ -177,7 +177,7 @@ gulp.task('build', function (callback) {
     runSequence(
         'clean:build',
         ['buildstatic', 'lessbuild', 'minifyjs'],
-        // 'images', COMPRESS IMAGES
+        // 'images',
         'twigbuild',
         callback
     )
