@@ -1,3 +1,17 @@
+{% set page_title = name + ": Web Informatics & Mapping" %}
+{% set meta_desc = desc %}
+{% set theme_color = "#030508" %}
+{% set share_title = name + ": Web Informatics & Mapping" %}
+{% set share_desc = desc %}
+
+{% set share_url = "https://wim.usgs.gov/i/projects/" + slug + ".html" %}
+{% set fb_img = "https://wim.usgs.gov/src/images/projects/" + slug + "_1.png" %}
+{% set tw_img = "https://wim.usgs.gov/src/images/projects/" + slug + "_1.png" %}
+
+<!-- Cooperator Logo -->
+{% set cooperator_logo = slug + "_cooperator.png" %}
+
+
 <!-- 
     USGS Header, USA Banner, and Nav
 -->
@@ -7,12 +21,11 @@
 <!-- Main Content -->
 
 <div class="project-hero xs-f-center xs-f-col">
-    {{ project_name }}
+    {{ name }}
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
 
-    
     
     
     
@@ -24,7 +37,7 @@
         {{ paragraph }}
     </div>
     {% endfor %}
-    
+
     <!-- 
         Screenshots
     -->

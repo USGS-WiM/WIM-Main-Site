@@ -3,22 +3,12 @@
 
 <head>
 
-    {% set page_title = "Wetlands: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "Wetlands: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/wetlands.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/wetlands_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/wetlands_1.png" %}
+    <!-- Project Info -->
+    {% set desc = "The U.S. Fish and Wildlife Service is the principal federal agency that provides information to the public on the extent and status of the Nation's wetlands. The agency has developed a series of topical maps to show wetlands and deepwater habitats which can be viewed and downloaded through the wetlands mapper." %}
+    {% set slug = "wetlands" %}
+    {% set name = "Wetlands" %}
+    {% set name_full = "" %}
 
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "Wetlands" %}
-    {% set project_slug = "wetlands" %}
-    {% set short_desc = "Wetlands Short Description." %}
 
     <!-- Images & Captions -->
     {% set screenshots = [
@@ -39,13 +29,9 @@
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "Wetlands Description paragraph 1.",
-        "Wetlands Description paragraph 2."
+        "The Wetlands mapper is designed to deliver easy-to-use, map like views of America's Wetland resources. It integrates digital map data along with other resource information to produce current information on the status, extent, characteristics and functions of wetlands, riparian, and deepwater habitats. The Wetland Mapper fulfills the U.S. Fish and Wildlife Service's strategic plan for the development, revision and dissemination of wetlands data and information to resource managers and the public. This information is intended  to promote the understanding and conservation of wetland resources through discovery and education as well as to aid in resource management, research and decision making.",
+        "The wetlands displayed on the Wetlands Mapper show wetland type and extent using a biological definition of wetlands. There is no attempt to define the limits of proprietary jurisdiction of any Federal, State, or local government, or to establish the geographical scope of the regulatory programs of government agencies."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "wetlands_cooperator.png" %}
-
 
     <!-- Related Repos -->
     {% set related_repos = [
@@ -58,7 +44,7 @@
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/",
+            link: "https://github.com/usgs-wim/wetland-projects-v2",
             text: "View on GitHub",
             link_icon: "fab fa-github"
         }

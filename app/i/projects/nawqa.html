@@ -3,22 +3,12 @@
 
 <head>
 
-    {% set page_title = "NAWQA: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "NAWQA: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/nawqa.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/nawqa_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/nawqa_1.png" %}
+    <!-- Project Info -->
+    {% set desc = "NAWQA provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers." %}
+    {% set slug = "nawqa" %}
+    {% set name = "NAWQA" %}
+    {% set name_full = "National Water-Quality Assessment" %}
 
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "NAWQA" %}
-    {% set project_slug = "nawqa" %}
-    {% set short_desc = "NAWQA Short Description." %}
 
     <!-- Images & Captions -->
     {% set screenshots = [
@@ -39,13 +29,9 @@
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "NAWQA Description paragraph 1.",
-        "NAWQA Description paragraph 2."
+        "In 1991, Congress established the National Water-Quality Assessment (NAWQA) Project to address where, when, why, and how the Nation's water quality has changed, or is likely to change in the future, in response to human activities and natural factors. Since then, NAWQA has produced scientific data and knowledge that is used by national, regional, state, and local agencies to develop science-based policies and management strategies to improve and protect water resources used for drinking water, recreation, irrigation, energy development, and ecosystem needs.",
+        "Our NAWQA web application provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "nawqa_cooperator.png" %}
-
 
     <!-- Related Repos -->
     {% set related_repos = [
@@ -58,7 +44,7 @@
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/",
+            link: "https://github.com/USGS-WiM/nawqa-sw-trends",
             text: "View on GitHub",
             link_icon: "fab fa-github"
         }

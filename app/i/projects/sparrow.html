@@ -3,22 +3,11 @@
 
 <head>
 
-    {% set page_title = "SPARROW: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "SPARROW: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/sparrow.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/sparrow_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/sparrow_1.png" %}
-
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "SPARROW" %}
-    {% set project_slug = "sparrow" %}
-    {% set short_desc = "SPARROW Short Description." %}
+    <!-- Project Info -->
+    {% set desc = "SPARROW is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WIM has partnered with SPARROW scientists to provide several map applications depicting SPARROW models for different regions of the U.S." %}
+    {% set slug = "sparrow" %}
+    {% set name = "SPARROW" %}
+    {% set name_full = "SPAtially Referenced Regressions On Watershed attributes" %}
 
     <!-- Images & Captions -->
     {% set screenshots = [
@@ -39,18 +28,14 @@
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "SPARROW Description paragraph 1.",
-        "SPARROW Description paragraph 2."
+        "SPARROW (SPAtially Referenced Regressions On Watershed attributes) models estimate the amount of a contaminant transported from inland watersheds to larger water bodies by linking monitoring data with information on watershed characteristics and contaminant sources. Explore relations between human activities, natural processes, and contaminant transport using interactive Mappers.",
+        "SPARROW models are used to estimate long-term average values of water characteristics, such as the amount of a contaminant that is delivered downstream, on the basis of existing monitoring data, location and strength of contaminant sources, and characteristics of the landscape."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "sparrow_cooperator.png" %}
-
 
     <!-- Related Repos -->
     {% set related_repos = [
         {
-            name: "Related Repos",
+            name: "sparrow-eastern-us-js",
             description: "Related repos will be here."
         }
     ] %}
@@ -58,7 +43,7 @@
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/",
+            link: "https://github.com/usgs-wim/sparrow-eastern-us-js",
             text: "View on GitHub",
             link_icon: "fab fa-github"
         }

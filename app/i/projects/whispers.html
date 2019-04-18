@@ -2,23 +2,13 @@
 <html>
 
 <head>
+    
+    <!-- Project Info -->
+    {% set desc = "WHISPers is a partner-driven, web-based repository for sharing basic information about historic and ongoing wildlife mortality (death) and/or morbidity (illness) events. The information, such as county-level locations, onset and ending dates, species affected, and diagnosis has generously been shared with the USGS National Wildlife Health Center over time by hundreds of natural resource managers and stakeholders across the U.S. and beyond." %}
+    {% set slug = "WHISPers" %}
+    {% set name = "Wetlands" %}
+    {% set name_full = "Wildlife Health Information Sharing Partnership event reporting system" %}
 
-    {% set page_title = "WHISPers: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "WHISPers: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/whispers.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/whispers_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/whispers_1.png" %}
-
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "WHISPers" %}
-    {% set project_slug = "whispers" %}
-    {% set short_desc = "WHISPers Short Description." %}
 
     <!-- Images & Captions -->
     {% set screenshots = [
@@ -39,12 +29,9 @@
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "WHISPers Description paragraph 1.",
+        "Welcome to WHISPers, a Wildlife Health Information Sharing Partnership event reporting system with current and historic information on wildlife morbidity or mortality events in North America. Events typically involve five or more sick or dead wild animals observed in the same general location and time period. This information is collected opportunistically and provided here by multiple State, Federal, and other agencies to enhance collective understanding of disease in wildlife populations.",
         "WHISPers Description paragraph 2."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "whispers_cooperator.png" %}
 
 
     <!-- Related Repos -->
@@ -58,7 +45,7 @@
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/",
+            link: "https://github.com/usgs-wim/whispers",
             text: "View on GitHub",
             link_icon: "fab fa-github"
         }
