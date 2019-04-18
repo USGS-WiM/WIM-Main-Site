@@ -59,11 +59,12 @@
 <link rel="apple-touch-startup-image" href="/src/images/branding/meta/splash.png">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Source+Sans+Pro:400,,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
 
 
-<link rel="stylesheet" href="https://wim.usgs.gov/styleguide/css/main.css" />
+<link rel="stylesheet" href="/styleguide.css" />
 <link rel="stylesheet" href="/src/main.css" />
+<link rel="stylesheet" href="/src/publicsans/stylesheet.css" />
 
 
 <!-- Javascript -->
@@ -98,9 +99,9 @@
                         <span><i class="far fa-landmark"></i></span>
                     </div>
                     <div class="usa-info-text">
-                        <h5>The .gov means it’s official.</h5>
+                        <h5>The .gov means it's official.</h5>
                         <p>Federal government websites often end in .gov or .mil. Before sharing sensitive information,
-                            make sure you’re on a federal government site.</p>
+                            make sure you're on a federal government site.</p>
                     </div>
                 </div>
                 <div class="usa-info">
@@ -132,19 +133,22 @@ USGS Bar
 WIM Nav
 -->
 <header class="wim-header">
-    <div
-        class="standard-width xs-pl-15 xs-pr-15 sm-pl-20 sm-pr-20 md-pl-30 md-pr-30 lg-pl-50 lg-pr-50 xs-pt-30 xs-pb-20 xs-f-btw">
-        <a href="/" class="wim-header-logo">
-            <img src="/src/images/branding/logo.png" alt="United States Geological Survey (USGS) Logo"
-                title="USGS Home Page" />
+    <div class="standard-width xs-pl-15 xs-pr-15 sm-pl-20 sm-pr-20 md-pl-30 md-pr-30 lg-pl-50 lg-pr-50 xs-f-btw">
+        <a href="/" class="wim-header-branding">
+            <div class="logo">
+                <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
+            </div>
+            <div class="name">
+                Web informatics & Mapping
+            </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
-            <a href="/" class="nav-home"><span>Home</span></a>
-            <a href="/i/team/" class="nav-team""><span>Team</span></a>
-                <a href="/i/projects/" class="nav-projects""><span>Projects</span></a>
-            </nav>
-        </div>
-    </header>
+            <a href="/" id="homeLink"><span>Home</span></a>
+            <a href="/i/team/" id="teamLink"><span>Team</span></a>
+            <a href="/i/projects/" id="projectsLink"><span>Projects</span></a>
+        </nav>
+    </div>
+</header>
     
     
     <!-- Main Content -->
@@ -163,7 +167,7 @@ WIM Nav
 
         <h2>What is Web Informatics and Mapping?</h2>
         <div class="text-body xs-pt-15 lg-pt-25">
-            Web Informatics and Mapping (WIM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations. WIM team members combine collective expertise in cartography, science, and web technology to create custom products that are practical, intuitive, and focused on our cooperators’ needs.
+            Web Informatics and Mapping (WIM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations. WIM team members combine collective expertise in cartography, science, and web technology to create custom products that are practical, intuitive, and focused on our cooperators' needs.
         </div>
         <div class="text-body xs-pt-15 lg-pt-25">
             Our work includes digital cartography, data visualization, data management, data analysis, and decision support. All of our applications are created with the latest web technology, including Angular and ArcGIS. You can view the code for our public projects on our GitHub at <a href="https://github.com/usgs-wim" target="_blank">github.com/USGS-WIM</a>. You can also view the frontend style guide WIM's applications use at <a href="https://wim.usgs.gov/styleguide/" title="WIM Frontend Style Guide">wim.usgs.gov/styleguide</a>.
@@ -228,6 +232,10 @@ WIM Nav
         </div>
     </div>
 </div>
+
+    <script>
+        $("#homeLink").addClass("active");
+    </script>
 
     
 

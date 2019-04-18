@@ -179,6 +179,31 @@
 /////////////////////////////
 // Individual Project Page //
 /////////////////////////////
+.project-hero{
+    background-image: url('/src/images/map_hero.jpg');
+    text-align: center;
+    color: @white;
+    font-family: @serif;
+    font-weight: 700;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    background-color: fade(@primary_darker, 50%);
+    background-blend-mode: multiply;
+    box-sizing: border-box;
+    font-size: 38px;
+    
+    @media (min-width: @screen_mobile) {
+        font-size: 48px;
+        height: 35vh;
+        padding-bottom: 10vh;
+    }
+}
 .project-page{
-
+    background-color: @white;
+    position: relative;
+    
+    @media (min-width: @screen_mobile) {
+        top: -10vh;
+    }
 }

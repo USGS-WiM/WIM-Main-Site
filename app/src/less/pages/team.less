@@ -5,17 +5,22 @@
     color: @white;
     font-family: @serif;
     font-weight: 700;
-    font-size: 55px;
-    height: 35vh;
+    height: 25vh;
     background-size: cover;
     background-position: center;
     background-color: fade(@primary_darker, 50%);
     background-blend-mode: multiply;
+    font-size: 38px;
+
+    @media (min-width: @screen_mobile) {
+        height: 35vh;
+        font-size: 48px;
+    }
 }
 .team-hero{
     display: block;
     width: 100%;
-    background-color: @accent_bg;
+    // background-color: @accent_bg;
 
     h1,h2{
         margin: 0 auto;
@@ -26,9 +31,15 @@
     h1{
         font-weight: 300;
         font-family: @serif;
-        font-size: 40px;
-        line-height: 50px;
-        margin-bottom: 26px;
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 16px;
+
+        @media (min-width: @screen_mobile) {
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 26px;
+        }
     }
     h2{
         font-weight: normal;

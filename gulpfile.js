@@ -37,6 +37,7 @@ gulp.task('clean:dev', function () {
 // Move static files
 var devFiles = [
     folder.src + 'src/repos.json',
+    folder.src + 'src/repos2.json',
     folder.src + 'src/js/**/*',
     folder.src + 'src/images/**/*',
     folder.src + 'src/publicsans/**/*',
@@ -114,6 +115,12 @@ gulp.task('clean:build', function () {
 
 // Move any static files over
 var staticFiles = [
+    folder.src + 'src/repos.json',
+    folder.src + 'src/repos2.json',
+    folder.src + 'src/js/**/*',
+    folder.src + 'src/images/**/*',
+    folder.src + 'src/publicsans/**/*',
+    folder.src + 'styleguide.css',
     folder.src + 'manifest.json'
 ];
 gulp.task('buildstatic', function () {
@@ -155,7 +162,7 @@ gulp.task('images', function () {
 gulp.task('twigbuild', function () {
     return gulp.src([folder.src + '**/*.html'])
         .pipe(twig())
-        .pipe(inject.replace('/styleguide.css', 'https://wim.usgs.gov/styleguide/css/main.css'))
+        // .pipe(inject.replace('/styleguide.css', 'https://wim.usgs.gov/styleguide/css/main.css')) Replace Local Styleguide with wim.usgs
         .pipe(gulp.dest(folder.build))
 });
 
@@ -170,7 +177,7 @@ gulp.task('build', function (callback) {
     runSequence(
         'clean:build',
         ['buildstatic', 'lessbuild', 'minifyjs'],
-        'images',
+        // 'images', COMPRESS IMAGES
         'twigbuild',
         callback
     )
