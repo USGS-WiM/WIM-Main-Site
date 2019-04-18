@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% set page_title = "SPARROW: Web Informatics & Mapping" %}
+    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = "SPARROW: Web Informatics & Mapping" %}
+    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/sparrow.html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/projects/sparrow_1.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/projects/sparrow_1.png" %}
+
+
+    <!-- 
+        Project Specific Variables
+    -->
+    {% set project_name = "SPARROW" %}
+    {% set project_slug = "SPARROW" %}
+    {% set short_desc = "SPARROW's Short Description." %}
+
+    <!-- Images & Captions -->
+    {% set screenshot_main = "sparrow_1.png" %}
+    {% set caption_main = "SPARROW Screenshot 1 Caption" %}
+
+    {% set screenshots = ["sparrow_1.png", "sparrow_1.png", "sparrow_1.png"] %}
+    {% set captions = [
+        "SPARROW Screenshot 2 Caption", 
+        "SPARROW Screenshot 3 Caption", 
+        "SPARROW Screenshot 4 Caption"
+    ] %}
+
+    <!-- Description Paragraphs -->
+    {% set description = [
+        "SPARROW Description paragraph 1.",
+        "SPARROW Description paragraph 2" 
+    ] %}
+
+    <!-- Cooperator Logo -->
+    {% set cooperator_logo = "sparrow_cooperator.png" %}
+
+
+    <!-- Related Repos -->
+    {% set related_repos = [
+        "sparrow" 
+    ] %}
+
+    <!-- Related Repos -->
+    {% set project_links = [
+        "https://github.com/usgs-wim/sparrow"
+    ] %}
+    {% set project_links_text = [
+        "View on GitHub"
+    ] %}
+
+
+
+    {% include "../includes/header.html" %}
+
+    <!-- Vue required only on projects page -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 
+        Include Project Page include file
+    -->
+    {% include "project.html" %}
+
+
+    <!-- <script src="/src/js/projects.js"></script> -->
+
+
+</body>
+
+</html>

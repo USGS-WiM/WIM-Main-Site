@@ -40,9 +40,12 @@ body{
 .wim-header{
     background-color: white;
     box-shadow: @shadow;
-    position: sticky;
     top: 0px;
     z-index: 10;
+
+    @media (min-width: @screen_mobile) {
+        position: sticky;
+    }
 
     // Logo
     .wim-header-branding{
@@ -52,10 +55,10 @@ body{
         box-sizing: border-box;
         padding: 5px 0;
         text-decoration: none;
+        justify-content: center;
 
         @media (min-width: @screen_mobile) {
-            text-align: left;
-            width: auto;
+            justify-content: flex-start;
         }
 
         // Pin Logo
@@ -63,11 +66,11 @@ body{
             img{
                 width: auto;
                 height: auto;
-                max-height: 70px;
-                margin: 15px auto;
-    
+                max-height: 38px;
+                
                 @media (min-width: @screen_mobile) {
                     max-height: 38px;
+                    margin: 15px auto;
                     margin: 0 auto;
                 }
             }
@@ -124,7 +127,7 @@ body{
         }
         
         a{
-            font-size: 14px;
+            font-size: 16px;
             font-weight: normal;
             box-sizing: border-box;
             box-sizing: border-box;
@@ -137,6 +140,7 @@ body{
             transition: @transition;
             color: @ink_dark;
             margin: 2px 6px;
+            font-weight: bold;
 
             @media (min-width: @screen_mobile) {
                 box-shadow: none;
@@ -145,35 +149,6 @@ body{
                 margin: 0 0 0 15px;
                 height: 100%;
                 max-height: 54px;
-            }
-
-            // Icon before link text
-            &:before{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-family: @font_awesome;
-                font-weight: 400;
-                margin-right: 6px;
-                font-size: 18px;
-                display: none;
-
-                @media (min-width: @screen_mobile) {
-                    font-size: 16px;
-                    margin-right: 5px;
-                }
-            }
-
-            &.nav-home:before{
-                content: '\f80b';
-                position: relative;
-                top: -1px;
-            }
-            &.nav-team:before{
-                content: '\f500';
-            }
-            &.nav-projects:before{
-                content: '\f61f';
             }
 
             // Actual Link Text
@@ -224,11 +199,13 @@ body{
                 &:hover{
                     background-color: @primary;
                     box-shadow: @shadow;
+                    color: @white;
                     
                     @media (min-width: @screen_mobile) {
                         background-color: transparent;
                         box-shadow: none;
                         cursor: default;
+                        color: @primary_dark;
                     }
 
                     span{

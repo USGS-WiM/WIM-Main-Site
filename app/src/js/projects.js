@@ -2,7 +2,8 @@ var wimProjects = new Vue({
     el: '#wimProjects',
     delimiters: ["${", "}"],
     data: {
-        message: 'Vue.js Binding!',
+        message: '',
+        featured: [],
         allRepos: [],
         repoCount: 0,
         projectSearch: ''
@@ -15,9 +16,9 @@ var wimProjects = new Vue({
             return this.allRepos;
         },
         filteredList() {
-            return this.newestRepos.filter(repo => {
+            return this.allRepos.filter(repo => {
                 // Combine all GitHub fields to search into one string
-                var repoSearchString = repo.name + " " + repo.description + " " + repo.language;
+                var repoSearchString = repo.name + " " + repo.description + " " + repo.languages;
                 return repoSearchString.toLowerCase().includes(this.projectSearch.toLowerCase())
             })
         }
@@ -25,56 +26,55 @@ var wimProjects = new Vue({
 })
 
 
-var apiPage = 1;
 
-var goodRepos = [];
-
-var scanRepos = function(){
-    for (var i = 0; i < wimProjects.allRepos.length; i++) {
-
-        $.ajax({
-            url: "https://raw.githubusercontent.com/USGS-WIM/" + wimProjects.allRepos[i].name + "/staging/code.json",
-            method: "GET",
-            dataType: "json",
-            success: function (res) {
+var allRepos = [];
 
 
-                if (res[0].status.toLowerCase() == 'production' || res[0].status.toLowerCase() == 'beta'){
-                    goodRepos.push(res);
-                }
-            }
-        });
 
-
-    }
-
-    console.log(goodRepos)
-}
-
-var getRepos = function(page){
+var getRepos = function(jsonFile){
 
     $.ajax({
-        url: "https://api.github.com/orgs/usgs-wim/repos?per_page=100&page="+page,
+        url: "/src/"+jsonFile,
         jsonp: true,
         method: "GET",
         dataType: "json",
         success: function (res) {
 
-            // Concat page of results to the wimProjects.allRepos array
-            wimProjects.allRepos = wimProjects.allRepos.concat(res);
+            var loadRepos = res.data.organization.repositories.nodes;
 
-            // If there are more repos, run the call again
-            if(res.length > 99){
-                apiPage++;
-                getRepos(apiPage);
-            }else{ 
-                // Otherwise 
-                wimProjects.repoCount = wimProjects.allRepos.length;
-                scanRepos();
+            // Parse JSON and remove empty code.json repos
+            for (var i = 0; i < loadRepos.length; i++) {
+
+                // If code.json exists
+                if(loadRepos[i].object !== null){
+
+                    // Parse JSON
+                    var parsed = JSON.parse(loadRepos[i].object.text);
+                 
+                    // Remove undefined
+                    if(parsed[0]){
+                      
+                        // Only save if beta or Production
+                        if(parsed[0].status.toString().toLowerCase() == 'production' || parsed[0].status.toString().toLowerCase() == 'beta'){
+                            allRepos.push(parsed[0])
+                        }
+                    }
+                }
+
+
+            }
+
+            wimProjects.allRepos = allRepos;
+            wimProjects.repoCount = allRepos.length;
+
+            // Do it all again with 2nd 100 repos
+            if(jsonFile == 'repos.json'){
+                getRepos('repos2.json')
+            }else{
+                console.log(allRepos[5]);
             }
         }
     });
 }
 
-getRepos(apiPage);
-
+getRepos("repos.json");

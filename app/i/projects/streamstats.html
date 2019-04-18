@@ -2,32 +2,32 @@
 <html>
 <head>
 
-    {% set page_title = "Projects: Web Informatics & Mapping" %}
+    {% set page_title = "StreamStats: Web Informatics & Mapping" %}
     {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
     {% set theme_color = "#030508" %}
-    {% set share_title = "Our Projects: Web Informatics & Mapping" %}
+    {% set share_title = "StreamStats: Web Informatics & Mapping" %}
     {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/branding/meta/Facebook.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/branding/meta/Twitter.png" %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/streamstats.html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/projects/streamstats_1.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/projects/streamstats_1.png" %}
 
 
     <!-- 
         Project Specific Variables
-     -->
-    {% set project_repo_name = "StreamStats" %}
+    -->
     {% set project_name = "StreamStats" %}
-    {% set project_desc = "StreamStats" %}
-
-    <!-- Images and Captions -->
+    {% set project_slug = "streamstats" %}
+    {% set short_desc = "StreamStats provides access to spatial analytical tools providing USGS water science-backed information that are useful for water-resources planning and management, and for engineering and design purposes." %}
+    
+    <!-- Images & Captions -->
     {% set screenshot_main = "streamstats_1.png" %}
-    {% set caption_main = "Primary StreamStats Client Interface showing large basin in IA." %}
+    {% set caption_main = "Primary StreamStats Client Interface showing large basin in IA" %}
 
     {% set screenshots = ["streamstats_2.png", "streamstats_3.png", "streamstats_4.png"] %}
     {% set captions = [
-        "API documentation for National Streamflow Statistics.", 
-        "Upstream flow trace from pourpoint in an OH basin.", 
-        "Flow Statistics available in Streamstats report."
+        "API documentation for National Streamflow Statistics", 
+        "Upstream flow trace from pourpoint in an OH basin", 
+        "Flow Statistics available in Streamstats report"
     ] %}
 
     <!-- Description Paragraphs -->
@@ -42,15 +42,23 @@
 
     <!-- Related Repos -->
     {% set related_repos = [
-        "StreamStatsWebserviceDocumentation", 
-        "StreamStatsServices", 
-        "TravelTimeService",
-        "StreamStatsNationalServices",
-        "StreamStats-Setup",
-        "FlowDirectionTraceServices",
-        "StreamStats-Tools",
-        "StreamStatsIntegrationTest"
+        {
+            name: "mobileangularui-checkbox",
+            description: "A styled checkbox of various sizes and colors for mobile angular ui."
+        }
     ] %}
+
+    <!-- Repo Links -->
+    {% set project_links = [
+        "https://github.com/usgs-wim/StreamStats", 
+        "https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools"
+    ] %}
+    {% set project_links_text = [
+        "View on GitHub", 
+        "View Project Page"
+    ] %}
+
+
     
     {% include "../includes/header.html" %}
     

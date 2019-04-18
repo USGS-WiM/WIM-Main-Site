@@ -1,0 +1,884 @@
+{
+    "data": {
+        "organization": {
+            "id": "MDEyOk9yZ2FuaXphdGlvbjg3MTM2NDk=",
+            "name": "USGS Web Informatics and Mapping",
+            "repositories": {
+                "nodes": [
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkyNDIzMTEzMQ==",
+                        "name": "STNPublic",
+                        "createdAt": "2014-09-19T13:39:43Z",
+                        "description": "Flood Event Viewer v1 (formerly STN public)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNPublic\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Flood Event Viewer v1 for short-term network (STN) database (formerly STN public)\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/STNPublic/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNPublic/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNPublic/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNPublic\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"client\",\n      \"stn\",\n      \"fev\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkyNDUwODY3NA==",
+                        "name": "STNField",
+                        "createdAt": "2014-09-26T17:28:18Z",
+                        "description": "code base for the STN Field map",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNField\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Original map within the origin stnweb in the map tab\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNField/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNField/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNField\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"client\",\n      \"stn\",\n      \"map\"\n    ],\n\n    \"languages\": [\n      \"Javascript\", \"ESRI\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-01-11\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkyNDY5NjAzNw==",
+                        "name": "merlin_django",
+                        "createdAt": "2014-10-01T21:25:37Z",
+                        "description": "Mercury Research Laboratory Information Management System written in Django with Django Rest Framework",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"merlin_django\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Mercury Research Laboratory Information Management System\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Development\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/merlin_django/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/merlin_django/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/merlin_django/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/merlin_django\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"mercury\",\n      \"lab\",\n      \"merlin\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"python\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Aaron Stephenson\",\n      \"email\": \"astephenson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-11-08\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkyNjQ1ODE3NA==",
+                        "name": "STNDataPortal",
+                        "createdAt": "2014-11-10T22:09:00Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"Wimpo\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Short-term Network (STN) data portal\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/STNDataPortal/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://stn.wim.usgs.gov/stndataportal/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNDataPortal/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNDataPortal/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNDataPortal\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"stn\",\n      \"short-term network\",\n      \"data\",\n      \"portal\",\n      \"data portal\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMTI3NDAwNw==",
+                        "name": "NAWQATrends",
+                        "createdAt": "2015-02-24T18:07:09Z",
+                        "description": "NaWQA Decadal Trends in Groundwater",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"NAWQATrends\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"NaWQA Decadal Trends in Groundwater\",\n    \"version\": \"v0.0.0\",\n    \"status\": [\"Archival\"],\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/USGS-WiM/NAWQATrends/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/NAWQATrends/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/NAWQATrends/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/NAWQATrends\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"nawqa\",\n      \"groundwater\",\n      \"decadal\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nick Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-04-19\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzIxMTQ4Mw==",
+                        "name": "jstemplate-esri-bootstrap",
+                        "createdAt": "2015-03-31T21:39:33Z",
+                        "description": "WiM template for building a map application with the ArcGIS API for JavaScript and Twitter Bootstrap, using the 'bootstrap-map-js' extension from Esri",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"jstemplate-esri-bootstrap\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"WiM template for building a map application\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Development\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/jstemplate-esri-bootstrap/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"N/A\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/jstemplate-esri-bootstrap/archive/master.zip\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/jstemplate-esri-bootstrap.git\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"bootstrap\",\n      \"esri\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"html\",\n      \"css\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzQ5MzEwOA==",
+                        "name": "STNWeb1",
+                        "createdAt": "2015-04-06T16:49:23Z",
+                        "description": "Legacy STNWeb codebase",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNWeb1\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"ASP.NET Web application for Short Term Network data management\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNWeb1/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNWeb1/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNWeb1\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"STN\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Hans Vraga\",\n      \"email\": \"hvraga@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-01-11\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzYyNjQ5Ng==",
+                        "name": "generator-wim",
+                        "createdAt": "2015-04-08T19:04:40Z",
+                        "description": "Yeoman generator for creating WIM compliant mapping templates",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzg4NzA0OA==",
+                        "name": "BadRiverGroundwater",
+                        "createdAt": "2015-04-13T18:47:40Z",
+                        "description": "3 map applications to support groundwater modeling in the Bad River watershed, northern Wisconsin",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BadRiverGroundwater\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"groundwater modeling in the Bad River watershed\",\n    \"version\": \"v0.0.0\",\n    \"status\":\"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/BadRiverGroundwater/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/badriver/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BadRiverGroundwater/archive/BadRiverGroundwater-master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BadRiverGroundwater/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BadRiverGroundwater\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Bad River\",\n      \"Groundwater\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzg5MDE3NA==",
+                        "name": "BadRiverInputs",
+                        "createdAt": "2015-04-13T19:50:51Z",
+                        "description": "2nd application for the Bad River Groundwater project to show inputs to the model",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BadRiverInputs\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Show inputs for the Bad River Groundwater Model Mapper\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/BadRiverInputs/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/badriver/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BadRiverInputs/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BadRiverInputs/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BadRiverInputs\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Bad River\",\n      \"groundwater\",\n      \"inputs\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzg5MDUxNA==",
+                        "name": "BadRiverResults",
+                        "createdAt": "2015-04-13T19:56:45Z",
+                        "description": "3rd application for the Bad River Groundwater project that allows users to interact with model results",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BadRiverResults\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Show results for the Bad River Groundwater Model Mapper\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/BadRiverResults/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/badriver/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BadRiverResults/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BadRiverResults/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BadRiverResults\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Bad River\",\n      \"groundwater\",\n      \"results\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzMzkzOTIxMA==",
+                        "name": "SiGLDMS",
+                        "createdAt": "2015-04-14T15:11:58Z",
+                        "description": "Data management system for SiGL",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"SiGLDMS\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Data Management System for Science in the Great Lakes (SiGL)\",\n    \"version\": \"v2.0.02\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/SiGLDMS/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sigl.wim.usgs.gov/sigldms/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/SiGLDMS/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/SiGLDMS/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/SiGLDMS\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sigl\",\n      \"great lakes\",\n      \"data management\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"C#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzNDQxMTc0Ng==",
+                        "name": "StreamStats",
+                        "createdAt": "2015-04-22T19:40:29Z",
+                        "description": "USGS StreamStats",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"StreamStats\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"StreamStats client application\",\n    \"version\": \"v4.3.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"Production\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/StreamStats/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/StreamStats/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/StreamStats\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Streamstats\",\n      \"Services\"\n    ],\n\n    \"languages\": [\n      \"typescript\",\"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-12-12\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzNDY2NzI5Ng==",
+                        "name": "wim_angular",
+                        "createdAt": "2015-04-27T13:08:38Z",
+                        "description": "Contains base typescript models and services for WiM.",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim_angular\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"wim_angular is a collection of custom reusable angularjs libraries and objects.\",\n    \"version\": \"v1.1.3\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/wim_angular/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wim_angular/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wim_angular\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"angularjs\"\n    ],\n\n    \"languages\": [\n      \"typescript\",\n\t  \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzNDc0MDc3MQ==",
+                        "name": "WLERA",
+                        "createdAt": "2015-04-28T16:01:01Z",
+                        "description": "Western Lake Erie Restoration Assessment",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WLERA\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Web interface for the Western Lake Erie Restoration Area of the Great Lakes Coastal Restoration Assessment project\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/USGS-WiM/WLERA/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WLERA/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WLERA/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WLERA\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"glcwra\",\n      \"great lakes\",\n      \"science\"\n    ],\n    \"languages\": [\n      \"Javascript\",\n      \"HTML\",\n      \"CSS\"\n    ],\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n    \"partners\": [\n      {\n        \"name\": \"Kurt Kowalski\",\n        \"email\": \"kkowalski@usgs.gov\"\n      }\n    ],\n    \"relatedCode\": [\n      {\n        \"name\": \"WLERA\",\n        \"codeUrl\": \"https://github.com/USGS-WiM/CRSRA\",\n        \"isGovernmetnRepo\": true\n      },\n      {\n        \"name\": \"SBRA\",\n        \"codeUrl\": \"https://github.com/USGS-WiM/SBRA\",\n        \"isGovernmetnRepo\": true\n      }\n\n    ],\n    \"date\": {\n      \"lastModified\": \"2017-10-27\",\n      \"metadataLastUpdated\": \"2017-11-29\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzNTg4NDUwNQ==",
+                        "name": "StreamStatsWebserviceDocumentation",
+                        "createdAt": "2015-05-19T13:41:29Z",
+                        "description": "Light weight angular app that documents ss REST services",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzNjM4MDU2Ng==",
+                        "name": "Github-Auto-Deploy",
+                        "createdAt": "2015-05-27T16:33:28Z",
+                        "description": "a server that allows you to automatically deploy the latest version of your github project at each git push",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzNjM5NTk1Mw==",
+                        "name": "StreamStatsServices",
+                        "createdAt": "2015-05-27T21:08:05Z",
+                        "description": "StreamStats REST Services",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"StreamStatsServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"StreamStats REST services\",\n    \"version\": \"v1.2.22\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/StreamStatsServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/StreamStatsServices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/StreamStatsServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Streamstats\",\n      \"Services\",\n\t  \"REST\",\n\t  \"Delineation\",\n\t  \"BasinCharacteristics\"\n    ],\n\n    \"languages\": [\n      \"c#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzODc4MjM1MQ==",
+                        "name": "STNEventApp",
+                        "createdAt": "2015-07-08T22:00:40Z",
+                        "description": "Template for single event application for declared event in STN",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNEventApp\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Template for single event application for declared event in short-term network (STN) database\",\n    \"version\": \"v0.0.0\",\n    \"status\":  \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/STNEventApp/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNEventApp/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNEventApp/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNEventApp\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"stn\",\n      \"short-term network\",\n      \"event\",\n      \"app\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzODgzNjMwOA==",
+                        "name": "WetlandsMapper",
+                        "createdAt": "2015-07-09T17:55:52Z",
+                        "description": "FWS Wetlands Mapper (HTML)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WetlandsMapper\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"FWS Wetlands Mapper (HTML)\",\n    \"version\": \"v0.0.0\",\n    \"status\": [\"Archival\"],\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/WetlandsMapper/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WetlandsMapper/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WetlandsMapper/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WetlandsMapper\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"fws\",\n      \"wetlands\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nick Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-04-19\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzOTEwMzg5NA==",
+                        "name": "Fishtail",
+                        "createdAt": "2015-07-14T22:35:11Z",
+                        "description": "Fishtail",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"Fishtail\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"A decision support mapper for conserving stream fish habitats of the Northeast Climate Science Center (NECSC) region\",\n    \"version\": \"v1.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/Fishtail/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/Fishtail\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/Fishtail/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/Fishtail/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/Fishtail\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Fishtail\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"Actionscript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkzOTE1Mzk5Mg==",
+                        "name": "FishVis",
+                        "createdAt": "2015-07-15T18:31:24Z",
+                        "description": "FishVis mapper",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"FishVis\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"The FishVis Mapper is the product of an Upper Midwest and Great Lakes Landscape Conservation Cooperative project, 'A Regional Decision Support Tool for Identifying Vulnerabilities of Riverine Habitat and Fishes to Climate Change'\",\n    \"version\": \"\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/FishVis/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/FishVis\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/FishVis/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/FishVis/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/FishVis\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Fishvis\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"Actionscript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0MDIwOTUwNg==",
+                        "name": "FIM",
+                        "createdAt": "2015-08-04T21:15:50Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"FIM\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"The Flood Inundation Mapper is a tool for exploring flood inundation maps, streamflow conditions, flood forecasts, potential loss estimates, and more.\",\n    \"version\": \"v1.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/FIM/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/FIM\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/FIM/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/FIM/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/FIM\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"flood\",\n      \"inundation\",\n      \"fim\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"Actionscript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0MDMxODU4MA==",
+                        "name": "NSSServices",
+                        "createdAt": "2015-08-06T17:42:11Z",
+                        "description": "Services to calculate National Streamflow statistics",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"NSSServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"StreamStats National Streamflow Statistics (NSS) services that provides regional flood-peak streamflow estimates and low flow frequency/duration streamflow estimates. See https://water.usgs.gov/osw/programs/nss/index.html\",\n    \"version\": \"v0.0.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/NSSServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/NSSServices/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/NSSServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Streamstats\",\n\t  \"NSS\",\n\t  \"Flow statistics\",\n      \"Services\",\n\t  \"REST\"\n    ],\n\n    \"languages\": [\n      \"c#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-30\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0MTEwMjkzNg==",
+                        "name": "wim-leaflet-examples",
+                        "createdAt": "2015-08-20T15:18:11Z",
+                        "description": "Example code for common leaflet needs, arranged bespoke for WiM's needs.",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim-leaflet-examples\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Example code for common leaflet needs, arranged bespoke for WiM's needs\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Ideation\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/wim-leaflet-examples/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/wim-leaflet-examples/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wim-leaflet-examples/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wim-leaflet-examples\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"wim\",\n      \"leaflet\",\n      \"examples\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0MjU5MzgwNw==",
+                        "name": "WIM-Main-Site",
+                        "createdAt": "2015-09-16T14:52:24Z",
+                        "description": "Main Website at wim.usgs.gov",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim-main-site\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Main website for the USGS Web Informatics & Mapping team\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/USGS-WIM/WIM-Main-Site/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WIM/WIM-Main-Site/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WIM/WIM-Main-Site/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WIM/WIM-Main-Site\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Static Site\"\n    ],\n\n    \"languages\": [\n      \"VueJS\",\n      \"TwigJS\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Mitch Samuels\",\n      \"email\": \"msamuels@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2019-03-30\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0MzE1NTE2MA==",
+                        "name": "NorEaST",
+                        "createdAt": "2015-09-25T15:29:47Z",
+                        "description": "Map portal for NorEaST stream temperature database",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"NorEaST\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Map portal for NorEaST stream temperature database\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/NorEaST/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/noreast/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/NorEaST/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/NorEaST/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/NorEaST\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"noreast\",\n      \"stream temperature\",\n      \"portal\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0Mzc4Mjk4MA==",
+                        "name": "WesternHazards2015",
+                        "createdAt": "2015-10-06T22:41:41Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WesternHazards2015\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"\",\n    \"version\": \"v0.0.0\",\n    \"status\": [\"Archival\"],\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/WesternHazards2015/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WesternHazards2015/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WesternHazards2015/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WesternHazards2015\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"hazards\",\n      \"western\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nick Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-04-19\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0MzgzNjQ4NQ==",
+                        "name": "WetlandsProjects",
+                        "createdAt": "2015-10-07T18:29:32Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WetlandsProjects\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"The Wetlands Projects Mapper shows recent wetland data additions and active wetland mapping projects.\",\n    \"version\": \"v1.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/WetlandsProjects/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/WetlandsProjects\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WetlandsProjects/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WetlandsProjects/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WetlandsProjects\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"wetlands\",\n      \"nwi\",\n      \"fws\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"Actionscript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0NTYzMDI0NQ==",
+                        "name": "NJReservoirMapper",
+                        "createdAt": "2015-11-05T18:17:07Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"NJReservoirMapper\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"The New Jersey Reservoir Mapper provides a snapshot of most recent available water-level data for 25 gaged reservoirs in New Jersey.\",\n    \"version\": \"v1.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/NJReservoirMapper/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/NJReservoirMapper\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/NJReservoirMapper/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/NJReservoirMapper/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/NJReservoirMapper\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"reservoir\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"Actionscript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0NjE0NjgxNw==",
+                        "name": "nwr-zoom-applet",
+                        "createdAt": "2015-11-13T20:56:38Z",
+                        "description": "A simple map applet for zooming to specified National Wildlife Refuge, for embedding. Based on ArcGIS API for JavaScript. ",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"nwr-zoom-applet\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Map applet for zooming to specified National Wildlife Refuge, for embedding\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/nwr-zoom-applet/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"downloadURL\": \"https://github.com/USGS-WiM/nwr-zoom-applet/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/nwr-zoom-applet/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/nwr-zoom-applet\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"nwr\",\n      \"zoom\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0NzM1OTA2MQ==",
+                        "name": "FWSResourceMapper",
+                        "createdAt": "2015-12-03T20:41:23Z",
+                        "description": "FWS Resource Mapper (Gulf Spill)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"FWSResourceMapper\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"FWS Resource Mapper (Gulf Spill)\",\n    \"version\": \"v0.0.0\",\n    \"status\": [\"Archival\"],\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/FWSResourceMapper/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/FWSResourceMapper/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/FWSResourceMapper/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/FWSResourceMapper\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"fws\",\n      \"resource\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nick Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-04-19\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0NzcxODcxOA==",
+                        "name": "Sandy",
+                        "createdAt": "2015-12-09T21:02:27Z",
+                        "description": "Replacement for the legacy Hurricane Sandy mapper, based on the STNEventApp codebase.",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"Sandy\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Flood event viewer for hurricane Sandy, from the Short-Term Network (STN) database\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/Sandy/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://stn.wim.usgs.gov/fev/#Sandy\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/Sandy/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/Sandy/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/Sandy\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"flood event\",\n      \"hurricane\",\n      \"Sandy\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0OTA5NTExNg==",
+                        "name": "MARBFlood2015",
+                        "createdAt": "2016-01-05T21:55:10Z",
+                        "description": "Mapper for OWQ that shows key data for historic winter flood of the Mississippi Area River Basin in 2015",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"MARBFlood2015\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Mapper for OWQ that shows key data for historic winter flood of the Mississippi Area River Basin in 2015\",\n    \"version\": \"v1.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/MARBFlood2015/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/MARBFlood2015\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/MARBFlood2015/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/MARBFlood2015/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/MARBFlood2015\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"MARB\",\n      \"Flood\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"html\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk0OTIyMzc0Nw==",
+                        "name": "STNWeb",
+                        "createdAt": "2016-01-07T18:53:05Z",
+                        "description": "Data management application for the USGS Short-Term Network (STN) database",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNWeb\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Data management application for the USGS Short-Term Network (STN) database\",\n    \"version\": \"v2.2.5\",\n\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/STNWeb/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://stn.wim.usgs.gov/stnweb/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNWeb/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNWeb/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNWeb\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"data management\",\n      \"stn\",\n      \"short-term network\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Lauren\",\n      \"email\": \"lprivette@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MDU4ODYzNQ==",
+                        "name": "NABat",
+                        "createdAt": "2016-01-28T14:32:51Z",
+                        "description": "Pilot application for National Wildlife Health Center highlighting disease in bats",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"NABat\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Pilot application for National Wildlife Health Center highlighting disease in bats\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/NABat/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/NABat/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/NABat\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"NaBat\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MDY2ODEwMg==",
+                        "name": "STNServices2",
+                        "createdAt": "2016-01-29T14:40:15Z",
+                        "description": "Web services for the Short-Term Network (STN) database",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNServices2\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Services used by the Short-Term Network (STN) database\",\n    \"version\": \"v2.1.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/STNServices2/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://stn.wim.usgs.gov/STNServices/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNServices2/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNServices2/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNServices2\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"services\",\n      \"stn\",\n      \"short-term network\"\n    ],\n\n    \"languages\": [\n      \"C#\",\n      \"python\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MDg0NjAwMw==",
+                        "name": "WIM-Style-Guide",
+                        "createdAt": "2016-02-01T14:49:47Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WIM Style Guide\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Style guide for WIM applications\",\n    \"version\": \"v0.5.0\",\n    \"status\": \"Archived\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/styleguide\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WiM-Style-Guide/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WiM-Style-Guide/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WiM-Style-Guide\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"HTML\",\n      \"CSS\",\n      \"LESS\",\n      \"Javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Mitch Samuels\",\n      \"email\": \"msamuels@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-12-28\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MTAwODYwMQ==",
+                        "name": "BLTAdmin_angular",
+                        "createdAt": "2016-02-03T15:23:46Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BLTAdmin_angular\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Log in based data management application in angularJS\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BLTAdmin_angular/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BLTAdmin_angular/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BLTAdmin_angular\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"client\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Veni Kunche\",\n      \"email\": \"kkunche@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MTYxMDQ3Ng==",
+                        "name": "nwis-chart-proxies",
+                        "createdAt": "2016-02-12T19:18:08Z",
+                        "description": "Proxy scripts used to retrieve NWIS graphs",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"nwis-chart-proxies\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Proxy scripts used to retrieve NWIS graphs\",\n    \"version\": null,\n    \"status\": \"development\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/nwis-chart-proxies/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/nwis-chart-proxies/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/nwis-chart-proxies/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/nwis-chart-proxies\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"nwis\",\n      \"chart\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"C#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MTk1MDExNg==",
+                        "name": "BLTServices",
+                        "createdAt": "2016-02-17T19:44:34Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BLTServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"REST Services to provide access to database tables\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BLTServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BLTServices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BLTServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Tonia Roddick\",\n      \"email\": \"troddick@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MTk1MDcyOQ==",
+                        "name": "BLTWeb",
+                        "createdAt": "2016-02-17T19:53:05Z",
+                        "description": "old mvc version of internal app",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BLTWeb\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Log in based data management application for Bulletins Live Two.\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BLTWeb/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BLTWeb/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BLTWeb\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Tonia Roddick\",\n      \"email\": \"troddick@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MTk1MTA3Nw==",
+                        "name": "BLTPublic",
+                        "createdAt": "2016-02-17T19:58:32Z",
+                        "description": "public-facing map application",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BLTPublic\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Public mapping application for protected species against Pesticide Use Limitations\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BLTPublic/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BLTPublic/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BLTPublic\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"EPA\",\n      \"PULA\"\n    ],\n\n    \"languages\": [\n      \"javascript\", \"esri\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Tonia Roddick\",\n      \"email\": \"troddick@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-06-01\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MjUzOTYzNQ==",
+                        "name": "WiM-Mapper-Styles",
+                        "createdAt": "2016-02-25T16:27:45Z",
+                        "description": "Styling for generator-wim generated mapping apps",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WiM-Mapper-Styles\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Styling for generator-wim generated mapping apps\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Ideation\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/WiM-Mapper-Styles/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WiM-Mapper-Styles/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WiM-Mapper-Styles/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WiM-Mapper-Styles\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"WiM\",\n      \"styles\",\n      \"mapping\"\n    ],\n\n    \"languages\": [\n      \"css\",\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MzE1NDAxMA==",
+                        "name": "FEV",
+                        "createdAt": "2016-03-04T17:40:03Z",
+                        "description": "Version 2 of the Flood Event Viewer (FEV)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"FEV\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Displays flood events from the short-term network (STN) database\",\n    \"version\": \"v2.4.8\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/FEV/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"stn.wim.usgs.gov/fev\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/FEV/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/FEV/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/FEV\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"flood event\",\n      \"flood event viewer\",\n      \"fev\",\n      \"stn\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MzE1Njc1OQ==",
+                        "name": "CBRARequests",
+                        "createdAt": "2016-03-04T18:25:24Z",
+                        "description": "Client-side app for requesting CRBA determinations",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"CBRARequests\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Client-side app for requesting CRBA determinations\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/CBRARequests/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/CBRARequests/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/CBRARequests/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/CBRARequests\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"cbra\",\n      \"requests\"\n    ],\n\n    \"languages\": [\n      \"typescript\",\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Aaron Stephenson\",\n      \"email\": \"astephenson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MzE2MDY1NQ==",
+                        "name": "wim-styles",
+                        "createdAt": "2016-03-04T19:35:01Z",
+                        "description": "WiM stylesheets for developing WiM-ly. ",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim-styles\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"WiM stylesheets for developing WiM-ly\",\n    \"version\": \"v0.0.3\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/wim-styles/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/wim-styles/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wim-styles/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wim-styles\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"wim\",\n      \"styles\",\n      \"stylesheet\"\n    ],\n\n    \"languages\": [\n      \"css\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1MzY4ODA1NQ==",
+                        "name": "swi",
+                        "createdAt": "2016-03-11T18:27:30Z",
+                        "description": "Surface Water Inventory Mapper (Wetlands 2.0) - HTML/JS",
+                        "object": {
+                            "text": "[{\n  \"name\": \"swi\",\n  \"organization\": \"U.S. Geological Survey\",\n  \"description\": \"Fish and Wildlife National Wetlands Inventory Wetlands Mapper\",\n  \"status\": \"Production\",\n  \"homepage\": \"https://www.fws.gov/wetlands/data/mapper.html\",\n  \"downloadURL\": \"https://github.com/usgs-wim/swi/archive/master.zip\",\n  \"openSourceProject\": 1,\n  \"license\": \"https://github.com/usgs-wim/swi/blob/master/LICENSE.md\",\n  \"vcs\": \"git\",\n  \"repository\": \"https://github.com/usgs-wim/swi.git\",\n\n  \"tags\": [\n    \"fws\",\n    \"nwi\",\n    \"wim\",\n    \"usgs\"\n  ],\n  \"languages\": [\n    \"javascript\",\n    \"html\"\n  ],\n\n  \"contact\": {\n    \"name\": \"Nicholas Estes\",\n    \"email\": \"njestes@usgs.gov\"\n  },\n  \"updated\": {\n    \"metadataLastUpdated\": \"10/25/2017\"\n  }\n}]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1NTI4MDYyNA==",
+                        "name": "cbrsdms",
+                        "createdAt": "2016-04-02T06:09:06Z",
+                        "description": "CBRS Determinations Management System",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"CBRADMS\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"CBRA Determinations Management System\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Development\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/CBRADMS/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/CBRADMS/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/CBRADMS/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/CBRADMS\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"cbra\",\n      \"determinations\",\n      \"management\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"typescript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Aaron Stephenson\",\n      \"email\": \"astephenson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1NTQxOTI5Mw==",
+                        "name": "cbrsservices_django",
+                        "createdAt": "2016-04-04T14:44:22Z",
+                        "description": "Backend for CBRA project",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1NjMxODYxOQ==",
+                        "name": "PRMSWrapper",
+                        "createdAt": "2016-04-15T12:30:53Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"PRMSWrapper\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"PRMSWrapper is a wrapper method for scripting and running PRMS on an daily schedule\",\n    \"version\": \"v0.0.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/PRMSWrapper/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/PRMSWrapper/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/PRMSWrapper\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"PRMS\",\n      \"StreamEst\"\n    ],\n\n    \"languages\": [\n      \"Python\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1ODQwOTM2OQ==",
+                        "name": "sfb-map",
+                        "createdAt": "2016-05-09T21:25:53Z",
+                        "description": "SFB mapper, services and files",
+                        "object": {
+                            "text": "[\n    {\n      \"name\": \"sfb-map\",\n      \"organization\": \"U.S. Geological Survey\",\n      \"description\": \"SFB mapper, services and files\",\n      \"version\": \"v0.0.0\",\n      \"status\": [\"Archival\"],\n  \n      \"permissions\": {\n        \"usageType\": \"openSource\",\n        \"licenses\": [\n          {\n            \"name\": \"Public Domain\",\n            \"URL\": \"https://github.com/USGS-WiM/sfb-map/blob/master/LICENSE.md\"\n          }\n        ]\n      },\n  \n      \"homepageURL\": \"https://wim.usgs.gov\",\n      \"downloadURL\": \"https://github.com/USGS-WiM/sfb-map/archive/master.zip\",\n      \"disclaimerURL\": \"https://github.com/USGS-WiM/sfb-map/blob/master/DISCLAIMER.md\",\n      \"repositoryUrl\": \"https://github.com/USGS-WiM/sfb-map\",\n      \"vcs\": \"git\",\n  \n      \"laborHours\": null,\n  \n      \"tags\": [\n        \"sfb\",\n        \"mapper\"\n      ],\n  \n      \"languages\": [\n        \"javascript\"\n      ],\n  \n      \"contact\": {\n        \"name\": \"Nick Estes\",\n        \"email\": \"njestes@usgs.gov\"\n      },\n  \n      \"date\": {\n        \"metadataLastUpdated\": \"2018-04-19\"\n      }\n    }\n  ]\n  "
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1ODU3OTIzNw==",
+                        "name": "GroundWaterWatch",
+                        "createdAt": "2016-05-11T20:37:20Z",
+                        "description": null,
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1ODY2NjM4Mw==",
+                        "name": "Rigs2Reefs",
+                        "createdAt": "2016-05-12T18:26:05Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n    {\n      \"name\": \"Rigs2Reefs\",\n      \"organization\": \"U.S. Geological Survey\",\n      \"description\": \"\",\n      \"version\": \"v0.0.0\",\n      \"status\": [\"Archival\"],\n  \n      \"permissions\": {\n        \"usageType\": \"openSource\",\n        \"licenses\": [\n          {\n            \"name\": \"Public Domain\",\n            \"URL\": \"https://github.com/USGS-WiM/Rigs2Reefs/blob/master/LICENSE.md\"\n          }\n        ]\n      },\n  \n      \"homepageURL\": \"https://wim.usgs.gov\",\n      \"downloadURL\": \"https://github.com/USGS-WiM/Rigs2Reefs/archive/master.zip\",\n      \"disclaimerURL\": \"https://github.com/USGS-WiM/Rigs2Reefs/blob/master/DISCLAIMER.md\",\n      \"repositoryUrl\": \"https://github.com/USGS-WiM/Rigs2Reefs\",\n      \"vcs\": \"git\",\n  \n      \"laborHours\": null,\n  \n      \"tags\": [\n        \"reefs\"\n      ],\n  \n      \"languages\": [\n        \"javascript\"\n      ],\n  \n      \"contact\": {\n        \"name\": \"Nick Estes\",\n        \"email\": \"njestes@usgs.gov\"\n      },\n  \n      \"date\": {\n        \"metadataLastUpdated\": \"2018-04-19\"\n      }\n    }\n  ]\n  "
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk1OTg1NDM1OA==",
+                        "name": "STNWeb2_Oracle",
+                        "createdAt": "2016-05-27T18:13:39Z",
+                        "description": "STNWeb2 angularJS with Oracle DB",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNWeb2_Oracle\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"STNWeb2 angularJS with Oracle DB\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/STNWeb2_Oracle/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNWeb2_Oracle/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNWeb2_Oracle/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNWeb2_Oracle\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"stn\",\n      \"oracle\",\n      \"angular\",\n      \"web\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-20\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2MDI5Mjk1Nw==",
+                        "name": "STNPublicInfo",
+                        "createdAt": "2016-06-02T19:51:37Z",
+                        "description": "STN public information pages for hwms and sensors",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNPublicInfo\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"STN public information pages for hwms and sensors\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/STNPublicInfo/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://stn.wim.usgs.gov/STNPublicInfo/#/HWMPage?Site=18351&HWM=16909\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNPublicInfo/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNPublicInfo/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNPublicInfo\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"stn\",\n      \"short-term network\",\n      \"public\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-20\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2MTIzNjQ4OQ==",
+                        "name": "STNWebserviceDocumentation",
+                        "createdAt": "2016-06-15T19:52:00Z",
+                        "description": "Web services documentation application for Short-Term Network (STN) web services",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"STNWebserviceDocumentation\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Web services documentation application for Short-Term Network (STN) web services\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/STNWebserviceDocumentation/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"http://stn.wim.usgs.gov/STNServices/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/STNWebserviceDocumentation/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/STNWebserviceDocumentation/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/STNWebserviceDocumentation\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"stn\",\n      \"short-term network\",\n      \"web service\",\n      \"documentation\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"typescript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-20\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2Mjg4Njk3MA==",
+                        "name": "SiGLServices",
+                        "createdAt": "2016-07-08T12:26:50Z",
+                        "description": "REST services pointing to a PostgreSQL DB",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"SiGLServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"REST services pointing to a PostgreSQL DB for SiGL (Science in the Great Lakes\",\n    \"version\": \"v2.0.1\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/SiGLServices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sigldev.wim.usgs.gov/SiGLServices\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/SiGLServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/SiGLServices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/SiGLServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sigl\",\n      \"services\",\n      \"great lakes\"\n    ],\n\n    \"languages\": [\n      \"c#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-26\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2MzE4OTcxOA==",
+                        "name": "fim-js",
+                        "createdAt": "2016-07-12T20:19:45Z",
+                        "description": "Flood inundation map libraries with real-time USGS river-level data.",
+                        "object": {
+                            "text": "{\n  \"name\": \"fim-js\",\n  \"organization\": \"U.S. Geological Survey\",\n  \"description\": \"Flood Inundation Mapper\",\n  \"status\": \"Production\",\n  \"homepage\": \"https://fim.wim.usgs.gov/fim\",\n  \"downloadURL\": \"https://github.com/usgs-wim/fim-js/archive/master.zip\",\n  \"openSourceProject\": 1,\n  \"license\": \"https://github.com/usgs-wim/fim-js/blob/master/LICENSE.md\",\n  \"vcs\": \"git\",\n  \"repository\": \"https://github.com/usgs-wim/fim-js.git\",\n\n  \"tags\": [\n    \"fim\",\n    \"wim\",\n    \"usgs\"\n  ],\n  \"languages\": [\n    \"javascript\",\n    \"html\"\n  ],\n\n  \"contact\": {\n    \"name\": \"Nicholas Estes\",\n    \"email\": \"njestes@usgs.gov\"\n  },\n  \"updated\": {\n    \"metadataLastUpdated\": \"10/26/2017\"\n  }\n}\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2MzM2NjEyNQ==",
+                        "name": "SiGLWebservicesDocumentation",
+                        "createdAt": "2016-07-14T20:05:57Z",
+                        "description": "Documentation page for SiGLServices",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"SiGLWebservicesDocumentation\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Documentation page for SiGLServices\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/SiGLWebservicesDocumentation/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sigldev.wim.usgs.gov/SiGLServices\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/SiGLWebservicesDocumentation/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/SiGLWebservicesDocumentation/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/SiGLWebservicesDocumentation\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sigl\",\n      \"services\",\n      \"documentation\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"typescript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-20\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2MzgxNTQ0OA==",
+                        "name": "CRSRA",
+                        "createdAt": "2016-07-20T21:22:43Z",
+                        "description": "Connecting River Systems Restoration Assessment, part of the Great Lakes Coastal Wetlands Restoration Assessment (GLCWRA) Project",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"CRSRA\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Web interface for the Connescting River Systems Restoration Area of the Great Lakes Coastal Restoration Assessment project\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/USGS-WiM/CRSRA/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/CRSRA/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/CRSRA/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/CRSRA\",\n    \"vcs\": \"git\",\n    \"laborHours\": null,\n    \"tags\": [\n      \"glcwra\",\n      \"great lakes\",\n      \"science\"\n    ],\n    \"languages\": [\n      \"Javascript\",\n      \"HTML\",\n      \"CSS\"\n    ],\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n    \"partners\": [\n      {\n        \"name\": \"Kurt Kowalski\",\n        \"email\": \"kkowalski@usgs.gov\"\n      }\n    ],\n    \"relatedCode\": [\n      {\n        \"name\": \"WLERA\",\n        \"codeUrl\": \"https://github.com/USGS-WiM/WLERA\",\n        \"isGovernmetnRepo\": true\n      },\n      {\n        \"name\": \"SBRA\",\n        \"codeUrl\": \"https://github.com/USGS-WiM/SBRA\",\n        \"isGovernmetnRepo\": true\n      }\n\n    ],\n    \"date\": {\n      \"lastModified\": \"2017-10-28\",\n      \"metadataLastUpdated\": \"2017-11-28\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2MzgxNTc0MA==",
+                        "name": "SBRA",
+                        "createdAt": "2016-07-20T21:27:50Z",
+                        "description": "Saginaw Bay Restoration Assessment, part of the Great Lakes Coastal Wetlands Restoration Assessment (GLCWRA) Project",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"SBRA\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Web interface for the Saginaw Bay Restoration Area of the Great Lakes Coastal Restoration Assessment project\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/USGS-WiM/SBRA/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/SBRA/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/SBRA/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/SBRA\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"glcwra\",\n      \"great lakes\",\n      \"science\"\n    ],\n    \"languages\": [\n      \"Javascript\",\n      \"HTML\",\n      \"CSS\"\n    ],\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n    \"partners\": [\n      {\n        \"name\": \"Kurt Kowalski\",\n        \"email\": \"kkowalski@usgs.gov\"\n      }\n    ],\n    \"relatedCode\": [\n      {\n        \"name\": \"WLERA\",\n        \"codeUrl\": \"https://github.com/USGS-WiM/CRSRA\",\n        \"isGovernmetnRepo\": true\n      },\n      {\n        \"name\": \"CRSRA\",\n        \"codeUrl\": \"https://github.com/USGS-WiM/CRSRA\",\n        \"isGovernmetnRepo\": true\n      }\n\n    ],\n    \"date\": {\n      \"lastModified\": \"2017-10-27\",\n      \"metadataLastUpdated\": \"2017-11-29\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2NDI0Mzg5MQ==",
+                        "name": "streamest",
+                        "createdAt": "2016-07-26T18:12:53Z",
+                        "description": "PRMS/FDCTM/FA mapping application",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2NDQ5NTA4NA==",
+                        "name": "angular2-leaflet",
+                        "createdAt": "2016-07-29T16:31:20Z",
+                        "description": "a 3 panel map application template using angular 2",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2NjAwNDMwOQ==",
+                        "name": "LaMPServices",
+                        "createdAt": "2016-08-18T14:33:30Z",
+                        "description": "archiving old LaMPServices which contain the LaMPServices and old MVC SiGLDMS",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"LaMPServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"archiving old LaMPServices which contain the LaMPServices and old MVC SiGLDMS\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/LaMPServices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/LaMPServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/LaMPServices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/LaMPServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"lamp\",\n      \"services\",\n      \"sigl\",\n      \"dms\"\n    ],\n\n    \"languages\": [\n      \"c#\",\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-20\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2Njg3NjMzNQ==",
+                        "name": "ekip-api",
+                        "createdAt": "2016-08-29T20:02:11Z",
+                        "description": "The source for the Every Kid in a Park website. ",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2ODEzNTYwOQ==",
+                        "name": "MRDATA",
+                        "createdAt": "2016-09-13T18:25:26Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"MRData\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"USGS Mineral Resources On-Line Spatial Data Viewer\",\n    \"version\": \"v0.5.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/mrdata/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/MRDATA/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/MRDATA/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/MRDATA\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Spatial Data\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Mitch Samuels\",\n      \"email\": \"msamuels@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-3-2\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2ODMyNjk4Mg==",
+                        "name": "BLTServices-new",
+                        "createdAt": "2016-09-15T20:00:58Z",
+                        "description": "newVersion of BLTServices using Postgres and test projects included, pulled out db project",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BLTServices-new\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Most current version of BLTServices.\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BLTServices-new/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BLTServices-new/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BLTServices-new\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"BLTServices\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"C#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-01-11\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2ODc0MTk4Mw==",
+                        "name": "BLTServicesDocumentation",
+                        "createdAt": "2016-09-20T18:35:42Z",
+                        "description": "Documentation page on BLTServices",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"BLTServicesDocumentation\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Web Services Documenation\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Archival\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/BLTServicesDocumentation/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/BLTServicesDocumentation/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/BLTServicesDocumentation\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Tonia Roddick\",\n      \"email\": \"troddick@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-01-11\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2ODk5MDkxNA==",
+                        "name": "mercurymobile",
+                        "createdAt": "2016-09-23T05:09:55Z",
+                        "description": "Mercury Lab application for use on mobile devices, built with Ionic Framework 2.",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk2OTA0MDYyMA==",
+                        "name": "SparrowTennessee",
+                        "createdAt": "2016-09-23T16:08:40Z",
+                        "description": "JS version of SPARROW",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"SparrowTennessee\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Display Spatially-Referenced Regresson On Watershed Attributes (SPARROW) data in Tennessee\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/SparrowTennessee/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/sparrowtennessee/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/SparrowTennessee/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/SparrowTennessee/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/SparrowTennessee\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sparrow\",\n      \"tennessee\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3MTM5NTkyOQ==",
+                        "name": "service_lists",
+                        "createdAt": "2016-10-19T20:20:17Z",
+                        "description": "Repository of WiM service lists, including map services XML/ATOM feed",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"service_lists\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Repository of WiM service lists, including map services XML/ATOM feed\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/service_lists/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/service_lists/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/service_lists\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"service list\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3MTU4MjYxNQ==",
+                        "name": "wim-status-dashboard",
+                        "createdAt": "2016-10-21T16:41:43Z",
+                        "description": "Status dashboard for WiM services and apps",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim-status-dashboard\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Status dashboard for WiM services and apps\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/wim-status-dashboard/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov/status/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/wim-status-dashboardimpo/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wim-status-dashboard/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wim-status-dashboard\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"wim\",\n      \"status\",\n      \"dashboard\",\n      \"services\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3MTkyNDE4NQ==",
+                        "name": "CBRAMapper",
+                        "createdAt": "2016-10-25T17:55:46Z",
+                        "description": "Coastal Barrier Resources Systems Mapper for US Fish and Wildlife",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3MTkzMjE3OQ==",
+                        "name": "WetlandsMapperV1",
+                        "createdAt": "2016-10-25T19:35:59Z",
+                        "description": "Flex version of Wetlands Mapper (due to be retired in FY17)",
+                        "object": {
+                            "text": "[\n    {\n      \"name\": \"WetlandsMapperV1\",\n      \"organization\": \"U.S. Geological Survey\",\n      \"description\": \"Flex version of Wetlands Mapper\",\n      \"version\": \"v0.0.0\",\n      \"status\": [\"Archival\"],\n  \n      \"permissions\": {\n        \"usageType\": \"openSource\",\n        \"licenses\": [\n          {\n            \"name\": \"Public Domain\",\n            \"URL\": \"https://github.com/USGS-WiM/WetlandsMapperV1/blob/master/LICENSE.md\"\n          }\n        ]\n      },\n  \n      \"homepageURL\": \"https://wim.usgs.gov\",\n      \"downloadURL\": \"https://github.com/USGS-WiM/WetlandsMapperV1/archive/master.zip\",\n      \"disclaimerURL\": \"https://github.com/USGS-WiM/WetlandsMapperV1/blob/master/DISCLAIMER.md\",\n      \"repositoryUrl\": \"https://github.com/USGS-WiM/WetlandsMapperV1\",\n      \"vcs\": \"git\",\n  \n      \"laborHours\": null,\n  \n      \"tags\": [\n        \"sfb\",\n        \"mapper\"\n      ],\n  \n      \"languages\": [\n        \"javascript\",\n        \"actionscript\"\n      ],\n  \n      \"contact\": {\n        \"name\": \"Nick Estes\",\n        \"email\": \"njestes@usgs.gov\"\n      },\n  \n      \"date\": {\n        \"metadataLastUpdated\": \"2018-04-19\"\n      }\n    }\n  ]\n  "
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3MjY4NTk0MQ==",
+                        "name": "nawqa-sw-trends",
+                        "createdAt": "2016-11-02T22:14:10Z",
+                        "description": "Application showing trends for surface water",
+                        "object": {
+                            "text": "[{\n  \"name\": \"nawqa-sw-trends\",\n  \"organization\": \"U.S. Geological Survey\",\n  \"description\": \"Water-quality changes in the nation's streams and rivers\",\n  \"status\": \"Production\",\n  \"homepage\": \"https://nawqatrends.wim.usgs.gov/sw-trends/\",\n  \"downloadURL\": \"https://github.com/usgs-wim/nawqa-sw-trends/archive/master.zip\",\n  \"openSourceProject\": 1,\n  \"license\": \"https://github.com/usgs-wim/nawqa-sw-trends/blob/master/LICENSE.md\",\n  \"vcs\": \"git\",\n  \"repository\": \"https://github.com/usgs-wim/nawqa-sw-trends.git\",\n\n  \"tags\": [\n    \"nawqa\",\n    \"wim\",\n    \"usgs\"\n  ],\n  \"languages\": [\n    \"javascript\",\n    \"html\"\n  ],\n\n  \"contact\": {\n    \"name\": \"Nicholas Estes\",\n    \"email\": \"njestes@usgs.gov\"\n  },\n  \"updated\": {\n    \"metadataLastUpdated\": \"10/26/2017\"\n  }\n}]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3MzQxMTY3Nw==",
+                        "name": "NSS",
+                        "createdAt": "2016-11-10T18:54:40Z",
+                        "description": "NSS client application",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk3NTc2OTgzMA==",
+                        "name": "wim-monitor",
+                        "createdAt": "2016-12-06T20:44:27Z",
+                        "description": "Scripts and tools for monitoring WiM services and other dependencies.",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim-monitor\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Scripts and tools for monitoring WiM services and other dependencies\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Ideation\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/wim-monitor/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/wim-monitor/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wim-monitor/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wim-monitor\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"wim\",\n      \"monitor\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Blake Draper\",\n      \"email\": \"bdraper@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4MDQ2NjY4Nw==",
+                        "name": "StreamStatsNationalServices",
+                        "createdAt": "2017-01-30T21:43:09Z",
+                        "description": "National Implementation of Streamstats Services",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4MDYyNDA2Ng==",
+                        "name": "nwis-mapper",
+                        "createdAt": "2017-02-01T13:48:31Z",
+                        "description": "USGS NWIS Mapper (Mapper interface for USGS NWIS Waterdata)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"nwis-mapper\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Mapper interface for the USGS NWIS Waterdata\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/nwis-mapper/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://maps.waterdata.usgs.gov/mapper/index.html\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/nwis-mapper/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/nwis-mapper/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/nwis-mapper\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"nwis\",\n      \"wateruse\",\n      \"mapper\"\n    ],\n\n    \"languages\": [\n      \"javascript\",\n      \"python\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Martyn Smith\",\n      \"email\": \"marsmith@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-09\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4MTU4MDk1MA==",
+                        "name": "wetland-projects-v2",
+                        "createdAt": "2017-02-10T15:58:22Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wetland-projects-v2\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Documents best practices for software development within WIM\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Development\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"n/a\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/wetland-projects-v2/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wetland-projects-v2/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wetland-projects-v2\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"wetlands\",\n      \"projects\"\n    ],\n\n    \"languages\": [\n      \"Markdown\",\n      \"javascript\",\n      \"html\",\n      \"css\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-27\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4MjM0MjY4Mw==",
+                        "name": "lili",
+                        "createdAt": "2017-02-17T22:13:21Z",
+                        "description": "v2 LIMS for LIDE",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"Wimpo\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Documents best practices for software development within WIM\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Ideation\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/wimpo/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/wimpo/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/wimpo\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"Markdown\"\n    ],\n\n    \"contact\": {\n      \"name\": \"jessie doe\",\n      \"email\": \"jdoe@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4MjY5ODIwMQ==",
+                        "name": "CBRS-projects-map",
+                        "createdAt": "2017-02-21T15:53:01Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n    {\n      \"name\": \"CBRS-projects-map\",\n      \"organization\": \"U.S. Geological Survey\",\n      \"description\": \"The Coastal Barrier Resources System (CBRS) mapper can be used to help property owners, local, State, and Federal stakeholders, and the public determine whether or not properties or project sites may be affected by CBRA.\",\n      \"version\": \"v2.1.4\",\n      \"status\": \"Development\",\n  \n      \"permissions\": {\n        \"usageType\": \"openSource\",\n        \"licenses\": [\n          {\n            \"name\": \"Public Domain, CC0-1.0\",\n            \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n          }\n        ]\n      },\n  \n      \"homepageURL\": \"https://wim.usgs.gov\",\n      \"downloadURL\": \"https://github.com/USGS-WiM/CBRS-projects-map/archive/master.zip\",\n      \"disclaimerURL\": \"https://github.com/USGS-WiM/CBRS-projects-map/blob/master/DISCLAIMER.md\",\n      \"repositoryUrl\": \"https://github.com/USGS-WiM/CBRS-projects-map\",\n      \"vcs\": \"git\",\n  \n      \"laborHours\": null,\n  \n      \"tags\": [\n        \"CBRS\",\n        \"CBRA\"\n      ],\n  \n      \"languages\": [\n        \"Markdown\",\n        \"html\",\n        \"javascript\",\n        \"css\"\n      ],\n  \n      \"contact\": {\n        \"name\": \"Lauren Privette \",\n        \"email\": \"lprivette@usgs.gov\"\n      },\n  \n      \"date\": {\n        \"metadataLastUpdated\": \"2018-03-01\"\n      }\n    }\n  ]\n  \n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4MjcyNzQ3Mw==",
+                        "name": "mobileangularui-checkbox",
+                        "createdAt": "2017-02-21T21:10:56Z",
+                        "description": "An styled checkbox of various sizes and colors for mobile angular ui.",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"mobileangularui-checkbox\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"A styled checkbox of various sizes and colors for mobile angular ui, dependency of StreamStats\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/mobileangularui-checkbox/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://streamstats.usgs.gov/ss/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/mobileangularui-checkbox/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/mobileangularui-checkbox/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/mobileangularui-checkbox\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"angular\",\n      \"checkbox\",\n      \"streamstats\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Marty Smith\",\n      \"email\": \"marsmith@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4Mjk0NzM4NA==",
+                        "name": "cbrs-mapper-v2",
+                        "createdAt": "2017-02-23T16:32:10Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"cbrs-mapper-v2\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Documents best practices for software development within WIM\",\n    \"version\": \"v2.1.1\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://fwsprimary.wim.usgs.gov/cbrs-mapper-v2/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/cbrs-mapper-v2/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/cbrs-mapper-v2/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/cbrs-mapper-v2\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"guidance\",\n      \"template\"\n    ],\n\n    \"languages\": [\n      \"Markdown\",\n      \"html\",\n      \"javascript\",\n      \"css\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-27\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4NDcxMjEzMw==",
+                        "name": "Styleguide",
+                        "createdAt": "2017-03-12T08:44:24Z",
+                        "description": "WIM Frontend Design Styleguide",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"wim-styleguide\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Frontend development styleguide for WIM\",\n    \"version\": \"v2.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/USGS-WIM/Styleguide/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WIM/Styleguide/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WIM/Styleguide/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WIM/Styleguide\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Webapp\"\n    ],\n\n    \"languages\": [\n      \"Javascript\",\n      \"HTML\",\n      \"LESS/CSS\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Mitch Samuels\",\n      \"email\": \"msamuels@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2019-04-10\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4NTAwMTI3MA==",
+                        "name": "MercuryMapper",
+                        "createdAt": "2017-03-14T21:58:48Z",
+                        "description": "Predicted Methylmercury in National Parks (Flex)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"MercuryMapper\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"This mapper is intended to assist park managers in understanding the relative potential for mercury issues in their park unit.\",\n    \"version\": \"v1.0\",\n    \"status\": \"Production\",\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs-wim/MercuryMapper/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://ccviewer.wim.usgs.gov/MercuryMapper\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/MercuryMapper/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/MercuryMapper/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/MercuryMapper\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"methyl-mercury\",\n      \"nps\",\n      \"usgs\"\n    ],\n\n    \"languages\": [\n      \"Actionscript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Nicholas Estes\",\n      \"email\": \"njestes@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4NjUwMjkzOQ==",
+                        "name": "sparrow-mrb3-js",
+                        "createdAt": "2017-03-28T20:12:40Z",
+                        "description": "JS version of SPARROW MRB3.  ",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"sparrow-mrb3-js\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Spatially-Referenced Regresson On Watershed Attributes (SPARROW) MRB3 in JavaScript\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Development\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/sparrow-mrb3-js/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sparrow.wim.usgs.gov/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/sparrow-mrb3-js/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/sparrow-mrb3-js/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/sparrow-mrb3-js\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sparrow\",\n      \"mrb3\",\n      \"javascript\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk4OTI0MjA0Mw==",
+                        "name": "usgs-region-PoC",
+                        "createdAt": "2017-04-24T13:15:02Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n    {\n      \"name\": \"usgs-region-PoC\",\n      \"organization\": \"U.S. Geological Survey\",\n      \"description\": \"A proof of concept application\",\n      \"version\": \"v1.0.0\",\n      \"status\": \"Archival\",\n  \n      \"permissions\": {\n        \"usageType\": \"openSource\",\n        \"licenses\": [\n          {\n            \"name\": \"Public Domain, CC0-1.0\",\n            \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n          }\n        ]\n      },\n  \n      \"homepageURL\": \"https://wim.usgs.gov\",\n      \"downloadURL\": \"https://github.com/USGS-WiM/usgs-region-PoC/archive/master.zip\",\n      \"disclaimerURL\": \"https://github.com/USGS-WiM/usgs-region-PoC/blob/master/DISCLAIMER.md\",\n      \"repositoryUrl\": \"https://github.com/USGS-WiM/usgs-region-PoC\",\n      \"vcs\": \"git\",\n  \n      \"laborHours\": null,\n  \n      \"tags\": [\n        \"regions\"\n      ],\n  \n      \"languages\": [\n        \"Markdown\",\n        \"html\",\n        \"javascript\",\n        \"css\"\n      ],\n  \n      \"contact\": {\n        \"name\": \"Lauren Privette\",\n        \"email\": \"lprivette@usgs.gov\"\n      },\n  \n      \"date\": {\n        \"metadataLastUpdated\": \"2017-11-06\"\n      }\n    }\n  ]\n  \n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk5MTEyMzY3NA==",
+                        "name": "WaterUseServices",
+                        "createdAt": "2017-05-12T19:32:23Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"WaerUseServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"StreamStats custom REST Wateruse services\",\n    \"version\": \"v0.0.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/WaerUseServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/WaerUseServices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/WaerUseServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Streamstats\",\n      \"Services\",\n\t  \"REST\",\n\t  \"Wateruse\"\n    ],\n\n    \"languages\": [\n      \"c#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk5MTc0MTk3NQ==",
+                        "name": "krigservices",
+                        "createdAt": "2017-05-18T22:12:33Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"krigservices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"krig REST services. Used to find the most correlated gage.\",\n    \"version\": \"v0.0.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/krigservices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/krigservices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/krigservices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"krig\",\n      \"Services\",\n\t  \"REST\"\n    ],\n\n    \"languages\": [\n      \"c#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk5MTgzMDU4Nw==",
+                        "name": "sparrow-greatlakes-js",
+                        "createdAt": "2017-05-19T17:37:48Z",
+                        "description": "JS Version of Sparrow Great Lakes (based on MRB3 model)",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"sparrow-greatlakes-js\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Display Spatially-Referenced Regresson On Watershed Attributes (SPARROW) data for the Great Lakes\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/sparrow-greatlakes-js/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sparrow.wim.usgs.gov/great-lakes/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/sparrow-greatlakes-js/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/sparrow-greatlakes-js/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/sparrow-greatlakes-js\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sparrow\",\n      \"Great Lakes\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk5MzQyNTIwNQ==",
+                        "name": "SiGL",
+                        "createdAt": "2017-06-05T16:37:31Z",
+                        "description": "angular 4 cli mapping application",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"SiGL\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Mapping application for data exploration of monitoring and restoration activities around the Great Lakes\",\n    \"version\": \"v3.0.0\",\n    \"status\": \"Beta\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sigl.wim.usgs.gov/sigl/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/SiGL/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/SiGL/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/SiGL\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"GLRI\",\n      \"Great Lakes\",\n\t  \"SiGL\"\n    ],\n\n    \"languages\": [\n      \"Javascript\",\n\t  \"Angular\",\n\t  \"Leaflet\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-12-28\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk5ODU2ODMzNg==",
+                        "name": "wateruse",
+                        "createdAt": "2017-07-27T18:27:23Z",
+                        "description": "client application for data management of wateruse data",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnk5OTAzMDk3OQ==",
+                        "name": "wangular",
+                        "createdAt": "2017-08-01T18:23:44Z",
+                        "description": "AngularX modules/tools developed by WIM for WIM or anybody",
+                        "object": null
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkxMDA1MjA1NTk=",
+                        "name": "ServicesDocumentation",
+                        "createdAt": "2017-08-16T18:33:54Z",
+                        "description": "REST Services Documentation Template",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"Service Documentation\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Service Documentation API host application.\",\n    \"version\": \"v0.0.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/ServicesDocumentation/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/ServicesDocumentation/blob/master/LICENSE.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/ServicesDocumentation\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"API\",\n      \"Services\",\n\t  \"REST\",\n\t  \"Documentation\"\n    ],\n\n    \"languages\": [\n      \"typescript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-01-11\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkxMDEyMDY2OTQ=",
+                        "name": "sparrow-marb-js",
+                        "createdAt": "2017-08-23T17:20:44Z",
+                        "description": "Javascript version of SPARROW MARB (mississippi) models",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"sparrow-marb-js\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Display Spatially-Referenced Regresson On Watershed Attributes (SPARROW) data for Mississippi\",\n    \"version\": \"v1.0.0\",\n    \"status\": \"Production\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/USGS-WiM/sparrow-marb-js/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://sparrow.wim.usgs.gov/marb/\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/sparrow-marb-js/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/sparrow-marb-js/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/sparrow-marb-js\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"sparrow\",\n      \"marb\",\n      \"mississippi\"\n    ],\n\n    \"languages\": [\n      \"javascript\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Erik Myers\",\n      \"email\": \"emyers@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-07\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkxMDE3MDEwMzQ=",
+                        "name": "stn-event-photos",
+                        "createdAt": "2017-08-29T00:39:34Z",
+                        "description": "STN Event Photos",
+                        "object": {
+                            "text": "[\n    {\n      \"name\": \"stn-event-photos\",\n      \"organization\": \"U.S. Geological Survey\",\n      \"description\": \"Simple STN Event Photo viewer.\",\n      \"version\": \"v0.9.0\",\n      \"status\": \"Development\",\n  \n      \"permissions\": {\n        \"usageType\": \"openSource\",\n        \"licenses\": [\n          {\n            \"name\": \"Public Domain, CC0-1.0\",\n            \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n          }\n        ]\n      },\n  \n      \"homepageURL\": \"https://wim.usgs.gov\",\n      \"downloadURL\": \"https://github.com/USGS-WiM/stn-event-photos/archive/master.zip\",\n      \"disclaimerURL\": \"https://github.com/USGS-WiM/stn-event-photos/blob/master/DISCLAIMER.md\",\n      \"repositoryUrl\": \"https://github.com/USGS-WiM/stn-event-photos\",\n      \"vcs\": \"git\",\n  \n      \"laborHours\": null,\n  \n      \"tags\": [\n        \"STN\"\n      ],\n  \n      \"languages\": [\n        \"Markdown\",\n        \"html\",\n        \"javascript\",\n        \"css\"\n      ],\n  \n      \"contact\": {\n        \"name\": \"Lauren Privette\",\n        \"email\": \"lprivette@usgs.gov\"\n      },\n  \n      \"date\": {\n        \"metadataLastUpdated\": \"2017-11-07\"\n      }\n    }\n  ]\n  \n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkxMDI3NTc4Mjg=",
+                        "name": "StreamStats-Setup",
+                        "createdAt": "2017-09-07T16:01:10Z",
+                        "description": "Setup scripts and information for StreamStats",
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"StreamStats-Setup\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"Setup scripts and information for StreamStats\",\n    \"version\": \"v0.0.0\",\n    \"status\": \"Development\",\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain\",\n          \"URL\": \"https://github.com/usgs/StreamStats-Setup/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": null,\n    \"downloadURL\": \"https://github.com/USGS-WiM/StreamStats-Setup/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/StreamStats-Setup/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/StreamStats-Setup\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"streamstats\",\n      \"setup\",\n      \"scripts\"\n    ],\n\n    \"languages\": [\n      \"html\",\n      \"css\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Marty Smith\",\n      \"email\": \"marsmith@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2018-02-16\"\n    }\n  }\n]\n"
+                        }
+                    },
+                    {
+                        "id": "MDEwOlJlcG9zaXRvcnkxMDI3ODg4Mzc=",
+                        "name": "NavigationServices",
+                        "createdAt": "2017-09-07T21:48:48Z",
+                        "description": null,
+                        "object": {
+                            "text": "[\n  {\n    \"name\": \"NavigationServices\",\n    \"organization\": \"U.S. Geological Survey\",\n    \"description\": \"StreamStats custome REST Navigation services that leverage USGS NLDI services and flow direction rasters to navigate NHD network\",\n    \"version\": \"v0.0.0\",\n    \"statusOptionsURL\":\"https://github.com/GSA/code-gov-web/blob/master/src/assets/schemas/2.0.0.json#L144-L152\",\n\t\"status\": \"preliminary\",\t\n\n    \"permissions\": {\n      \"usageType\": \"openSource\",\n      \"licenses\": [\n        {\n          \"name\": \"Public Domain, CC0-1.0\",\n          \"URL\": \"https://github.com/usgs/best-practices/blob/master/LICENSE.md\"\n        }\n      ]\n    },\n\n    \"homepageURL\": \"https://wim.usgs.gov\",\n    \"downloadURL\": \"https://github.com/USGS-WiM/NavigationServices/archive/master.zip\",\n    \"disclaimerURL\": \"https://github.com/USGS-WiM/NavigationServices/blob/master/DISCLAIMER.md\",\n    \"repositoryUrl\": \"https://github.com/USGS-WiM/NavigationServices\",\n    \"vcs\": \"git\",\n\n    \"laborHours\": null,\n\n    \"tags\": [\n      \"Streamstats\",\n      \"Services\",\n\t  \"REST\",\n\t  \"Navigation\"\n    ],\n\n    \"languages\": [\n      \"c#\"\n    ],\n\n    \"contact\": {\n      \"name\": \"Jeremy Newson\",\n      \"email\": \"jknewson@usgs.gov\"\n    },\n\n    \"date\": {\n      \"metadataLastUpdated\": \"2017-10-25\"\n    }\n  }\n]\n"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

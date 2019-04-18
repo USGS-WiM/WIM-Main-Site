@@ -39,9 +39,12 @@
     .project{
         flex-wrap: wrap;
         position: relative;
+        text-decoration: none;
+        min-height: 200px;
 
         @media (min-width: @screen_mobile) {
             flex-wrap: nowrap;
+            min-height: none;
         }
 
         .project-image{
@@ -53,7 +56,8 @@
             border-radius: @border_radius;
             background-position: center;
             background-size: cover;
-            box-shadow: @shadow_lg;
+            box-shadow: @shadow;
+            transition: @transition;
 
             @media (min-width: @screen_mobile) {
                 min-width: 39%;
@@ -69,17 +73,6 @@
                 height: 100%;
                 min-height: 100%;
             }
-
-            &.fim{background-image: url('/src/images/projects/fim.png');}
-            &.sparrow{background-image: url('/src/images/projects/sparrow.png');}
-            &.wetlands{background-image: url('/src/images/projects/wetlands.png');}
-            &.nawqa{background-image: url('/src/images/projects/nawqa.png');}
-            &.streamstats{background-image: url('/src/images/projects/streamstats.png');}
-            &.whispers{
-                background-image: url('/src/images/projects/whispers.png');
-                background-position: top left;
-                background-repeat: no-repeat;
-            }
         }
 
         .project-info{
@@ -93,10 +86,23 @@
                 padding-left: 37%;
             }
 
-            .project-links{
-                a{
-                    margin-bottom: 5px;
-                }
+            h3{
+                font-weight: 600;
+            }
+        }
+
+        // Hover Project
+        &:hover{
+            cursor: pointer;
+            color: inherit;
+
+            .project-image{
+                filter: grayscale(75%);
+                transition: @transition;
+            }
+
+            h3{
+                text-decoration: underline;
             }
         }
     }
@@ -167,4 +173,12 @@
             }
         }
     }
+}
+
+
+/////////////////////////////
+// Individual Project Page //
+/////////////////////////////
+.project-page{
+
 }

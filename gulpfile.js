@@ -36,6 +36,7 @@ gulp.task('clean:dev', function () {
 
 // Move static files
 var devFiles = [
+    folder.src + 'src/repos.json',
     folder.src + 'src/js/**/*',
     folder.src + 'src/images/**/*',
     folder.src + 'src/publicsans/**/*',
@@ -44,7 +45,8 @@ var devFiles = [
 ];
 gulp.task('staticdev', function () {
     return gulp.src(devFiles, { base: folder.src })
-        .pipe(gulp.dest(folder.dev));
+        .pipe(gulp.dest(folder.dev))
+        .pipe(browserSync.stream());
 });
 
 // Compile Twig Templates
@@ -66,7 +68,8 @@ gulp.task('lessdev', function () {
 // Changes to JS or other (image) files in /src folder
 gulp.task('staticchange', function () {
     gulp.src(folder.src + 'src/**/*', { base: folder.src })
-        .pipe(gulp.dest(folder.dev));
+        .pipe(gulp.dest(folder.dev))
+        .pipe(browserSync.stream());
 });
 
 // Browsersync
@@ -78,18 +81,16 @@ gulp.task('browsersync', function () {
 
     gulp.watch(folder.src + "src/less/**/*.less", ['lessdev']);
     gulp.watch(folder.src + "**/*.html", ["twigdev"]);
-    gulp.watch([
-        folder.src + "src/js/**/*",
-        folder.src + "src/images/**/*"
-    ] ["staticchange"]).on("change", reload);
-
+    gulp.watch(folder.src + "**/*.js", ["staticchange"]);
+    gulp.watch(folder.src + "src/**/*.jpg", ["staticchange"]);
+    gulp.watch(folder.src + "src/**/*.png", ["staticchange"]);
 });
 
 // Default serve sequence
 gulp.task('serve', function (callback) {
     runSequence(
         'clean:dev',
-        ['lessdev', 'staticdev', 'twigdev'],
+        ['lessdev', 'staticdev', 'twigdev', 'staticchange'],
         'browsersync'
     )
 })

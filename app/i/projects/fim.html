@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% set page_title = "FIM: Web Informatics & Mapping" %}
+    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = "FIM: Web Informatics & Mapping" %}
+    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/fim.html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/projects/fim_1.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/projects/fim_1.png" %}
+
+
+    <!-- 
+        Project Specific Variables
+    -->
+    {% set project_name = "FIM" %}
+    {% set project_slug = "fim" %}
+    {% set short_desc = "FIM Short Description." %}
+
+    <!-- Images & Captions -->
+    {% set screenshot_main = "fim_1.png" %}
+    {% set caption_main = "FIM Screenshot 1 Caption" %}
+
+    {% set screenshots = ["fim_1.png", "fim_1.png", "fim_1.png"] %}
+    {% set captions = [
+        "FIM Screenshot 2 Caption", 
+        "FIM Screenshot 3 Caption", 
+        "FIM Screenshot 4 Caption"
+    ] %}
+
+    <!-- Description Paragraphs -->
+    {% set description = [
+        "FIM Description paragraph 1.",
+        "FIM Description paragraph 2" 
+    ] %}
+
+    <!-- Cooperator Logo -->
+    {% set cooperator_logo = "fim_cooperator.png" %}
+
+
+    <!-- Related Repos -->
+    {% set related_repos = [
+        "fim-js" 
+    ] %}
+
+    <!-- Related Repos -->
+    {% set project_links = [
+        "https://github.com/usgs-wim/fim-js", 
+        "https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools"
+    ] %}
+    {% set project_links_text = [
+        "View on GitHub", 
+        "View Project Page"
+    ] %}
+
+
+
+    {% include "../includes/header.html" %}
+
+    <!-- Vue required only on projects page -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 
+        Include Project Page include file
+    -->
+    {% include "project.html" %}
+
+
+    <!-- <script src="/src/js/projects.js"></script> -->
+
+
+</body>
+
+</html>
