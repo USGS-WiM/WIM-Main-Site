@@ -13,46 +13,87 @@
         letter-spacing: 0;
         font-weight: 600;
         text-transform: capitalize;
+        transition: @transition;
+
+        &:hover{
+            transition: @transition;
+            cursor: pointer;
+        }
 
         &.client,
         &.Client{
             background-color: lighten(@purple, 18%);
             color: @purple_darker;
+
+            &:hover{
+                background-color: @purple_light;
+                color: darken(@purple_darker, 10%);
+            }
         }
         &.script,
         &.Script{
             background-color: lighten(@grey, 4%);
             color: darken(@grey_darker, 44%);
+            &:hover{
+                background-color: @grey_dark;
+                color: darken(@grey_darker, 54%);
+            }
         }
         &.service,
         &.Service{
             background-color: lighten(@yellow, 26%);
             color: darken(@yellow_darker, 20%);
+
+            &:hover{
+                background-color: @yellow_light;
+                color: @ink_dark;
+            }
         }
         &.guidance,
         &.Guidance{
             background-color: lighten(@red, 28%);
             color: @red_dark;
+            &:hover{
+                background-color: @red_lighter;
+                color: @red_darker;
+            }
         }
         &.template,
         &.Template{
             background-color: lighten(@ink_lighter, 58%);
             color: @ink_lighter;
+            &:hover{
+                background-color: lighten(@ink_lighter, 48%);
+                color: @ink_light;
+            }
         }
         &.map,
         &.Map{
             background-color: @primary_xlight;
             color: @primary;
+
+            &:hover{
+                background-color: darken(@primary_xlight, 10%);
+                color: @primary_dark;
+            }
         }
         &.api,
         &.Api{
             background-color: lighten(@secondary, 57%);
             color: @secondary;
+            &:hover{
+                background-color: lighten(@secondary, 47%);
+                color: @secondary_dark;
+            }
         }
         &.webapp,
         &.Webapp{
             background-color: lighten(@orange, 27%);
             color: @orange_darker;
+            &:hover{
+                background-color: lighten(@orange, 20%);
+                color: darken(@orange_darker, 8%);
+            }
         }
 
         &:hover{
@@ -92,6 +133,7 @@
             color: @ink_lighter;
             transition: @transition;
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 }
@@ -266,13 +308,6 @@
             span{
                 margin: 2px 0 2px 4px;
                 transition: @transition;
-
-                &:hover{
-                    background-color: @primary;
-                    color: @white;
-                    transition: @transition;
-                    cursor: pointer;
-                }
             }
         }
         
