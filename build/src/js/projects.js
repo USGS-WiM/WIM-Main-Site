@@ -18,7 +18,7 @@ var wimProjects = new Vue({
         filteredList() {
             return this.allRepos.filter(repo => {
                 // Combine all GitHub fields to search into one string
-                var repoSearchString = repo.name + " " + repo.description + " " + repo.languages;
+                var repoSearchString = repo.name + " " + repo.description + " " + repo.languages + " " + repo.tags;
                 return repoSearchString.toLowerCase().includes(this.projectSearch.toLowerCase())
             })
         }
@@ -70,9 +70,23 @@ var getRepos = function(jsonFile){
             if(jsonFile == 'repos.json'){
                 getRepos('repos2.json')
             }else{
-                wimProjects.allRepos = allRepos;
+                // wimProjects.allRepos = allRepos;
                 wimProjects.repoCount = allRepos.length;
-                console.log(allRepos);
+
+                var repoNames = [];
+                allRepos.forEach(function (repo) {
+
+                    if (repoNames.includes(repo.name)){
+                        console.log(repo.name + " is a duplicate.")
+                    }else{
+                        repoNames.push(repo.name);
+                        wimProjects.allRepos.push(repo);
+                    }
+                });
+
+                console.log(wimProjects.allRepos);
+
+
             }
         }
     });
