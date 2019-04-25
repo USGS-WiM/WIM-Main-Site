@@ -34,7 +34,7 @@ var allRepos = [];
 var getRepos = function(jsonFile){
 
     $.ajax({
-        url: "/src/"+jsonFile,
+        url: "https://test.wim.usgs.gov/src/"+jsonFile,
         jsonp: true,
         method: "GET",
         dataType: "json",
@@ -72,9 +72,15 @@ var getRepos = function(jsonFile){
             }else{
                 wimProjects.allRepos = allRepos;
                 wimProjects.repoCount = allRepos.length;
+                console.log(allRepos);
             }
         }
     });
 }
 
 getRepos("repos.json");
+
+
+
+// Active Link
+$("#projectsLink").addClass("active");

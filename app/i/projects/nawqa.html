@@ -4,42 +4,39 @@
 <head>
 
     <!-- Project Info -->
-    {% set desc = "NAWQA provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers." %}
+    {% set desc = "This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment." %}
     {% set slug = "nawqa" %}
     {% set name = "NAWQA" %}
     {% set name_full = "National Water-Quality Assessment" %}
+    {% set cooperator = "National Water-Quality Assessment" %}
+    {% set cooperator_logo = "nwqa" %}
 
 
     <!-- Images & Captions -->
     {% set screenshots = [
         {
             file: "nawqa_1.png",
-            description: "NAWQA Screenshot 1 Caption"
+            description: "Map icons indicating trend results"
         },{
-            file: "nawqa_1.png",
-            description: "NAWQA Screenshot 2 Caption"
+            file: "nawqa_2.png",
+            description: "Highlighted HUC and site information"
         },{
-            file: "nawqa_1.png",
-            description: "NAWQA Screenshot 3 Caption"
+            file: "nawqa_3.png",
+            description: "Trend results table for a site"
         },{
-            file: "nawqa_1.png",
-            description: "NAWQA Screenshot 4 Caption"
+            file: "nawqa_4.png",
+            description: "Constituent Select Menu"
         }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "In 1991, Congress established the National Water-Quality Assessment (NAWQA) Project to address where, when, why, and how the Nation's water quality has changed, or is likely to change in the future, in response to human activities and natural factors. Since then, NAWQA has produced scientific data and knowledge that is used by national, regional, state, and local agencies to develop science-based policies and management strategies to improve and protect water resources used for drinking water, recreation, irrigation, energy development, and ecosystem needs.",
-        "Our NAWQA web application provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment."
+        "One of the major goals of the U.S. Geological Survey's (USGS) National Water-Quality Assessment project is to answer the question “Has water quality been changing over time?”. To support that goal, they have conducted long-term consistent and comparable monitoring on streams and rivers throughout the Nation since 1992. Other USGS programs, as well as many other Federal, State, regional, and local monitoring organizations, also have collected long-term water-quality data to support their own assessments of changing water- quality conditions. Data from these organizations have been aggregated, screened, standardized, and used to support the most comprehensive assessment of stream-quality trends conducted to date in the United States. Collectively, these trend results will be used to provide insight into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.",
+        "WIM worked closely with USGS scientists to develop and release this interactive map interface with the release of their trends report."
     ] %}
 
     <!-- Related Repos -->
-    {% set related_repos = [
-        {
-            name: "Related Repos",
-            description: "Related repos will be here."
-        }
-    ] %}
+    {% set related_repos = [] %}
 
     <!-- Repo Links -->
     {% set repo_links = [
@@ -49,8 +46,6 @@
             link_icon: "fab fa-github"
         }
     ] %}
-
-
 
 
     {% include "../includes/header.html" %}

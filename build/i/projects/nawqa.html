@@ -8,6 +8,8 @@
     
     
     
+    
+    
 
 
     <!-- Images & Captions -->
@@ -21,8 +23,6 @@
 
     <!-- Repo Links -->
     
-
-
 
 
     <meta charset="utf-8">
@@ -172,7 +172,7 @@ WIM Nav
                 <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
             </div>
             <div class="name">
-                Web informatics & Mapping
+                Web Informatics & Mapping
             </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
@@ -185,12 +185,15 @@ WIM Nav
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/nawqa_hero.jpeg');">
     NAWQA
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">National Water-Quality Assessment</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
     
     
     
@@ -199,11 +202,11 @@ WIM Nav
     -->
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        In 1991, Congress established the National Water-Quality Assessment (NAWQA) Project to address where, when, why, and how the Nation's water quality has changed, or is likely to change in the future, in response to human activities and natural factors. Since then, NAWQA has produced scientific data and knowledge that is used by national, regional, state, and local agencies to develop science-based policies and management strategies to improve and protect water resources used for drinking water, recreation, irrigation, energy development, and ecosystem needs.
+        One of the major goals of the U.S. Geological Survey's (USGS) National Water-Quality Assessment project is to answer the question “Has water quality been changing over time?”. To support that goal, they have conducted long-term consistent and comparable monitoring on streams and rivers throughout the Nation since 1992. Other USGS programs, as well as many other Federal, State, regional, and local monitoring organizations, also have collected long-term water-quality data to support their own assessments of changing water- quality conditions. Data from these organizations have been aggregated, screened, standardized, and used to support the most comprehensive assessment of stream-quality trends conducted to date in the United States. Collectively, these trend results will be used to provide insight into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.
     </div>
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        Our NAWQA web application provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment.
+        WIM worked closely with USGS scientists to develop and release this interactive map interface with the release of their trends report.
     </div>
     
 
@@ -213,30 +216,62 @@ WIM Nav
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 1 Caption</div>
+            <img src="/src/images/projects/nawqa_1.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_1.png" tabindex="1"/>
+                        <div class="caption">Map icons indicating trend results</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Map icons indicating trend results</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 2 Caption</div>
+            <img src="/src/images/projects/nawqa_2.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_2.png" tabindex="1"/>
+                        <div class="caption">Highlighted HUC and site information</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Highlighted HUC and site information</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 3 Caption</div>
+            <img src="/src/images/projects/nawqa_3.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_3.png" tabindex="1"/>
+                        <div class="caption">Trend results table for a site</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Trend results table for a site</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 4 Caption</div>
+            <img src="/src/images/projects/nawqa_4.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_4.png" tabindex="1"/>
+                        <div class="caption">Constituent Select Menu</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Constituent Select Menu</div>
         </div>
         
     </div>
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         
         <a href="https://github.com/USGS-WiM/nawqa-sw-trends" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="fab fa-github"></i>
@@ -249,20 +284,7 @@ WIM Nav
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
     
-    
-        <!-- All Projects Loop (TWIG) -->
-        
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">Related Repos</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
-        
-    
-    </div>
 
 
 </div>

@@ -8,6 +8,8 @@
     
     
     
+    
+    
 
     <!-- Images & Captions -->
     
@@ -20,8 +22,6 @@
 
     <!-- Repo Links -->
     
-
-
 
 
     <meta charset="utf-8">
@@ -171,7 +171,7 @@ WIM Nav
                 <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
             </div>
             <div class="name">
-                Web informatics & Mapping
+                Web Informatics & Mapping
             </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
@@ -184,12 +184,15 @@ WIM Nav
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/sparrow_hero.jpeg');">
     SPARROW
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">National Water-Quality Assessment</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
     
     
     
@@ -198,11 +201,15 @@ WIM Nav
     -->
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        SPARROW (SPAtially Referenced Regressions On Watershed attributes) models estimate the amount of a contaminant transported from inland watersheds to larger water bodies by linking monitoring data with information on watershed characteristics and contaminant sources. Explore relations between human activities, natural processes, and contaminant transport using interactive Mappers.
+        SPARROW (SPAtially Referenced Regressions On Watershed attributes) models estimate the amount of a contaminant transported from inland watersheds to larger water bodies by linking monitoring data with information on watershed characteristics and contaminant sources. SPARROW models are used to estimate long-term average values of water characteristics, such as the amount of a contaminant that is delivered downstream, on the basis of existing monitoring data, location and strength of contaminant sources, and characteristics of the landscape.
     </div>
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        SPARROW models are used to estimate long-term average values of water characteristics, such as the amount of a contaminant that is delivered downstream, on the basis of existing monitoring data, location and strength of contaminant sources, and characteristics of the landscape.
+        These interactive map applications are designed around comprehensive user-defined map selections with dynamic graphs and tables to visualize underlying data.  The flexible, map-based approach to viewing SPARROW models helps managers visualize thousands to millions of data points to determine how to reduce loads of contaminants and design protection strategies; design strategies to meet regulatory requirements; predict changes in water quality that might result from management actions; and identify gaps and priorities in monitoring.
+    </div>
+    
+    <div class="text-body xs-pt-15 lg-pt-25">
+        In collaboration with local and national SPARROW modelers, WIM has produced several generations of SPARROW online interactive map viewers to highlight the amount of data produced by this powerful model.
     </div>
     
 
@@ -212,34 +219,71 @@ WIM Nav
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 1 Caption</div>
+            <img src="/src/images/projects/sparrow_1.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_1.png" tabindex="1"/>
+                        <div class="caption">The main interface of a SPARROW application allows flexible map selections and customizable data views</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">The main interface of a SPARROW application allows flexible map selections and customizable data views</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 2 Caption</div>
+            <img src="/src/images/projects/sparrow_2.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_2.png" tabindex="1"/>
+                        <div class="caption">An example of a SPARROW national model</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">An example of a SPARROW national model</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 3 Caption</div>
+            <img src="/src/images/projects/sparrow_3.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_3.png" tabindex="1"/>
+                        <div class="caption">Interactive chart depicting nutrient sources and quantities within a specified region</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Interactive chart depicting nutrient sources and quantities within a specified region</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 4 Caption</div>
+            <img src="/src/images/projects/sparrow_4.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_4.png" tabindex="1"/>
+                        <div class="caption">Downloadable table view for all nutrient source values in a user-selected region</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Downloadable table view for all nutrient source values in a user-selected region</div>
         </div>
         
     </div>
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         
         <a href="https://github.com/usgs-wim/sparrow-eastern-us-js" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="fab fa-github"></i>
             <span>View on GitHub</span>
+        </a>
+        
+        <a href="https://www.usgs.gov/mission-areas/water-resources/science/sparrow-modeling-estimating-nutrient-sediment-and-dissolved?qt-science_center_objects=4#qt-science_center_objects" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
+            <i class="fas fa-external-link-square"></i>
+            <span>View Project Page</span>
         </a>
         
     </div>
@@ -248,20 +292,62 @@ WIM Nav
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
     
-    
+    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
+    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <div class="projects-compact xs-mt-20">
+        
+        
         <!-- All Projects Loop (TWIG) -->
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-national-dissolved-solids-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-midwest-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-northwest-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-midcontinental-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-california-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-marb-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrowTennessee</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
+        
+        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+            <div class="heading">sparrow-greatlakes-js</div>
+            <div class="text-body">Related repos will be here.</div>
+        </a>
         
         <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
             <div class="heading">sparrow-eastern-us-js</div>
             <div class="text-body">Related repos will be here.</div>
         </a>
         
-    
+        
     </div>
+    
 
 
 </div>

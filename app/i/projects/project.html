@@ -20,12 +20,15 @@
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/{{slug}}_hero.jpeg');">
     {{ name }}
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">{{ cooperator }}</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
     
     
     
@@ -44,7 +47,15 @@
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         {% for item in screenshots %}
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/{{ item.file }}"/>
+            <img src="/src/images/projects/{{ item.file }}" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/{{ item.file }}" tabindex="1"/>
+                        <div class="caption">{{ item.description }}</div>
+                    </span>
+                </div>
+            </div>
             <div class="caption">{{ item.description }}</div>
         </div>
         {% endfor %}
@@ -52,7 +63,7 @@
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         {% for item in repo_links %}
         <a href="{{ item.link }}" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="{{ item.link_icon }}"></i>
@@ -65,11 +76,12 @@
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
-    
-    
+    {% if related_repos %}
+    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
+    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <div class="projects-compact xs-mt-20">
+        
+        
         <!-- All Projects Loop (TWIG) -->
         {% for repo in related_repos %}
         <a href="'https://github.com/usgs-wim/{{  }}" target="_blank" class="project-item xs-mb-20 lg-mb-25">
@@ -77,8 +89,9 @@
             <div class="text-body">{{ repo.description }}</div>
         </a>
         {% endfor %}
-    
+        
     </div>
+    {% endif %}
 
 
 </div>

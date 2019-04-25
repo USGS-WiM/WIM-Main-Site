@@ -79,7 +79,7 @@
     integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
     
     <!-- Vue required only on projects page -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 </head>
 <body>
@@ -146,7 +146,7 @@ WIM Nav
                 <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
             </div>
             <div class="name">
-                Web informatics & Mapping
+                Web Informatics & Mapping
             </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
@@ -193,7 +193,7 @@ WIM Nav
                 <div class="project-image" style="background-image: url('/src/images/projects/fim_1.png');"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
                     <h3>Flood Inundation Mapper</h3>
-                    <p>The USGS Flood Inundation Mapper combines flood inundation map libraries with real-time USGS river-level data and National Weather Service flood forecasts into a powerful tool that helps communicate when and where flooding may occur and bettter inform local responses that can protect lives and property.</p>
+                    <p>The USGS Flood Inundation Mapper combines flood inundation map libraries with real-time USGS river-level data and National Weather Service flood forecasts into a powerful tool that helps communicate when and where flooding may occur and better inform local responses that can protect lives and property.</p>
                 </div>
             </a>
             
@@ -201,7 +201,7 @@ WIM Nav
                 <div class="project-image" style="background-image: url('/src/images/projects/sparrow_1.png');"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
                     <h3>SPARROW</h3>
-                    <p>SPARROW is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WIM has partnered with SPARROW scientists to provide several map applications depicting SPARROW models for different regions of the U.S.</p>
+                    <p>SPARROW is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WIM has partnered with SPARROW scientists to provide a suite of map applications depicting SPARROW models for different regions of the U.S. and parts of Canada.</p>
                 </div>
             </a>
             
@@ -209,14 +209,14 @@ WIM Nav
                 <div class="project-image" style="background-image: url('/src/images/projects/whispers_1.png');"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
                     <h3>WHISPers</h3>
-                    <p>WHISPers is a partner-driven, web-based repository for sharing basic information about historic and ongoing wildlife mortality (death) and/or morbidity (illness) events. The information, such as county-level locations, onset and ending dates, species affected, and diagnosis has generously been shared with the USGS National Wildlife Health Center over time by hundreds of natural resource managers and stakeholders across the U.S. and beyond.</p>
+                    <p>WHISPers is the Wildlife Health Information Sharing Partnership event reporting system. It web application exposing wildlife mortality data submitted by partners across North America and verified by trained biologists.</p>
                 </div>
             </a>
             
             <a class="project xs-f-around xs-mt-20 lg-mt-30 xs-mb-20 xs-mb-30" href="wetlands.html">
                 <div class="project-image" style="background-image: url('/src/images/projects/wetlands_1.png');"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
-                    <h3>Wetlands</h3>
+                    <h3>Wetlands Inventory</h3>
                     <p>The U.S. Fish and Wildlife Service is the principal federal agency that provides information to the public on the extent and status of the Nation's wetlands. The agency has developed a series of topical maps to show wetlands and deepwater habitats which can be viewed and downloaded through the wetlands mapper.</p>
                 </div>
             </a>
@@ -224,8 +224,8 @@ WIM Nav
             <a class="project xs-f-around xs-mt-20 lg-mt-30 xs-mb-20 xs-mb-30" href="nawqa.html">
                 <div class="project-image" style="background-image: url('/src/images/projects/nawqa_1.png');"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
-                    <h3>NAWQA Trends</h3>
-                    <p>About 140 million people (almost one-half of the Nation's population) rely on groundwater for drinking water, and the demand for groundwater for irrigation and agriculture continues to increase. This mapper shows how concentrations of pesticides, nutrients, metals, and organic contaminants in groundwater are changing during decadal periods across the Nation.</p>
+                    <h3>NAWQA Surface Water Quality Trends</h3>
+                    <p>This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment.</p>
                 </div>
             </a>
             
@@ -238,24 +238,46 @@ WIM Nav
             All Projects
             All Projects
          -->
-        <h1 class="xs-mt-40 lg-mt-75">All ${ repoCount } WIM Projects</h1>
+        <h1 class="xs-mt-40 lg-mt-75">All WIM Projects</h1>
         <div class="text-body xs-pt-15 lg-pt-25">
-            View our full list of public projects on the table below or on our <a href="https://github.com/usgs-wim" target="_blank">GitHub</a>.
+            View our full list of public projects on the table below or on our <a href="https://github.com/usgs-wim" target="_blank">GitHub</a>. You can search projects by name, description, and languages, or you can click on a project's language or tag to show matching projects.
         </div>
 
-        <input type="text" v-model="projectSearch" placeholder="Search for something.." />
+        <div class="project-search xs-mt-20 lg-mt-30">
+            <label for="projectSearch">Search Projects</label>
+            <input type="text" v-model="projectSearch" name="projectSearch" id="projectSearch" placeholder="Type to start searching..." />
+        </div>
 
         <div class="projects-compact xs-mt-20 lg-mt-40">
 
 
             <!-- All Projects Loop -->
-            <a v-bind:href="'https://github.com/usgs-wim/'+repo.name" target="_blank" class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
                 <div class="heading">${ repo.name }</div>
-                <div class="text-body">${ repo.description }</div>
+                <div class="caption">${ repo.description }</div>
                 <div class="tags">
-                    <span class="map" v-for="language in repo.languages">${ language }</span>
+                    <span v-bind:class="tag" v-for="tag in repo.tags" v-on:click="projectSearch = tag">${ tag }</span>
                 </div>
-            </a>
+                <div class="languages">
+                    <span v-for="language in repo.languages" v-on:click="projectSearch = language">${ language }</span>
+                </div>
+                <div class="project-links">
+                    <a v-bind:href="repo.homepageURL" target="_blank" v-if="repo.homepageURL != null" class="homepage-link">
+                        <i class="far fa-external-link"></i>
+                        <span>Open</span>
+                    </a>
+                    <a v-bind:href="'https://github.com/usgs-wim/'+repo.name" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- No Projects -->
+            <div class="no-projects" v-if="!filteredList.length">
+                <i class="far fa-empty-set"></i>
+                <div class="xs-mt-15">No projects found.</div>
+            </div>
 
         </div>
 

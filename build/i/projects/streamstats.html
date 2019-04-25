@@ -8,6 +8,8 @@
     
     
     
+    
+    
 
     <!-- Images & Captions -->
     
@@ -170,7 +172,7 @@ WIM Nav
                 <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
             </div>
             <div class="name">
-                Web informatics & Mapping
+                Web Informatics & Mapping
             </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
@@ -183,12 +185,15 @@ WIM Nav
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/streamstats_hero.jpeg');">
     StreamStats
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">USGS Water Mission Area</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
     
     
     
@@ -201,7 +206,7 @@ WIM Nav
     </div>
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        Cooperator & WIM involvement: WIM began collaborating with the USGS Water Mission Area StreamStats development team since 2014, and has since taken the technical and architecture lead in web development. To keep StreamStats on the forefront of web technology, WIM has moved StreamStats away from a proprietary monolithic application to an ecosystem of web applications and services allowing for more flexibility and extensibility. Adapting an industry-standard Database, Web Service, and Client architecture model has allowed development of numerous APIs and clients to allow for external development on this key system as well better integration possibilities within the USGS.  WIM looks forward to continued involvement in the project, adding additional features and functionality to StreamStats as well as integrating with other Water Mission Area systems and services.
+        WIM began collaborating with the USGS Water Mission Area StreamStats development team in 2014, and has since taken the technical and architecture lead in web development. To keep StreamStats on the forefront of web technology, WIM has moved StreamStats away from a proprietary monolithic application to an ecosystem of web applications and services allowing for more flexibility and extensibility. Adapting an industry-standard database, web service, and client architecture model has allowed development of numerous APIs and clients to allow for external development on this key system as well better integration possibilities within the USGS. WIM looks forward to continued involvement in the project, adding additional features and functionality to StreamStats as well as integrating with other Water Mission Area systems and services.
     </div>
     
 
@@ -211,22 +216,54 @@ WIM Nav
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/streamstats_1.png"/>
+            <img src="/src/images/projects/streamstats_1.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/streamstats_1.png" tabindex="1"/>
+                        <div class="caption">Primary StreamStats Client Interface showing large basin in IA</div>
+                    </span>
+                </div>
+            </div>
             <div class="caption">Primary StreamStats Client Interface showing large basin in IA</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/streamstats_2.png"/>
+            <img src="/src/images/projects/streamstats_2.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/streamstats_2.png" tabindex="1"/>
+                        <div class="caption">API documentation for National Streamflow Statistics</div>
+                    </span>
+                </div>
+            </div>
             <div class="caption">API documentation for National Streamflow Statistics</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/streamstats_3.png"/>
+            <img src="/src/images/projects/streamstats_3.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/streamstats_3.png" tabindex="1"/>
+                        <div class="caption">Upstream flow trace from pourpoint in an OH basin</div>
+                    </span>
+                </div>
+            </div>
             <div class="caption">Upstream flow trace from pourpoint in an OH basin</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/streamstats_4.png"/>
+            <img src="/src/images/projects/streamstats_4.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/streamstats_4.png" tabindex="1"/>
+                        <div class="caption">Flow Statistics available in Streamstats report</div>
+                    </span>
+                </div>
+            </div>
             <div class="caption">Flow Statistics available in Streamstats report</div>
         </div>
         
@@ -234,7 +271,7 @@ WIM Nav
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         
         <a href="https://github.com/usgs-wim/StreamStats" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="fab fa-github"></i>
@@ -252,11 +289,12 @@ WIM Nav
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
     
-    
+    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
+    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <div class="projects-compact xs-mt-20">
+        
+        
         <!-- All Projects Loop (TWIG) -->
         
         <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
@@ -264,8 +302,9 @@ WIM Nav
             <div class="text-body">A styled checkbox of various sizes and colors for mobile angular ui.</div>
         </a>
         
-    
+        
     </div>
+    
 
 
 </div>

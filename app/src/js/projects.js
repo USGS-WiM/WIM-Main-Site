@@ -72,9 +72,15 @@ var getRepos = function(jsonFile){
             }else{
                 wimProjects.allRepos = allRepos;
                 wimProjects.repoCount = allRepos.length;
+                console.log(allRepos);
             }
         }
     });
 }
 
 getRepos("repos.json");
+
+
+
+// Active Link
+$("#projectsLink").addClass("active");

@@ -8,6 +8,8 @@
     {% set slug = "wetlands" %}
     {% set name = "Wetlands" %}
     {% set name_full = "" %}
+    {% set cooperator = "US Fish and Wildlife Service" %}
+    {% set cooperator_logo = "fws" %}
 
 
     <!-- Images & Captions -->
@@ -16,29 +18,38 @@
             file: "wetlands_1.png",
             description: "Wetlands Screenshot 1 Caption"
         },{
-            file: "wetlands_1.png",
+            file: "wetlands_2.png",
             description: "Wetlands Screenshot 2 Caption"
         },{
-            file: "wetlands_1.png",
+            file: "wetlands_3.png",
             description: "Wetlands Screenshot 3 Caption"
         },{
-            file: "wetlands_1.png",
+            file: "wetlands_4.png",
             description: "Wetlands Screenshot 4 Caption"
         }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "The Wetlands mapper is designed to deliver easy-to-use, map like views of America's Wetland resources. It integrates digital map data along with other resource information to produce current information on the status, extent, characteristics and functions of wetlands, riparian, and deepwater habitats. The Wetland Mapper fulfills the U.S. Fish and Wildlife Service's strategic plan for the development, revision and dissemination of wetlands data and information to resource managers and the public. This information is intended  to promote the understanding and conservation of wetland resources through discovery and education as well as to aid in resource management, research and decision making.",
-        "The wetlands displayed on the Wetlands Mapper show wetland type and extent using a biological definition of wetlands. There is no attempt to define the limits of proprietary jurisdiction of any Federal, State, or local government, or to establish the geographical scope of the regulatory programs of government agencies."
+        "The Wetlands mapper is designed to deliver easy-to-use, map like views of America's Wetland resources. It integrates digital map data along with other resource information to produce current information on the status, extent, characteristics and functions of wetlands, riparian, and deepwater habitats. The Wetlands Mapper fulfills the U.S. Fish and Wildlife Service's strategic plan for the development, revision and dissemination of wetlands data and information to resource managers and the public. This information is intended to promote the understanding and conservation of wetland resources through discovery and education as well as to aid in resource management, research and decision making.",
+        "WIM personnel and the FWS wetlands group made use of an inter-agency agreement in 2000s to co-develop this key resource. This Federal partnership has yielded tremendous benefits in ongoing efforts to configure, improve and distribute the wetlands map information using newer technologies in digital mapping and web-serving capabilities."
     ] %}
 
     <!-- Related Repos -->
     {% set related_repos = [
         {
-            name: "Related Repos",
+            name: "WetlandsMapper",
             description: "Related repos will be here."
-        }
+        },{
+            name: "WetlandsMapperV2",
+            description: "Related repos will be here."
+        },{
+            name: "WetlandsProjects",
+            description: "Related repos will be here."
+        },{
+            name: "Swi",
+            description: "Related repos will be here."
+        },
     ] %}
 
     <!-- Repo Links -->
@@ -49,8 +60,6 @@
             link_icon: "fab fa-github"
         }
     ] %}
-
-
 
 
     {% include "../includes/header.html" %}

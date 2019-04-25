@@ -4,41 +4,46 @@
 <head>
     
     <!-- Project Info -->
-    {% set desc = "WHISPers is a partner-driven, web-based repository for sharing basic information about historic and ongoing wildlife mortality (death) and/or morbidity (illness) events. The information, such as county-level locations, onset and ending dates, species affected, and diagnosis has generously been shared with the USGS National Wildlife Health Center over time by hundreds of natural resource managers and stakeholders across the U.S. and beyond." %}
-    {% set slug = "WHISPers" %}
-    {% set name = "Wetlands" %}
+    {% set desc = "WHISPers is the Wildlife Health Information Sharing Partnership event reporting system. It web application exposing wildlife mortality data submitted by partners across North America and verified by trained biologists." %}
+    {% set slug = "whispers" %}
+    {% set name = "WHISPers" %}
     {% set name_full = "Wildlife Health Information Sharing Partnership event reporting system" %}
+    {% set cooperator = "USGS National Wildlife Health Center" %}
+    {% set cooperator_logo = "nwhc" %}
 
 
     <!-- Images & Captions -->
     {% set screenshots = [
         {
             file: "whispers_1.png",
-            description: "WHISPers Screenshot 1 Caption"
+            description: "WHISPers maps search results as well as providing tabular results for easy review."
         },{
-            file: "whispers_1.png",
-            description: "WHISPers Screenshot 2 Caption"
+            file: "whispers_2.png",
+            description: "Users can search the WHISPers with a number of parameters relating to location and nature of the infection."
         },{
-            file: "whispers_1.png",
-            description: "WHISPers Screenshot 3 Caption"
+            file: "whispers_3.png",
+            description: "A dedicated event details page for each event provides all event details available. Availability is based on permissions required for more sensitive data."
         },{
-            file: "whispers_1.png",
-            description: "WHISPers Screenshot 4 Caption"
+            file: "whispers_4.png",
+            description: "A user dashboard allows for special  actions for data and contact management that allow the user to personalize their experience."
         }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "Welcome to WHISPers, a Wildlife Health Information Sharing Partnership event reporting system with current and historic information on wildlife morbidity or mortality events in North America. Events typically involve five or more sick or dead wild animals observed in the same general location and time period. This information is collected opportunistically and provided here by multiple State, Federal, and other agencies to enhance collective understanding of disease in wildlife populations.",
-        "WHISPers Description paragraph 2."
+        "WHISPers (Wildlife Health Information Sharing Partnership event reporting system)  is a partner-driven, web-based repository for sharing current and historic data on wildlife morbidity or mortality events in North America and beyond. The data, including event locations, onset and ending dates, species affected, and diagnosis has generously been shared with the USGS National Wildlife Health Center over time by hundreds of natural resource managers and stakeholders across the U.S. and beyond to enhance collective understanding of disease in wildlife populations.",
+        "In collaboration with the National Wildlife Health Center and with a grant from the National Biosurveillance Integration Center, WIM developed WHISPers version 2 to modernize the application architecture, user interface, and increase the data management and data sharing capabilities of the system; with the ultimate goal of making wildlife mortality and morbidity data more accessible to all interested parties."
     ] %}
 
 
     <!-- Related Repos -->
     {% set related_repos = [
         {
-            name: "Related Repos",
+            name: "whispers",
             description: "Related repos will be here."
+        },{
+            name: "whispersservices",
+            description: "Whispers services"
         }
     ] %}
 
@@ -50,8 +55,6 @@
             link_icon: "fab fa-github"
         }
     ] %}
-
-
 
 
     {% include "../includes/header.html" %}
