@@ -77,19 +77,40 @@
         Related Projects
      -->
     {% if related_repos %}
-    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
-    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
     <div class="projects-compact xs-mt-20">
         
         
-        <!-- All Projects Loop (TWIG) -->
+        <!-- Related Projects Loop (TWIG) -->
         {% for repo in related_repos %}
-        <a href="'https://github.com/usgs-wim/{{  }}" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">{{ repo.name }}</div>
-            <div class="text-body">{{ repo.description }}</div>
-        </a>
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">{{repo.name}}</div>
+            <div class="caption">{{ repo.description }}</div>
+            <!-- <div class="tags noclick">
+                {% for tag in repo.tags %}
+                <span>{{tag}}</span>
+                {% endfor %}
+            </div>
+            <div class="languages noclick">
+                {% for lang in repo.languages %}
+                <span>{{lang}}</span>
+                {% endfor %}
+            </div> -->
+            <div class="project-links xs-mt-10">
+                {% if repo.homepageURL %}
+                <a href="{{repo.homepageURL}}" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                {% endif %}
+                <a href="https://github.com/usgs-wim/{{repo.name}}" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         {% endfor %}
-        
+
     </div>
     {% endif %}
 

@@ -120,6 +120,7 @@
         margin-left: 5px;
         font-size: 11px;
         font-family: @monospace;
+        text-transform: capitalize;
 
         &:after{
             content: ',';
@@ -137,6 +138,14 @@
         }
     }
 }
+.noclick span:hover{
+    cursor: default;
+    text-decoration: none;
+}
+.languages.noclick span:hover{
+    color: fade(@ink, 50%);
+}
+
 ///////////////////////////////
 // List of featured projects //
 ///////////////////////////////
@@ -295,6 +304,7 @@
         }
         .heading{
             padding-top: 8px;
+            word-wrap: break-word;
         }
         .caption{
             flex-grow: 3;

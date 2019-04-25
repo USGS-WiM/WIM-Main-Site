@@ -293,59 +293,175 @@ WIM Nav
         Related Projects
      -->
     
-    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
-    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
     <div class="projects-compact xs-mt-20">
         
         
-        <!-- All Projects Loop (TWIG) -->
+        <!-- Related Projects Loop (TWIG) -->
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-national-dissolved-solids-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">Sparrow National Dissolved Solids</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-national-dissolved-solids-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-midwest-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">ESRI javascript API map app for SPARROW Midwest data</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-midwest-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-northwest-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">Pacific Northwest.</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-northwest-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-midcontinental-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">Sparrow Midcontinental</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-midcontinental-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-california-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">Javascript SPARROW map interface for California</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-california-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-marb-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">Javascript version of SPARROW MARB (mississippi) models</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-marb-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrowTennessee</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">JS version of SPARROW</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrowTennessee" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-greatlakes-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">JS Version of Sparrow Great Lakes (based on MRB3 model)</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-greatlakes-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">sparrow-eastern-us-js</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+            <div class="caption">Eastern United States NHD model</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-eastern-us-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        
+
     </div>
     
 

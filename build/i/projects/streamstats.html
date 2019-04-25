@@ -290,19 +290,277 @@ WIM Nav
         Related Projects
      -->
     
-    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
-    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
     <div class="projects-compact xs-mt-20">
         
         
-        <!-- All Projects Loop (TWIG) -->
+        <!-- Related Projects Loop (TWIG) -->
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">mobileangularui-checkbox</div>
-            <div class="text-body">A styled checkbox of various sizes and colors for mobile angular ui.</div>
-        </a>
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">StreamStatsWebserviceDocumentation</div>
+            <div class="caption">Light weight angular app that documents ss REST services</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://streamstats.usgs.gov/streamstatsservices" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                
+                <a href="https://github.com/usgs-wim/StreamStatsWebserviceDocumentation" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">StreamStatsServices</div>
+            <div class="caption">StreamStats REST Services</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://streamstats.usgs.gov/streamstatsservices" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                
+                <a href="https://github.com/usgs-wim/StreamStatsServices" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">StreamStats-Setup</div>
+            <div class="caption">Setup scripts and information for StreamStats</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/StreamStats-Setup" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">StreamStatsNationalServices</div>
+            <div class="caption">National Implementation of Streamstats Services</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/StreamStatsNationalServices" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">NSS</div>
+            <div class="caption">NSS Client Application</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/NSS" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">NSSServices</div>
+            <div class="caption">Services to calculate National Streamflow statistics</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://streamstats.usgs.gov/nssservices" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                
+                <a href="https://github.com/usgs-wim/NSSServices" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">wateruse</div>
+            <div class="caption">Client application for data management of wateruse data</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://test.streamstats.usgs.gov/wu" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                
+                <a href="https://github.com/usgs-wim/wateruse" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">WaterUseServices</div>
+            <div class="caption">Services for wateruse data</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/WaterUseServices" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">NavigationServices</div>
+            <div class="caption">Network navigation REST web services used for NHDplus V2 network navigation</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://streamstats.usgs.gov/navigationservices" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                
+                <a href="https://github.com/usgs-wim/NavigationServices" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">StreamStats-Tools</div>
+            <div class="caption">A collection of tools for StreamStats data preparation and upload to AWS</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/StreamStats-Tools" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">FlowDirectionTraceServices</div>
+            <div class="caption">StreamStats custom Flow Direction Trace to be served as a arcgeo-processing service</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://streamstats.usgs.gov/navigationservices" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                
+                <a href="https://github.com/usgs-wim/FlowDirectionTraceServices" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">TravelTime</div>
+            <div class="caption">Time of travel client application</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/TravelTime" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">TravelTimeService</div>
+            <div class="caption">StreamStats Time of travel</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/TravelTimeService" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+
     </div>
     
 

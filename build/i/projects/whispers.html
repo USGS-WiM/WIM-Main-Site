@@ -286,24 +286,31 @@ WIM Nav
         Related Projects
      -->
     
-    <h1 class="xs-mt-20 lg-mt-40">Associated Repos</h1>
-    <h3 class="xs-mt-20 lg-mt-40">Ignore this section - it will look exactly like the main projects page</h3>
+    <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
     <div class="projects-compact xs-mt-20">
         
         
-        <!-- All Projects Loop (TWIG) -->
+        <!-- Related Projects Loop (TWIG) -->
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">whispers</div>
-            <div class="text-body">Related repos will be here.</div>
-        </a>
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">whispersservices_django</div>
+            <div class="caption">Django services for WHISPers</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/whispersservices_django" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">whispersservices</div>
-            <div class="text-body">Whispers services</div>
-        </a>
-        
-        
+
     </div>
     
 
