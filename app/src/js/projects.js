@@ -67,7 +67,7 @@ var getRepos = function(jsonFile){
 
 
             // Do it all again with 2nd 100 repos
-            if(jsonFile == 'repos.json'){
+            if(jsonFile == 'repos1.json'){
                 getRepos('repos2.json')
             }else{
                 // wimProjects.allRepos = allRepos;
@@ -88,7 +88,7 @@ var getRepos = function(jsonFile){
     });
 }
 
-getRepos("repos.json");
+getRepos("repos1.json");
 
 
 
