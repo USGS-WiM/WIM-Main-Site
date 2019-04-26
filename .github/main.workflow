@@ -52,3 +52,27 @@ action "GitHub Action for Slack" {
   secrets = ["SLACK_WEBHOOK"]
   args = "Successfully deployed to test site"
 }
+
+workflow "Push to Prod Site" {
+  on = "push"
+  resolves = ["GitHub Action for Slack-2"]
+}
+
+action "Filters for GitHub Actions-2" {
+  uses = "actions/bin/filter@3c0b4f0e63ea54ea5df2914b4fabf383368cd0da"
+  args = "branch master"
+}
+
+action "GitHub Action for AWS-2" {
+  uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
+  needs = ["Filters for GitHub Actions-2"]
+  args = "s3 cp $GITHUB_WORKSPACE/build/ s3://wim.usgs.gov/  --recursive"
+  secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+}
+
+action "GitHub Action for Slack-2" {
+  uses = "Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385"
+  needs = ["GitHub Action for AWS-2"]
+  secrets = ["SLACK_WEBHOOK"]
+  args = "Successfully deployed to prod site"
+}
