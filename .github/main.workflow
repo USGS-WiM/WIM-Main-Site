@@ -1,6 +1,6 @@
 workflow "Production Repo Workflow" {
   resolves = ["GitHub Action for AWS-prod", "GitHub Action for AWS2-prod"]
-  on = "schedule(40 16 * * *)"
+  on = "schedule(42 16 * * *)"
 }
 workflow "Test Repo Workflow" {
   resolves = ["GitHub Action for AWS-test", "GitHub Action for AWS2-test"]
