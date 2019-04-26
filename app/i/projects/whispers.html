@@ -2,69 +2,64 @@
 <html>
 
 <head>
+    
+    <!-- Project Info -->
+    {% set desc = "WHISPers is the Wildlife Health Information Sharing Partnership event reporting system. It web application exposing wildlife mortality data submitted by partners across North America and verified by trained biologists." %}
+    {% set slug = "whispers" %}
+    {% set name = "WHISPers" %}
+    {% set name_full = "Wildlife Health Information Sharing Partnership event reporting system" %}
+    {% set cooperator = "USGS National Wildlife Health Center" %}
+    {% set cooperator_logo = "nwhc" %}
 
-    {% set page_title = "WHISPers: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "WHISPers: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/whispers.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/whispers_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/whispers_1.png" %}
-
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "WHISPers" %}
-    {% set project_slug = "whispers" %}
-    {% set short_desc = "WHISPers Short Description." %}
 
     <!-- Images & Captions -->
     {% set screenshots = [
         {
             file: "whispers_1.png",
-            description: "WHISPers Screenshot 1 Caption"
+            description: "WHISPers maps search results as well as providing tabular results for easy review."
         },{
-            file: "whispers_1.png",
-            description: "WHISPers Screenshot 2 Caption"
+            file: "whispers_2.png",
+            description: "Users can search the WHISPers with a number of parameters relating to location and nature of the infection."
         },{
-            file: "whispers_1.png",
-            description: "WHISPers Screenshot 3 Caption"
+            file: "whispers_3.png",
+            description: "A dedicated event details page for each event provides all event details available. Availability is based on permissions required for more sensitive data."
         },{
-            file: "whispers_1.png",
-            description: "WHISPers Screenshot 4 Caption"
+            file: "whispers_4.png",
+            description: "A user dashboard allows for special  actions for data and contact management that allow the user to personalize their experience."
         }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "WHISPers Description paragraph 1.",
-        "WHISPers Description paragraph 2."
+        "WHISPers (Wildlife Health Information Sharing Partnership event reporting system)  is a partner-driven, web-based repository for sharing current and historic data on wildlife morbidity or mortality events in North America and beyond. The data, including event locations, onset and ending dates, species affected, and diagnosis has generously been shared with the USGS National Wildlife Health Center over time by hundreds of natural resource managers and stakeholders across the U.S. and beyond to enhance collective understanding of disease in wildlife populations.",
+        "In collaboration with the National Wildlife Health Center and with a grant from the National Biosurveillance Integration Center, WIM developed WHISPers version 2 to modernize the application architecture, user interface, and increase the data management and data sharing capabilities of the system; with the ultimate goal of making wildlife mortality and morbidity data more accessible to all interested parties."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "whispers_cooperator.png" %}
 
 
     <!-- Related Repos -->
     {% set related_repos = [
         {
             name: "WHISPers",
-            description: "WHISPers Repos go here."
+            description: "Wildlife Health Information Sharing Partnership event reporting system(WHISPers) v2"
+        },{
+            name: "whispersservices_django",
+            description: "Django services for WHISPers"
         }
     ] %}
 
     <!-- Repo Links -->
     {% set repo_links = [
-        {
-            link: "https://github.com/usgs-wim/",
-            text: "View on GitHub",
-            link_icon: "fab fa-github"
-        }
     ] %}
 
-
+    <!-- Page Meta -->
+    {% set page_title = name ~ " | Web Informatics & Mapping" %}
+    {% set meta_desc = desc %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = name ~ " | Web Informatics & Mapping" %}
+    {% set share_desc = desc %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/" ~ slug ~ ".html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/branding/meta/Facebook.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/branding/meta/Twitter.png" %}
 
 
     {% include "../includes/header.html" %}

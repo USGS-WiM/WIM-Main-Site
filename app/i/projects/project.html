@@ -1,3 +1,17 @@
+{% set page_title = name + ": Web Informatics & Mapping" %}
+{% set meta_desc = desc %}
+{% set theme_color = "#030508" %}
+{% set share_title = name + ": Web Informatics & Mapping" %}
+{% set share_desc = desc %}
+
+{% set share_url = "https://wim.usgs.gov/i/projects/" + slug + ".html" %}
+{% set fb_img = "https://wim.usgs.gov/src/images/projects/" + slug + "_1.png" %}
+{% set tw_img = "https://wim.usgs.gov/src/images/projects/" + slug + "_1.png" %}
+
+<!-- Cooperator Logo -->
+{% set cooperator_logo = slug + "_cooperator.png" %}
+
+
 <!-- 
     USGS Header, USA Banner, and Nav
 -->
@@ -6,13 +20,15 @@
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
-    {{ project_name }}
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/{{slug}}_hero.jpeg');">
+    {{ name }}
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">{{ cooperator }}</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
-    
     
     
     
@@ -24,14 +40,22 @@
         {{ paragraph }}
     </div>
     {% endfor %}
-    
+
     <!-- 
         Screenshots
     -->
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         {% for item in screenshots %}
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/{{ item.file }}"/>
+            <img src="/src/images/projects/{{ item.file }}" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/{{ item.file }}" tabindex="1"/>
+                        <div class="caption">{{ item.description }}</div>
+                    </span>
+                </div>
+            </div>
             <div class="caption">{{ item.description }}</div>
         </div>
         {% endfor %}
@@ -39,7 +63,8 @@
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    {% if repo_links %}
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         {% for item in repo_links %}
         <a href="{{ item.link }}" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="{{ item.link_icon }}"></i>
@@ -47,25 +72,49 @@
         </a>
         {% endfor %}
     </div>
+    {% endif %}
     
 
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
-    
-    
-        <!-- All Projects Loop (TWIG) -->
+    {% if related_repos %}
+    <h1 class="xs-mt-20 lg-mt-40">Project Repos</h1>
+    <div class="projects-compact xs-mt-20">
+        
+        
+        <!-- Related Projects Loop (TWIG) -->
         {% for repo in related_repos %}
-        <a href="'https://github.com/usgs-wim/{{  }}" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">{{ repo.name }}</div>
-            <div class="text-body">{{ repo.description }}</div>
-        </a>
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">{{repo.name}}</div>
+            <div class="caption">{{ repo.description }}</div>
+            <!-- <div class="tags noclick">
+                {% for tag in repo.tags %}
+                <span>{{tag}}</span>
+                {% endfor %}
+            </div>
+            <div class="languages noclick">
+                {% for lang in repo.languages %}
+                <span>{{lang}}</span>
+                {% endfor %}
+            </div> -->
+            <div class="project-links xs-mt-10">
+                {% if repo.homepageURL %}
+                <a href="{{repo.homepageURL}}" target="_blank" class="homepage-link">
+                    <i class="far fa-external-link"></i>
+                    <span>Open</span>
+                </a>
+                {% endif %}
+                <a href="https://github.com/usgs-wim/{{repo.name}}" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         {% endfor %}
-    
+
     </div>
+    {% endif %}
 
 
 </div>

@@ -52,7 +52,7 @@ gulp.task('staticdev', function () {
 
 // Compile Twig Templates
 gulp.task('twigdev', function () {
-    return gulp.src([ folder.src + '**/*.html'])
+    return gulp.src([folder.src + '**/*.html'])
         .pipe(twig())
         .pipe(gulp.dest(folder.dev))
         .pipe(browserSync.stream());
@@ -115,9 +115,6 @@ gulp.task('clean:build', function () {
 
 // Move any static files over
 var staticFiles = [
-    folder.src + 'src/repos.json',
-    folder.src + 'src/repos2.json',
-    folder.src + 'src/js/**/*',
     folder.src + 'src/images/**/*',
     folder.src + 'src/publicsans/**/*',
     folder.src + 'styleguide.css',
@@ -139,6 +136,7 @@ gulp.task('lessbuild', function () {
 // Minify JS
 gulp.task('minifyjs', function () {
     gulp.src(folder.src + 'src/js/**/*')
+        // .pipe(replace('"/src/"+jsonFile', '"https://test.wim.usgs.gov/src/"+jsonFile')) // Replace local repos json with live
         .pipe(minify({
             nosource: true,
             ext: {
@@ -163,14 +161,9 @@ gulp.task('twigbuild', function () {
     return gulp.src([folder.src + '**/*.html'])
         .pipe(twig())
         // .pipe(inject.replace('/styleguide.css', 'https://wim.usgs.gov/styleguide/css/main.css')) Replace Local Styleguide with wim.usgs
+        .pipe(inject.replace('https://cdn.jsdelivr.net/npm/vue/dist/vue.js', 'https://cdn.jsdelivr.net/npm/vue')) // Replace Dev Vue with Production
         .pipe(gulp.dest(folder.build))
 });
-
-// Replace local styleguide css with wim/styleguide.csss
-gulp.task('styleguidecss', function () {
-    gulp.src(folder.build + '**/*.html')
-        .pipe(gulp.dest('build'));
-}); 
 
 // Clean first, then the rest
 gulp.task('build', function (callback) {

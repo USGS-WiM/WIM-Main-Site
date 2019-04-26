@@ -2,23 +2,15 @@
 <html>
 <head>
 
-    {% set page_title = "StreamStats: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "StreamStats: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/streamstats.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/streamstats_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/streamstats_1.png" %}
-
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "StreamStats" %}
-    {% set project_slug = "streamstats" %}
-    {% set short_desc = "StreamStats provides access to spatial analytical tools providing USGS water science-backed information that are useful for water-resources planning and management, and for engineering and design purposes." %}
     
+    <!-- Project Info -->
+    {% set desc = "StreamStats provides access to spatial analytical tools providing USGS water science-backed information that are useful for water-resources planning and management, and for engineering and design purposes." %}
+    {% set slug = "streamstats" %}
+    {% set name = "StreamStats" %}
+    {% set name_full = "" %}
+    {% set cooperator = "USGS Water Mission Area" %}
+    {% set cooperator_logo = "wma" %}
+
     <!-- Images & Captions -->
     {% set screenshots = [
         {
@@ -38,34 +30,94 @@
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "StreamStats is a Web-based Geographic Information Systems (GIS) application that provides users with access to an assortment of analytical tools that are useful for a variety of water-resources planning and management purposes, and for engineering and design purposes. StreamStats users can select USGS data-collection station locations shown on a map and obtain previously published information for the stations. Users also can select any location along a stream and obtain the drainage-basin boundary, basin characteristics, and estimates of streamflow statistics for the location. The streamflow statistics that StreamStats can provide for data-collection stations and for user-selected ungaged sites vary among the implemented states and among data-collection stations within states.", 
-        "Cooperator & WIM involvement: WIM began collaborating with the USGS Water Mission Area StreamStats development team since 2014, and has since taken the technical and architecture lead in web development. To keep StreamStats on the forefront of web technology, WIM has moved StreamStats away from a proprietary monolithic application to an ecosystem of web applications and services allowing for more flexibility and extensibility. Adapting an industry-standard Database, Web Service, and Client architecture model has allowed development of numerous APIs and clients to allow for external development on this key system as well better integration possibilities within the USGS.  WIM looks forward to continued involvement in the project, adding additional features and functionality to StreamStats as well as integrating with other Water Mission Area systems and services."
+        "StreamStats is a Web-based Geographic Information Systems (GIS) application that provides users with access to an assortment of analytical tools that are useful for a variety of water-resources planning and management purposes, and for engineering and design purposes. StreamStats users can select USGS data-collection station locations shown on a map and obtain previously published information for the stations. Users also can select any location along a stream and obtain the drainage-basin boundary, basin characteristics, and estimates of streamflow statistics for the location. The streamflow statistics that StreamStats can provide for data-collection stations and for user-selected ungaged sites vary among the implemented states and among data-collection stations within states.",
+        "WIM began collaborating with the USGS Water Mission Area StreamStats development team in 2014, and has since taken the technical and architecture lead in web development. To keep StreamStats on the forefront of web technology, WIM has moved StreamStats away from a proprietary monolithic application to an ecosystem of web applications and services allowing for more flexibility and extensibility. Adapting an industry-standard database, web service, and client architecture model has allowed development of numerous APIs and clients to allow for external development on this key system as well better integration possibilities within the USGS. WIM looks forward to continued involvement in the project, adding additional features and functionality to StreamStats as well as integrating with other Water Mission Area systems and services."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "streamstats_cooperator.png" %}
-
 
     <!-- Related Repos -->
     {% set related_repos = [
         {
-            name: "mobileangularui-checkbox",
-            description: "A styled checkbox of various sizes and colors for mobile angular ui."
+            name: "StreamStats",
+            description: "USGS Streamstats Web Application",
+            homepageURL: "https://streamstats.usgs.gov/ss/"
+        },{
+            name: "StreamStatsWebserviceDocumentation",
+            description: "Light weight angular app that documents ss REST services",
+            homepageURL: "https://streamstats.usgs.gov/streamstatsservices"
+        },{
+            name: "StreamStatsServices",
+            description: "StreamStats REST Services",
+            homepageURL: "https://streamstats.usgs.gov/streamstatsservices"
+        },{
+            name: "StreamStats-Setup",
+            description: "Setup scripts and information for StreamStats",
+            homepageURL: ""
+        },{
+            name: "StreamStatsNationalServices",
+            description: "National Implementation of Streamstats Services",
+            homepageURL: ""
+        },{
+            name: "NSS",
+            description: "NSS Client Application",
+            homepageURL: ""
+        },{
+            name: "NSSServices",
+            description: "Services to calculate National Streamflow statistics",
+            homepageURL: "https://streamstats.usgs.gov/nssservices"
+        },{
+            name: "wateruse",
+            description: "Client application for data management of wateruse data",
+            homepageURL: "https://test.streamstats.usgs.gov/wu"
+        },{
+            name: "WaterUseServices",
+            description: "Services for wateruse data",
+            homepageURL: ""
+        },{
+            name: "NavigationServices",
+            description: "Network navigation REST web services used for NHDplus V2 network navigation",
+            homepageURL: "https://streamstats.usgs.gov/navigationservices"
+        },{
+            name: "StreamStats-Tools",
+            description: "A collection of tools for StreamStats data preparation and upload to AWS",
+            homepageURL: ""
+        },{
+            name: "FlowDirectionTraceServices",
+            description: "StreamStats custom Flow Direction Trace to be served as a arcgeo-processing service",
+            homepageURL: "https://streamstats.usgs.gov/navigationservices"
+        },{
+            name: "TravelTime",
+            description: "Time of travel client application",
+            homepageURL: ""
+        },{
+            name: "TravelTimeService",
+            description: "StreamStats Time of travel",
+            homepageURL: ""
         }
     ] %}
 
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/StreamStats",
-            text: "View on GitHub",
-            link_icon: "fab fa-github"
+            link: "https://streamstats.usgs.gov/ss/",
+            text: "Open StreamStats",
+            link_icon: "fas fa-external-link-square"
         },{
             link: "https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools",
             text: "View Project Page",
-            link_icon: "fas fa-external-link-square"
+            link_icon: "fas fa-info-square"
         }
     ] %}
+
+
+    <!-- Page Meta -->
+    {% set page_title = name ~ " | Web Informatics & Mapping" %}
+    {% set meta_desc = desc %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = name ~ " | Web Informatics & Mapping" %}
+    {% set share_desc = desc %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/" ~ slug ~ ".html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/branding/meta/Facebook.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/branding/meta/Twitter.png" %}
 
 
 

@@ -181,12 +181,13 @@
     <div class="team-hero">
         <div class="standard-width xs-pt-40 lg-pt-75 xs-pb-10 xs-pl-20 xs-pr-20">
             <h1>
-                WIM is improving how the government serves the public through technology.
+                Modern web development delivering the best of the USGS to the public.
+                <!-- WIM is improving how the government serves the public through technology. -->
                 <!-- The people who work at Etsy share the vision and values of our community. -->
             </h1>
             <h2>
                 We are geographers, cartographers, and scientists who are passionate about science communication
-                <!-- We’re driven by the idea that the best work is born from diligence, craftsmanship and fun. -->
+                <!-- We're driven by the idea that the best work is born from diligence, craftsmanship and fun. -->
             </h2>
         </div>
     </div>
@@ -199,8 +200,8 @@
 
             {% for member in team %}
             <div class="member" id="{{ member.first_name }}" tabindex="0">
-                <div class="member-image" style="background-image: url('/src/images/team/{{ member.first_name }}.png');">
-                    <img src="/src/images/team/{{ member.first_name }}.png" class="member-image-element" alt="{{ member.first_name}} {{ member.last_name }}'s Photo" title="{{ member.first_name}} {{ member.last_name }}"/>
+                <div class="member-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');">
+                    <img src="/src/images/team/{{ member.first_name }}.jpg" class="member-image-element" alt="{{ member.first_name}} {{ member.last_name }}'s Photo" title="{{ member.first_name}} {{ member.last_name }}"/>
                 </div>
                 <div class="member-meta">
                     <b class="text-sm">{{ member.first_name }} {{ member.last_name }}</b>
@@ -220,7 +221,7 @@
                         <!-- Member Name, Title, Contact -->
                         <div class="xs-f-btw xs-mb-15">
                             <!-- Image -->
-                            <div class="member-about-image" style="background-image: url('/src/images/team/{{ member.first_name }}.png');"></div>
+                            <div class="member-about-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');"></div>
                             <div class="member-about-header xs-f-center xs-f-col">
                                 <h3>{{ member.first_name }} {{ member.last_name }}</h3>
                                 <h4>{{ member.title }}</h4>

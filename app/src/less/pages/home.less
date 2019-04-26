@@ -21,8 +21,40 @@
 //////////
 // Hero //
 //////////
+.hero-home{
+    display: block;
+    background-image: url('/src/images/hero.jpg');
+    background-color: rgba(225,225,255,0.6);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+
+    h1{
+        font-weight: bolder;
+    }
+
+    h3{
+        max-width: 500px;
+    }
+
+}
+
+
+.home-body{
+    background-image: url('/src/images/trees.png');
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-color: rgba(255,255,255,0.1);
+
+    .home-paragraph{
+        max-width: 760px;
+    }
+}
 .home-hero{
     display: flex;
+    display: none;
     
     .hero-image{
         display: block;

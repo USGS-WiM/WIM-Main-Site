@@ -3,7 +3,7 @@ body{
     // background-color: @grey_lighter;
 
     @media (max-width: @screen_mobile) {
-        padding-bottom: 85px;
+        padding-bottom: 65px;
     }
 }
 
@@ -238,10 +238,45 @@ a.btn-icon i{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: @ink_darker;
-
+    background-color: @ink_dark;
+    
     .footer-content{
         color: @white;
         text-align: center;
+    }
+}
+////////////////////////
+//   USGS FOOTER      //
+////////////////////////
+.usgs-footer{
+    background: @ink;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    width: 100%;
+    color: fade(@white, 50%);
+
+    .tmp-container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .footer-doi{
+
+            a{
+                padding: 5px 5px;
+                color: fade(@white, 80%);
+                transition: @transition;
+
+                &:hover{
+                    color: @white;
+                    transition: @transition;
+                }
+            }
+        }
+    }
+
+    .footer-social-links{
+        display: none;
     }
 }

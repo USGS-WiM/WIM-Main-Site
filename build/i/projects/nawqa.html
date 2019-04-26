@@ -3,8 +3,7 @@
 
 <head>
 
-    
-    
+    <!-- Project Info -->
     
     
     
@@ -12,23 +11,12 @@
     
     
 
-
-    <!-- 
-        Project Specific Variables
-    -->
-    
-    
-    
 
     <!-- Images & Captions -->
     
 
     <!-- Description Paragraphs -->
     
-
-    <!-- Cooperator Logo -->
-    
-
 
     <!-- Related Repos -->
     
@@ -37,13 +25,23 @@
     
 
 
+    <!-- Page Meta -->
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 
     <meta charset="utf-8">
 
 <!-- Dynamic - change in controllers -->
-<title>NAWQA: Web Informatics & Mapping</title>
-<meta name="description" content="WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." />
+<title>NAWQA | Web Informatics & Mapping</title>
+<meta name="description" content="This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment." />
 <meta name="theme-color" content="#030508">
 
 <!-- Static Meta -->
@@ -53,17 +51,17 @@
 
 <!-- Social Media Meta -->
 <!-- Facebook -->
-<meta property="og:title" content="NAWQA: Web Informatics & Mapping">
-<meta property="og:description" content="WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
-<meta property="og:image" content="https://wim.usgs.gov/src/images/projects/nawqa_1.png">
+<meta property="og:title" content="NAWQA | Web Informatics & Mapping">
+<meta property="og:description" content="This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment.">
+<meta property="og:image" content="https://wim.usgs.gov/src/images/branding/meta/Facebook.png">
 <meta property="og:url" content="https://wim.usgs.gov/i/projects/nawqa.html">
 
 <!-- Twitter -->
-<meta name="twitter:title" content="NAWQA: Web Informatics & Mapping">
-<meta name="twitter:description" content="WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
-<meta name="twitter:image" content="https://wim.usgs.gov/src/images/projects/nawqa_1.png">
+<meta name="twitter:title" content="NAWQA | Web Informatics & Mapping">
+<meta name="twitter:description" content="This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment.">
+<meta name="twitter:image" content="https://wim.usgs.gov/src/images/branding/meta/Twitter.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:alt" content="NAWQA: Web Informatics & Mapping">
+<meta name="twitter:image:alt" content="NAWQA | Web Informatics & Mapping">
 
 
 <!-- Mobile App Meta -->
@@ -110,7 +108,21 @@
     <!-- 
         Include Project Page include file
     -->
-    <!-- 
+    
+
+
+
+
+
+
+
+
+
+<!-- Cooperator Logo -->
+
+
+
+<!-- 
     USGS Header, USA Banner, and Nav
 -->
 <!-- USA Site Banner -->
@@ -172,7 +184,7 @@ WIM Nav
                 <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
             </div>
             <div class="name">
-                Web informatics & Mapping
+                Web Informatics & Mapping
             </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
@@ -185,13 +197,15 @@ WIM Nav
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/nawqa_hero.jpeg');">
     NAWQA
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">National Water-Quality Assessment</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
-    
     
     
     
@@ -200,70 +214,91 @@ WIM Nav
     -->
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        NAWQA Description paragraph 1.
+        One of the major goals of the U.S. Geological Survey's (USGS) National Water-Quality Assessment project is to answer the question “Has water quality been changing over time?”. To support that goal, they have conducted long-term consistent and comparable monitoring on streams and rivers throughout the Nation since 1992. Other USGS programs, as well as many other Federal, State, regional, and local monitoring organizations, also have collected long-term water-quality data to support their own assessments of changing water- quality conditions. Data from these organizations have been aggregated, screened, standardized, and used to support the most comprehensive assessment of stream-quality trends conducted to date in the United States. Collectively, these trend results will be used to provide insight into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.
     </div>
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        NAWQA Description paragraph 2.
+        WIM worked closely with USGS scientists to develop and release this interactive map interface with the release of their trends report.
     </div>
     
-    
+
     <!-- 
         Screenshots
     -->
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 1 Caption</div>
+            <img src="/src/images/projects/nawqa_1.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_1.png" tabindex="1"/>
+                        <div class="caption">Map icons indicating trend results</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Map icons indicating trend results</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 2 Caption</div>
+            <img src="/src/images/projects/nawqa_2.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_2.png" tabindex="1"/>
+                        <div class="caption">Highlighted HUC and site information</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Highlighted HUC and site information</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 3 Caption</div>
+            <img src="/src/images/projects/nawqa_3.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_3.png" tabindex="1"/>
+                        <div class="caption">Trend results table for a site</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Trend results table for a site</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/nawqa_1.png"/>
-            <div class="caption">NAWQA Screenshot 4 Caption</div>
+            <img src="/src/images/projects/nawqa_4.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/nawqa_4.png" tabindex="1"/>
+                        <div class="caption">Constituent Select Menu</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Constituent Select Menu</div>
         </div>
         
     </div>
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         
-        <a href="https://github.com/usgs-wim/" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
+        <a href="https://github.com/USGS-WiM/nawqa-sw-trends" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="fab fa-github"></i>
             <span>View on GitHub</span>
         </a>
         
     </div>
     
+    
 
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
     
-    
-        <!-- All Projects Loop (TWIG) -->
-        
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">NAWQATrends</div>
-            <div class="text-body">NaWQA Decadal Trends in Groundwater.</div>
-        </a>
-        
-    
-    </div>
 
 
 </div>
@@ -282,6 +317,31 @@ Footer
         </div>
     </div>
 </div>
+
+<footer class="usgs-footer">
+    <div class="tmp-container">
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/privacy">DOI Privacy Policy</a>|
+            <a href="https://www.usgs.gov/laws/policies_notices.html">Legal</a>|
+            <a href="https://www2.usgs.gov/laws/accessibility.html">Accessibility</a>|
+            <a href="https://www.usgs.gov/sitemap.html">Site Map</a>|
+            <a href="https://answers.usgs.gov/">Contact USGS</a>
+        </div>
+
+        <hr>
+
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/">U.S. Department of the Interior</a>|
+            <a href="https://www.doioig.gov/">DOI Inspector General</a>|
+            <a href="https://www.whitehouse.gov/">White House</a>|
+            <a href="https://www.whitehouse.gov/omb/e-gov/">E-gov</a>|
+            <a href="https://www.whitehouse.gov/open">Open Government</a>|
+            <a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a>|
+            <a href="https://www2.usgs.gov/foia">FOIA</a>
+        </div>    
+    </div>
+    <!-- /.footer-wrap -->
+</footer>
 
 
 

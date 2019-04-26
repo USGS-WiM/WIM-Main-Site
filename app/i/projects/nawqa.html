@@ -3,67 +3,60 @@
 
 <head>
 
-    {% set page_title = "NAWQA: Web Informatics & Mapping" %}
-    {% set meta_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set theme_color = "#030508" %}
-    {% set share_title = "NAWQA: Web Informatics & Mapping" %}
-    {% set share_desc = "WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." %}
-    {% set share_url = "https://wim.usgs.gov/i/projects/nawqa.html" %}
-    {% set fb_img = "https://wim.usgs.gov/src/images/projects/nawqa_1.png" %}
-    {% set tw_img = "https://wim.usgs.gov/src/images/projects/nawqa_1.png" %}
+    <!-- Project Info -->
+    {% set desc = "This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper provides results from the largest-ever assessment of water-quality changes in the Nation's streams and rivers. More than 185 million water-quality records from over 600 Federal, State, Tribal, and local organizations were screened as part of this assessment." %}
+    {% set slug = "nawqa" %}
+    {% set name = "NAWQA" %}
+    {% set name_full = "National Water-Quality Assessment" %}
+    {% set cooperator = "National Water-Quality Assessment" %}
+    {% set cooperator_logo = "nwqa" %}
 
-
-    <!-- 
-        Project Specific Variables
-    -->
-    {% set project_name = "NAWQA" %}
-    {% set project_slug = "nawqa" %}
-    {% set short_desc = "NAWQA Short Description." %}
 
     <!-- Images & Captions -->
     {% set screenshots = [
         {
             file: "nawqa_1.png",
-            description: "NAWQA Screenshot 1 Caption"
+            description: "Map icons indicating trend results"
         },{
-            file: "nawqa_1.png",
-            description: "NAWQA Screenshot 2 Caption"
+            file: "nawqa_2.png",
+            description: "Highlighted HUC and site information"
         },{
-            file: "nawqa_1.png",
-            description: "NAWQA Screenshot 3 Caption"
+            file: "nawqa_3.png",
+            description: "Trend results table for a site"
         },{
-            file: "nawqa_1.png",
-            description: "NAWQA Screenshot 4 Caption"
+            file: "nawqa_4.png",
+            description: "Constituent Select Menu"
         }
     ] %}
 
     <!-- Description Paragraphs -->
     {% set description = [
-        "NAWQA Description paragraph 1.",
-        "NAWQA Description paragraph 2."
+        "One of the major goals of the U.S. Geological Survey's (USGS) National Water-Quality Assessment project is to answer the question “Has water quality been changing over time?”. To support that goal, they have conducted long-term consistent and comparable monitoring on streams and rivers throughout the Nation since 1992. Other USGS programs, as well as many other Federal, State, regional, and local monitoring organizations, also have collected long-term water-quality data to support their own assessments of changing water- quality conditions. Data from these organizations have been aggregated, screened, standardized, and used to support the most comprehensive assessment of stream-quality trends conducted to date in the United States. Collectively, these trend results will be used to provide insight into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.",
+        "WIM worked closely with USGS scientists to develop and release this interactive map interface with the release of their trends report."
     ] %}
-
-    <!-- Cooperator Logo -->
-    {% set cooperator_logo = "nawqa_cooperator.png" %}
-
 
     <!-- Related Repos -->
-    {% set related_repos = [
-        {
-            name: "NAWQATrends",
-            description: "NaWQA Decadal Trends in Groundwater."
-        }
-    ] %}
+    {% set related_repos = [] %}
 
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/",
+            link: "https://github.com/USGS-WiM/nawqa-sw-trends",
             text: "View on GitHub",
             link_icon: "fab fa-github"
         }
     ] %}
 
+
+    <!-- Page Meta -->
+    {% set page_title = name ~ " | Web Informatics & Mapping" %}
+    {% set meta_desc = desc %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = name ~ " | Web Informatics & Mapping" %}
+    {% set share_desc = desc %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/" ~ slug ~ ".html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/branding/meta/Facebook.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/branding/meta/Twitter.png" %}
 
 
 

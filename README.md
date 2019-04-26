@@ -21,23 +21,28 @@ npm install
 
 ## Building and testing
 
-Serve project from /app/ with
 ```bash
 gulp
 ```
-Build it with
+Compiles HTML Twig tags into /dev/ folder & live reloads browser with BrowserSync from /dev/.
+
 ```bash
 gulp build
 ```
-Serve project from build folder with
+Builds the project into the /build/ folder - minifies JS, compiles TWIG and LESS, and compresses images (which takes some time).
+
 ```bash
 gulp serve-build
 ```
+Test the build by serving from the /build/ folder.
 
 
 ## Deployment
 
-Upload build (/public/ folder) to server.
+Pushing to `staging` deploys site to test.wim.usgs.gov.
+Pushing to `master` deploys site to wim.usgs.gov.
+
+Alternatively, upload the /build/ folder contents manually.
 
 ## Built With
 

@@ -3,19 +3,10 @@
 
 <head>
 
+    <!-- Project Info -->
     
     
     
-    
-    
-    
-    
-    
-
-
-    <!-- 
-        Project Specific Variables
-    -->
     
     
     
@@ -26,10 +17,6 @@
     <!-- Description Paragraphs -->
     
 
-    <!-- Cooperator Logo -->
-    
-
-
     <!-- Related Repos -->
     
 
@@ -37,13 +24,22 @@
     
 
 
+    <!-- Page Meta -->
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     <meta charset="utf-8">
 
 <!-- Dynamic - change in controllers -->
-<title>SPARROW: Web Informatics & Mapping</title>
-<meta name="description" content="WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." />
+<title>SPARROW | Web Informatics & Mapping</title>
+<meta name="description" content="SPARROW is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WIM has partnered with SPARROW scientists to provide a suite of map applications depicting SPARROW models for different regions of the U.S. and parts of Canada." />
 <meta name="theme-color" content="#030508">
 
 <!-- Static Meta -->
@@ -53,17 +49,17 @@
 
 <!-- Social Media Meta -->
 <!-- Facebook -->
-<meta property="og:title" content="SPARROW: Web Informatics & Mapping">
-<meta property="og:description" content="WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
-<meta property="og:image" content="https://wim.usgs.gov/src/images/projects/sparrow_1.png">
+<meta property="og:title" content="SPARROW | Web Informatics & Mapping">
+<meta property="og:description" content="SPARROW is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WIM has partnered with SPARROW scientists to provide a suite of map applications depicting SPARROW models for different regions of the U.S. and parts of Canada.">
+<meta property="og:image" content="https://wim.usgs.gov/src/images/branding/meta/Facebook.png">
 <meta property="og:url" content="https://wim.usgs.gov/i/projects/sparrow.html">
 
 <!-- Twitter -->
-<meta name="twitter:title" content="SPARROW: Web Informatics & Mapping">
-<meta name="twitter:description" content="WIM's projects are built using the latest web technologies to support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
-<meta name="twitter:image" content="https://wim.usgs.gov/src/images/projects/sparrow_1.png">
+<meta name="twitter:title" content="SPARROW | Web Informatics & Mapping">
+<meta name="twitter:description" content="SPARROW is a collection of tools for relating water-quality monitoring data and watershed attributes. Sparrow models are designed to describe the spatial patterns of water quality and the factors that affect it. WIM has partnered with SPARROW scientists to provide a suite of map applications depicting SPARROW models for different regions of the U.S. and parts of Canada.">
+<meta name="twitter:image" content="https://wim.usgs.gov/src/images/branding/meta/Twitter.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:alt" content="SPARROW: Web Informatics & Mapping">
+<meta name="twitter:image:alt" content="SPARROW | Web Informatics & Mapping">
 
 
 <!-- Mobile App Meta -->
@@ -110,7 +106,21 @@
     <!-- 
         Include Project Page include file
     -->
-    <!-- 
+    
+
+
+
+
+
+
+
+
+
+<!-- Cooperator Logo -->
+
+
+
+<!-- 
     USGS Header, USA Banner, and Nav
 -->
 <!-- USA Site Banner -->
@@ -172,7 +182,7 @@ WIM Nav
                 <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
             </div>
             <div class="name">
-                Web informatics & Mapping
+                Web Informatics & Mapping
             </div>
         </a>
         <nav class="wim-header-nav xs-f-end">
@@ -185,13 +195,15 @@ WIM Nav
 
 <!-- Main Content -->
 
-<div class="project-hero xs-f-center xs-f-col">
+<div class="project-hero xs-f-center xs-f-col" style="background-image: url('/src/images/projects/sparrow_hero.jpeg');">
     SPARROW
+    <div class="cooperator">
+        <span class="cooperator-label">In cooperation with</span>
+        <span class="cooperator-name">National Water-Quality Assessment</span>
+    </div>
 </div>
 
 <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-
-    
     
     
     
@@ -200,70 +212,271 @@ WIM Nav
     -->
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        SPARROW Description paragraph 1.
+        SPARROW (SPAtially Referenced Regressions On Watershed attributes) models estimate the amount of a contaminant transported from inland watersheds to larger water bodies by linking monitoring data with information on watershed characteristics and contaminant sources. SPARROW models are used to estimate long-term average values of water characteristics, such as the amount of a contaminant that is delivered downstream, on the basis of existing monitoring data, location and strength of contaminant sources, and characteristics of the landscape.
     </div>
     
     <div class="text-body xs-pt-15 lg-pt-25">
-        SPARROW Description paragraph 2.
+        These interactive map applications are designed around comprehensive user-defined map selections with dynamic graphs and tables to visualize underlying data.  The flexible, map-based approach to viewing SPARROW models helps managers visualize thousands to millions of data points to determine how to reduce loads of contaminants and design protection strategies; design strategies to meet regulatory requirements; predict changes in water quality that might result from management actions; and identify gaps and priorities in monitoring.
     </div>
     
+    <div class="text-body xs-pt-15 lg-pt-25">
+        In collaboration with local and national SPARROW modelers, WIM has produced several generations of SPARROW online interactive map viewers to highlight the amount of data produced by this powerful model.
+    </div>
     
+
     <!-- 
         Screenshots
     -->
     <div class="project-thumbnails xs-f-btw xs-mt-25">
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 1 Caption</div>
+            <img src="/src/images/projects/sparrow_1.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_1.png" tabindex="1"/>
+                        <div class="caption">The main interface of a SPARROW application allows flexible map selections and customizable data views</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">The main interface of a SPARROW application allows flexible map selections and customizable data views</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 2 Caption</div>
+            <img src="/src/images/projects/sparrow_2.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_2.png" tabindex="1"/>
+                        <div class="caption">An example of a SPARROW national model</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">An example of a SPARROW national model</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 3 Caption</div>
+            <img src="/src/images/projects/sparrow_3.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_3.png" tabindex="1"/>
+                        <div class="caption">Interactive chart depicting nutrient sources and quantities within a specified region</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Interactive chart depicting nutrient sources and quantities within a specified region</div>
         </div>
         
         <div class="thumbnail xs-p-15">
-            <img src="/src/images/projects/sparrow_1.png"/>
-            <div class="caption">SPARROW Screenshot 4 Caption</div>
+            <img src="/src/images/projects/sparrow_4.png" tabindex="1"/>
+            <div class="thumbnail-zoom">
+                <div class="xs-f-col xs-f-center thumbnail-zoom-flex">
+                    <span>
+                        <img src="/src/images/projects/sparrow_4.png" tabindex="1"/>
+                        <div class="caption">Downloadable table view for all nutrient source values in a user-selected region</div>
+                    </span>
+                </div>
+            </div>
+            <div class="caption">Downloadable table view for all nutrient source values in a user-selected region</div>
         </div>
         
     </div>
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-start f-wrap xs-mt-25">
+    
+    <div class="repo-links xs-f-center f-wrap xs-mt-25">
         
-        <a href="https://github.com/usgs-wim/" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
+        <a href="https://github.com/USGS-WiM?utf8=✓&q=sparrow" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
             <i class="fab fa-github"></i>
-            <span>View on GitHub</span>
+            <span>View All on GitHub</span>
+        </a>
+        
+        <a href="https://www.usgs.gov/mission-areas/water-resources/science/sparrow-modeling-estimating-nutrient-sediment-and-dissolved?qt-science_center_objects=4#qt-science_center_objects" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
+            <i class="fas fa-external-link-square"></i>
+            <span>View Project Page</span>
         </a>
         
     </div>
+    
     
 
     <!-- 
         Related Projects
      -->
-     
-     <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
-     <div class="projects-compact xs-mt-20">
     
-    
-        <!-- All Projects Loop (TWIG) -->
+    <h1 class="xs-mt-20 lg-mt-40">Project Repos</h1>
+    <div class="projects-compact xs-mt-20">
         
-        <a href="'https://github.com/usgs-wim/" target="_blank" class="project-item xs-mb-20 lg-mb-25">
-            <div class="heading">SPARROW</div>
-            <div class="text-body">SPARROW Repos go here.</div>
-        </a>
         
-    
+        <!-- Related Projects Loop (TWIG) -->
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-national-dissolved-solids-js</div>
+            <div class="caption">Sparrow National Dissolved Solids</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-national-dissolved-solids-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-midwest-js</div>
+            <div class="caption">ESRI javascript API map app for SPARROW Midwest data</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-midwest-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-northwest-js</div>
+            <div class="caption">Pacific Northwest.</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-northwest-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-midcontinental-js</div>
+            <div class="caption">Sparrow Midcontinental</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-midcontinental-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-california-js</div>
+            <div class="caption">Javascript SPARROW map interface for California</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-california-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-marb-js</div>
+            <div class="caption">Javascript version of SPARROW MARB (mississippi) models</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-marb-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrowTennessee</div>
+            <div class="caption">JS version of SPARROW</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrowTennessee" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-greatlakes-js</div>
+            <div class="caption">JS Version of Sparrow Great Lakes (based on MRB3 model)</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-greatlakes-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">sparrow-eastern-us-js</div>
+            <div class="caption">Eastern United States NHD model</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/sparrow-eastern-us-js" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+
     </div>
+    
 
 
 </div>
@@ -282,6 +495,31 @@ Footer
         </div>
     </div>
 </div>
+
+<footer class="usgs-footer">
+    <div class="tmp-container">
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/privacy">DOI Privacy Policy</a>|
+            <a href="https://www.usgs.gov/laws/policies_notices.html">Legal</a>|
+            <a href="https://www2.usgs.gov/laws/accessibility.html">Accessibility</a>|
+            <a href="https://www.usgs.gov/sitemap.html">Site Map</a>|
+            <a href="https://answers.usgs.gov/">Contact USGS</a>
+        </div>
+
+        <hr>
+
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/">U.S. Department of the Interior</a>|
+            <a href="https://www.doioig.gov/">DOI Inspector General</a>|
+            <a href="https://www.whitehouse.gov/">White House</a>|
+            <a href="https://www.whitehouse.gov/omb/e-gov/">E-gov</a>|
+            <a href="https://www.whitehouse.gov/open">Open Government</a>|
+            <a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a>|
+            <a href="https://www2.usgs.gov/foia">FOIA</a>
+        </div>    
+    </div>
+    <!-- /.footer-wrap -->
+</footer>
 
 
 
