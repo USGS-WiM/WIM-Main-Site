@@ -63,6 +63,7 @@
     
     
     <!-- Repo Links -->
+    {% if repo_links %}
     <div class="repo-links xs-f-center f-wrap xs-mt-25">
         {% for item in repo_links %}
         <a href="{{ item.link }}" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
@@ -71,13 +72,14 @@
         </a>
         {% endfor %}
     </div>
+    {% endif %}
     
 
     <!-- 
         Related Projects
      -->
     {% if related_repos %}
-    <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
+    <h1 class="xs-mt-20 lg-mt-40">Project Repos</h1>
     <div class="projects-compact xs-mt-20">
         
         

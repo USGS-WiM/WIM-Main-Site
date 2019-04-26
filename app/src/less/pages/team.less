@@ -48,20 +48,6 @@
 }
 
 // Footer at bottom of team page
-.team-photo{
-    display: block;
-    width: 100%;
-    
-    img{
-        display: block;
-        max-width: 80%;
-        max-width: 800px;
-        width: auto;
-        margin: 0 auto 20px auto;
-        filter: sepia(60%) saturate(50%);
-    }
-
-}
 .team-footer{
     display: block;
     box-sizing: border-box;
@@ -129,12 +115,12 @@
             border-radius: @border_radius;
             background-size: cover;
             background-position: center 5%;
-            background-blend-mode: luminosity;
             transition: @transition;
             background-color: fade(@primary_darker, 20%);
             box-sizing: border-box;
             border: 8px solid @white;
             box-shadow: @shadow;
+            filter: grayscale(10%) contrast(110%);
 
             .member-image-element{
                 width: 100%;

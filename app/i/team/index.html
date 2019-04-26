@@ -128,7 +128,7 @@
             mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren
             enjoys snowboarding and ultimate frisbee."
         },{
-            first_name: "mitch",
+            first_name: "Mitch",
             last_name: "Samuels",
             title: "Frontend Developer",
             email: "msamuels@contractor.usgs.gov",
@@ -200,8 +200,8 @@
 
             {% for member in team %}
             <div class="member" id="{{ member.first_name }}" tabindex="0">
-                <div class="member-image" style="background-image: url('/src/images/team/{{ member.first_name }}.png');">
-                    <img src="/src/images/team/{{ member.first_name }}.png" class="member-image-element" alt="{{ member.first_name}} {{ member.last_name }}'s Photo" title="{{ member.first_name}} {{ member.last_name }}"/>
+                <div class="member-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');">
+                    <img src="/src/images/team/{{ member.first_name }}.jpg" class="member-image-element" alt="{{ member.first_name}} {{ member.last_name }}'s Photo" title="{{ member.first_name}} {{ member.last_name }}"/>
                 </div>
                 <div class="member-meta">
                     <b class="text-sm">{{ member.first_name }} {{ member.last_name }}</b>
@@ -221,7 +221,7 @@
                         <!-- Member Name, Title, Contact -->
                         <div class="xs-f-btw xs-mb-15">
                             <!-- Image -->
-                            <div class="member-about-image" style="background-image: url('/src/images/team/{{ member.first_name }}.png');"></div>
+                            <div class="member-about-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');"></div>
                             <div class="member-about-header xs-f-center xs-f-col">
                                 <h3>{{ member.first_name }} {{ member.last_name }}</h3>
                                 <h4>{{ member.title }}</h4>

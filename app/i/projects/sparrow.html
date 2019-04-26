@@ -70,8 +70,8 @@
     <!-- Repo Links -->
     {% set repo_links = [
         {
-            link: "https://github.com/usgs-wim/sparrow-eastern-us-js",
-            text: "View on GitHub",
+            link: "https://github.com/USGS-WiM?utf8=✓&q=sparrow",
+            text: "View All on GitHub",
             link_icon: "fab fa-github"
         },{
             link: "https://www.usgs.gov/mission-areas/water-resources/science/sparrow-modeling-estimating-nutrient-sediment-and-dissolved?qt-science_center_objects=4#qt-science_center_objects",
@@ -79,6 +79,17 @@
             link_icon: "fas fa-external-link-square"
         }
     ] %}
+
+
+    <!-- Page Meta -->
+    {% set page_title = name ~ " | Web Informatics & Mapping" %}
+    {% set meta_desc = desc %}
+    {% set theme_color = "#030508" %}
+    {% set share_title = name ~ " | Web Informatics & Mapping" %}
+    {% set share_desc = desc %}
+    {% set share_url = "https://wim.usgs.gov/i/projects/" ~ slug ~ ".html" %}
+    {% set fb_img = "https://wim.usgs.gov/src/images/branding/meta/Facebook.png" %}
+    {% set tw_img = "https://wim.usgs.gov/src/images/branding/meta/Twitter.png" %}
 
 
     {% include "../includes/header.html" %}

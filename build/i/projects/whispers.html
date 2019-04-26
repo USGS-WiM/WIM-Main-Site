@@ -25,13 +25,23 @@
     <!-- Repo Links -->
     
 
+    <!-- Page Meta -->
+    
+    
+    
+    
+    
+    
+    
+    
+
 
     <meta charset="utf-8">
 
 <!-- Dynamic - change in controllers -->
-<title></title>
-<meta name="description" content="" />
-<meta name="theme-color" content="">
+<title>WHISPers | Web Informatics & Mapping</title>
+<meta name="description" content="WHISPers is the Wildlife Health Information Sharing Partnership event reporting system. It web application exposing wildlife mortality data submitted by partners across North America and verified by trained biologists." />
+<meta name="theme-color" content="#030508">
 
 <!-- Static Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -40,17 +50,17 @@
 
 <!-- Social Media Meta -->
 <!-- Facebook -->
-<meta property="og:title" content="">
-<meta property="og:description" content="">
-<meta property="og:image" content="">
-<meta property="og:url" content="">
+<meta property="og:title" content="WHISPers | Web Informatics & Mapping">
+<meta property="og:description" content="WHISPers is the Wildlife Health Information Sharing Partnership event reporting system. It web application exposing wildlife mortality data submitted by partners across North America and verified by trained biologists.">
+<meta property="og:image" content="https://wim.usgs.gov/src/images/branding/meta/Facebook.png">
+<meta property="og:url" content="https://wim.usgs.gov/i/projects/whispers.html">
 
 <!-- Twitter -->
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="">
+<meta name="twitter:title" content="WHISPers | Web Informatics & Mapping">
+<meta name="twitter:description" content="WHISPers is the Wildlife Health Information Sharing Partnership event reporting system. It web application exposing wildlife mortality data submitted by partners across North America and verified by trained biologists.">
+<meta name="twitter:image" content="https://wim.usgs.gov/src/images/branding/meta/Twitter.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:alt" content="">
+<meta name="twitter:image:alt" content="WHISPers | Web Informatics & Mapping">
 
 
 <!-- Mobile App Meta -->
@@ -272,25 +282,36 @@ WIM Nav
     
     
     <!-- Repo Links -->
-    <div class="repo-links xs-f-center f-wrap xs-mt-25">
-        
-        <a href="https://github.com/usgs-wim/whispers" target="_blank" class="btn-primary btn-icon xs-mr-5 xs-ml-5">
-            <i class="fab fa-github"></i>
-            <span>View on GitHub</span>
-        </a>
-        
-    </div>
+    
     
 
     <!-- 
         Related Projects
      -->
     
-    <h1 class="xs-mt-20 lg-mt-40">Related Repos</h1>
+    <h1 class="xs-mt-20 lg-mt-40">Project Repos</h1>
     <div class="projects-compact xs-mt-20">
         
         
         <!-- Related Projects Loop (TWIG) -->
+        
+        <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+            <div class="heading">WHISPers</div>
+            <div class="caption">Wildlife Health Information Sharing Partnership event reporting system(WHISPers) v2</div>
+            <!-- <div class="tags noclick">
+                
+            </div>
+            <div class="languages noclick">
+                
+            </div> -->
+            <div class="project-links xs-mt-10">
+                
+                <a href="https://github.com/usgs-wim/WHISPers" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
         
         <div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
             <div class="heading">whispersservices_django</div>
@@ -331,6 +352,31 @@ Footer
         </div>
     </div>
 </div>
+
+<footer class="usgs-footer">
+    <div class="tmp-container">
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/privacy">DOI Privacy Policy</a>|
+            <a href="https://www.usgs.gov/laws/policies_notices.html">Legal</a>|
+            <a href="https://www2.usgs.gov/laws/accessibility.html">Accessibility</a>|
+            <a href="https://www.usgs.gov/sitemap.html">Site Map</a>|
+            <a href="https://answers.usgs.gov/">Contact USGS</a>
+        </div>
+
+        <hr>
+
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/">U.S. Department of the Interior</a>|
+            <a href="https://www.doioig.gov/">DOI Inspector General</a>|
+            <a href="https://www.whitehouse.gov/">White House</a>|
+            <a href="https://www.whitehouse.gov/omb/e-gov/">E-gov</a>|
+            <a href="https://www.whitehouse.gov/open">Open Government</a>|
+            <a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a>|
+            <a href="https://www2.usgs.gov/foia">FOIA</a>
+        </div>    
+    </div>
+    <!-- /.footer-wrap -->
+</footer>
 
 
 
