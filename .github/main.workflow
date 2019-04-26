@@ -1,6 +1,6 @@
 workflow "Production Repo Workflow" {
   resolves = ["GitHub Action for AWS-prod", "GitHub Action for AWS2-prod"]
-  on = "schedule(35 16 * * *)"
+  on = "schedule(40 16 * * *)"
 }
 workflow "Test Repo Workflow" {
   resolves = ["GitHub Action for AWS-test", "GitHub Action for AWS2-test"]
@@ -47,6 +47,9 @@ action "GitHub Action for AWS2-test" {
   args = "s3 cp $GITHUB_WORKSPACE/repos2.json s3://test.wim.usgs.gov/src/repos2.json"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
+
+
+
 
 workflow "Push to Test Site" {
   on = "push"
