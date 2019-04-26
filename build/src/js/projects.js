@@ -34,7 +34,7 @@ var allRepos = [];
 var getRepos = function(jsonFile){
 
     $.ajax({
-        url: "https://test.wim.usgs.gov/src/"+jsonFile,
+        url: "/src/"+jsonFile,
         jsonp: true,
         method: "GET",
         dataType: "json",

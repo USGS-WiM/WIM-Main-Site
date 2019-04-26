@@ -136,7 +136,7 @@ gulp.task('lessbuild', function () {
 // Minify JS
 gulp.task('minifyjs', function () {
     gulp.src(folder.src + 'src/js/**/*')
-        .pipe(replace('"/src/"+jsonFile', '"https://test.wim.usgs.gov/src/"+jsonFile')) // Replace local repos json with live
+        // .pipe(replace('"/src/"+jsonFile', '"https://test.wim.usgs.gov/src/"+jsonFile')) // Replace local repos json with live
         .pipe(minify({
             nosource: true,
             ext: {
@@ -170,7 +170,7 @@ gulp.task('build', function (callback) {
     runSequence(
         'clean:build',
         ['buildstatic', 'lessbuild', 'minifyjs'],
-        'images',
+        // 'images',
         'twigbuild',
         callback
     )

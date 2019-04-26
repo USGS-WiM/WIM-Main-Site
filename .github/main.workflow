@@ -1,5 +1,9 @@
-workflow "Repo Workflow" {
-  resolves = ["GitHub Action for AWS", "GitHub Action for AWS2"]
+workflow "Production Repo Workflow" {
+  resolves = ["GitHub Action for AWS-prod", "GitHub Action for AWS2-prod"]
+  on = "schedule(35 16 * * *)"
+}
+workflow "Test Repo Workflow" {
+  resolves = ["GitHub Action for AWS-test", "GitHub Action for AWS2-test"]
   on = "schedule(50 20 * * *)"
 }
 
@@ -15,14 +19,29 @@ action "GraphQL query2" {
   args = "--query .github/graph-ql.query2.yaml --output repos2.json"
 }
 
-action "GitHub Action for AWS" {
+
+action "GitHub Action for AWS-prod" {
+  uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
+  needs = ["GraphQL query"]
+  args = "s3 cp $GITHUB_WORKSPACE/repos1.json s3://wim.usgs.gov/src/repos1.json"
+  secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+}
+
+action "GitHub Action for AWS2-prod" {
+  uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
+  needs = ["GraphQL query2"]
+  args = "s3 cp $GITHUB_WORKSPACE/repos2.json s3://wim.usgs.gov/src/repos2.json"
+  secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+}
+
+action "GitHub Action for AWS-test" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
   needs = ["GraphQL query"]
   args = "s3 cp $GITHUB_WORKSPACE/repos1.json s3://test.wim.usgs.gov/src/repos1.json"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
 
-action "GitHub Action for AWS2" {
+action "GitHub Action for AWS2-test" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
   needs = ["GraphQL query2"]
   args = "s3 cp $GITHUB_WORKSPACE/repos2.json s3://test.wim.usgs.gov/src/repos2.json"
