@@ -161,9 +161,35 @@
 
 
     {% include "../includes/header.html" %}
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+    <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+    integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+    crossorigin=""></script>
 
 </head>
 <body>
+
+    <style>
+        #basemaps-wrapper {
+          position: absolute;
+          top: 750px;
+          right: 10px;
+          z-index: 400;
+          background: white;
+          padding: 10px;
+        }
+        #basemaps {
+          margin-bottom: 5px;
+        }
+      </style>
 
     <!-- 
     USGS Header, USA Banner, and Nav
@@ -192,6 +218,115 @@
         </div>
     </div>
 
+    <div id="mapid" style="Height: 360px"></div>
+
+    <div id="basemaps-wrapper" class="leaflet-bar">
+        <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
+          <option value="Topographic">Topographic</option>
+          <option value="Streets">Streets</option>
+          <option value="NationalGeographic">National Geographic</option>
+          <option value="Oceans">Oceans</option>
+          <option value="Gray">Gray</option>
+          <option value="DarkGray">Dark Gray</option>
+          <option value="Imagery">Imagery</option>
+          <option value="ImageryClarity">Imagery (Clarity)</option>
+          <option value="ImageryFirefly">Imagery (Firefly)</option>
+          <option value="ShadedRelief">Shaded Relief</option>
+          <option value="Physical">Physical</option>
+        </select>
+      </div>
+
+    <script> 
+ var map = L.map('mapid').setView([42.87, -97.38], 4);
+  var layer = L.esri.basemapLayer('Topographic').addTo(map);
+  var layerLabels;
+
+  function setBasemap(basemap) {
+    if (layer) {
+      map.removeLayer(layer);
+    }
+
+    layer = L.esri.basemapLayer(basemap);
+
+    map.addLayer(layer);
+
+    if (layerLabels) {
+      map.removeLayer(layerLabels);
+    }
+
+    if (basemap === 'ShadedRelief'
+     || basemap === 'Oceans'
+     || basemap === 'Gray'
+     || basemap === 'DarkGray'
+     || basemap === 'Terrain'
+   ) {
+      layerLabels = L.esri.basemapLayer(basemap + 'Labels');
+      map.addLayer(layerLabels);
+    } else if (basemap.includes('Imagery')) {
+      layerLabels = L.esri.basemapLayer('ImageryLabels');
+      map.addLayer(layerLabels);
+    }
+  }
+
+  function changeBasemap(basemaps){
+    var basemap = basemaps.value;
+    setBasemap(basemap);
+  }
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+
+var geojsonFeature = [ {
+    "type": "Feature",
+    "properties": {"popupContent": "Gary Latzke, Bruce Droster, Erik Myers, Aaron Stephenson" },
+    "geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Hans Vraga, Katrin Jacobson, Mitch Samuels" },
+    "geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Veni Kunche, Lauren Privette" },
+    "geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Blake Draper" },
+    "geometry": {"type": "Point", "coordinates": [-92.723246, 41.743409]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Nick Estes" },
+    "geometry": {"type": "Point", "coordinates": [-121.740517, 38.544907]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Daniel Backman" },
+    "geometry": {"type": "Point", "coordinates": [-104.990251, 39.739236]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Jeremy Newson" },
+    "geometry": {"type": "Point", "coordinates": [-116.202314, 43.615019]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Martyn Smith" },
+    "geometry": {"type": "Point", "coordinates": [-73.691785, 42.728412]},
+},
+]
+
+L.geoJSON(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+
+    </script>
 
     <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
 
@@ -288,6 +423,7 @@
         });
 
     });
+
 
 
     </script>
