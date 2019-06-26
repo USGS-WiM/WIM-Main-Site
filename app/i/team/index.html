@@ -250,7 +250,71 @@
         </select>
       </div>
 
-    <script> 
+    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
+
+        <!-- Team Display/Loop -->
+        <div class="team-display xs-f-start xs-f-wrap ">
+
+            {% for member in team %}
+            <div class="member" id="{{ member.first_name }}" coordinates = "{{ member.coordinates }}" tabindex="0">
+                <div class="member-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');">
+                    <img src="/src/images/team/{{ member.first_name }}.jpg" class="member-image-element" alt="{{ member.first_name}} {{ member.last_name }}'s Photo" title="{{ member.first_name}} {{ member.last_name }}"/>
+                </div>
+                <div class="member-meta">
+                    <b class="text-sm">{{ member.first_name }} {{ member.last_name }}</b>
+                    <span class="text-body">{{ member.title }}</span>
+                </div>
+            </div>
+
+            <!-- Member Modal -->
+            <div class="member-about" id="{{ member.first_name }}Bio" style="z-index : 9999">
+                <div class="member-about-content">
+                    <!-- Close modal button -->
+                    <div class="close-bio-icon">
+                        <i class="far fa-times"></i>
+                    </div>
+
+                    <div class="member-about-scroll xs-p-25 lg-p-30">
+                        <!-- Member Name, Title, Contact -->
+                        <div class="xs-f-btw xs-mb-15">
+                            <!-- Image -->
+                            <div class="member-about-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');"></div>
+                            <div class="member-about-header xs-f-center xs-f-col">
+                                <h3>{{ member.first_name }} {{ member.last_name }}</h3>
+                                <h4>{{ member.title }}</h4>
+                                <div class="xs-f-start xs-f-wrap">
+                                    <!-- if phone exists (admin) -->
+                                    {% if member.phone %}
+                                        <div class="text-body xs-mr-10">{{ member.phone }}</div>
+                                    {% endif %}
+                                    <a href="mailto:{{ member.email }}" class="xs-mb-10 text-body">{{ member.email }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{ member.bio }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <!-- Lightbox for bio modals -->
+        <div class="member-about-lightbox"></div>
+
+    </div>
+
+    <!-- Team Footer -->
+    <div class="team-footer xs-pt-40 lg-pt-50">
+        <img src="/src/images/team/group_cropped.png" alt="WIM Group Photo" title="Group Photo" class="group-photo" />
+    </div>
+        
+    <!-- 
+    Footer
+    -->
+    {% include "../includes/footer.html" %}
+
+    <script>
   var map = L.map('mapid', { zoomControl:false }).setView([42.87, -97.38], 3.5);
   var layer = L.esri.basemapLayer('Topographic').addTo(map);
   var layerLabels;
@@ -343,85 +407,23 @@ var geojsonFeature = [ {
 },
 ]
 
+var myIcon = L.Icon.extend({});
+
+var wimIcon = new myIcon({
+		iconUrl: 'https://wim.usgs.gov/styleguide/assets/branding/logo_only_fullres.png',
+        iconSize: [24.9, 28.95],
+        iconAnchor: [12.45,28.95],
+});
+
 L.geoJSON(geojsonFeature, {
-    onEachFeature: onEachFeature
-}).addTo(map);
+    pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {icon: wimIcon}).bindPopup(feature.properties.popupContent).addTo(map);
+    } 
+    }).addTo(map);
 
-    </script>
-
-    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
-
-        <!-- Team Display/Loop -->
-        <div class="team-display xs-f-start xs-f-wrap ">
-
-            {% for member in team %}
-            <div class="member" id="{{ member.first_name }}" coordinates = "{{ member.coordinates }}" tabindex="0">
-                <div class="member-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');">
-                    <img src="/src/images/team/{{ member.first_name }}.jpg" class="member-image-element" alt="{{ member.first_name}} {{ member.last_name }}'s Photo" title="{{ member.first_name}} {{ member.last_name }}"/>
-                </div>
-                <div class="member-meta">
-                    <b class="text-sm">{{ member.first_name }} {{ member.last_name }}</b>
-                    <span class="text-body">{{ member.title }}</span>
-                </div>
-            </div>
-
-            <!-- Member Modal -->
-            <div class="member-about" id="{{ member.first_name }}Bio" style="z-index : 9999">
-                <div class="member-about-content">
-                    <!-- Close modal button -->
-                    <div class="close-bio-icon">
-                        <i class="far fa-times"></i>
-                    </div>
-
-                    <div class="member-about-scroll xs-p-25 lg-p-30">
-                        <!-- Member Name, Title, Contact -->
-                        <div class="xs-f-btw xs-mb-15">
-                            <!-- Image -->
-                            <div class="member-about-image" style="background-image: url('/src/images/team/{{ member.first_name }}.jpg');"></div>
-                            <div class="member-about-header xs-f-center xs-f-col">
-                                <h3>{{ member.first_name }} {{ member.last_name }}</h3>
-                                <h4>{{ member.title }}</h4>
-                                <div class="xs-f-start xs-f-wrap">
-                                    <!-- if phone exists (admin) -->
-                                    {% if member.phone %}
-                                        <div class="text-body xs-mr-10">{{ member.phone }}</div>
-                                    {% endif %}
-                                    <a href="mailto:{{ member.email }}" class="xs-mb-10 text-body">{{ member.email }}</a>
-                                </div>
-                            </div>
-                        </div>
-                        <p>{{ member.bio }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-
-        </div>
-
-
-        <!-- Lightbox for bio modals -->
-        <div class="member-about-lightbox"></div>
-
-    </div>
-
-    <!-- Team Footer -->
-    <div class="team-footer xs-pt-40 lg-pt-50">
-        <img src="/src/images/team/group_cropped.png" alt="WIM Group Photo" title="Group Photo" class="group-photo" />
-    </div>
-        
-    
-
-
-    <!-- 
-    Footer
-    -->
-    {% include "../includes/footer.html" %}
-
-    <script>
     $(document).ready(function () {
 
         $("#teamLink").addClass("active");
-
 
         $(".member").click(function () {
             console.log("Clicked " + $(this).attr('id'));
@@ -441,23 +443,18 @@ L.geoJSON(geojsonFeature, {
             map.flyTo([42.87, -97.38], 3.5)
         });
 
-
         $('.member-about').on('click', function (e) {
             if (e.target !== this){
                 return;
             }
             $(this).removeClass("show");
             $(".member-about-lightbox").removeClass("show");
-            map.flyTo([42.87, -97.38], 3.5)
+            map.flyTo([42.87, -97.38], 3.5);
         });
 
-    });
-
-
+});
 
     </script>
 
-
-  
 </body>
 </html>
