@@ -187,6 +187,7 @@
     <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
     integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
     crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
 
 </head>
 <body>
@@ -315,6 +316,7 @@
     {% include "../includes/footer.html" %}
 
     <script>
+  // Leaflet map & disabling all map funtionality
   var map = L.map('mapid', { zoomControl:false }).setView([42.87, -97.38], 3.5);
   var layer = L.esri.basemapLayer('Topographic').addTo(map);
   var layerLabels;
@@ -358,26 +360,51 @@
     setBasemap(basemap);
   }
 
-function onEachFeature(feature, layer) {
-    // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
-    }
-}
-
-var geojsonFeature = [ {
+// geojson array of each individual team member and their coordinates
+var geojsonFeature = [ 
+{
     "type": "Feature",
-    "properties": {"popupContent": "Gary Latzke, Bruce Droster, Erik Myers, Aaron Stephenson" },
+    "properties": {"popupContent": "Gary Latzke" },
     "geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 },
 {
     "type": "Feature",
-    "properties": {"popupContent": "Hans Vraga, Katrin Jacobson, Mitch Samuels" },
+    "properties": {"popupContent": "Bruce Droster" },
+    "geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Erik Myers" },
+    "geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Aaron Stephenson" },
+    "geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Mitch Samuels" },
     "geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 },
 {
     "type": "Feature",
-    "properties": {"popupContent": "Veni Kunche, Lauren Privette" },
+    "properties": {"popupContent": "Katrin Jacobson" },
+    "geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Hans Vraga" },
+    "geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Lauren Privette" },
+    "geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
+},
+{
+    "type": "Feature",
+    "properties": {"popupContent": "Veni Kunche" },
     "geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
 },
 {
@@ -407,24 +434,21 @@ var geojsonFeature = [ {
 },
 ]
 
+// WimIcon & popup
 var myIcon = L.Icon.extend({});
-
 var wimIcon = new myIcon({
 		iconUrl: 'https://wim.usgs.gov/styleguide/assets/branding/logo_only_fullres.png',
         iconSize: [24.9, 28.95],
         iconAnchor: [12.45,28.95],
+        popupAnchor: [0,-28.95]
 });
 
-L.geoJSON(geojsonFeature, {
-    pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, {icon: wimIcon}).bindPopup(feature.properties.popupContent).addTo(map);
-    } 
-    }).addTo(map);
 
     $(document).ready(function () {
 
         $("#teamLink").addClass("active");
 
+        // Clicking each member scrolls up to and zooms to their location on the map
         $(".member").click(function () {
             console.log("Clicked " + $(this).attr('id'));
             $("#" + $(this).attr('id') + "Bio, .member-about-lightbox").addClass("show");
@@ -436,6 +460,18 @@ L.geoJSON(geojsonFeature, {
         var lat = parseFloat(coords[1]);
         map.flyTo([lat,long], 8);
         });
+
+// Clicking on icon zooms into it
+    L.geoJSON(geojsonFeature, {
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {icon: wimIcon}).bindPopup(feature.properties.popupContent).on('click', function(a) {
+            //$("#" + $(this).attr('id') + "Bio, .member-about-lightbox").addClass("show");
+            //$("#" + $(this).attr('id') + "Bio").addClass("show");
+            map.flyTo(a.latlng,8)}).addTo(map);}}).addTo(map);
+
+        map.on('click', function(a) {
+        map.flyTo([42.87, -97.38], 3.5)
+    });
 
         $(".close-bio-icon").click(function () {
             $(this).closest(".member-about").removeClass("show");
@@ -453,6 +489,9 @@ L.geoJSON(geojsonFeature, {
         });
 
 });
+
+// Add cross funcitonality with icon clicking that pulls up the members file
+// Add spider web functionality with the points that 2 or more people are working at
 
     </script>
 
