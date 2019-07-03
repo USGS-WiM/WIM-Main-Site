@@ -453,40 +453,56 @@ var wimIcon = new myIcon({
             console.log("Clicked " + $(this).attr('id'));
             $("#" + $(this).attr('id') + "Bio, .member-about-lightbox").addClass("show");
             $("#" + $(this).attr('id') + "Bio").addClass("show");
-            $('html,body').animate({scrollTop: $(".map").offset().top}, 15, 'linear');
+           
+		    $('html,body').animate({scrollTop: $(".map").offset().top}, 15, 'linear');
 
-        var coords = ($(this).attr('coordinates')).split(',');
-        var long = parseFloat(coords[0]);
-        var lat = parseFloat(coords[1]);
-        map.flyTo([lat,long], 8);
+			var coords = ($(this).attr('coordinates')).split(',');
+			var long = parseFloat(coords[0]);
+			var lat = parseFloat(coords[1]);
+			map.flyTo([lat,long], 8);
+
+
         });
 
-// Clicking on icon zooms into it
+	// Clicking on icon zooms into it
     L.geoJSON(geojsonFeature, {
         pointToLayer: function (feature, latlng) {
         return L.marker(latlng, {icon: wimIcon}).bindPopup(feature.properties.popupContent).on('click', function(a) {
             //$("#" + $(this).attr('id') + "Bio, .member-about-lightbox").addClass("show");
             //$("#" + $(this).attr('id') + "Bio").addClass("show");
-            map.flyTo(a.latlng,8)}).addTo(map);}}).addTo(map);
+
+			// Regex to get first name from popup content
+			var firstName = feature.properties.popupContent.replace(/ .*/,'');
+			// Show bio modal based "#[firstname]Bio" element id to show
+			$("#" + firstName + "Bio, .member-about-lightbox").addClass("show");
+
+            map.flyTo(a.latlng,8)}).addTo(map);
+
+
+
+
+		}}).addTo(map);
 
         map.on('click', function(a) {
         map.flyTo([42.87, -97.38], 3.5)
+
+
     });
 
-        $(".close-bio-icon").click(function () {
-            $(this).closest(".member-about").removeClass("show");
-            $(".member-about-lightbox").removeClass("show");
-            map.flyTo([42.87, -97.38], 3.5)
-        });
+	$(".close-bio-icon").click(function () {
+		$(this).closest(".member-about").removeClass("show");
+		$(".member-about-lightbox").removeClass("show");
+		map.flyTo([42.87, -97.38], 3.5)
+	});
 
-        $('.member-about').on('click', function (e) {
-            if (e.target !== this){
-                return;
-            }
-            $(this).removeClass("show");
-            $(".member-about-lightbox").removeClass("show");
-            map.flyTo([42.87, -97.38], 3.5);
-        });
+	$('.member-about').on('click', function (e) {
+		if (e.target !== this){
+			return;
+		}
+		$(this).removeClass("show");
+		$(".member-about-lightbox").removeClass("show");
+		map.flyTo([42.87, -97.38], 3.5);
+	});
 
 });
 
