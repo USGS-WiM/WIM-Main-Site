@@ -170,6 +170,18 @@
             service-oriented architecture and cloud computing. In his free time, Aaron loves reading, getting outdoors to hike and
             canoe, and attempting to become a decent cook.",
             coordinates: "-89.4012302, 43.0730517"
+        },
+        {
+            first_name: "Nathan",
+            last_name: "Krawza",
+            title: "Student Developer",
+            email: "nkrawza@contractor.usgs.gov",
+            bio: "Nathan is a student developer for WIM. He is studying Management Information Systems at the Carlson School of Management, 
+            University of Minnesota. He built his first computer in the 7th grade and has had a passion for computers and technology ever since. 
+            Nathan's previous experiences include being a computer sales associate at Best Buy, a camp counselor, and a grocery bagger. 
+            He enjoys going for runs, playing multiple rhythm instruments, traveling, 
+            and driving his stick-shift 2001 Honda Accord.",
+            coordinates: "-93.265011, 44.977753"
         }
     ] %}
 
@@ -316,8 +328,13 @@
 
     <script>
   var zoomlvl = 4
+  var mapCenter = [29.76, -95.38]
   // Leaflet map & disabling all map funtionality
-  var map = L.map('mapid', { zoomControl:false })
+  var map = L.map('mapid', { 
+    zoomControl:false,
+    defaultExtentControl: true,
+    center: mapCenter,
+  })
   var layer = L.esri.basemapLayer('Topographic').addTo(map);
   var layerLabels;
     map.dragging.disable();
