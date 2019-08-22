@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	@@include('../i/includes/header.html', {
+		"page_title": "Team: Web Informatics & Mapping",
+		"meta_desc": "WIM is comprised of developers, geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways.",
+		"theme_color": "#030508",
+		"share_title": "Our Team: Web Informatics & Mapping",
+		"share_desc": "WIM is comprised of developers, geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways.",
+		"share_url": "https://wim.usgs.gov/team/",
+		"fb_image": "https://wim.usgs.gov/src/images/branding/meta/Facebook.png",
+		"tw_image": "https://wim.usgs.gov/src/images/branding/meta/Twitter.png"
+	})
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+    <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+    integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+</head>
+<body>
+
+    <style>
+        #basemaps-wrapper {
+          position: absolute;
+          top: 780px;
+          right: 10px;
+          z-index: 400;
+          background: white;
+          padding: 10px;
+        }
+        #basemaps {
+          margin-bottom: 5px;
+        }
+      </style>
+
+    <!-- 
+    USGS Header, USA Banner, and Nav
+	-->
+	@@include('../i/includes/usa-banner.html')
+	@@include('../i/includes/nav.html')
+    
+    <!-- Main Content -->
+
+    <!-- Hero header -->
+    <div class="team-hero-header xs-f-center xs-f-col">
+        Our Team
+    </div>
+    <!-- Hero text -->
+    <div class="team-hero">
+        <div class="standard-width xs-pt-40 lg-pt-75 xs-pb-10 xs-pl-20 xs-pr-20">
+            <h1>
+                Modern web development delivering the best of the USGS to the public.
+                <!-- WIM is improving how the government serves the public through technology. -->
+                <!-- The people who work at Etsy share the vision and values of our community. -->
+            </h1>
+            <h2>
+                We are geographers, cartographers, and scientists who are passionate about science communication
+                <!-- We're driven by the idea that the best work is born from diligence, craftsmanship and fun. -->
+            </h2>
+        </div>
+    </div>
+
+    <div id="mapid" class="map" style="Height: 360px" ></div>
+
+    <div id="basemaps-wrapper" class="leaflet-bar">
+        <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
+          <option value="Topographic">Topographic</option>
+          <option value="Streets">Streets</option>
+          <option value="NationalGeographic">National Geographic</option>
+          <option value="Oceans">Oceans</option>
+          <option value="Gray">Gray</option>
+          <option value="DarkGray">Dark Gray</option>
+          <option value="Imagery">Imagery</option>
+          <option value="ImageryClarity">Imagery (Clarity)</option>
+          <option value="ImageryFirefly">Imagery (Firefly)</option>
+          <option value="ShadedRelief">Shaded Relief</option>
+          <option value="Physical">Physical</option>
+        </select>
+      </div>
+
+    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
+
+        <!-- Team Display/Loop -->
+        <div class="team-display xs-f-start xs-f-wrap ">
+			<!-- This div gets populated by the team.js file -->
+		</div>
+		
+		<!-- If Javascript is disabled, give the user a warning -->
+		<div class="team-no-js">
+			Sorry, this page doesn't work properly without Javascript enabled.
+			<i class="far fa-sad-tear"></i>
+		</div>
+
+        <!-- Lightbox for bio modals -->
+        <div class="member-about-lightbox"></div>
+
+    </div>
+
+    <!-- Team Footer -->
+    <div class="team-footer xs-pt-40 lg-pt-50">
+        <img src="/src/images/team/group_cropped.png" alt="WIM Group Photo" title="Group Photo" class="group-photo" />
+    </div>
+        
+    <!-- 
+    Footer
+    -->
+	@@include('..//i/includes/footer.html')
+
+	<!-- Team JS Controller -->
+	<script src="../src/js/team.js"></script>
+	
+
+</body>
+</html>
