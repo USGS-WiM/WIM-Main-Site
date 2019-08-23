@@ -2,7 +2,8 @@ var wimProjects = new Vue({
     el: '#wimProjects',
     delimiters: ["${", "}"],
     data: {
-        message: '',
+		message: '',
+		showAllProjects: false,
         featured: [],
         allRepos: [],
         repoCount: 0,

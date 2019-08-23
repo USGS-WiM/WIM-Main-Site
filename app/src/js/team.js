@@ -1,14 +1,7 @@
 $(document).ready(function () {
 
-
 	// Active nav link
 	$("#teamLink").addClass("active");
-
-
-	// On Map Click
-	map.on('click', function(a) {
-		map.flyTo([43, -97], zoomlvl)
-	});
 
 	// JS works, remove warning
 	$(".team-no-js").remove();
@@ -20,9 +13,9 @@ $(document).ready(function () {
 		var email = member.email;
 		var bio = member.bio;
 
-		var memberHTML = 	"<div class=\"member\" id=\"" + member.first_name + "\" coordinates = \"" + member.coordinates + "\" tabindex=\"0\">" +
+		var memberHTML = 	"<div class=\"member\" id=\"" + member.first_name + "\" tabindex=\"0\">" +
 					"<div class=\"member-image\" style=\"background-image: url(\'/src/images/team/" + member.first_name + ".jpg\');\">" + 
-					"<img src=\"/src/images/team/{{ member.first_name }}.jpg\" class=\"member-image-element\" alt=\"" + name + "\'s Photo\" title=\"" + name + "\"/></div>" + 
+					"<img src=\"/src/images/team/" + member.first_name + ".jpg\" class=\"member-image-element\" alt=\"" + name + "\'s Photo\" title=\"" + name + "\"/></div>" + 
 					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body\">" + title + "</span></div></div>" + 
 					"<div class=\"member-about\" id=\"" + member.first_name + "Bio\" style=\"z-index : 9999\">" + 
 					"<div class=\"member-about-content\"><div class=\"close-bio-icon\"><i class=\"far fa-times\"></i></div>" + 
@@ -34,34 +27,33 @@ $(document).ready(function () {
 			memberHTML = memberHTML + "<div class=\"text-body xs-mr-10\">" + member.phone + "</div>";
 		}
 
-		memberHTML = memberHTML + 	"<a href=\"mailto:" + email + "\" class=\"xs-mb-10 text-body\">{{ member.email }}</a>" + 
+		memberHTML = memberHTML + 	"<a href=\"mailto:" + email + "\" class=\"xs-mb-10 text-body\">" + email + "</a>" + 
 									"</div></div></div><p>" + bio + "</p></div></div></div>"
 		
-		
+		// Append team member to container
 		$(".team-display").append(memberHTML)
 		
 	}); // End Team Loop
 
 	// Clicking each member scrolls up to and zooms to their location on the map
+	var openMemberPopup = function(name){
+		console.log("Clicked " + name);
+		$("#" + name + "Bio, .member-about-lightbox").addClass("show");
+		$("#" + name + "Bio").addClass("show");
+	}
+	// Click photo tile opens modal
 	$('.team-display').on('click', '.member', function() {
-		console.log("Clicked " + $(this).attr('id'));
-		$("#" + $(this).attr('id') + "Bio, .member-about-lightbox").addClass("show");
-		$("#" + $(this).attr('id') + "Bio").addClass("show");
-	   
-		$('html,body').animate({scrollTop: $(".map").offset().top}, 15, 'linear');
-
-		var coords = ($(this).attr('coordinates')).split(',');
-		var long = parseFloat(coords[0]);
-		var lat = parseFloat(coords[1]);
-		map.flyTo([lat,long], 8);
-
+		openMemberPopup($(this).attr('id'));
+	});
+	// Click map popup link opens modal also
+	$('#mapid').on('click', '.map-popup span', function() {
+		openMemberPopup($(this).attr('id'));
 	});
 
 	// Close member modal with X
 	$('.team-display').on('click', '.close-bio-icon', function() {
 		$(this).closest(".member-about").removeClass("show");
 		$(".member-about-lightbox").removeClass("show");
-		map.flyTo([43, -97], zoomlvl)
 	});
 
 	// Hide member on click outside
@@ -71,7 +63,6 @@ $(document).ready(function () {
 		}
 		$(this).removeClass("show");
 		$(".member-about-lightbox").removeClass("show");
-		map.flyTo([43, -97], zoomlvl);
 	});
 	
 	
@@ -94,119 +85,133 @@ var map = L.map('mapid', {
 	defaultExtentControl: true,
 	center: mapCenter,
 })
-var layer = L.esri.basemapLayer('Topographic').addTo(map);
+
+// Set Map Options
+// Set Map Options
+// Set Map Options
+// var layer = L.esri.basemapLayer("USATopo").addTo(map);
 var layerLabels;
-map.dragging.disable();
+// map.dragging.disable();
 map.touchZoom.disable();
-map.doubleClickZoom.disable();
+// map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
 map.boxZoom.disable();
 map.keyboard.disable();
-
 if (map.tap) map.tap.disable();
 
-function setBasemap(basemap) {
-	if (layer) {
-		map.removeLayer(layer);
-	}
+// Load alt basemaps
+// Load alt basemaps
+var CartoDB_PositronNoLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
+});
+var NASAGIBS_ViirsEarthAtNight2012 = L.tileLayer('https://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_2012/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.{format}', {
+	attribution: 'Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href="https://earthdata.nasa.gov">ESDIS</a>) with funding provided by NASA/HQ.',
+	bounds: [[-85.0511287776, -179.999999975], [85.0511287776, 179.999999975]],
+	minZoom: 1,
+	maxZoom: 8,
+	format: 'jpg',
+	time: '',
+	tilematrixset: 'GoogleMapsCompatible_Level'
+});
+var CartoDB_DarkMatterNoLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
+});
 
-	layer = L.esri.basemapLayer(basemap);
 
-	map.addLayer(layer);
+// Fun maps
+var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 1,
+	maxZoom: 16,
+	ext: 'jpg'
+});
+var NASAGIBS_ViirsEarthAtNight2012 = L.tileLayer('https://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_2012/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.{format}', {
+	attribution: 'Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href="https://earthdata.nasa.gov">ESDIS</a>) with funding provided by NASA/HQ.',
+	bounds: [[-85.0511287776, -179.999999975], [85.0511287776, 179.999999975]],
+	minZoom: 1,
+	maxZoom: 8,
+	format: 'jpg',
+	time: '',
+	tilematrixset: 'GoogleMapsCompatible_Level'
+});
 
-	if (layerLabels) {
-		map.removeLayer(layerLabels);
-	}
+// Set basemap based on time
+// 7am-8pm, light theme
+// 8pm-7am, Night theme
 
-	if (basemap === 'ShadedRelief'
-		|| basemap === 'Oceans'
-		|| basemap === 'Gray'
-		|| basemap === 'DarkGray'
-		|| basemap === 'Terrain'
-	) {
-		layerLabels = L.esri.basemapLayer(basemap + 'Labels');
-		map.addLayer(layerLabels);
-	} else if (basemap.includes('Imagery')) {
-		layerLabels = L.esri.basemapLayer('ImageryLabels');
-		map.addLayer(layerLabels);
-	}
+var today = new Date()
+var curHr = today.getHours()
+
+if (curHr < 7) {
+	NASAGIBS_ViirsEarthAtNight2012.addTo(map);
+
+
+	// CartoDB_DarkMatterNoLabels.addTo(map); USE THIS ONE (DARK)
+	// NO ->
+	// CartoDB_PositronNoLabels.addTo(map);
+} else if (curHr < 20) {
+	CartoDB_PositronNoLabels.addTo(map);
+	// CartoDB_DarkMatterNoLabels.addTo(map);
+} else {
+	NASAGIBS_ViirsEarthAtNight2012.addTo(map);
+
+
+	// CartoDB_DarkMatterNoLabels.addTo(map); USE THIS ONE (DARK)
+	// NO ->
+	// CartoDB_PositronNoLabels.addTo(map);
 }
 
-function changeBasemap(basemaps){
-	var basemap = basemaps.value;
-	setBasemap(basemap);
+// Center Map
+// Center Map
+var centerMap = function(){
+	map.flyTo([43, -97], zoomlvl, {
+		animate: true,
+		duration: 0.7
+	});
 }
 
-// geojson array of each individual team member and their coordinates
+// GeoJSON Array of each location
+// And popup content for map marker popups
+// with each member at each location
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Gary Latzke" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Bruce'>Bruce Droster</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Bruce Droster" },
-		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Erik Myers" },
-		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Aaron Stephenson" },
-		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Mitch Samuels" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Katrin Jacobson" },
-		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Hans Vraga" },
-		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Lauren Privette" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><span id='Lauren'>Lauren Privette</span><span id='Veni'>Veni Kunche</span>" },
 		"geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Veni Kunche" },
-		"geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Blake Draper" },
-		"geometry": {"type": "Point", "coordinates": [-92.723246, 41.743409]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "Nick Estes" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Davis, CA</b><span id='Nick'>Nick Estes</span>" },
 		"geometry": {"type": "Point", "coordinates": [-121.740517, 38.544907]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Daniel Backman" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Denver, CO</b><span id='Daniel'>Daniel Beckman</span>" },
 		"geometry": {"type": "Point", "coordinates": [-104.990251, 39.739236]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Jeremy Newson" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Boise, ID</b><span id='Jeremy'>Jeremy Newson</span>" },
 		"geometry": {"type": "Point", "coordinates": [-116.202314, 43.615019]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "Martyn Smith" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Albany, NY</b><span id='Martyn'>Martyn Smith</span>" },
 		"geometry": {"type": "Point", "coordinates": [-73.691785, 42.728412]},
 	}
 ];
@@ -214,39 +219,39 @@ var geojsonFeature = [
 // WimIcon & popup
 var myIcon = L.Icon.extend({});
 var wimIcon = new myIcon({
-	iconUrl: 'https://wim.usgs.gov/styleguide/assets/branding/logo_only_fullres.png',
+	iconUrl: '/src/images/map_pin.png',
 	iconSize: [24.9, 28.95],
 	iconAnchor: [12.45,28.95],
-	popupAnchor: [0,-28.95]
+	popupAnchor: [0,-28.95],
 });
 
-
-
-
-var markers = L.markerClusterGroup({maxClusterRadius: 1, spiderfyDistanceMultiplier: 0.75 });
-
+// Add points to map
 var geoJsonLayer = L.geoJSON(geojsonFeature, {
 	pointToLayer: function (feature, latlng) {
 		return L.marker(latlng, {icon: wimIcon}).on('click', function(a) {
-
-			// Regex to get first name from popup content
-			var firstName = feature.properties.popupContent.replace(/ .*/,'');
-			// Show bio modal based "#[firstname]Bio" element id to show
-			$("#" + firstName + "Bio, .member-about-lightbox").addClass("show");
-
-			map.flyTo(latlng,8)
-		}).addTo(map);
+			map.flyTo(latlng, 8, {
+				animate: true,
+				duration: 0.7
+			});
+		}).addTo(map).bindPopup(feature.properties.popupContent);
 
 	}
 }).addTo(map);
 
+var markers = L.markerClusterGroup({maxClusterRadius: 1, spiderfyDistanceMultiplier: 0.75 });
 markers.addLayer(geoJsonLayer);
 
+// On popup close, center map
+markers.on('popupclose', function(e) {
+	centerMap();
+});
+
+// Add markers to map and set bounds, zoom
 map.addLayer(markers);
 map.fitBounds(markers.getBounds());
-
 map.setZoom(zoomlvl);
 map.setView([43,-97]);
+
 
 // ======================== //
 // ======================== //
