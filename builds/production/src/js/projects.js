@@ -98,19 +98,12 @@ $("#homeLink").addClass("active");
 
 
 
-// if ('serviceWorker' in navigator) {
-// 	navigator.serviceWorker.register('sw.js')
-// 	.then(function(registration) {
-// 		console.log('Registered:', registration);
-// 	})
-// 	.catch(function(error) {
-// 		console.log('Registration failed: ', error);
-// 	});
-// }
-
-
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('sw.js')
-             .then(function() { console.log('Service Worker Registered'); });
+	navigator.serviceWorker.register('sw.js')
+	.then(function(registration) {
+		console.log('Registered:', registration);
+	})
+	.catch(function(error) {
+		console.log('Registration failed: ', error);
+	});
 }
