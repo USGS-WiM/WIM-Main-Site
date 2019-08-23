@@ -215,8 +215,8 @@ WIM Nav
     <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
         <div class="footer-content">
             <h3>Web Informatics & Mapping</h3>
-            <h5>USGS Wisconsin Water Science Center</h4>
-                <h5>8505 Research Way, Middleton WI 53562</h4>
+            <h5>USGS Wisconsin Water Science Center</h5>
+			<h5>8505 Research Way, Middleton WI 53562</h5>
         </div>
     </div>
 </div>
@@ -245,6 +245,77 @@ WIM Nav
     </div>
     <!-- /.footer-wrap -->
 </footer>
+
+
+<div class="install-pwa xs-f-around" onclick="installPWA()">
+	<span class="pwa-banner-text xs-f-center xs-f-col">Install this webapp to use offline</span> 
+	<b class="pwa-banner-button xs-f-center xs-f-col">
+		<span>
+			<i class="far fa-cloud-download-alt"></i> Install
+		</span>
+	</b>
+</div>
+
+
+<script>
+// ===================================================== //
+// ===================================================== //
+//            Progressive Webapp Stuff                   //
+//            Progressive Webapp Stuff                   //
+// ===================================================== //
+// ===================================================== //
+
+// Register Service worker on home page for PWA
+// Register Service worker on home page for PWA
+if ("serviceWorker" in navigator) {
+	if (navigator.serviceWorker.controller) {
+		console.log("Active service worker found, no need to register");
+	} else {
+		// Register the service worker
+		navigator.serviceWorker
+		.register("sw.js", {
+			scope: "./"
+		})
+		.then(function (reg) {
+			console.log("Service worker has been registered for scope: " + reg.scope);
+		});
+	}
+}
+
+// Defer prompt for webapp install until called
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+	// Prevent Chrome 67 and earlier from automatically showing the prompt
+	e.preventDefault();
+	// Stash the event so it can be triggered later.
+	deferredPrompt = e;
+});
+
+async function installPWA() {
+	if (deferredPrompt) {
+
+		// Show banner if available
+		$(".install-pwa").show();
+		
+		deferredPrompt.prompt();
+		console.log(deferredPrompt)
+		deferredPrompt.userChoice.then(function(choiceResult){
+
+			if (choiceResult.outcome === 'accepted') {
+				console.log('WIM PWA has been installed');
+			} else {
+				console.log('User chose to not install WIM PWA');
+			}
+
+			deferredPrompt = null;
+
+		});
+
+
+	}
+}
+</script>
 
 	<!-- Team JS Controller -->
 	<script src="../src/js/team.js"></script>

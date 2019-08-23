@@ -370,16 +370,47 @@
         }
 	}
 	
-	// Initially show 12 items only
-	.project-item:nth-of-type(1n+13) {
-		display: none;
-	}
-	// Show all items
-	&.show-all{
+	// Default to showing 12
+	@media (min-width: @screen_mobile) {
+        // Initially show 12 items only - Larger than mobile
 		.project-item:nth-of-type(1n+13) {
-			display: flex;
+			display: none;
+		}
+		// Show all items
+		&.show-all{
+			.project-item:nth-of-type(1n+13) {
+				display: flex;
+			}
 		}
 	}
+
+	// Show 6 items on medium screens
+	@media (max-width: @screen_mobile) {
+		// Initially show 6 items only in Mobile
+		.project-item:nth-of-type(1n+7) {
+			display: none;
+		}
+		// Show all items
+		&.show-all{
+			.project-item:nth-of-type(1n+7) {
+				display: flex;
+			}
+		}
+	}
+	
+	// Show 4 items on smallest screens
+	@media (max-width: @screen_sm) {
+		.project-item:nth-of-type(1n+5) {
+			display: none;
+		}
+		// Show all items
+		&.show-all{
+			.project-item:nth-of-type(1n+5) {
+				display: flex;
+			}
+		}
+    }
+	
 
 
     // No projects

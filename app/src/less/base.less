@@ -245,6 +245,56 @@ a.btn-icon i{
         text-align: center;
     }
 }
+
+////////////////////////
+//    PWA BANNER      //
+////////////////////////
+.install-pwa{
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background-color: @primary;
+	color: @white;
+	font-size: 18px;
+	font-weight: 600;
+	z-index: 100;
+	width: 100%;
+	height: 65px;
+	padding: 0 15px;
+	box-shadow: @shadow_lg;
+	display: none;
+
+	.pwa-banner-text{
+
+	}
+	.pwa-banner-button{
+		margin-left: 10px;
+
+		span{
+			background-color: @primary_darker;
+			box-sizing: border-box;
+			padding: 10px 12px;
+			border-radius: 4px;
+			box-shadow: @shadow;
+			transition: @transition;
+			display: flex;
+
+			&:hover{
+				cursor: pointer;
+				background-color: @primary;
+				transition: @transition;
+				text-decoration: underline;
+			}
+
+			i{
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+
 ////////////////////////
 //   USGS FOOTER      //
 ////////////////////////
