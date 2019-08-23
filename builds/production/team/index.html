@@ -82,19 +82,6 @@
 </head>
 <body>
 
-    <style>
-        #basemaps-wrapper {
-          position: absolute;
-          top: 780px;
-          right: 10px;
-          z-index: 400;
-          background: white;
-          padding: 10px;
-        }
-        #basemaps {
-          margin-bottom: 5px;
-        }
-      </style>
 
     <!-- 
     USGS Header, USA Banner, and Nav
@@ -171,13 +158,19 @@ WIM Nav
     
     <!-- Main Content -->
 
-    <!-- Hero header -->
-    <div class="team-hero-header xs-f-center xs-f-col">
+	<!-- Hero header -->
+	<div id="mapid">
+		<div class="map-team-overlay">
+			<b>Our Team</b>
+		</div>
+	</div>
+
+    <!-- <div class="team-hero-header xs-f-center xs-f-col">
         Our Team
-    </div>
+    </div> -->
     <!-- Hero text -->
     <div class="team-hero">
-        <div class="standard-width xs-pt-40 lg-pt-75 xs-pb-10 xs-pl-20 xs-pr-20">
+        <div class="standard-width xs-pt-30 lg-pt-50 xs-pb-10 xs-pl-20 xs-pr-20">
             <h1>
                 Modern web development delivering the best of the USGS to the public.
                 <!-- WIM is improving how the government serves the public through technology. -->
@@ -190,23 +183,6 @@ WIM Nav
         </div>
     </div>
 
-    <div id="mapid" class="map" style="Height: 360px" ></div>
-
-    <div id="basemaps-wrapper" class="leaflet-bar">
-        <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
-          <option value="Topographic">Topographic</option>
-          <option value="Streets">Streets</option>
-          <option value="NationalGeographic">National Geographic</option>
-          <option value="Oceans">Oceans</option>
-          <option value="Gray">Gray</option>
-          <option value="DarkGray">Dark Gray</option>
-          <option value="Imagery">Imagery</option>
-          <option value="ImageryClarity">Imagery (Clarity)</option>
-          <option value="ImageryFirefly">Imagery (Firefly)</option>
-          <option value="ShadedRelief">Shaded Relief</option>
-          <option value="Physical">Physical</option>
-        </select>
-      </div>
 
     <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
 

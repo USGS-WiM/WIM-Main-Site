@@ -187,12 +187,17 @@ WIM Nav
 		-->
 		<div class="standard-width" id="wimProjects">
 
-			<div class="project-search xs-mt-20 lg-mt-30">
+			<div class="text-body xs-pt-15 lg-pt-20 home-paragraph">
+				View our full list of public projects on the table below or on our <a href="https://github.com/usgs-wim" target="_blank">GitHub</a>. You can search projects by name, description, and languages, or you can click on a project's language or tag to show matching projects.
+			</div>
+		
+
+			<div class="project-search xs-mt-10 lg-mt-15">
 				<label for="projectSearch">Search Projects</label>
-				<input type="text" v-model="projectSearch" name="projectSearch" id="projectSearch" placeholder="Type to start searching..." />
+				<input type="text" v-model="projectSearch" name="projectSearch" id="projectSearch" placeholder="Type to start searching..." @focus="showAllProjects = true"/>
 			</div>
 
-			<div class="projects-compact xs-mt-20 lg-mt-40">
+			<div class="projects-compact xs-mt-10 lg-mt-20" v-bind:class="{ 'show-all': showAllProjects }">
 
 
 				<!-- All Projects Loop -->
@@ -221,6 +226,11 @@ WIM Nav
 				<div class="no-projects" v-if="!filteredList.length">
 					<i class="far fa-empty-set"></i>
 					<div class="xs-mt-15">No projects found.</div>
+				</div>
+
+				<!-- Show all projects -->
+				<div class="show-all-projects" v-if="!showAllProjects" v-on:click="showAllProjects = true">
+					<div class="xs-mt-15">View all projects</div>
 				</div>
 
 			</div>
