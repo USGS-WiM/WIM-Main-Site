@@ -8,6 +8,7 @@ query:
             name
             createdAt
             description
+            homepageUrl
             object(expression: "master:code.json") {
                 ... on Blob {
                    text

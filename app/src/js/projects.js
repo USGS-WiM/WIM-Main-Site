@@ -2,7 +2,8 @@ var wimProjects = new Vue({
     el: '#wimProjects',
     delimiters: ["${", "}"],
     data: {
-        message: '',
+		message: '',
+		showAllProjects: false,
         featured: [],
         allRepos: [],
         repoCount: 0,
@@ -93,4 +94,4 @@ getRepos("repos1.json");
 
 
 // Active Link
-$("#projectsLink").addClass("active");
+$("#homeLink").addClass("active");

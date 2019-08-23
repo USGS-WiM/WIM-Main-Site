@@ -1,3 +1,76 @@
+// Map hero
+.leaflet-control-container{
+	display: none;
+}
+
+#mapid{
+	height: 340px;
+	width: 100%;
+	position: relative;
+
+	.map-team-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 500;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 32px;
+		font-weight: 600;
+		color: @white;
+		height: 100%;
+		box-sizing: border-box;
+		padding: 250px 0 0 0;
+		pointer-events: none;
+
+		b{
+			display: inline;
+			width: fit-content;
+			height: fit-content;
+			margin: 0 auto;
+			background-color: @ink_dark;
+			box-sizing: border-box;
+			padding: 0px 15px 2px 15px;
+			border-radius: 10px;
+			box-shadow: @shadow_lg;
+		}
+	}
+
+	// Popup Styling
+	.leaflet-popup-content{
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 5px 26px 5px 8px;
+		width: fit-content;
+		max-width: fit-content; 
+
+		b{
+			display: block;
+			font-size: 14px;
+		}
+		span{
+			font-size: 13px;
+			font-weight: 400;
+			display: block;
+			transition: @transition;
+			text-decoration: underline;
+			text-decoration-color: fade(@ink, 40%);
+			&:hover{
+				cursor: pointer;
+				color: @primary;
+				transition: @transition;
+				text-decoration-color: @primary;
+			}
+		}
+	}
+	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+		box-shadow: @shadow_lg;
+	}
+}
+
 // Hero text
 .team-hero-header{
     background-image: url('/src/images/map_hero.jpg');
@@ -76,7 +149,7 @@
     &.show{
         pointer-events: all;
         transition: opacity 0.2s 0s ease-in-out;
-        z-index: 95;
+        z-index: 500;
         top: 0;
         opacity: 1;
         visibility: visible;
@@ -323,4 +396,20 @@
             }
         }
     }
+}
+
+// No JS Warning
+.team-no-js{
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: 22px;
+	color: fade(@black, 80%);
+	font-weight: 600;
+
+	i{
+		display: block;
+		margin-top: 20px;
+		font-size: 52px;
+	}
 }

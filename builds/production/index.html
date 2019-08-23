@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 
 <!-- Dynamic - change in controllers -->
 <title>Web Informatics & Mapping</title>
@@ -27,13 +17,13 @@
 <!-- Facebook -->
 <meta property="og:title" content="Web Informatics & Mapping">
 <meta property="og:description" content="WIM develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
-<meta property="og:image" content="https://wim.usgs.gov/src/images/branding/meta/Facebook.png">
-<meta property="og:url" content="https://wim.usgs.gov/">
+<meta property="og:image" content="@@fb_img">
+<meta property="og:url" content="https://wim.usgs.gov">
 
 <!-- Twitter -->
 <meta name="twitter:title" content="Web Informatics & Mapping">
 <meta name="twitter:description" content="WIM develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations.">
-<meta name="twitter:image" content="https://wim.usgs.gov/src/images/branding/meta/Twitter.png">
+<meta name="twitter:image" content="@@tw_img">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image:alt" content="Web Informatics & Mapping">
 
@@ -74,13 +64,17 @@
 <!-- Font Awesome PRO CDN -->
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+	<!-- Vue required only on home page -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 <body>
 
     <!-- 
     USGS Header, USA Banner, and Nav
-    -->
-    <!-- USA Site Banner -->
+	-->
+	<!-- USA Site Banner -->
 <div class="usa-banner">
     <div class="usa-inner standard-width">
         <div class="usa-banner-flag">
@@ -118,7 +112,7 @@
         </div>
     </div>
 </div>
-    <!-- 
+	<!-- 
 USGS Bar
 -->
 <div class="usgs-bar">
@@ -144,8 +138,8 @@ WIM Nav
         </a>
         <nav class="wim-header-nav xs-f-end">
             <a href="/" id="homeLink"><span>Home</span></a>
-            <a href="/i/team/" id="teamLink"><span>Team</span></a>
-            <a href="/i/projects/" id="projectsLink"><span>Projects</span></a>
+            <a href="/team/" id="teamLink"><span>Team</span></a>
+            <!-- <a href="/i/projects/" id="projectsLink"><span>Projects</span></a> -->
         </nav>
     </div>
 </header>
@@ -178,7 +172,61 @@ WIM Nav
         </div>
         <div class="text-body xs-pt-15 lg-pt-25 home-paragraph">
             Our work includes digital cartography, data visualization, data management, data analysis, and decision support. All of our applications are created with the latest web technology, including Angular and ArcGIS. You can view the code for our public projects on our GitHub at <a href="https://github.com/usgs-wim" target="_blank">github.com/USGS-WIM</a>. You can also view the frontend style guide WIM's applications use at <a href="https://wim.usgs.gov/styleguide/" title="WIM Frontend Style Guide">wim.usgs.gov/styleguide</a>.
-        </div>
+		</div>
+		
+		<!-- Projects -->
+		<h2 class="xs-pt-50 lg-pt-75">Our Projects</h2>
+		<!-- 
+			__   __ _   _   ___      (_) ___ 
+			\ \ / /| | | | / _ \     | |/ __|
+			\ V / | |_| ||  __/ _   | |\__ \
+			\_/   \__,_| \___|(_) _/ ||___/
+								|__/      
+			Vue wimProjects app starts here
+			Vue tags are wrapped with ${ TAG } instead of double brackets
+		-->
+		<div class="standard-width" id="wimProjects">
+
+			<div class="project-search xs-mt-20 lg-mt-30">
+				<label for="projectSearch">Search Projects</label>
+				<input type="text" v-model="projectSearch" name="projectSearch" id="projectSearch" placeholder="Type to start searching..." />
+			</div>
+
+			<div class="projects-compact xs-mt-20 lg-mt-40">
+
+
+				<!-- All Projects Loop -->
+				<div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+					<div class="heading">${ repo.name }</div>
+					<div class="caption">${ repo.description }</div>
+					<div class="tags">
+						<span v-bind:class="tag" v-for="tag in repo.tags" v-on:click="projectSearch = tag">${ tag }</span>
+					</div>
+					<div class="languages">
+						<span v-for="language in repo.languages" v-on:click="projectSearch = language">${ language }</span>
+					</div>
+					<div class="project-links">
+						<a v-bind:href="repo.homepageURL" target="_blank" v-if="repo.homepageURL != null" class="homepage-link">
+							<i class="far fa-external-link"></i>
+							<span>Open</span>
+						</a>
+						<a v-bind:href="'https://github.com/usgs-wim/'+repo.name" target="_blank" class="github-link">
+							<i class="fab fa-github"></i>
+							<span>GitHub</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- No Projects -->
+				<div class="no-projects" v-if="!filteredList.length">
+					<i class="far fa-empty-set"></i>
+					<div class="xs-mt-15">No projects found.</div>
+				</div>
+
+			</div>
+		</div>
+		
+
 
         <!-- Who we work with -->
         <h2 class="xs-pt-75 lg-pt-100">Who do we Work With?</h2>
@@ -231,7 +279,7 @@ WIM Nav
     <!-- 
     Footer
     -->
-    <!-- Footer -->
+	<!-- Footer -->
 <div class="wim-footer">
     <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
         <div class="footer-content">
@@ -269,7 +317,10 @@ WIM Nav
 
     <script>
         $("#homeLink").addClass("active");
-    </script>
+	</script>
+	<!-- Projects JS Controller -->
+    <script src="/src/js/projects.js"></script>
+	
 
     
 

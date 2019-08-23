@@ -93,4 +93,4 @@ getRepos("repos1.json");
 
 
 // Active Link
-$("#projectsLink").addClass("active");
+$("#homeLink").addClass("active");

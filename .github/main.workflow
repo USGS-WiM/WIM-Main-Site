@@ -1,6 +1,6 @@
 workflow "Production Repo Workflow" {
   resolves = ["GitHub Action for AWS-prod", "GitHub Action for AWS2-prod"]
-  on = "schedule(40 16 * * *)"
+  on = "schedule(05 17 * * *)"
 }
 workflow "Test Repo Workflow" {
   resolves = ["GitHub Action for AWS-test", "GitHub Action for AWS2-test"]
@@ -64,7 +64,7 @@ action "Filters for GitHub Actions" {
 action "GitHub Action for AWS-1" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
   needs = ["Filters for GitHub Actions"]
-  args = "s3 cp $GITHUB_WORKSPACE/build/ s3://test.wim.usgs.gov/  --recursive"
+  args = "s3 cp $GITHUB_WORKSPACE/builds/production/ s3://test.wim.usgs.gov/  --recursive"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
 
@@ -88,7 +88,7 @@ action "Filters for GitHub Actions-2" {
 action "GitHub Action for AWS-2" {
   uses = "actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6"
   needs = ["Filters for GitHub Actions-2"]
-  args = "s3 cp $GITHUB_WORKSPACE/build/ s3://wim.usgs.gov/  --recursive"
+  args = "s3 cp $GITHUB_WORKSPACE/builds/production/ s3://wim.usgs.gov/  --recursive"
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
 }
 

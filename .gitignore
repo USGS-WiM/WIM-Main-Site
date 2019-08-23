@@ -28,6 +28,7 @@ node_modules/
 ######################
 public/
 dev/
+builds/development/
 
 # Logs and databases #
 ######################
