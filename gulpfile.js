@@ -40,7 +40,8 @@ var devFiles = [
     folder.source + 'src/publicsans/**/*',
     folder.source + 'src/js/vendor/**/*.js',
     folder.source + 'styleguide.css',
-    folder.source + 'manifest.json'
+    folder.source + 'manifest.json',
+    folder.source + 'sw.js'
 ];
 gulp.task('devFiles', function () {
     gulp.src(devFiles, { base: folder.source })
@@ -120,7 +121,8 @@ var staticFiles = [
     folder.source + 'src/publicsans/**/*',
     folder.source + 'src/js/vendor/**/*.js',
     folder.source + 'styleguide.css',
-    folder.source + 'manifest.json'
+    folder.source + 'manifest.json',
+    folder.source + 'sw.js'
 ];
 gulp.task('buildFiles', function () {
     gulp.src(staticFiles, { base: folder.source })

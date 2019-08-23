@@ -95,3 +95,59 @@ getRepos("repos1.json");
 
 // Active Link
 $("#homeLink").addClass("active");
+
+
+
+// ===================================================== //
+// ===================================================== //
+//            Progressive Webapp Stuff                   //
+//            Progressive Webapp Stuff                   //
+// ===================================================== //
+// ===================================================== //
+
+// Register Service worker on home page for PWA
+// Register Service worker on home page for PWA
+if ("serviceWorker" in navigator) {
+	if (navigator.serviceWorker.controller) {
+		console.log("Active service worker found, no need to register");
+	} else {
+		// Register the service worker
+		navigator.serviceWorker
+		.register("sw.js", {
+			scope: "./"
+		})
+		.then(function (reg) {
+			console.log("Service worker has been registered for scope: " + reg.scope);
+		});
+	}
+}
+
+// Defer prompt for webapp install until called
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+	// Prevent Chrome 67 and earlier from automatically showing the prompt
+	e.preventDefault();
+	// Stash the event so it can be triggered later.
+	deferredPrompt = e;
+});
+
+async function install() {
+	if (deferredPrompt) {
+		deferredPrompt.prompt();
+		console.log(deferredPrompt)
+		deferredPrompt.userChoice.then(function(choiceResult){
+
+		if (choiceResult.outcome === 'accepted') {
+			console.log('WIM PWA has been installed');
+		} else {
+			console.log('User chose to not install WIM PWA');
+		}
+
+		deferredPrompt = null;
+
+	});
+
+
+	}
+}

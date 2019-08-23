@@ -213,6 +213,11 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div class='map-popup'><b>Albany, NY</b><span id='Martyn'>Martyn Smith</span>" },
 		"geometry": {"type": "Point", "coordinates": [-73.691785, 42.728412]},
+	},
+	{
+		"type": "Feature",
+		"properties": {"popupContent": "<div class='map-popup'><b>Lebanon, IL</b><span id='Mackenzie'>Mackenzie Meni</span>" },
+		"geometry": {"type": "Point", "coordinates": [-89.808691, 38.6035269]},
 	}
 ];
 
@@ -369,6 +374,14 @@ var team = [
 		title: "Student Developer",
 		email: "nkrawza@contractor.usgs.gov",
 		bio: "Nathan is a student developer for WIM. He is studying Management Information Systems at the Carlson School of Management,  University of Minnesota. He built his first computer in the 7th grade and has had a passion for computers and technology ever since.  Nathan's previous experiences include being a computer sales associate at Best Buy, a camp counselor, and a grocery bagger.  He enjoys going for runs, playing multiple rhythm instruments, traveling,  and driving his stick-shift 2001 Honda Accord.",
+		coordinates: "-93.265011, 44.977753"
+	},
+	{
+		first_name: "Mackenzie",
+		last_name: "Meni",
+		title: "Student Developer",
+		email: "EMAIL@contractor.usgs.gov",
+		bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
 		coordinates: "-93.265011, 44.977753"
 	}
 ]
