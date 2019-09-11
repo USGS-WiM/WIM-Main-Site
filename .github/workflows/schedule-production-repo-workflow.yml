@@ -1,5 +1,5 @@
 on:
-  schedules:
+  schedule:
   - cron: 05 17 * * *
 name: Production Repo Workflow
 jobs:
