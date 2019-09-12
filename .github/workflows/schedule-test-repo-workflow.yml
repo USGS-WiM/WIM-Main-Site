@@ -1,6 +1,6 @@
 on:
   schedule:
-  - cron: 50 20 * * *
+  - cron: '50 20 * * *'
 name: Test Repo Workflow
 jobs:
   graphQLQuery2:
