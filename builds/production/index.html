@@ -326,6 +326,17 @@ WIM Nav
 	</b>
 </div>
 
+<script>
+if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js')
+			.then(function(registration) {
+				console.log('Registered:', registration);
+			})
+			.catch(function(error) {
+				console.log('Registration failed: ', error);
+			});
+		}
+</script>
 
 <!-- <script>
 // // ===================================================== //
@@ -464,18 +475,6 @@ WIM Nav
 
     <script>
 		$("#homeLink").addClass("active");
-		
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('sw.js')
-			.then(function(registration) {
-				console.log('Registered:', registration);
-			})
-			.catch(function(error) {
-				console.log('Registration failed: ', error);
-			});
-		}
-
-
 	</script>
 	<!-- Projects JS Controller -->
     <script src="/src/js/projects.js"></script>
