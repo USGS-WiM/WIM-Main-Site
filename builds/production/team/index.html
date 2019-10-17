@@ -32,7 +32,6 @@
 
 <!-- Mobile App Meta -->
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="manifest" href="/manifest.json">
 <link rel="icon" sizes="192x192" href="/src/images/branding/meta/touch192.png">
 <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/src/images/branding/meta/appletouch128.png">
 <meta name="apple-mobile-web-app-title" content="WIM">
@@ -66,6 +65,10 @@
 <!-- Font Awesome PRO CDN -->
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+	<!-- Manifest -->
+	<link rel="manifest" href="../manifest.json">
+
 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -256,18 +259,6 @@ WIM Nav
 		</span>
 	</b>
 </div>
-
-<script>
-if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('sw.js')
-			.then(function(registration) {
-				console.log('Registered:', registration);
-			})
-			.catch(function(error) {
-				console.log('Registration failed: ', error);
-			});
-		}
-</script>
 
 <!-- <script>
 // // ===================================================== //

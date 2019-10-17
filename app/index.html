@@ -12,6 +12,10 @@
 		"tw_image": "https://wim.usgs.gov/src/images/branding/meta/Twitter.png"
 	})
 
+	<!-- Manifest -->
+	<link rel="manifest" href="/manifest.json">
+
+
 	<!-- Vue required only on home page -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
@@ -163,7 +167,20 @@
 
     <script>
 		$("#homeLink").addClass("active");
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js')
+				.then(function(registration) {
+					console.log('Registered:', registration);
+				})
+				.catch(function(error) {
+					console.log('Registration failed: ', error);
+			});
+		}
+
 	</script>
+
+
 	<!-- Projects JS Controller -->
     <script src="/src/js/projects.js"></script>
 	

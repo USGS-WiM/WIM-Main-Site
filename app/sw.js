@@ -8,9 +8,9 @@ var urlsToCache = [
 	'/team/',
 	'/team',
 	'/team/index.html',
-	// '/js/projects.js'
-	// '/js/team.js',
-	// '/js/vendor/jquery-3.3.1.min.js'
+	'/src/js/projects.js',
+	'/src/js/team.js',
+	'/src/js/vendor/jquery-3.3.1.min.js',
 	// Images
 	'/src/images/hero.jpg',
 	'/src/images/map_pin.png',
@@ -52,7 +52,14 @@ var urlsToCache = [
 	'/src/images/branding/logo_hor_fullres.png',
 	'/src/images/branding/logo_only_fullres.png',
 	'/src/images/branding/logo_pin.png',
-	'/src/images/branding/logo.png'
+	'/src/images/branding/logo.png',
+	'/src/images/branding/meta/favicon.png',
+	// FONTS
+	'/src/publicsans/PublicSans-Bold.woff',
+	'/src/publicsans/PublicSans-Bold.woff2',
+	'/src/publicsans/PublicSans-Regular.woff',
+	'/src/publicsans/PublicSans-Regular.woff2',
+	'/src/publicsans/stylesheet.css'
 ];
 
 self.addEventListener('install', function(event) {
@@ -63,18 +70,6 @@ self.addEventListener('install', function(event) {
 		})
 	);
 });
-
-
-// OFFLINE FIRST
-// self.addEventListener('fetch', function(event) {
-// 	event.respondWith(
-// 		caches.match(event.request)
-// 		.then(function(response) {
-// 			return response;
-// 			// return response || fetchAndCache(event.request);
-// 		})
-// 	);
-// });
 
 self.addEventListener('fetch', (event) => {
 	const { request } = event;
@@ -106,6 +101,16 @@ self.addEventListener('fetch', (event) => {
 
 
 
+// OFFLINE FIRST
+// self.addEventListener('fetch', function(event) {
+// 	event.respondWith(
+// 		caches.match(event.request)
+// 		.then(function(response) {
+// 			return response;
+// 			// return response || fetchAndCache(event.request);
+// 		})
+// 	);
+// });
 
 
 
