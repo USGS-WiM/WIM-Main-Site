@@ -41,7 +41,7 @@ body{
     background-color: white;
     box-shadow: @shadow;
     top: 0px;
-    z-index: 1000;
+    z-index: 499;
 
     @media (min-width: @screen_mobile) {
         position: sticky;
@@ -242,7 +242,12 @@ a.btn-icon i{
     
     .footer-content{
         color: @white;
-        text-align: center;
+		text-align: center;
+		
+		a:hover{
+			color: white;
+			opacity: 0.8;
+		}
     }
 }
 

@@ -285,7 +285,7 @@ WIM Nav
     <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
         <div class="footer-content">
             <h3>Web Informatics & Mapping</h3>
-            <h5>USGS Wisconsin Water Science Center</h5>
+            <h5><a href="https://www.usgs.gov/centers/umid-water" target="_blank">USGS Upper Midwest Water Science Center</a></h5>
 			<h5>8505 Research Way, Middleton WI 53562</h5>
         </div>
     </div>
@@ -463,7 +463,19 @@ WIM Nav
 </script>-->
 
     <script>
-        $("#homeLink").addClass("active");
+		$("#homeLink").addClass("active");
+		
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js')
+			.then(function(registration) {
+				console.log('Registered:', registration);
+			})
+			.catch(function(error) {
+				console.log('Registration failed: ', error);
+			});
+		}
+
+
 	</script>
 	<!-- Projects JS Controller -->
     <script src="/src/js/projects.js"></script>

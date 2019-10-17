@@ -91,9 +91,9 @@ var map = L.map('mapid', {
 // Set Map Options
 // var layer = L.esri.basemapLayer("USATopo").addTo(map);
 var layerLabels;
-// map.dragging.disable();
+map.dragging.disable();
 map.touchZoom.disable();
-// map.doubleClickZoom.disable();
+map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
 map.boxZoom.disable();
 map.keyboard.disable();
@@ -147,7 +147,7 @@ var NASAGIBS_ViirsEarthAtNight2012 = L.tileLayer('https://map1.vis.earthdata.nas
 var today = new Date()
 var curHr = today.getHours()
 
-if (curHr < 7) {
+if (curHr < 8) {
 	NASAGIBS_ViirsEarthAtNight2012.addTo(map);
 
 
@@ -155,6 +155,7 @@ if (curHr < 7) {
 	// NO ->
 	// CartoDB_PositronNoLabels.addTo(map);
 } else if (curHr < 20) {
+	// NASAGIBS_ViirsEarthAtNight2012.addTo(map);
 	CartoDB_PositronNoLabels.addTo(map);
 	// CartoDB_DarkMatterNoLabels.addTo(map);
 } else {
@@ -186,7 +187,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span></div>" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Nathan'>Nathan Krawza</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
@@ -381,7 +382,7 @@ var team = [
 		last_name: "Meni",
 		title: "Student Developer",
 		email: "EMAIL@contractor.usgs.gov",
-		bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+		bio: "Mackenzie is a junior developer for WIM. She is currently working towards a B.S in Mathematics with a Minor in Engineering Physics at McKendree University. Mackenzie loves everything math and has recently entered the world of coding. Although she spends the majority of her time working or at school, she enjoys playing coed soccer, volunteering, and spending time with her family.",
 		coordinates: "-93.265011, 44.977753"
 	}
 ]

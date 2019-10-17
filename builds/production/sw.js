@@ -1,23 +1,22 @@
 var CACHE_NAME = 'wim-cache';
 var urlsToCache = [
-	'./team',
-	'/team/index.html',
-	'./team/index.html',
+	'/',
+	'index.html',
+	'src/main.css',
+	'styleguide.css',
+
 	'/team',
-	'/index.html',
-	'/src/main.css',
-	'/styleguide.css',
-	'/js/projects.js',
-	'/js/team.js',
-	'/js/vendor/jquery-3.3.1.min.js',
 	'/team/index.html',
+	// '/js/projects.js'
+	// '/js/team.js',
+	// '/js/vendor/jquery-3.3.1.min.js'
 	// Images
 	'/src/images/hero.jpg',
 	'/src/images/map_pin.png',
 	'/src/images/trees.png',
 	'/src/images/us_flag_small.png',
 	'/src/images/usgs.png',
-	// Team
+	// // Team
 	'/src/images/team/Aaron.jpg',
 	'/src/images/team/Blake.jpg',
 	'/src/images/team/Bruce.jpg',
@@ -34,8 +33,8 @@ var urlsToCache = [
 	'/src/images/team/Nick.jpg',
 	'/src/images/team/Veni.jpg',
 	'/src/images/team/Mackenzie.jpg',
-	'/src/images/team/grop_cropped.png',
-	// Cooperators
+	'/src/images/team/group_cropped.png',
+	// // Cooperators
 	'/src/images/cooperators/ars.png',
 	'/src/images/cooperators/badriver.png',
 	'/src/images/cooperators/dhs.png',
@@ -48,7 +47,7 @@ var urlsToCache = [
 	'/src/images/cooperators/lcc.png',
 	'/src/images/cooperators/epa.png',
 	'/src/images/cooperators/nawqa.png',
-	// Branding
+	// // Branding
 	'/src/images/branding/logo_hor_fullres.png',
 	'/src/images/branding/logo_only_fullres.png',
 	'/src/images/branding/logo_pin.png',
@@ -68,30 +67,31 @@ self.addEventListener('fetch', function(event) {
 	event.respondWith(
 		caches.match(event.request)
 		.then(function(response) {
-			return response || fetchAndCache(event.request);
+			return response;
+			// return response || fetchAndCache(event.request);
 		})
 	);
 });
 
   
-function fetchAndCache(url) {
-	return fetch(url)
-	.then(function(response) {
-		// Check if we received a valid response
-		if (!response.ok) {
-			throw Error(response.statusText);
-		}
-		return caches.open(CACHE_NAME)
-		.then(function(cache) {
-			cache.put(url, response.clone());
-			return response;
-		});
-	})
-	.catch(function(error) {
-		console.log('Request failed:', error);
-		// You could return a custom offline 404 page here
-	});
-}
+// function fetchAndCache(url) {
+// 	return fetch(url)
+// 	.then(function(response) {
+// 		// Check if we received a valid response
+// 		if (!response.ok) {
+// 			throw Error(response.statusText);
+// 		}
+// 		return caches.open(CACHE_NAME)
+// 		.then(function(cache) {
+// 			cache.put(url, response.clone());
+// 			return response;
+// 		});
+// 	})
+// 	.catch(function(error) {
+// 		console.log('Request failed:', error);
+// 		// You could return a custom offline 404 page here
+// 	});
+// }
 
 // const CACHE = "wim-offline";
 
