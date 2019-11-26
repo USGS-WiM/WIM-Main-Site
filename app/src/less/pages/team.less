@@ -1,21 +1,78 @@
-// Hero text
-.team-hero-header{
-    background-image: url('/src/images/map_hero.jpg');
-    text-align: center;
-    color: @white;
-    font-weight: 700;
-    height: 25vh;
-    background-size: cover;
-    background-position: center;
-    background-color: fade(@primary_darker, 50%);
-    background-blend-mode: multiply;
-    font-size: 38px;
-
-    @media (min-width: @screen_mobile) {
-        height: 35vh;
-        font-size: 48px;
-    }
+// Map hero
+.leaflet-control-container{
+	display: none;
 }
+
+#mapid{
+	height: 340px;
+	width: 100%;
+	position: relative;
+
+	.map-team-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 498;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 32px;
+		font-weight: 600;
+		color: @white;
+		height: 100%;
+		box-sizing: border-box;
+		padding: 250px 0 0 0;
+		pointer-events: none;
+
+		b{
+			display: inline;
+			width: fit-content;
+			height: fit-content;
+			margin: 0 auto;
+			background-color: @ink_dark;
+			box-sizing: border-box;
+			padding: 0px 15px 2px 15px;
+			border-radius: 10px;
+			box-shadow: @shadow_lg;
+		}
+	}
+
+	// Popup Styling
+	.leaflet-popup-content{
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 5px 26px 5px 8px;
+		width: fit-content;
+		max-width: fit-content; 
+
+		b{
+			display: block;
+			font-size: 14px;
+		}
+		span{
+			font-size: 13px;
+			font-weight: 400;
+			display: block;
+			transition: @transition;
+			text-decoration: underline;
+			text-decoration-color: fade(@ink, 40%);
+
+			&:hover{
+				cursor: pointer;
+				color: @primary;
+				transition: @transition;
+				text-decoration-color: @primary;
+			}
+		}
+	}
+	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+		box-shadow: @shadow_lg;
+	}
+}
+
+// Hero text
 .team-hero{
     display: block;
     width: 100%;
@@ -48,13 +105,14 @@
 // Footer at bottom of team page
 .team-footer{
     display: block;
-    box-sizing: border-box;
+	border-top: 4px solid @grey_dark;
+	box-sizing: border-box;
     img{
         display: block;
-        width: 90%;
-        max-width: 950px;
+        width: 100%;
+        // max-width: 950px;
         margin: 0 auto 0 auto;
-        filter: saturate(75%);
+		// filter: saturate(75%);
     }
 }
 
@@ -76,7 +134,7 @@
     &.show{
         pointer-events: all;
         transition: opacity 0.2s 0s ease-in-out;
-        z-index: 95;
+        z-index: 500;
         top: 0;
         opacity: 1;
         visibility: visible;
@@ -323,4 +381,20 @@
             }
         }
     }
+}
+
+// No JS Warning
+.team-no-js{
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: 22px;
+	color: fade(@black, 80%);
+	font-weight: 600;
+
+	i{
+		display: block;
+		margin-top: 20px;
+		font-size: 52px;
+	}
 }

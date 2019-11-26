@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+<!-- Dynamic - change in controllers -->
+<title>Team: Web Informatics & Mapping</title>
+<meta name="description" content="WIM is comprised of developers, geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways." />
+<meta name="theme-color" content="#030508">
+
+<!-- Static Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+<meta name="author" content="Mitch Samuels">
+<link rel="shortcut icon" type="image/png" href="/src/images/branding/meta/favicon.png" />
+
+<!-- Social Media Meta -->
+<!-- Facebook -->
+<meta property="og:title" content="Our Team: Web Informatics & Mapping">
+<meta property="og:description" content="WIM is comprised of developers, geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways.">
+<meta property="og:image" content="@@fb_img">
+<meta property="og:url" content="https://wim.usgs.gov/team/">
+
+<!-- Twitter -->
+<meta name="twitter:title" content="Our Team: Web Informatics & Mapping">
+<meta name="twitter:description" content="WIM is comprised of developers, geographers, cartographers, and scientists who are passionate about science communication. Our small team works closely with cooperators to build products that manage, analyze, and visualize scientific information in intuitive and user-friendly ways.">
+<meta name="twitter:image" content="@@tw_img">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Our Team: Web Informatics & Mapping">
+
+
+<!-- Mobile App Meta -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="/src/images/branding/meta/touch192.png">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/src/images/branding/meta/appletouch128.png">
+<meta name="apple-mobile-web-app-title" content="WIM">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="/src/images/branding/meta/appletouch72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/src/images/branding/meta/appletouch114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/src/images/branding/meta/appletouch120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/src/images/branding/meta/appletouch128.png" rel="apple-touch-icon" sizes="128x128">
+<link href="/src/images/branding/meta/appletouch152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/src/images/branding/meta/appletouch167.png" rel="apple-touch-icon" sizes="167x167">
+<link href="/src/images/branding/meta/appletouch180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/src/images/branding/meta/appletouch192.png" rel="apple-touch-icon" sizes="192x192">
+<link rel="apple-touch-startup-image" href="/src/images/branding/meta/splash.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/styleguide.css" />
+<link rel="stylesheet" href="/src/main.css" />
+<link rel="stylesheet" href="/src/publicsans/stylesheet.css" />
+
+
+<!-- Javascript -->
+<script src="/src/js/vendor/jquery-3.3.1.min.js"></script>
+
+
+<!-- Font Awesome PRO CDN -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+	<!-- Manifest -->
+	<link rel="manifest" href="../manifest.json">
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+    <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+    integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+</head>
+<body>
+
+
+    <!-- 
+    USGS Header, USA Banner, and Nav
+	-->
+	<!-- USA Site Banner -->
+<div class="usa-banner">
+    <div class="usa-inner standard-width">
+        <div class="usa-banner-flag">
+            <span><img src="/src/images/us_flag_small.png" alt="U.S. flag"></span>
+        </div>
+        <div class="usa-content">
+            <div class="usa-title" tabindex="0">
+                <div>
+                    An official website of the United States government.
+                </div>
+                <a>Here's how you know.</a>
+            </div>
+            <div class="usa-expanded">
+                <div class="usa-info">
+                    <div class="usa-info-image">
+                        <span><i class="far fa-landmark"></i></span>
+                    </div>
+                    <div class="usa-info-text">
+                        <h5>The .gov means it's official.</h5>
+                        <p>Federal government websites often end in .gov or .mil. Before sharing sensitive information,
+                            make sure you're on a federal government site.</p>
+                    </div>
+                </div>
+                <div class="usa-info">
+                    <div class="usa-info-image">
+                        <span><i class="far fa-lock"></i></span>
+                    </div>
+                    <div class="usa-info-text">
+                        <h5>The site is secure.</h5>
+                        <p>The https:// ensures that you are connecting to the official website and that any information
+                            you provide is encrypted and transmitted securely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<!-- 
+USGS Bar
+-->
+<div class="usgs-bar">
+    <div class="standard-width xs-pl-15 xs-pr-15 sm-pl-20 sm-pr-20 md-pl-30 md-pr-30 lg-pl-50 lg-pr-50 xs-pt-10 xs-pb-10">
+        <a href="https://usgs.gov" target="_blank">
+            <img src="/src/images/usgs.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
+        </a>
+    </div>
+</div>
+
+<!-- 
+WIM Nav
+-->
+<header class="wim-header">
+    <div class="standard-width xs-pl-15 xs-pr-15 sm-pl-20 sm-pr-20 md-pl-30 md-pr-30 lg-pl-50 lg-pr-50 xs-f-btw">
+        <a href="/" class="wim-header-branding">
+            <div class="logo">
+                <img src="/src/images/branding/logo_only_fullres.png" alt="United States Geological Survey (USGS) Logo" title="USGS Home Page" />
+            </div>
+            <div class="name">
+                Web Informatics & Mapping
+            </div>
+        </a>
+        <nav class="wim-header-nav xs-f-end">
+            <a href="/" id="homeLink"><span>Home</span></a>
+            <a href="/team/" id="teamLink"><span>Team</span></a>
+            <!-- <a href="/i/projects/" id="projectsLink"><span>Projects</span></a> -->
+        </nav>
+    </div>
+</header>
+    
+    <!-- Main Content -->
+
+	<!-- Hero header -->
+	<div id="mapid">
+		<div class="map-team-overlay">
+			<b>Our Team</b>
+		</div>
+	</div>
+
+    <!-- <div class="team-hero-header xs-f-center xs-f-col">
+        Our Team
+    </div> -->
+    <!-- Hero text -->
+    <div class="team-hero">
+        <div class="standard-width xs-pt-30 lg-pt-50 xs-pb-10 xs-pl-20 xs-pr-20">
+            <h1>
+                Modern web development delivering the best of the USGS to the public.
+                <!-- WIM is improving how the government serves the public through technology. -->
+                <!-- The people who work at Etsy share the vision and values of our community. -->
+            </h1>
+            <h2>
+                We are geographers, cartographers, and scientists who are passionate about science communication
+                <!-- We're driven by the idea that the best work is born from diligence, craftsmanship and fun. -->
+            </h2>
+        </div>
+    </div>
+
+
+    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
+
+        <!-- Team Display/Loop -->
+        <div class="team-display xs-f-start xs-f-wrap ">
+			<!-- This div gets populated by the team.js file -->
+		</div>
+		
+		<!-- If Javascript is disabled, give the user a warning -->
+		<div class="team-no-js">
+			Sorry, this page doesn't work properly without Javascript enabled.
+			<i class="far fa-sad-tear"></i>
+		</div>
+
+        <!-- Lightbox for bio modals -->
+        <div class="member-about-lightbox"></div>
+
+    </div>
+
+    <!-- Team Footer -->
+    <div class="team-footer xs-mt-40 lg-mt-50">
+        <img src="/src/images/team/group_19.jpg" alt="WIM Group Photo" title="Group Photo" class="group-photo" />
+    </div>
+        
+    <!-- 
+    Footer
+    -->
+	<!-- Footer -->
+<div class="wim-footer">
+    <div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
+        <div class="footer-content">
+            <h3>Web Informatics & Mapping</h3>
+            <h5><a href="https://www.usgs.gov/centers/umid-water" target="_blank">USGS Upper Midwest Water Science Center</a></h5>
+			<h5>8505 Research Way, Middleton WI 53562</h5>
+        </div>
+    </div>
+</div>
+
+<footer class="usgs-footer">
+    <div class="tmp-container">
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/privacy">DOI Privacy Policy</a>|
+            <a href="https://www.usgs.gov/laws/policies_notices.html">Legal</a>|
+            <a href="https://www2.usgs.gov/laws/accessibility.html">Accessibility</a>|
+            <a href="https://www.usgs.gov/sitemap.html">Site Map</a>|
+            <a href="https://answers.usgs.gov/">Contact USGS</a>
+        </div>
+
+        <hr>
+
+        <div class="footer-doi">
+            <a href="https://www.doi.gov/">U.S. Department of the Interior</a>|
+            <a href="https://www.doioig.gov/">DOI Inspector General</a>|
+            <a href="https://www.whitehouse.gov/">White House</a>|
+            <a href="https://www.whitehouse.gov/omb/e-gov/">E-gov</a>|
+            <a href="https://www.whitehouse.gov/open">Open Government</a>|
+            <a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a>|
+            <a href="https://www2.usgs.gov/foia">FOIA</a>
+        </div>    
+    </div>
+    <!-- /.footer-wrap -->
+</footer>
+
+
+<div class="install-pwa xs-f-around" onclick="installPWA()">
+	<span class="pwa-banner-text xs-f-center xs-f-col">Install this webapp to use offline</span> 
+	<b class="pwa-banner-button xs-f-center xs-f-col">
+		<span>
+			<i class="far fa-cloud-download-alt"></i> Install
+		</span>
+	</b>
+</div>
+
+<!-- <script>
+// // ===================================================== //
+// // ===================================================== //
+// //            Progressive Webapp Stuff                   //
+// //            Progressive Webapp Stuff                   //
+// // ===================================================== //
+// // ===================================================== //
+
+
+// var cacheName = 'wim-pwa';
+// var filesToCache = [
+// 	'./',
+// 	'/team',
+// 	'/index.html',
+// 	'/src/main.css',
+// 	'/styleguide.css',
+// 	'/js/projects.js',
+// 	'/js/team.js',
+// 	'/js/vendor/jquery-3.3.1.min.js',
+// 	'/team/index.html',
+// 	// Images
+// 	'/src/images/hero.jpg',
+// 	'/src/images/map_pin.png',
+// 	'/src/images/trees.png',
+// 	'/src/images/us_flag_small.png',
+// 	'/src/images/usgs.png',
+// 	// Team
+// 	'/src/images/team/Aaron.jpg',
+// 	'/src/images/team/Blake.jpg',
+// 	'/src/images/team/Bruce.jpg',
+// 	'/src/images/team/Daniel.jpg',
+// 	'/src/images/team/Erik.jpg',
+// 	'/src/images/team/Gary.jpg',
+// 	'/src/images/team/Hans.jpg',
+// 	'/src/images/team/Jeremy.jpg',
+// 	'/src/images/team/Katrin.jpg',
+// 	'/src/images/team/Lauren.jpg',
+// 	'/src/images/team/Martyn.jpg',
+// 	'/src/images/team/Mitch.jpg',
+// 	'/src/images/team/Nathan.jpg',
+// 	'/src/images/team/Nick.jpg',
+// 	'/src/images/team/Veni.jpg',
+// 	'/src/images/team/Mackenzie.jpg',
+// 	'/src/images/team/grop_cropped.png',
+// 	// Cooperators
+// 	'/src/images/cooperators/ars.png',
+// 	'/src/images/cooperators/badriver.png',
+// 	'/src/images/cooperators/dhs.png',
+// 	'/src/images/cooperators/fws.png',
+// 	'/src/images/cooperators/glri.png',
+// 	'/src/images/cooperators/ijc.png',
+// 	'/src/images/cooperators/USDA_logo.png',
+// 	'/src/images/cooperators/noaa.png',
+// 	'/src/images/cooperators/doi.png',
+// 	'/src/images/cooperators/lcc.png',
+// 	'/src/images/cooperators/epa.png',
+// 	'/src/images/cooperators/nawqa.png',
+// 	// Branding
+// 	'/src/images/branding/logo_hor_fullres.png',
+// 	'/src/images/branding/logo_only_fullres.png',
+// 	'/src/images/branding/logo_pin.png',
+// 	'/src/images/branding/logo.png'
+// ];
+
+
+// // Register Service worker on home page for PWA
+// // Register Service worker on home page for PWA
+// if ("serviceWorker" in navigator) {
+// 	if (navigator.serviceWorker.controller) {
+// 		console.log("Active service worker found, no need to register");
+// 	} else {
+// 		// Register the service worker
+// 		navigator.serviceWorker
+// 		.register("sw.js", {
+// 			scope: "/"
+// 		})
+// 		.then(function (reg) {
+// 			console.log("Service worker has been registered for scope: " + reg.scope);
+// 		});
+// 	}
+// }
+
+// /* Start the service worker and cache all of the app's content */
+// self.addEventListener('install', function(e) {
+// 	e.waitUntil(
+// 		caches.open(cacheName).then(function(cache) {
+// 			return cache.addAll(filesToCache);
+// 		})
+// 	);
+// });
+
+// /* Serve cached content when offline */
+// self.addEventListener('fetch', function(e) {
+// 	e.respondWith(
+// 		caches.match(e.request).then(function(response) {
+// 			return response || fetch(e.request);
+// 		})
+// 	);
+// });
+
+// // Defer prompt for webapp install until called
+// let deferredPrompt = null;
+
+// window.addEventListener('beforeinstallprompt', (e) => {
+// 	// Prevent Chrome 67 and earlier from automatically showing the prompt
+// 	e.preventDefault();
+// 	// Stash the event so it can be triggered later.
+// 	deferredPrompt = e;
+// });
+
+// async function installPWA() {
+// 	if (deferredPrompt) {
+
+// 		// Show banner if available
+// 		$(".install-pwa").show();
+
+// 		deferredPrompt.prompt();
+// 		console.log(deferredPrompt)
+// 		deferredPrompt.userChoice.then(function(choiceResult){
+
+// 			if (choiceResult.outcome === 'accepted') {
+// 				console.log('WIM PWA has been installed');
+// 			} else {
+// 				console.log('User chose to not install WIM PWA');
+// 			}
+
+// 			deferredPrompt = null;
+
+// 		});
+
+
+// 	}
+// }
+</script>-->
+
+	<!-- Team JS Controller -->
+	<script src="../src/js/team.js"></script>
+	
+
+</body>
+</html>

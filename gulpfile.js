@@ -10,88 +10,91 @@ var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
 var newer = require('gulp-newer');
 var imagemin = require('gulp-imagemin');
-var twig = require('gulp-twig');
 var minify = require('gulp-minify');
 var cleanCSS = require('gulp-clean-css');
 var inject = require('gulp-inject-string');
+var fileinclude = require('gulp-file-include');
+
 
 
 var folder = {
-    src: 'app/',
-    dev: 'dev/',
-    build: 'build/'
+	source: 'app/',
+	development: 'builds/development/',
+    production: 'builds/production/'
 }
 
 
-// Development
-// Development
-// Development
-// Development
-// Development
+// Serve Development
+// Serve Development
+// Serve Development
 
 // Clean Dev Folder
 gulp.task('clean:dev', function () {
-    return del.sync(folder.dev);
+    return del.sync(folder.development);
 })
 
 // Move static files
+// Non js/html/code files
 var devFiles = [
-    folder.src + 'src/repos.json',
-    folder.src + 'src/repos2.json',
-    folder.src + 'src/js/**/*',
-    folder.src + 'src/images/**/*',
-    folder.src + 'src/publicsans/**/*',
-    folder.src + 'styleguide.css',
-    folder.src + 'manifest.json'
+    folder.source + 'src/images/**/*',
+    folder.source + 'src/publicsans/**/*',
+    folder.source + 'src/js/vendor/**/*.js',
+    folder.source + 'styleguide.css',
+    folder.source + 'manifest.json',
+    folder.source + 'sw.js'
 ];
-gulp.task('staticdev', function () {
-    return gulp.src(devFiles, { base: folder.src })
-        .pipe(gulp.dest(folder.dev))
-        .pipe(browserSync.stream());
+gulp.task('devFiles', function () {
+    gulp.src(devFiles, { base: folder.source })
+        .pipe(gulp.dest(folder.development));
 });
 
-// Compile Twig Templates
-gulp.task('twigdev', function () {
-    return gulp.src([folder.src + '**/*.html'])
-        .pipe(twig())
-        .pipe(gulp.dest(folder.dev))
-        .pipe(browserSync.stream());
+// File Include
+gulp.task('devIncludes', function() {
+	 gulp.src([folder.source + '**/*.html'])
+	 .pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	 }))
+	.pipe(gulp.dest(folder.development))
+	.pipe(browserSync.stream());
 });
 
 // Compile less
-gulp.task('lessdev', function () {
-    return gulp.src(folder.src + 'src/less/main.less')
+gulp.task('lessDev', function () {
+    return gulp.src(folder.source + 'src/less/main.less')
         .pipe(less())
-        .pipe(gulp.dest(folder.dev + 'src/'))
+        .pipe(gulp.dest(folder.development + 'src/'))
         .pipe(browserSync.stream());
 });
 
-// Changes to JS or other (image) files in /src folder
-gulp.task('staticchange', function () {
-    gulp.src(folder.src + 'src/**/*', { base: folder.src })
-        .pipe(gulp.dest(folder.dev))
-        .pipe(browserSync.stream());
+// Changes to JS or other (image) files in /app folder
+gulp.task('staticChange', function () {
+	gulp.src(folder.source + 'src/**/*', { base: folder.source })
+	.pipe(gulp.dest(folder.development))
+	.pipe(browserSync.stream());
 });
 
 // Browsersync
-// Serve from Dev
+// Serve from Dev Build
 gulp.task('browsersync', function () {
     browserSync.init({
-        server: folder.dev
+        server: folder.development
     });
 
-    gulp.watch(folder.src + "src/less/**/*.less", ['lessdev']);
-    gulp.watch(folder.src + "**/*.html", ["twigdev"]);
-    gulp.watch(folder.src + "**/*.js", ["staticchange"]);
-    gulp.watch(folder.src + "src/**/*.jpg", ["staticchange"]);
-    gulp.watch(folder.src + "src/**/*.png", ["staticchange"]);
+    gulp.watch(folder.source + "**/*.html", ['devIncludes']);
+    gulp.watch(folder.source + "src/less/**/*.less", ['lessDev']);
+    gulp.watch(folder.source + "**/*.js", ["staticChange"]);
+    gulp.watch(folder.source + "src/**/*.jpg", ["staticChange"]);
+    gulp.watch(folder.source + "src/**/*.png", ["staticChange"]);
 });
 
 // Default serve sequence
 gulp.task('serve', function (callback) {
     runSequence(
-        'clean:dev',
-        ['lessdev', 'staticdev', 'twigdev', 'staticchange'],
+		'clean:dev',
+		['staticChange', 'devFiles'],
+		['devIncludes'],
+		['lessDev'],
         'browsersync'
     )
 })
@@ -102,40 +105,51 @@ gulp.task('default', ['serve']);
 
 
 
-// Build sequence
-// Build sequence
-// Build sequence
-// Build sequence
-// Build sequence
+// Production Build sequence
+// Production Build sequence
+// Production Build sequence
 
-// Clean build folder
-gulp.task('clean:build', function () {
-    return del.sync(folder.build);
+// Clean production folder
+gulp.task('clean:prod', function () {
+    return del.sync(folder.production);
 })
 
-// Move any static files over
+// Move any static files over to prod
 var staticFiles = [
-    folder.src + 'src/images/**/*',
-    folder.src + 'src/publicsans/**/*',
-    folder.src + 'styleguide.css',
-    folder.src + 'manifest.json'
+    folder.source + 'src/images/**/*',
+    folder.source + 'src/**/*.json',
+    folder.source + 'src/publicsans/**/*',
+    folder.source + 'src/js/vendor/**/*.js',
+    folder.source + 'styleguide.css',
+    folder.source + 'manifest.json',
+    folder.source + 'sw.js'
 ];
-gulp.task('buildstatic', function () {
-    gulp.src(staticFiles, { base: folder.src })
-        .pipe(gulp.dest(folder.build));
+gulp.task('buildFiles', function () {
+    gulp.src(staticFiles, { base: folder.source })
+        .pipe(gulp.dest(folder.production));
 });
 
-// Build LESS
-gulp.task('lessbuild', function () {
-    gulp.src(folder.src + 'src/less/main.less')
-        .pipe(less())
+// File Include
+gulp.task('buildIncludes', function() {
+	gulp.src([folder.source + '**/*.html'])
+	.pipe(fileinclude({
+	   prefix: '@@',
+	   basepath: '@file'
+	}))
+   .pipe(gulp.dest(folder.production))
+});
+
+// Compile LESS
+gulp.task('lessBuild', function () {
+    return gulp.src(folder.source + 'src/less/main.less')
+		.pipe(less())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(gulp.dest(folder.build + 'src/'))
+        .pipe(gulp.dest(folder.production + 'src/'))
 });
 
 // Minify JS
-gulp.task('minifyjs', function () {
-    gulp.src(folder.src + 'src/js/**/*')
+gulp.task('minifyJS', function () {
+    gulp.src(folder.source + 'src/js/**/*')
         // .pipe(replace('"/src/"+jsonFile', '"https://test.wim.usgs.gov/src/"+jsonFile')) // Replace local repos json with live
         .pipe(minify({
             nosource: true,
@@ -144,34 +158,26 @@ gulp.task('minifyjs', function () {
                 min: '.js'
             }
         }))
-        .pipe(gulp.dest(folder.build + 'src/js/'))
+        .pipe(gulp.dest(folder.production + 'src/js/'))
 });
 
 // Compress Images
 gulp.task('images', function () {
-    var out = folder.build + 'src/images/';
-    return gulp.src(folder.src + 'src/images/**/*')
+    var out = folder.production + 'src/images/';
+    return gulp.src(folder.source + 'src/images/**/*')
         .pipe(newer(out))
         .pipe(imagemin({ optimizationLevel: 5 }))
         .pipe(gulp.dest(out));
 });
 
-// Compile Twig templates to HTML
-gulp.task('twigbuild', function () {
-    return gulp.src([folder.src + '**/*.html'])
-        .pipe(twig())
-        // .pipe(inject.replace('/styleguide.css', 'https://wim.usgs.gov/styleguide/css/main.css')) Replace Local Styleguide with wim.usgs
-        .pipe(inject.replace('https://cdn.jsdelivr.net/npm/vue/dist/vue.js', 'https://cdn.jsdelivr.net/npm/vue')) // Replace Dev Vue with Production
-        .pipe(gulp.dest(folder.build))
-});
-
 // Clean first, then the rest
 gulp.task('build', function (callback) {
     runSequence(
-        'clean:build',
-        ['buildstatic', 'lessbuild', 'minifyjs'],
-        // 'images',
-        'twigbuild',
+		'clean:prod',
+		['buildFiles'],
+		['buildIncludes'],
+		['lessBuild', 'minifyJS'],
+		'images',
         callback
     )
 })
@@ -179,6 +185,6 @@ gulp.task('build', function (callback) {
 // Serve From Build
 gulp.task('serve-build', function () {
     browserSync.init({
-        server: folder.build
+        server: folder.production
     });
 });
