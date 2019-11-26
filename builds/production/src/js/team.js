@@ -187,7 +187,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Nathan'>Nathan Krawza</span></div>" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Nathan'>Nathan Krawza</span><span id='Kathy'>Kathy Dooley</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
@@ -352,7 +352,7 @@ var team = [
 		last_name: "Samuels",
 		title: "Frontend Developer",
 		email: "msamuels@contractor.usgs.gov",
-		bio: "Mitch is currently enrolled at the University of Wisconsin - Madison where he will earn his bachelor's degree in computer science with certificates in entrepreneurship and German. He is a front end developer desigining WIM and other websites. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
+		bio: "Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
 		coordinates: "-93.265011, 44.977753"
 	},{
 		first_name: "Martyn",
@@ -381,8 +381,15 @@ var team = [
 		first_name: "Mackenzie",
 		last_name: "Meni",
 		title: "Student Developer",
-		email: "EMAIL@contractor.usgs.gov",
+		email: "mmeni@contractor.usgs.gov",
 		bio: "Mackenzie is a junior developer for WIM. She is currently working towards a B.S in Mathematics with a Minor in Engineering Physics at McKendree University. Mackenzie loves everything math and has recently entered the world of coding. Although she spends the majority of her time working or at school, she enjoys playing coed soccer, volunteering, and spending time with her family.",
+		coordinates: "-89.808691, 38.6035269"
+	},{
+		first_name: "Kathy",
+		last_name: "Dooley",
+		title: "Student Developer",
+		email: "kdooley@contractor.usgs.gov",
+		bio: "Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.",
 		coordinates: "-93.265011, 44.977753"
 	}
 ]

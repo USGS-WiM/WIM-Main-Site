@@ -177,7 +177,7 @@ gulp.task('build', function (callback) {
 		['buildFiles'],
 		['buildIncludes'],
 		['lessBuild', 'minifyJS'],
-		// 'images'
+		'images',
         callback
     )
 })

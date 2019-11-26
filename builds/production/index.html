@@ -467,18 +467,38 @@ WIM Nav
     <script>
 		$("#homeLink").addClass("active");
 
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('sw.js')
-				.then(function(registration) {
-					console.log('Registered:', registration);
-				})
-				.catch(function(error) {
-					console.log('Registration failed: ', error);
-			});
+		// Service worker only on non-localhost 
+		if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+			// Deregister Service Worker
+			console.log("Local server, no service worker");
+
+			navigator.serviceWorker.getRegistrations().then(
+
+				function(registrations) {
+
+					for(let registration of registrations) {  
+						registration.unregister();
+						alert("SW unregistered")
+					}
+
+				}
+			);
+
+		}else{
+			// Register Service Worker
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('sw.js')
+					.then(function(registration) {
+						console.log('Registered:', registration);
+					})
+					.catch(function(error) {
+						console.log('Registration failed: ', error);
+				});
+			}
 		}
 
-	</script>
 
+	</script>
 
 	<!-- Projects JS Controller -->
     <script src="/src/js/projects.js"></script>
