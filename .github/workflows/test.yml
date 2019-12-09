@@ -16,6 +16,18 @@ jobs:
     - run: npm install
     - run: gulp build  
       
-    - name: Run a one-line script
-      run: DONE?
+    - name: GitHub Action for AWS-1
+      uses: actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      with:
+        args: s3 cp /github/workspace/builds/production/ s3://test.wim.usgs.gov/
+          --recursive
+    - name: GitHub Action for Slack
+      uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      with:
+        args: Successfully deployed to test site
 
