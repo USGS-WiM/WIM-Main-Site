@@ -417,16 +417,16 @@ var team = [
 		alumni: true,
 		years: "2010-2019",
 		alumniLink: "https://www.usgs.gov/staff-profiles/jeremy-k-newson?qt-staff_profile_science_products=1#qt-staff_profile_science_products"
-	// },{
-	// 	first_name: "Jonathan",
-	// 	last_name: "Baier",
-	// 	title: "Software Developer",
-	// 	email: "",
-	// 	bio: "Jonathan Baier's alumni bio coming soon..",
-	// 	coordinates: "",
-	// 	alumni: true,
-	// 	years: "2009-2014",
-	// 	alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
+	},{
+		first_name: "Jonathan",
+		last_name: "Baier",
+		title: "Software Developer",
+		email: "",
+		bio: "Jonathan Baier's alumni bio coming soon.",
+		coordinates: "",
+		alumni: true,
+		years: "2009-2014",
+		alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
 	},{
 		first_name: "Marie",
 		last_name: "Peppler",
