@@ -16,7 +16,16 @@ $(document).ready(function () {
 		var memberHTML = 	"<div class=\"member\" id=\"" + member.first_name + "\" tabindex=\"0\">" +
 					"<div class=\"member-image\" style=\"background-image: url(\'/src/images/team/" + member.first_name + ".jpg\');\">" + 
 					"<img src=\"/src/images/team/" + member.first_name + ".jpg\" class=\"member-image-element\" alt=\"" + name + "\'s Photo\" title=\"" + name + "\"/></div>" + 
-					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body\">" + title + "</span></div></div>" + 
+					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body\">" + title + "</span>";
+
+		// If Years exists, add that below title
+		if(member.years){
+			memberHTML = memberHTML + "<span class=\"caption block\">" + member.years + "</span></div></div>";
+		}else{
+			memberHTML = memberHTML + "</div></div>";
+		}
+
+		memberHTML = memberHTML +
 					"<div class=\"member-about\" id=\"" + member.first_name + "Bio\" style=\"z-index : 9999\">" + 
 					"<div class=\"member-about-content\"><div class=\"close-bio-icon\"><i class=\"far fa-times\"></i></div>" + 
 					"<div class=\"member-about-scroll xs-p-25 lg-p-30\"><div class=\"xs-f-btw xs-mb-15\">" +
@@ -27,11 +36,21 @@ $(document).ready(function () {
 			memberHTML = memberHTML + "<div class=\"text-body xs-mr-10\">" + member.phone + "</div>";
 		}
 
-		memberHTML = memberHTML + 	"<a href=\"mailto:" + email + "\" class=\"xs-mb-10 text-body\">" + email + "</a>" + 
-									"</div></div></div><p>" + bio + "</p></div></div></div>"
-		
-		// Append team member to container
-		$(".team-display").append(memberHTML)
+		// Fill popup content
+		// Alumni don't have Email, phone, etc
+		if(!member.alumni){
+			// Current Team 
+			memberHTML = memberHTML + 	"<a href=\"mailto:" + email + "\" class=\"xs-mb-10 text-body\">" + email + "</a>" + 
+			"</div></div></div><p>" + bio + "</p></div></div></div>"
+
+			$(".team-display").append(memberHTML)
+		}else{
+			// Alumni
+			memberHTML = memberHTML + 	"<div class=\"text-body xs-mr-10\">" + member.years + "</div><a href=\"" + member.alumniLink + "\" target=\"_blank\" class=\"xs-mb-10 text-body\">View Profile</a>" + 
+			"</div></div></div><p>" + bio + "</p></div></div></div>"
+
+			$(".alumni-display").append(memberHTML)
+		}
 		
 	}); // End Team Loop
 
@@ -42,7 +61,7 @@ $(document).ready(function () {
 		$("#" + name + "Bio").addClass("show");
 	}
 	// Click photo tile opens modal
-	$('.team-display').on('click', '.member', function() {
+	$('.team-display, .alumni-display').on('click', '.member', function() {
 		openMemberPopup($(this).attr('id'));
 	});
 	// Click map popup link opens modal also
@@ -51,13 +70,13 @@ $(document).ready(function () {
 	});
 
 	// Close member modal with X
-	$('.team-display').on('click', '.close-bio-icon', function() {
+	$('.team-display, .alumni-display').on('click', '.close-bio-icon', function() {
 		$(this).closest(".member-about").removeClass("show");
 		$(".member-about-lightbox").removeClass("show");
 	});
 
 	// Hide member on click outside
-	$('.team-display').on('click', '.member-about', function(e) {
+	$('.team-display, .alumni-display').on('click', '.member-about', function(e) {
 		if (e.target !== this){
 			return;
 		}
@@ -205,11 +224,11 @@ var geojsonFeature = [
 		"properties": {"popupContent": "<div class='map-popup'><b>Denver, CO</b><span id='Daniel'>Daniel Beckman</span>" },
 		"geometry": {"type": "Point", "coordinates": [-104.990251, 39.739236]},
 	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Boise, ID</b><span id='Jeremy'>Jeremy Newson</span>" },
-		"geometry": {"type": "Point", "coordinates": [-116.202314, 43.615019]},
-	},
+	// {
+	// 	"type": "Feature",
+	// 	"properties": {"popupContent": "<div class='map-popup'><b>Boise, ID</b><span id='Jeremy'>Jeremy Newson</span>" },
+	// 	"geometry": {"type": "Point", "coordinates": [-116.202314, 43.615019]},
+	// },
 	{
 		"type": "Feature",
 		"properties": {"popupContent": "<div class='map-popup'><b>Albany, NY</b><span id='Martyn'>Martyn Smith</span>" },
@@ -309,7 +328,7 @@ var team = [
 		first_name: "Katrin",
 		last_name: "Jacobsen",
 		title: "Software Developer",
-		email: "kjacobsen@contractor.usgs.gov",
+		email: "kjacobsen@usgs.gov",
 		bio: "Katrin has a BA in Anthropology from the University of Minnesota - Twin Cities. While going to school there, she began an internship with the USGS in Mounds View, MN performing GIS and database work, which eventually led her to WIM. She's always had a passion for maps - they're all over her home. Outside of work, she enjoys volunteering, playing with her puppy, reading, and hosting small get-togethers at her home.",
 		coordinates: "-93.265011, 44.977753"
 	},{
@@ -334,17 +353,10 @@ var team = [
 		bio: "Erik is a software developer for WIM. He earned bachelor's degrees in geography and Asian studies from Augustana College in Illinois, and a master's degree in geography from Ohio University. He also holds a GIS Certificate from the University of Wisconsin-Madison. In addition to Erik's work developing web applications for WIM, his major areas of interest are cartographic and user experience design. Erik enjoys travel, photography, and outdoor sports. In his free time, he can usually be found rock climbing, skiing, cycling, canoeing, or kayak touring.",
 		coordinates: "-89.4012302, 43.0730517"
 	},{
-		first_name: "Jeremy",
-		last_name: "Newson",
-		title: "Software Developer",
-		email: "jknewson@usgs.gov",
-		bio: "Jeremy Newson has been working as a hydrologic engineer for the United States Geological Survey for the past 8 years. He is currently a lead developer for WIM, developing hydrologic mapping applications. His programming skills include Javascript, HTML5, Typescript, C#, VB.net, Python, Action script, Flash/Flex and Fortran. He earned his master's degree in biological and agricultural engineering, emphasizing in sediment fluxes in fluvial systems, and a bachelor's degree in biological systems engineering from the University of Idaho. When he is not staring aimlessly at his computer monitors, he enjoys spending time with his family, fly-fishing, and camping.",
-		coordinates: "-116.202314, 43.615019"
-	},{
 		first_name: "Lauren",
 		last_name: "Privette",
 		title: "Software Developer",
-		email: "lprivette@contractor.usgs.gov",
+		email: "lprivette@usgs.gov",
 		bio: "Lauren is a software developer with WIM. She received her B.S in Geographic Science from James Madison University. While she enjoys work centered around GIS and cartography, her interests have expanded into the world of open source internet mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren enjoys snowboarding and ultimate frisbee.",
 		coordinates: "-77.036871, 38.907192"
 	},{
@@ -391,5 +403,49 @@ var team = [
 		email: "kdooley@contractor.usgs.gov",
 		bio: "Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.",
 		coordinates: "-93.265011, 44.977753"
+	},
+	// Alumni
+	// Alumni
+	// Alumni
+	{
+		first_name: "Jeremy",
+		last_name: "Newson",
+		title: "Software Developer",
+		email: "jknewson@usgs.gov",
+		bio: "Jeremy Newson has been working as a hydrologic engineer for the United States Geological Survey for the past 8 years. He is currently a lead developer for WIM, developing hydrologic mapping applications. His programming skills include Javascript, HTML5, Typescript, C#, VB.net, Python, Action script, Flash/Flex and Fortran. He earned his master's degree in biological and agricultural engineering, emphasizing in sediment fluxes in fluvial systems, and a bachelor's degree in biological systems engineering from the University of Idaho. When he is not staring aimlessly at his computer monitors, he enjoys spending time with his family, fly-fishing, and camping.",
+		coordinates: "-116.202314, 43.615019",
+		alumni: true,
+		years: "2010-2019",
+		alumniLink: "https://www.usgs.gov/staff-profiles/jeremy-k-newson?qt-staff_profile_science_products=1#qt-staff_profile_science_products"
+	// },{
+	// 	first_name: "Jonathan",
+	// 	last_name: "Baier",
+	// 	title: "Software Developer",
+	// 	email: "",
+	// 	bio: "Jonathan Baier's alumni bio coming soon..",
+	// 	coordinates: "",
+	// 	alumni: true,
+	// 	years: "2009-2014",
+	// 	alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
+	},{
+		first_name: "Marie",
+		last_name: "Peppler",
+		title: "Software Developer",
+		email: "",
+		bio: "Marie Peppler's alumni bio coming soon.",
+		coordinates: "",
+		alumni: true,
+		years: "2009-2014",
+		alumniLink: "https://www.usgs.gov/staff-profiles/marie-c-peppler?qt-staff_profile_science_products=0#qt-staff_profile_science_products"
+	},{
+		first_name: "Tonia",
+		last_name: "Roddick",
+		title: "Software Developer",
+		email: "",
+		bio: "Tonia Roddick's alumni bio coming soon.",
+		coordinates: "",
+		alumni: true,
+		years: "2012-2018",
+		alumniLink: "https://www.linkedin.com/in/tonia-roddick-76960531/"
 	}
 ]

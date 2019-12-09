@@ -3,6 +3,15 @@
 	display: none;
 }
 
+// Map popup fixes
+.map-popup{
+	span, b{
+		display: block;
+		white-space: pre;
+		line-height: 14px;
+	}
+}
+
 #mapid{
 	height: 340px;
 	width: 100%;
@@ -142,7 +151,16 @@
 }
 
 // Team Member Display
-.team-display{
+.alumni-header{
+	display: block;
+	// font-size: 32px;
+	text-align: center;
+	border-bottom: 1px solid @grey;
+	box-sizing: border-box;
+	padding-bottom: 15px;
+}
+.team-display,
+.alumni-display{
     width: 100%;
     width: calc(~'100% + 20px');
     position: relative;
