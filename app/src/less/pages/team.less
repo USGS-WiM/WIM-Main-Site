@@ -116,6 +116,13 @@
     display: block;
 	border-top: 4px solid @grey_dark;
 	box-sizing: border-box;
+
+	&.alumni-hidden{
+		margin-top: -170px !important;
+		z-index: 70;
+		position: relative;
+	}
+
     img{
         display: block;
         width: 100%;
@@ -151,14 +158,6 @@
 }
 
 // Team Member Display
-.alumni-header{
-	display: block;
-	// font-size: 32px;
-	text-align: center;
-	border-bottom: 1px solid @grey;
-	box-sizing: border-box;
-	padding-bottom: 15px;
-}
 .team-display,
 .alumni-display{
     width: 100%;
@@ -256,7 +255,7 @@
 
             .member-meta b{
                 text-decoration: underline;
-            }
+			}
         }
 
     }
@@ -400,6 +399,62 @@
         }
     }
 }
+
+// Hide certain things for alumni
+// Hide certain things for alumni
+// Hide certain things for alumni
+.alumni-header{
+	display: block;
+	// font-size: 32px;
+	text-align: center;
+	box-sizing: border-box;
+	position: absolute;
+	top: -15px;
+	left: 0;
+	z-index: 60;
+	width: 100%;
+	pointer-events: none;
+	text-decoration: underline;
+
+	&.toggled{
+		position: relative;
+		top: 0px;
+		margin: 25px auto 45px auto;
+	}
+}
+.alumni-display{
+	margin-top:35px;
+
+	&.toggled{
+		margin-top: 0px;
+	}
+
+	.member-title,
+	h4{
+		display: none;			
+	}
+
+	.alumni-link{
+		display: block;
+		width: 100%;
+	}
+
+	.alumni-overlay{
+		position: absolute;
+		top: -50px;
+		left: 0;
+		transition: 0.1s;
+		height: 100%;
+		width: 100%;
+		z-index: 50;
+		background: rgb(255,255,255);
+		background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); 
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
 
 // No JS Warning
 .team-no-js{

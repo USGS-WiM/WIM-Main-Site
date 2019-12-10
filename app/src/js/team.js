@@ -6,6 +6,14 @@ $(document).ready(function () {
 	// JS works, remove warning
 	$(".team-no-js").remove();
 
+	// Alumni toggle
+	$(".alumni-header, .alumni-overlay").click(function(){
+		$(".team-footer").removeClass("team-footer");
+		$(".alumni-header").addClass("toggled");
+		$(".alumni-display").addClass("toggled");
+		$(".alumni-overlay").fadeOut(250);
+	});
+
 	// Team Member layout setup
 	$.each(team, function( index, member ) {
 		var name = member.first_name + " " + member.last_name;
@@ -16,11 +24,11 @@ $(document).ready(function () {
 		var memberHTML = 	"<div class=\"member\" id=\"" + member.first_name + "\" tabindex=\"0\">" +
 					"<div class=\"member-image\" style=\"background-image: url(\'/src/images/team/" + member.first_name + ".jpg\');\">" + 
 					"<img src=\"/src/images/team/" + member.first_name + ".jpg\" class=\"member-image-element\" alt=\"" + name + "\'s Photo\" title=\"" + name + "\"/></div>" + 
-					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body\">" + title + "</span>";
+					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body member-title\">" + title + "</span>";
 
 		// If Years exists, add that below title
 		if(member.years){
-			memberHTML = memberHTML + "<span class=\"caption block\">" + member.years + "</span></div></div>";
+			memberHTML = memberHTML + "<span class=\"text-body block\">" + member.years + "</span></div></div>";
 		}else{
 			memberHTML = memberHTML + "</div></div>";
 		}
@@ -46,7 +54,7 @@ $(document).ready(function () {
 			$(".team-display").append(memberHTML)
 		}else{
 			// Alumni
-			memberHTML = memberHTML + 	"<div class=\"text-body xs-mr-10\">" + member.years + "</div><a href=\"" + member.alumniLink + "\" target=\"_blank\" class=\"xs-mb-10 text-body\">View Profile</a>" + 
+			memberHTML = memberHTML + 	"<div class=\"text-body xs-mr-10\">" + member.years + "</div><a href=\"" + member.alumniLink + "\" target=\"_blank\" class=\"xs-mb-10 text-body alumni-link\">View Profile</a>" + 
 			"</div></div></div><p>" + bio + "</p></div></div></div>"
 
 			$(".alumni-display").append(memberHTML)
@@ -418,15 +426,15 @@ var team = [
 		years: "2010-2019",
 		alumniLink: "https://www.usgs.gov/staff-profiles/jeremy-k-newson?qt-staff_profile_science_products=1#qt-staff_profile_science_products"
 	},{
-		first_name: "Jonathan",
-		last_name: "Baier",
+		first_name: "Tonia",
+		last_name: "Roddick",
 		title: "Software Developer",
 		email: "",
-		bio: "Jonathan Baier's alumni bio coming soon.",
+		bio: "Tonia Roddick's alumni bio coming soon.",
 		coordinates: "",
 		alumni: true,
-		years: "2009-2014",
-		alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
+		years: "2012-2018",
+		alumniLink: "https://www.linkedin.com/in/tonia-roddick-76960531/"
 	},{
 		first_name: "Marie",
 		last_name: "Peppler",
@@ -438,14 +446,14 @@ var team = [
 		years: "2009-2014",
 		alumniLink: "https://www.usgs.gov/staff-profiles/marie-c-peppler?qt-staff_profile_science_products=0#qt-staff_profile_science_products"
 	},{
-		first_name: "Tonia",
-		last_name: "Roddick",
+		first_name: "Jonathan",
+		last_name: "Baier",
 		title: "Software Developer",
 		email: "",
-		bio: "Tonia Roddick's alumni bio coming soon.",
+		bio: "Jonathan Baier's alumni bio coming soon.",
 		coordinates: "",
 		alumni: true,
-		years: "2012-2018",
-		alumniLink: "https://www.linkedin.com/in/tonia-roddick-76960531/"
+		years: "2009-2014",
+		alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
 	}
 ]
