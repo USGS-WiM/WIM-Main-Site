@@ -169,7 +169,7 @@
 		$("#homeLink").addClass("active");
 
 		// Service worker only on non-localhost 
-		if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+		// if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
 			// Deregister Service Worker
 			console.log("Local server, no service worker");
 
@@ -185,18 +185,18 @@
 				}
 			);
 
-		}else{
+		// }else{
 			// Register Service Worker
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('sw.js')
-					.then(function(registration) {
-						console.log('Registered:', registration);
-					})
-					.catch(function(error) {
-						console.log('Registration failed: ', error);
-				});
-			}
-		}
+		// 	if ('serviceWorker' in navigator) {
+		// 		navigator.serviceWorker.register('sw.js')
+		// 			.then(function(registration) {
+		// 				console.log('Registered:', registration);
+		// 			})
+		// 			.catch(function(error) {
+		// 				console.log('Registration failed: ', error);
+		// 		});
+		// 	}
+		// }
 
 
 	</script>
