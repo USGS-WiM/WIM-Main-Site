@@ -166,7 +166,7 @@
     left: calc(~'0% - 10px');
 
     .member{
-        height: 280px;
+        height: 380px;
         width: 48%;
         width: calc(~'50% - 20px');
         margin: 10px;
@@ -209,12 +209,17 @@
 
 
         @media (min-width: @screen_sm) {
-            height: 340px;
+            height: 380px;
+        }
+        @media (min-width: 600px) {
+            width: 31.5%;
+            width: calc(~'33.33% - 20px');
+            height: 320px;
         }
         @media (min-width: @screen_md) {
             width: 31.5%;
             width: calc(~'33.33% - 20px');
-            height: 380px;
+            height: 420px;
         }
         @media (min-width: @screen_lg) {
             width: 23%;
@@ -416,6 +421,13 @@
 	pointer-events: none;
 	text-decoration: underline;
 
+	@media (min-width: @screen_md) {
+		top: 25px;
+	}
+	@media (min-width: @screen_sm) {
+		top: 18px;
+	}
+
 	&.toggled{
 		position: relative;
 		top: 0px;
@@ -428,6 +440,21 @@
 	&.toggled{
 		margin-top: 0px;
 	}
+
+	&:not(.toggled){
+		// Member adjustments
+		@media (max-width: @screen_lg) {
+			#Jonathan{
+				display: none !important;
+			}
+		}
+		@media (max-width: @screen_md) {
+			#Marie{
+				display: none !important;
+			}
+		}
+	}
+	
 
 	.member-title,
 	h4{
