@@ -219,7 +219,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><span id='Lauren'>Lauren Privette</span><span id='Veni'>Veni Kunche</span>" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><span id='Lauren'>Lauren Privette</span>" },
 		"geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
 	},
 	{
@@ -347,13 +347,13 @@ var team = [
 		bio: "Daniel Beckman is a career intern at the USGS. He holds a bachelors degree from the University of Colorado in Ecology and Evolutionary Biology and minors in Chemistry and Computer Science. He currently attends Graduate school at the University of Colorado School of Engineering and Applied Science where he studies Machine Learning and Artificial Intelligence. Daniel is a combat Veteran and former paratrooper with Special Forces. He has worked in data for almost two decades in a variety of fields including, counterintelligence, research & development, forensic chemistry, and genomics. Daniel joined the USGS in 2017 and WIM in 2018. Currently, he works in cloud integration. He and his wife Sarah live in Colorado with their two dogs and cat. They enjoy climbing, hiking 14ers, craft IPAs, snowshoeing, cross country skiing, and paddle boarding.",
 		coordinates: "-104.990251, 39.739236"
 	},{
-		first_name: "Veni",
-		last_name: "Kunche",
-		title: "Software Developer",
-		email: "kkunche@contractor.usgs.gov",
-		bio: "Veni Kunche is a senior software developer residing in Northern Virginia. She has over 10 years of experience in software and web development, and has worked in several industries such as financial, governmental, and bio-medical. She loves to travel with friends and explore new cuisines.",
-		coordinates: "-77.036871, 38.907192"
-	},{
+	// 	first_name: "Veni",
+	// 	last_name: "Kunche",
+	// 	title: "Software Developer",
+	// 	email: "kkunche@contractor.usgs.gov",
+	// 	bio: "Veni Kunche is a senior software developer residing in Northern Virginia. She has over 10 years of experience in software and web development, and has worked in several industries such as financial, governmental, and bio-medical. She loves to travel with friends and explore new cuisines.",
+	// 	coordinates: "-77.036871, 38.907192"
+	// },{
 		first_name: "Erik",
 		last_name: "Myers",
 		title: "Software Developer",
@@ -419,18 +419,28 @@ var team = [
 		first_name: "Jeremy",
 		last_name: "Newson",
 		title: "Software Developer",
-		email: "jknewson@usgs.gov",
-		bio: "Jeremy Newson has been working as a hydrologic engineer for the United States Geological Survey for the past 8 years. He is currently a lead developer for WIM, developing hydrologic mapping applications. His programming skills include Javascript, HTML5, Typescript, C#, VB.net, Python, Action script, Flash/Flex and Fortran. He earned his master's degree in biological and agricultural engineering, emphasizing in sediment fluxes in fluvial systems, and a bachelor's degree in biological systems engineering from the University of Idaho. When he is not staring aimlessly at his computer monitors, he enjoys spending time with his family, fly-fishing, and camping.",
-		coordinates: "-116.202314, 43.615019",
+		email: "",
+		bio: "Jeremy was an integral part of WIM for 9 years, making his way here by way of the Kentucky Water Science Center, where he worked as a Hydrologist. As a member of the team, Jeremy served as a full stack developer, spurring growth in WIM’s capabilities by creating and implementing new technologies and architectures, while also pushing for adaptation of best practices in every facet of our work. Jeremy’s witty sense of humor and positive attitude made him a wonderful mentor for new and experienced developers.",
+		coordinates: "",
 		alumni: true,
 		years: "2010-2019",
 		alumniLink: "https://www.usgs.gov/staff-profiles/jeremy-k-newson?qt-staff_profile_science_products=1#qt-staff_profile_science_products"
+	},{
+		first_name: "Veni",
+		last_name: "Kunche",
+		title: "Software Developer",
+		email: "",
+		bio: "Veni filled the role of Senior Developer during her tenure on the team. Her ability to take on (often the most) complex problems the team faced at any given time made her an inspiration to others on the team and our cooperators. Perhaps even more impactful was how she was able to use her knowledge, experiences, and intuition to help us build a healthy and fun team environment, you can see her influence on many of the work conventions WIM follows. Veni is the founder at DiversifyTech.co. Where she connects underrepresented folks in tech to opportunities. Shes also won many awards in the DC area, including Trending 40 - The New Power Women of DC Tech.",
+		coordinates: "",
+		alumni: true,
+		years: "2014-2019",
+		alumniLink: "https://www.linkedin.com/in/venikunche"
 	},{
 		first_name: "Tonia",
 		last_name: "Roddick",
 		title: "Software Developer",
 		email: "",
-		bio: "Tonia Roddick's alumni bio coming soon.",
+		bio: "Tonia was a senior software developer with WIM for 6 years. She was a full-stack developer leading some of the teams largest and most ambitious projects; and her infectious no-nonsense attitude and adventurous spirit, was a benefit to everyone’s productivity. Tonia filled the role of  developer during her tenure with WIM. Tonia has gone on to have a very successful career in the private sector.",
 		coordinates: "",
 		alumni: true,
 		years: "2012-2018",
@@ -440,7 +450,7 @@ var team = [
 		last_name: "Peppler",
 		title: "Software Developer",
 		email: "",
-		bio: "Marie Peppler's alumni bio coming soon.",
+		bio: "Marie was with WIM for 4 years doing Project Coordinator and Program Development.  With her tireless work-ethic and skills in customer relations and problem solving, combined with an understanding of the technical skills of the WIM team, she lead projects that built several applications critical to the USGS, our cooperators and the general public. The connections Marie has established between WIM and many of our key cooperators continues to this day and have led to many interesting and exciting collaborations for the team. Marie is now the Hazards Coordinator for the USGS.",
 		coordinates: "",
 		alumni: true,
 		years: "2009-2014",
@@ -450,7 +460,7 @@ var team = [
 		last_name: "Baier",
 		title: "Software Developer",
 		email: "",
-		bio: "Jonathan Baier's alumni bio coming soon.",
+		bio: "Jon was one of three co-founders of WIM, where he was a Senior Technology Leader and Systems Architect, setting the technical direction for WIM.  He has shown remarkable foresight building  technologies and architectures that remain the gold standard for WIM web development. Jon filled the roles of Cloud Solution Architect and GIS Platform Technical Director during his tenure with WIM. Jon has published three books, produced webinars and articles on the subject of containerization. He has gone on to have a very successful career in the private sector delivering emerging technology strategies to companies and partners.",
 		coordinates: "",
 		alumni: true,
 		years: "2009-2014",
