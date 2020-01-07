@@ -12,8 +12,8 @@ jobs:
     - name: Set Up Node
       uses: actions/setup-node@v1
       with:
-        node-version: ['10.15']
-    - run: npm run-script [build]
+        node-version: '10.15'
+    - run: npm run-script build
     - name: GitHub Action for AWS
       uses: actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6
       env:
@@ -28,15 +28,6 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
         args: Successfully deployed to prod site
-
-
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.15'
-    - run: npm install
-    - run: gulp build  
       
 
 
