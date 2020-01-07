@@ -30,7 +30,8 @@
 
     "languages": [
       "VueJS",
-      "TwigJS"
+	  "Javascript",
+	  "LESS"
     ],
 
     "contact": {

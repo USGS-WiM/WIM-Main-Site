@@ -6,6 +6,14 @@ $(document).ready(function () {
 	// JS works, remove warning
 	$(".team-no-js").remove();
 
+	// Alumni toggle
+	$(".alumni-header, .alumni-overlay").click(function(){
+		$(".team-footer").removeClass("team-footer");
+		$(".alumni-header").addClass("toggled");
+		$(".alumni-display").addClass("toggled");
+		$(".alumni-overlay").fadeOut(250);
+	});
+
 	// Team Member layout setup
 	$.each(team, function( index, member ) {
 		var name = member.first_name + " " + member.last_name;
@@ -16,7 +24,16 @@ $(document).ready(function () {
 		var memberHTML = 	"<div class=\"member\" id=\"" + member.first_name + "\" tabindex=\"0\">" +
 					"<div class=\"member-image\" style=\"background-image: url(\'/src/images/team/" + member.first_name + ".jpg\');\">" + 
 					"<img src=\"/src/images/team/" + member.first_name + ".jpg\" class=\"member-image-element\" alt=\"" + name + "\'s Photo\" title=\"" + name + "\"/></div>" + 
-					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body\">" + title + "</span></div></div>" + 
+					"<div class=\"member-meta\"><b class=\"text-sm\">" + name + "</b><span class=\"text-body member-title\">" + title + "</span>";
+
+		// If Years exists, add that below title
+		if(member.years){
+			memberHTML = memberHTML + "<span class=\"text-body block\">" + member.years + "</span></div></div>";
+		}else{
+			memberHTML = memberHTML + "</div></div>";
+		}
+
+		memberHTML = memberHTML +
 					"<div class=\"member-about\" id=\"" + member.first_name + "Bio\" style=\"z-index : 9999\">" + 
 					"<div class=\"member-about-content\"><div class=\"close-bio-icon\"><i class=\"far fa-times\"></i></div>" + 
 					"<div class=\"member-about-scroll xs-p-25 lg-p-30\"><div class=\"xs-f-btw xs-mb-15\">" +
@@ -27,11 +44,21 @@ $(document).ready(function () {
 			memberHTML = memberHTML + "<div class=\"text-body xs-mr-10\">" + member.phone + "</div>";
 		}
 
-		memberHTML = memberHTML + 	"<a href=\"mailto:" + email + "\" class=\"xs-mb-10 text-body\">" + email + "</a>" + 
-									"</div></div></div><p>" + bio + "</p></div></div></div>"
-		
-		// Append team member to container
-		$(".team-display").append(memberHTML)
+		// Fill popup content
+		// Alumni don't have Email, phone, etc
+		if(!member.alumni){
+			// Current Team 
+			memberHTML = memberHTML + 	"<a href=\"mailto:" + email + "\" class=\"xs-mb-10 text-body\">" + email + "</a>" + 
+			"</div></div></div><p>" + bio + "</p></div></div></div>"
+
+			$(".team-display").append(memberHTML)
+		}else{
+			// Alumni
+			memberHTML = memberHTML + 	"<div class=\"text-body xs-mr-10\">" + member.years + "</div><a href=\"" + member.alumniLink + "\" target=\"_blank\" class=\"xs-mb-10 text-body alumni-link\">View Profile</a>" + 
+			"</div></div></div><p>" + bio + "</p></div></div></div>"
+
+			$(".alumni-display").append(memberHTML)
+		}
 		
 	}); // End Team Loop
 
@@ -42,7 +69,7 @@ $(document).ready(function () {
 		$("#" + name + "Bio").addClass("show");
 	}
 	// Click photo tile opens modal
-	$('.team-display').on('click', '.member', function() {
+	$('.team-display, .alumni-display').on('click', '.member', function() {
 		openMemberPopup($(this).attr('id'));
 	});
 	// Click map popup link opens modal also
@@ -51,13 +78,13 @@ $(document).ready(function () {
 	});
 
 	// Close member modal with X
-	$('.team-display').on('click', '.close-bio-icon', function() {
+	$('.team-display, .alumni-display').on('click', '.close-bio-icon', function() {
 		$(this).closest(".member-about").removeClass("show");
 		$(".member-about-lightbox").removeClass("show");
 	});
 
 	// Hide member on click outside
-	$('.team-display').on('click', '.member-about', function(e) {
+	$('.team-display, .alumni-display').on('click', '.member-about', function(e) {
 		if (e.target !== this){
 			return;
 		}
@@ -192,7 +219,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><span id='Lauren'>Lauren Privette</span><span id='Veni'>Veni Kunche</span>" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><span id='Lauren'>Lauren Privette</span>" },
 		"geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
 	},
 	{
@@ -205,11 +232,11 @@ var geojsonFeature = [
 		"properties": {"popupContent": "<div class='map-popup'><b>Denver, CO</b><span id='Daniel'>Daniel Beckman</span>" },
 		"geometry": {"type": "Point", "coordinates": [-104.990251, 39.739236]},
 	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Boise, ID</b><span id='Jeremy'>Jeremy Newson</span>" },
-		"geometry": {"type": "Point", "coordinates": [-116.202314, 43.615019]},
-	},
+	// {
+	// 	"type": "Feature",
+	// 	"properties": {"popupContent": "<div class='map-popup'><b>Boise, ID</b><span id='Jeremy'>Jeremy Newson</span>" },
+	// 	"geometry": {"type": "Point", "coordinates": [-116.202314, 43.615019]},
+	// },
 	{
 		"type": "Feature",
 		"properties": {"popupContent": "<div class='map-popup'><b>Albany, NY</b><span id='Martyn'>Martyn Smith</span>" },
@@ -309,7 +336,7 @@ var team = [
 		first_name: "Katrin",
 		last_name: "Jacobsen",
 		title: "Software Developer",
-		email: "kjacobsen@contractor.usgs.gov",
+		email: "kjacobsen@usgs.gov",
 		bio: "Katrin has a BA in Anthropology from the University of Minnesota - Twin Cities. While going to school there, she began an internship with the USGS in Mounds View, MN performing GIS and database work, which eventually led her to WIM. She's always had a passion for maps - they're all over her home. Outside of work, she enjoys volunteering, playing with her puppy, reading, and hosting small get-togethers at her home.",
 		coordinates: "-93.265011, 44.977753"
 	},{
@@ -320,13 +347,13 @@ var team = [
 		bio: "Daniel Beckman is a career intern at the USGS. He holds a bachelors degree from the University of Colorado in Ecology and Evolutionary Biology and minors in Chemistry and Computer Science. He currently attends Graduate school at the University of Colorado School of Engineering and Applied Science where he studies Machine Learning and Artificial Intelligence. Daniel is a combat Veteran and former paratrooper with Special Forces. He has worked in data for almost two decades in a variety of fields including, counterintelligence, research & development, forensic chemistry, and genomics. Daniel joined the USGS in 2017 and WIM in 2018. Currently, he works in cloud integration. He and his wife Sarah live in Colorado with their two dogs and cat. They enjoy climbing, hiking 14ers, craft IPAs, snowshoeing, cross country skiing, and paddle boarding.",
 		coordinates: "-104.990251, 39.739236"
 	},{
-		first_name: "Veni",
-		last_name: "Kunche",
-		title: "Software Developer",
-		email: "kkunche@contractor.usgs.gov",
-		bio: "Veni Kunche is a senior software developer residing in Northern Virginia. She has over 10 years of experience in software and web development, and has worked in several industries such as financial, governmental, and bio-medical. She loves to travel with friends and explore new cuisines.",
-		coordinates: "-77.036871, 38.907192"
-	},{
+	// 	first_name: "Veni",
+	// 	last_name: "Kunche",
+	// 	title: "Software Developer",
+	// 	email: "kkunche@contractor.usgs.gov",
+	// 	bio: "Veni Kunche is a senior software developer residing in Northern Virginia. She has over 10 years of experience in software and web development, and has worked in several industries such as financial, governmental, and bio-medical. She loves to travel with friends and explore new cuisines.",
+	// 	coordinates: "-77.036871, 38.907192"
+	// },{
 		first_name: "Erik",
 		last_name: "Myers",
 		title: "Software Developer",
@@ -334,17 +361,10 @@ var team = [
 		bio: "Erik is a software developer for WIM. He earned bachelor's degrees in geography and Asian studies from Augustana College in Illinois, and a master's degree in geography from Ohio University. He also holds a GIS Certificate from the University of Wisconsin-Madison. In addition to Erik's work developing web applications for WIM, his major areas of interest are cartographic and user experience design. Erik enjoys travel, photography, and outdoor sports. In his free time, he can usually be found rock climbing, skiing, cycling, canoeing, or kayak touring.",
 		coordinates: "-89.4012302, 43.0730517"
 	},{
-		first_name: "Jeremy",
-		last_name: "Newson",
-		title: "Software Developer",
-		email: "jknewson@usgs.gov",
-		bio: "Jeremy Newson has been working as a hydrologic engineer for the United States Geological Survey for the past 8 years. He is currently a lead developer for WIM, developing hydrologic mapping applications. His programming skills include Javascript, HTML5, Typescript, C#, VB.net, Python, Action script, Flash/Flex and Fortran. He earned his master's degree in biological and agricultural engineering, emphasizing in sediment fluxes in fluvial systems, and a bachelor's degree in biological systems engineering from the University of Idaho. When he is not staring aimlessly at his computer monitors, he enjoys spending time with his family, fly-fishing, and camping.",
-		coordinates: "-116.202314, 43.615019"
-	},{
 		first_name: "Lauren",
 		last_name: "Privette",
 		title: "Software Developer",
-		email: "lprivette@contractor.usgs.gov",
+		email: "lprivette@usgs.gov",
 		bio: "Lauren is a software developer with WIM. She received her B.S in Geographic Science from James Madison University. While she enjoys work centered around GIS and cartography, her interests have expanded into the world of open source internet mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren enjoys snowboarding and ultimate frisbee.",
 		coordinates: "-77.036871, 38.907192"
 	},{
@@ -391,5 +411,59 @@ var team = [
 		email: "kdooley@contractor.usgs.gov",
 		bio: "Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.",
 		coordinates: "-93.265011, 44.977753"
+	},
+	// Alumni
+	// Alumni
+	// Alumni
+	{
+		first_name: "Jeremy",
+		last_name: "Newson",
+		title: "Software Developer",
+		email: "",
+		bio: "Jeremy was an integral part of WIM for 9 years, making his way here by way of the Kentucky Water Science Center, where he worked as a Hydrologist. As a member of the team, Jeremy served as a full stack developer, spurring growth in WIM’s capabilities by creating and implementing new technologies and architectures, while also pushing for adaptation of best practices in every facet of our work. Jeremy’s witty sense of humor and positive attitude made him a wonderful mentor for new and experienced developers.",
+		coordinates: "",
+		alumni: true,
+		years: "2010-2019",
+		alumniLink: "https://www.usgs.gov/staff-profiles/jeremy-k-newson?qt-staff_profile_science_products=1#qt-staff_profile_science_products"
+	},{
+		first_name: "Veni",
+		last_name: "Kunche",
+		title: "Software Developer",
+		email: "",
+		bio: "Veni filled the role of Senior Developer during her tenure on the team. Her ability to take on (often the most) complex problems the team faced at any given time made her an inspiration to others on the team and our cooperators. Perhaps even more impactful was how she was able to use her knowledge, experiences, and intuition to help us build a healthy and fun team environment, you can see her influence on many of the work conventions WIM follows. Veni is the founder at DiversifyTech.co. Where she connects underrepresented folks in tech to opportunities. Shes also won many awards in the DC area, including Trending 40 - The New Power Women of DC Tech.",
+		coordinates: "",
+		alumni: true,
+		years: "2014-2019",
+		alumniLink: "https://www.linkedin.com/in/venikunche"
+	},{
+		first_name: "Tonia",
+		last_name: "Roddick",
+		title: "Software Developer",
+		email: "",
+		bio: "Tonia was a senior software developer with WIM for 6 years. She was a full-stack developer leading some of the teams largest and most ambitious projects; and her infectious no-nonsense attitude and adventurous spirit, was a benefit to everyone’s productivity. Tonia filled the role of  developer during her tenure with WIM. Tonia has gone on to have a very successful career in the private sector.",
+		coordinates: "",
+		alumni: true,
+		years: "2012-2018",
+		alumniLink: "https://www.linkedin.com/in/tonia-roddick-76960531/"
+	},{
+		first_name: "Marie",
+		last_name: "Peppler",
+		title: "Software Developer",
+		email: "",
+		bio: "Marie was with WIM for 4 years doing Project Coordinator and Program Development.  With her tireless work-ethic and skills in customer relations and problem solving, combined with an understanding of the technical skills of the WIM team, she lead projects that built several applications critical to the USGS, our cooperators and the general public. The connections Marie has established between WIM and many of our key cooperators continues to this day and have led to many interesting and exciting collaborations for the team. Marie is now the Hazards Coordinator for the USGS.",
+		coordinates: "",
+		alumni: true,
+		years: "2009-2014",
+		alumniLink: "https://www.usgs.gov/staff-profiles/marie-c-peppler?qt-staff_profile_science_products=0#qt-staff_profile_science_products"
+	},{
+		first_name: "Jonathan",
+		last_name: "Baier",
+		title: "Software Developer",
+		email: "",
+		bio: "Jon was one of three co-founders of WIM, where he was a Senior Technology Leader and Systems Architect, setting the technical direction for WIM.  He has shown remarkable foresight building  technologies and architectures that remain the gold standard for WIM web development. Jon filled the roles of Cloud Solution Architect and GIS Platform Technical Director during his tenure with WIM. Jon has published three books, produced webinars and articles on the subject of containerization. He has gone on to have a very successful career in the private sector delivering emerging technology strategies to companies and partners.",
+		coordinates: "",
+		alumni: true,
+		years: "2009-2014",
+		alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
 	}
 ]

@@ -1,15 +1,15 @@
 var CACHE_NAME = 'wim-cache';
 var urlsToCache = [
-	'/',
-	'index.html',
-	'src/main.css',
-	'styleguide.css',
+	// '/',
+	// 'index.html',
+	// 'src/main.css',
+	// 'styleguide.css',
 
-	'/team/',
-	'/team',
-	'/team/index.html',
-	'/src/js/projects.js',
-	'/src/js/team.js',
+	// '/team/',
+	// '/team',
+	// '/team/index.html',
+	// '/src/js/projects.js',
+	// '/src/js/team.js',
 	'/src/js/vendor/jquery-3.3.1.min.js',
 	// Images
 	'/src/images/hero.jpg',
