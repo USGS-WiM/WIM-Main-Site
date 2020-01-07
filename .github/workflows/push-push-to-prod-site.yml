@@ -28,15 +28,6 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
         args: Successfully deployed to prod site
-
-
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.15'
-    - run: npm install
-    - run: gulp build  
       
 
 
