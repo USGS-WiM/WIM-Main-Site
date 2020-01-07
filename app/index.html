@@ -74,7 +74,7 @@
 
 
 				<!-- All Projects Loop -->
-				<div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList">
+				<div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList.slice().reverse()">
 					<div class="heading">${ repo.name }</div>
 					<div class="caption">${ repo.description }</div>
 					<div class="tags">
