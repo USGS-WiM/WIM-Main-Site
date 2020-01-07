@@ -56,8 +56,10 @@ var getRepos = function(jsonFile){
                     // Remove undefined
                     if(parsed[0]){
                       
-                        // Only save if beta or Production
-                        if(parsed[0].status.toString().toLowerCase() == 'production' || parsed[0].status.toString().toLowerCase() == 'beta'){
+						// Only save if beta or Production
+						if(parsed[0].name.toString().toLowerCase() === 'wimpo'){
+							// Ignore wimpo
+						}else if(parsed[0].status.toString().toLowerCase() === 'production' || parsed[0].status.toString().toLowerCase() === 'beta'){
                             allRepos.push(parsed[0])
                         }
                     }
