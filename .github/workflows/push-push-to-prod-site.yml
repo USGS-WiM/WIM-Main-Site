@@ -28,7 +28,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: "Successfully deployed PRODUCTION to wim.usgs.gov"
+        args: "Successfully deployed PRODUCTION to wim.usgs.gov :production:"
       
 
 
