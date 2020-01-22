@@ -20,17 +20,17 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         args: --query .github/graph-ql.query.yaml --output repos1.json
-    - name: GitHub Action for AWS2-test
-      uses: actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      with:
-        args: s3 cp /github/workspace/repos2.json s3://test.wim.usgs.gov/src/repos2.json
-    - name: GitHub Action for AWS-test
+    - name: Repos To AWS - Test 1
       uses: actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       with:
         args: s3 cp /github/workspace/repos1.json s3://test.wim.usgs.gov/src/repos1.json
+    - name: Repos To AWS - Test 2
+      uses: actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      with:
+        args: s3 cp /github/workspace/repos2.json s3://test.wim.usgs.gov/src/repos2.json

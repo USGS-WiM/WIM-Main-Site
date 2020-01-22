@@ -2,10 +2,10 @@ on:
   push:
     branches:
     - staging
-name: Testing Push
+name: "Push to test.wim.usgs.gov (TEST)"
 jobs:
-  testingPush:
-    name: Testing Push
+  pushToTest:
+    name: Push to TETST
     runs-on: ubuntu-latest
 
     steps:
@@ -29,5 +29,5 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: Successfully deployed to test site
+        args: "Successfully deployed TEST to test.wim.usgs.gov :fire:"
 

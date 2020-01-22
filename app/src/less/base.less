@@ -4,7 +4,12 @@ body{
 
     @media (max-width: @screen_mobile) {
         padding-bottom: 65px;
-    }
+	}
+	
+	// Hide body overflow when full-page popup visible
+	&.no-body-scroll{
+		overflow: hidden !important;
+	}
 }
 html{
 	height: auto !important;

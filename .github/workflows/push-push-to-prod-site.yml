@@ -2,10 +2,10 @@ on:
   push:
     branches:
     - master
-name: Push to Prod Site
+name: "Push to wim.usgs.gov (PRODUCTION)"
 jobs:
   pushToProd:
-    name: Push to Prod
+    name: Push to PRODUCTION
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -27,7 +27,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: Successfully deployed to prod site
+        args: "Successfully deployed PRODUCTION to wim.usgs.gov"
       
 
 
