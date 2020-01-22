@@ -31,11 +31,13 @@ html{
     box-shadow: 0 5px 25px -5px rgba(30, 16, 84, .2);
 
     img{
-        height: 34px;
-        width: auto;
+        height: 32px;
+		width: auto;
+		position: relative;
+		top: -4px;
 
         @media (min-width: @screen_md) {
-            height: 50px;
+			height: 50px;
         }
     }
 }
@@ -60,12 +62,14 @@ html{
         text-align: center;
         display: flex;
         box-sizing: border-box;
-        padding: 5px 0;
+		padding: 5px 0;
+		width: 100%;
         text-decoration: none;
         justify-content: center;
 
         @media (min-width: @screen_mobile) {
-            justify-content: flex-start;
+			justify-content: flex-start;
+			width: auto;
         }
 
         // Pin Logo
@@ -116,13 +120,15 @@ html{
         display: flex;
         justify-content: center;
         box-sizing: border-box;
-        padding: 10px 0;
+        padding: 10px 25px 12px 25px;
         box-shadow: @shadow_lg;
         border-top: 1px solid @grey_light;
-        z-index: 100;
+		z-index: 100;
+		justify-content: space-around;
 
         @media (min-width: @screen_mobile) {
-            position: relative;
+			position: relative;
+			justify-content: center;
             top: auto;
             left: auto;
             right: auto;
@@ -130,7 +136,7 @@ html{
             width: auto;
             box-shadow: none;
             padding: 0;
-            border-top: none;
+			border-top: none;
         }
         
         a{
@@ -164,7 +170,18 @@ html{
                 flex-direction: column;
                 justify-content: center;
                 padding-bottom: 1px;
-            }
+			}
+			
+			i{
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				margin-right: 5px;
+				padding-bottom: 2px;
+				box-sizing: border-box;
+				height: 100%;
+				font-size: 17px;
+			}
 
             &:hover{
                 cursor: pointer;
