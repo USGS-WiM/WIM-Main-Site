@@ -89,7 +89,7 @@
 			<!-- Alumni Display -->
 			<div class="alumni-display xs-f-start xs-f-wrap" v-bind:class="{ 'toggled': showAlumni }">
 				
-				<h1 class="alumni-header xs-mt-10 lg-mt-20 xs-mb-10 lg-mb-20">Alumni</h1>
+				<h1 class="alumni-header xs-mt-20 lg-mt-20 lg-mb-20">Alumni</h1>
 
 				<div class="alumni-overlay" v-on:click="showAlumni = true"></div>
 
@@ -153,6 +153,10 @@
 
 	<!-- Team JS Controller -->
 	<script src="../src/js/team.js"></script>
+	<script>
+		// Active Link
+		$("#teamLink").addClass("active");
+	</script>
 
 </body>
 </html>

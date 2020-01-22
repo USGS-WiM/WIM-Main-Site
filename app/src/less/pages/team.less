@@ -418,7 +418,6 @@
 
 	.member{
 		transition: 0.2s ease;
-		filter: blur(4px);
 		opacity: 0.5;
 	}
 
@@ -429,14 +428,7 @@
 		box-sizing: border-box;
 		width: 100%;
 		pointer-events: none;
-		padding-bottom: 25px;
-	
-		@media (min-width: @screen_md) {
-			top: 25px;
-		}
-		@media (min-width: @screen_sm) {
-			top: 18px;
-		}
+		padding-bottom: 20px;
 	}
 
 	// Overlay to hide alumni
@@ -464,7 +456,6 @@
 	&:hover{
 		cursor: pointer;
 		.member{
-			filter: blur(0px);
 			transition: 0.2s ease;
 			opacity: 1;
 		}
@@ -476,6 +467,11 @@
 		overflow: visible;
 		max-height: 1000px;
 		transition: all 0.3s ease;
+
+        @media (max-width: @screen_mobile) {
+			max-height: 1500px;
+		}
+
 
 		.member{
 			filter: blur(0px);
