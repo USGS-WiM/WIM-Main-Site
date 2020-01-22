@@ -26,11 +26,11 @@ jobs:
 
     -name: AWS Test Failure
       if: failure()
-      uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      with:
-        args: ":warning::warning: Error deploying *wim-main-site* to :test:test.wim.usgs.gov - GitHub Action Failed :warning::warning:"
+        uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        with:
+          args: ":warning::warning: Error deploying *wim-main-site* to :test:test.wim.usgs.gov - GitHub Action Failed :warning::warning:"
 
     - name: GitHub Action for Slack
       uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
