@@ -16,7 +16,7 @@
 	<!-- Manifest -->
 	<link rel="manifest" href="../manifest.json">
 
-	<!-- Vue required only on home and project pages -->
+	<!-- Vue required only on team and project pages -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://unpkg.com/vue-router"></script>
 
@@ -50,10 +50,10 @@
 			Featured Projects
 			VUE JS app
 		 -->
-        <div class="project-list xs-f-col xs-mt-15" id="featured">
+        <div class="project-list xs-f-col xs-mt-15" id="featuredProjects">
 
 			<!-- Streamstats, FIM, SPARROW, WHISPers, Wetlands, NAWQA -->
-            <a class="project xs-f-around xs-mt-15 lg-mt-20 xs-mb-15 xs-mb-20" v-for="project in list" v-on:click="openFeaturedWindow(project.slug)">
+            <a class="project xs-f-around xs-mt-15 lg-mt-20 xs-mb-15 xs-mb-20" v-for="project in apps" v-on:click="openFeaturedWindow(project.slug)">
                 <div class="project-image" v-bind:style="'background-image: url(/src/images/projects/' + project.screenshots[0].file + ');'"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
                     <h3>${ project.name }</h3>
@@ -150,7 +150,7 @@
 		-->
 		<h2 class="xs-pt-50 lg-pt-75">All Projects</h2>
        
-		<div class="standard-width" id="wimProjects">
+		<div class="standard-width" id="allProjects">
 
 			<div class="text-body xs-pt-15 lg-pt-20 home-paragraph">
 				View our full list of public projects on the table below or on our <a href="https://github.com/usgs-wim" target="_blank">GitHub</a>. You can search projects by name, description, and languages, or you can click on a project's language or tag to show matching projects.
@@ -205,13 +205,6 @@
     -->
 	@@include('../i/includes/footer.html')
 
-	<!-- Team JS Controller -->
-	<script src="/src/js/projects.js"></script>
-	<script>
-	// Active Link
-	$("#projectsLink").addClass("active");
-	</script>
-	
 	<!-- Load images here so they're ready on click -->
 	<div class="lazy-load">
 		<img src="/src/images/projects/fim_hero.jpeg"/>
@@ -222,10 +215,14 @@
 		<img src="/src/images/projects/whispers_hero.jpeg"/>
 	</div>
 
-<script>
 
-
-</script>
+	<script src="/src/js/projects.js"></script>
+	<!-- Add Active Link -->
+	<script>
+		// Active Link
+		$("#projectsLink").addClass("active");
+	</script>
+	
 </html>
 
     

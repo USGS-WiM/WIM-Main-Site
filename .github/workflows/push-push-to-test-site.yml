@@ -29,5 +29,5 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: "Successfully deployed TEST to test.wim.usgs.gov :test:"
+        args: ":test: Successfully deployed TEST to test.wim.usgs.gov :fire:"
 
