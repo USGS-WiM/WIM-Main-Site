@@ -24,7 +24,7 @@ jobs:
         aws-region: us-east-2
     - run: aws s3 cp /home/runner/work/WIM-Main-Site/WIM-Main-Site/builds/prosduction/ s3://test.wim.usgs.gov/ --recursive
 
-    -name: AWS Test Failure
+    - name: AWS Test Failure
       uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
       if: failure()
       with:
