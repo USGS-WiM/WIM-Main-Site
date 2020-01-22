@@ -1,3 +1,13 @@
+// Add background to projects page
+.projects-background{
+	background-image: url('/src/images/trees.png');
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-color: rgba(255,255,255,0.1);
+}
+
 // Languages and tags display
 .tags{
                 
@@ -144,6 +154,7 @@
 // List of featured projects //
 ///////////////////////////////
 .project-list{
+	
 
     .project{
         flex-wrap: wrap;
@@ -442,9 +453,11 @@
 			font-size: 18px;
 			letter-spacing: 0.1px;
             text-align: center;
-            display: block;
-			width: 100%;
+            display: inline-block;
+			width: fit-content;
 			text-decoration: underline;
+			padding: 4px 10px;
+			font-size: 15px;
 			font-weight: 600;
 			transition: @transition;
 		}
@@ -693,5 +706,21 @@
 			transition: 0.3s all ease;
 			top: 15px;
 		}
+	}
+}
+
+// Hide lazy load images
+// They load so they're ready when
+// A popup is opened.
+.lazy-load{
+	opacity: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+
+	img{
+		opacity: 0;
+		width: 1px;
+		height: 1px;
 	}
 }

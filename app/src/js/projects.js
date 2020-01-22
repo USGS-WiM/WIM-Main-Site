@@ -95,11 +95,6 @@ getRepos("repos1.json");
 
 
 
-
-
-
-
-
 var router = new VueRouter({
 	routes: [
 	  	{ path: '/:projectSlug', component: featured }

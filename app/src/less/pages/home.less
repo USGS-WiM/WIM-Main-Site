@@ -1,4 +1,58 @@
+//////////////////////
+// Featured Projecs //
+//////////////////////
+.home-featured{
+	display: flex;
+	justify-content: space-between;
 
+	.project{
+		width: 31%;
+		border-radius: 5px;
+		box-sizing: border-box;
+		text-decoration: none;
+
+		.thumb{
+			box-shadow: @shadow;
+			background-size: cover;
+			background-position: center center;
+			height: 200px;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			color: @white;
+			width: 100%;
+			background-color: fade(@ink, 60%);
+			background-blend-mode: multiply;
+			text-align: center;
+			font-size: 22px;
+			transition: 0.2s ease;
+			border-radius: 5px;
+			font-weight: 700;
+			letter-spacing: 0.15px;
+		}
+		small{
+			font-size: 14px;
+			letter-spacing: 0px;
+			font-weight: 600;
+			line-height: 20px;
+			padding-top: 15px;
+			box-sizing: border-box;
+			padding: 5px;
+			display: block;
+		}
+
+		&:hover{
+			cursor: pointer;
+			color: @ink;
+
+			.thumb{
+				background-color: fade(@ink, 80%);
+				transition: 0.2s ease;
+			}
+		}
+	}
+
+}
 
 //////////////////////
 // Who we work with //
@@ -23,11 +77,11 @@
 //////////
 .hero-home{
     display: block;
-    background-image: url('/src/images/hero.jpg');
-    background-color: rgba(225,225,255,0.6);
+    background-image: url('/src/images/hero_map.png');
+    background-color: rgba(225,225,255,0.7);
     background-blend-mode: screen;
     background-size: cover;
-    background-position: center;
+    background-position: center 40%;
 
     h1{
         font-weight: bolder;

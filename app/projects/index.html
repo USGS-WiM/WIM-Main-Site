@@ -39,12 +39,12 @@
 		Vue tags are wrapped with ${ TAG } instead of double brackets
 	-->
 
-	<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50">
+	<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 projects-background">
     
         <h1>Explore Our Projects</h1>
-        <div class="text-body xs-pt-15 lg-pt-25">
+        <p class="text-body xs-pt-15 lg-pt-25">
             Discover some of the tools we've developed. Click a thumbnail to learn more. All applications listed here are publicly available and have links to their product websites and additional information.
-        </div>
+		</p>
 
 		<!-- 
 			Featured Projects
@@ -53,7 +53,7 @@
         <div class="project-list xs-f-col xs-mt-15" id="featured">
 
 			<!-- Streamstats, FIM, SPARROW, WHISPers, Wetlands, NAWQA -->
-            <a class="project xs-f-around xs-mt-20 lg-mt-30 xs-mb-20 xs-mb-30" v-for="project in list" v-on:click="openFeaturedWindow(project.slug)">
+            <a class="project xs-f-around xs-mt-15 lg-mt-20 xs-mb-15 xs-mb-20" v-for="project in list" v-on:click="openFeaturedWindow(project.slug)">
                 <div class="project-image" v-bind:style="'background-image: url(/src/images/projects/' + project.screenshots[0].file + ');'"></div>
                 <div class="project-info xs-f-center xs-f-col xs-pt-20 md-p-25">
                     <h3>${ project.name }</h3>
@@ -61,8 +61,6 @@
                 </div>
 			</a>
 			
-
-
 			<!-- 
 				Featured Project Popup
 				Featured Project Popup
@@ -73,7 +71,7 @@
 				<!-- Close Popup -->
 				<button id="featured-popup-close" class="btn-outline" v-on:click="closeFeaturedWindow()">
 					<i class="far fa-angle-left"></i>
-					<span>Back to all projects</span>
+					<span>All Projects</span>
 				</button>
 
 				<div class="project-hero xs-f-center xs-f-col" v-bind:style="'background-image: url(/src/images/projects/' + selectedProject.slug + '_hero.jpeg);'">
@@ -93,12 +91,12 @@
 				
 				
 				<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 project-page">
-					<!-- Description -->
-					
+					<!-- 
+						Description 
+					-->
 					<div class="text-body xs-pt-15 lg-pt-25" v-for="paragraph in selectedProject.long_description">
 						${ paragraph }
 					</div>
-				
 					<!-- 
 						Screenshots
 					-->
@@ -118,8 +116,6 @@
 						</div>
 
 					</div>
-
-					
 	
 					<!-- Related Repos -->
 					<span v-if="selectedProject.related_repos">
@@ -141,25 +137,18 @@
 									</a>
 								</div>
 							</div>
-
 						</div>
 					</span>
-					
-					
 				</div>
 			</div>
-
-
-
-
         </div>
 
 
 		<!-- 
 			All Projects
-			VUE JS app
+			VUE JS Component
 		-->
-		<h2 class="xs-pt-50 lg-pt-75">Our Projects</h2>
+		<h2 class="xs-pt-50 lg-pt-75">All Projects</h2>
        
 		<div class="standard-width" id="wimProjects">
 
@@ -204,19 +193,11 @@
 
 				<!-- Show all projects -->
 				<div class="show-all-projects" v-if="!showAllProjects" v-on:click="showAllProjects = true">
-					<div class="xs-mt-15">View all projects</div>
+					<div class="xs-mt-15 btn-grey">View all projects</div>
 				</div>
-
 			</div>
 		</div>
-
-
     </div>
-
-
-
-	
-	
 
 
     <!-- 
@@ -231,8 +212,15 @@
 	$("#projectsLink").addClass("active");
 	</script>
 	
-
-</bodyv-bind:class="{ 'visible': showFeaturedPopup }">
+	<!-- Load images here so they're ready on click -->
+	<div class="lazy-load">
+		<img src="/src/images/projects/fim_hero.jpeg"/>
+		<img src="/src/images/projects/nawqa_hero.jpeg"/>
+		<img src="/src/images/projects/sparrow_hero.jpeg"/>
+		<img src="/src/images/projects/streamstats_hero.jpeg"/>
+		<img src="/src/images/projects/wetlands_hero.jpeg"/>
+		<img src="/src/images/projects/whispers_hero.jpeg"/>
+	</div>
 
 <script>
 
