@@ -15,10 +15,6 @@
 	<!-- Manifest -->
 	<link rel="manifest" href="/manifest.json">
 
-	<!-- Vue required only on home and project pages -->
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/vue-router"></script>
-
 </head>
 <body>
 
@@ -48,7 +44,7 @@
 		</div>
 		
 		<!-- Projects -->
-		<h2 class="xs-pt-50 lg-pt-75">Featured Projects</h2>
+		<h2 class="xs-pt-50 lg-pt-75 xs-pb-25 lg-pb-40 home-featured-header">Featured Projects</h2>
 
 		<div class="home-featured">
 			<a class="project xs-mt-15 lg-mt-30" href="/projects/#/fim">
@@ -64,11 +60,18 @@
 				<small>Providing insights into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.</small>
 			</a>
 		</div>
+
+		<div class="all-projects xs-pt-10 lg-pt-20">
+			<a href="/projects" class="btn-primary btn-icon">
+				<span>View all Projects</span>
+				<i class="far fa-angle-right"></i>
+			</a>
+		</div>
 		
 
 
         <!-- Who we work with -->
-        <h2 class="xs-pt-50 lg-pt-75">Who do we Work With?</h2>
+        <h2 class="xs-pt-40 lg-pt-50">Who do we Work With?</h2>
         <div class="cooperator-logos xs-pt-20 lg-pt-30 xs-f-start lg-f-btw f-wrap">
             <img src="/src/images/cooperators/fws.png" title="US Fish and Wildlife Service" alt="US Fish and Wildlife Service Logo"/>
             <img src="/src/images/cooperators/epa.png" title="US Environmental Protection Agency" alt="US Environmental Protection Agency Logo"/>
@@ -135,7 +138,7 @@
 
 					for(let registration of registrations) {  
 						registration.unregister();
-						alert("SW unregistered")
+						// alert("SW unregistered")
 					}
 
 				}
@@ -156,12 +159,6 @@
 
 
 	</script>
-
-	<!-- Projects JS Controller -->
-    <script src="/src/js/projects.js"></script>
-	
-
-    
 
 
 </body>

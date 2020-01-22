@@ -245,7 +245,7 @@ a.btn-icon i{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: @ink_dark;
+	background-color: darken(@ink, 5%);
     
     .footer-content{
         color: @white;
@@ -254,6 +254,19 @@ a.btn-icon i{
 		a:hover{
 			color: white;
 			opacity: 0.8;
+		}
+
+		h3{
+			font-weight: 600;
+			padding-bottom: 2px;
+		}
+		h5{
+			font-size: 14px;
+			padding: 0;
+			margin: 0 auto;
+			line-height: 18px;
+			font-weight: 600;
+			letter-spacing: 0.1px;
 		}
     }
 }
@@ -311,9 +324,9 @@ a.btn-icon i{
 //   USGS FOOTER      //
 ////////////////////////
 .usgs-footer{
-    background: @ink;
+    background: @ink_darker;
     box-sizing: border-box;
-    padding: 20px 15px;
+    padding: 12px 15px;
     width: 100%;
     color: fade(@white, 50%);
 
