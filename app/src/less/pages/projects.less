@@ -1,3 +1,13 @@
+// Add background to projects page
+.projects-background{
+	background-image: url('/src/images/trees.png');
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-color: rgba(255,255,255,0.1);
+}
+
 // Languages and tags display
 .tags{
                 
@@ -144,6 +154,7 @@
 // List of featured projects //
 ///////////////////////////////
 .project-list{
+	
 
     .project{
         flex-wrap: wrap;
@@ -436,17 +447,22 @@
     .show-all-projects{
         width: 100%;
         text-align: center;
-        color: fade(@ink, 30%);
+		color: fade(@ink, 30%);
+		padding: 15px 0;
 
         div{
 			font-size: 18px;
 			letter-spacing: 0.1px;
             text-align: center;
-            display: block;
-			width: 100%;
+            display: inline-block;
+			width: fit-content;
 			text-decoration: underline;
+			padding: 4px 10px;
+			font-size: 15px;
 			font-weight: 600;
 			transition: @transition;
+			background-color: @grey_lighter;
+			text-decoration: none;
 		}
 		
 		&:hover{
@@ -455,6 +471,7 @@
 			div{
 				color: fade(@ink, 90%);
 				transition: @transition;
+				text-decoration: underline;
 			}
 		}
     }
@@ -470,8 +487,9 @@
     color: @white;
     font-family: @serif;
     font-weight: 700;
-    height: 25vh;
-    padding-bottom: 2vh;
+    height: 40vh;
+	padding-bottom: 0vh;
+	padding-top: 5vh;
     background-size: cover;
     background-position: center;
     background-color: fade(@primary_darker, 60%);
@@ -482,35 +500,52 @@
     
     @media (min-width: @screen_mobile) {
         font-size: 48px;
-        height: 40vh;
-        padding-bottom: 12vh;
+        height: 50vh;
+        padding-bottom: 8vh;
     }
 
     .cooperator{
         text-align: center;
         font-family: @sans;
         margin-top: 15px;
-        line-height: 10px;
+		line-height: 10px;
 
         @media (min-width: @screen_mobile) {
             line-height: 6px;
         }
         
         .cooperator-label{
-            font-weight: 500;
+            font-weight: 600;
             font-style: italic;
             opacity: 0.75;
-            font-size: 12px;
+            font-size: 14px;
             display: block;
-            letter-spacing: 0;
+			letter-spacing: 0;
+			padding-bottom: 5px;
         }
         .cooperator-name{
-            font-size: 16px;
-            letter-spacing: 0px;
-            font-weight: 500;
+            font-size: 18px;
+			letter-spacing: 0px;
+            font-weight: 800;
             color: @white;
         }
-    }
+	}
+	
+	// Repo Links
+	.repo-links{
+		.btn-ink{
+			background-color: white;
+			border-radius: 4px;
+			font-weight: 600;
+			font-size: 14px;
+			color: @ink;
+			padding: 2px 6px;
+
+			i{
+				font-weight: 400;
+			}
+		}
+	}
 }
 
 // Page Content Wrapper
@@ -559,38 +594,142 @@
                 }
             }
 
-            .thumbnail-zoom{
-                display: flex;
-                text-align: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: none;
-                background-color: fade(@ink_darker, 70%);
-                z-index: 500;
+		}
+		
+		.thumbnail-zoom{
+			display: flex;
+			text-align: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 0%;
+			height: 100%;
+			overflow: hidden;
+			justify-content: center;
+			opacity: 0;
+			transition: width 0s ease 0.4s, opacity 0.2s ease 0.2s;
+			z-index: 5020;
 
-                .thumbnail-zoom-flex{
-                    height: 100%;
+			&:hover{
+				cursor: pointer;
+			}
+			.thumbnail-zoom-flex{
+				height: 100%;
+				transform: scale(0);
+				transition: transform 0.2s ease;
 
-                    img{
-                        height: auto;
-                        width: auto;
-                        max-width: 85vw;
-                        max-height: 85vh;
-                        box-shadow: 0 10px 35px -2px rgba(30, 16, 84, .3);
-                    }
+				img{
+					height: auto;
+					width: auto;
+					max-width: 85vw;
+					max-height: 85vh;
+					box-shadow: 0 10px 35px -2px rgba(30, 16, 84, .3);
+				}
 
-                    .caption{
-                        color: @white;
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding-top: 5px;
-                        letter-spacing: 0.3px;
-                    }
-                }
-            }
-        }
+				.caption{
+					color: @white;
+					font-size: 14px;
+					font-weight: 600;
+					padding-top: 5px;
+					letter-spacing: 0.3px;
+				}
+			}
+
+			// When visible 
+			&.visible{
+				width: 100vw;
+				opacity: 1;
+				background-color: fade(@ink_darker, 90%);
+				transition: width 0s ease, opacity 0.2s ease;
+
+				.thumbnail-zoom-flex{
+					transform: scale(1);
+					transition: transform 0.2s ease 0.2s;
+				}
+			}
+		}
+
     }
+}
+
+
+// Featured Projects Popup
+// Featured Projects Popup
+// Featured Projects Popup
+#featured_popup{
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 100vh;
+	left: 0;
+	background-color: white;
+	z-index: 500;
+	transition: 0.3s all ease;
+	overflow: auto;
+
+
+	// Close Featured Popup
+	#featured-popup-close{
+		position: fixed;
+		top: 100vh;
+		left: 15px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		font-size: 14px;
+		font-weight: 600;
+		color: @ink;
+		border-color: @ink;
+		display: flex;
+		justify-content: space-between;
+		transition: 0.3s all ease;
+		z-index: 501;
+		height: 38px;
+
+		@media (max-width: @screen_mobile) {
+		}
+
+		&:hover span{
+			text-decoration: underline;
+		}
+
+		span,
+		i{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 34px;
+		}
+		i{
+			font-size: 18px;
+			margin-right: 8px;
+		}
+	}
+
+	// When popup is visible
+	&.visible{
+		top: 0vh;
+		transition: 0.3s all ease;
+
+		#featured-popup-close{
+			transition: 0.3s all ease;
+			top: 15px;
+		}
+	}
+}
+
+// Hide lazy load images
+// They load so they're ready when
+// A popup is opened.
+.lazy-load{
+	opacity: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+
+	img{
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+	}
 }

@@ -15,10 +15,6 @@
 	<!-- Manifest -->
 	<link rel="manifest" href="/manifest.json">
 
-
-	<!-- Vue required only on home page -->
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
 </head>
 <body>
 
@@ -48,71 +44,34 @@
 		</div>
 		
 		<!-- Projects -->
-		<h2 class="xs-pt-50 lg-pt-75">Our Projects</h2>
-		<!-- 
-			__   __ _   _   ___      (_) ___ 
-			\ \ / /| | | | / _ \     | |/ __|
-			\ V / | |_| ||  __/ _   | |\__ \
-			\_/   \__,_| \___|(_) _/ ||___/
-								|__/      
-			Vue wimProjects app starts here
-			Vue tags are wrapped with ${ TAG } instead of double brackets
-		-->
-		<div class="standard-width" id="wimProjects">
+		<h2 class="xs-pt-50 lg-pt-75 xs-pb-25 lg-pb-40 home-featured-header">Featured Projects</h2>
 
-			<div class="text-body xs-pt-15 lg-pt-20 home-paragraph">
-				View our full list of public projects on the table below or on our <a href="https://github.com/usgs-wim" target="_blank">GitHub</a>. You can search projects by name, description, and languages, or you can click on a project's language or tag to show matching projects.
-			</div>
-		
+		<div class="home-featured">
+			<a class="project xs-mt-15 lg-mt-30" href="/projects/#/fim">
+				<div class="thumb" style="background-image: url('/src/images/projects/fim_1.png');">Flood Inundation Mapper</div>
+				<small>A powerful tool that helps communicate when and where flooding may occur and better inform local responses that can protect lives and property.</small>
+			</a>
+			<a class="project xs-mt-15 lg-mt-30" href="/projects/#/sparrow">
+				<div class="thumb" style="background-image: url('/src/images/projects/sparrow_1.png');">SPARROW</div>
+				<small>Estimate the amount of a contaminant transported from inland watersheds to larger water bodies by linking monitoring data with information on watershed characteristics and contaminant sources.</small>
+			</a>
+			<a class="project xs-mt-15 lg-mt-30" href="/projects/#/nawqa">
+				<div class="thumb" style="background-image: url('/src/images/projects/nawqa_1.png');">NAWQA</div>
+				<small>Providing insights into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.</small>
+			</a>
+		</div>
 
-			<div class="project-search xs-mt-10 lg-mt-15">
-				<label for="projectSearch">Search Projects</label>
-				<input type="text" v-model="projectSearch" name="projectSearch" id="projectSearch" placeholder="Type to start searching..." @focus="showAllProjects = true"/>
-			</div>
-
-			<div class="projects-compact xs-mt-10 lg-mt-20" v-bind:class="{ 'show-all': showAllProjects }">
-
-
-				<!-- All Projects Loop -->
-				<div class="project-item xs-mb-20 lg-mb-25" v-for="repo in filteredList.slice().reverse()">
-					<div class="heading">${ repo.name }</div>
-					<div class="caption">${ repo.description }</div>
-					<div class="tags">
-						<span v-bind:class="tag" v-for="tag in repo.tags" v-on:click="projectSearch = tag">${ tag }</span>
-					</div>
-					<div class="languages">
-						<span v-for="language in repo.languages" v-on:click="projectSearch = language">${ language }</span>
-					</div>
-					<div class="project-links">
-						<a v-bind:href="repo.homepageURL" target="_blank" v-if="repo.homepageURL != null" class="homepage-link">
-							<i class="far fa-external-link"></i>
-							<span>Open</span>
-						</a>
-						<a v-bind:href="'https://github.com/usgs-wim/'+repo.name" target="_blank" class="github-link">
-							<i class="fab fa-github"></i>
-							<span>GitHub</span>
-						</a>
-					</div>
-				</div>
-
-				<!-- No Projects -->
-				<div class="no-projects" v-if="!filteredList.length">
-					<i class="far fa-empty-set"></i>
-					<div class="xs-mt-15">No projects found.</div>
-				</div>
-
-				<!-- Show all projects -->
-				<div class="show-all-projects" v-if="!showAllProjects" v-on:click="showAllProjects = true">
-					<div class="xs-mt-15">View all projects</div>
-				</div>
-
-			</div>
+		<div class="all-projects xs-pt-10 lg-pt-20">
+			<a href="/projects" class="btn-primary btn-icon">
+				<span>View all Projects</span>
+				<i class="far fa-angle-right"></i>
+			</a>
 		</div>
 		
 
 
         <!-- Who we work with -->
-        <h2 class="xs-pt-75 lg-pt-100">Who do we Work With?</h2>
+        <h2 class="xs-pt-40 lg-pt-50">Who do we Work With?</h2>
         <div class="cooperator-logos xs-pt-20 lg-pt-30 xs-f-start lg-f-btw f-wrap">
             <img src="/src/images/cooperators/fws.png" title="US Fish and Wildlife Service" alt="US Fish and Wildlife Service Logo"/>
             <img src="/src/images/cooperators/epa.png" title="US Environmental Protection Agency" alt="US Environmental Protection Agency Logo"/>
@@ -135,10 +94,10 @@
         </div>
         <div class="wim-contact xs-pt-20 lg-pt-30 xs-f-start f-wrap">
             <div class="wim-contact-person xs-pr-25 xs-pb-25 md-pr-40 lg-pr-50">
-                <h3>Gary Latzke</h3>
-                <h4>WIM Program Manager</h4>
-                <a class="text-body" href="mailto:gdlatzke@usgs.gov">gdlatzke@usgs.gov</a>
-                <div class="text-body">608-821-3805</div>
+                <h3>Chris Sanocki</h3>
+                <h4>WIM Chief</h4>
+                <a class="text-body" href="mailto:sanocki@usgs.gov">sanocki@usgs.gov</a>
+                <div class="text-body">763-783-3151</div>
             </div>
             <div class="wim-contact-person xs-pr-25 xs-pb-25 md-pr-40 lg-pr-50">
                 <h3>Bruce Droster</h3>
@@ -169,9 +128,9 @@
 		$("#homeLink").addClass("active");
 
 		// Service worker only on non-localhost 
-		if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
-			// Deregister Service Worker
-			console.log("Local server, no service worker");
+		// if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+		// 	// Deregister Service Worker
+		// 	console.log("Local server, no service worker");
 
 			navigator.serviceWorker.getRegistrations().then(
 
@@ -179,33 +138,27 @@
 
 					for(let registration of registrations) {  
 						registration.unregister();
-						alert("SW unregistered")
+						// alert("SW unregistered")
 					}
 
 				}
 			);
 
-		}else{
-			// Register Service Worker
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('sw.js')
-					.then(function(registration) {
-						console.log('Registered:', registration);
-					})
-					.catch(function(error) {
-						console.log('Registration failed: ', error);
-				});
-			}
-		}
+		// }else{
+		// 	// Register Service Worker
+		// 	if ('serviceWorker' in navigator) {
+		// 		navigator.serviceWorker.register('sw.js')
+		// 			.then(function(registration) {
+		// 				console.log('Registered:', registration);
+		// 			})
+		// 			.catch(function(error) {
+		// 				console.log('Registration failed: ', error);
+		// 		});
+		// 	}
+		// }
 
 
 	</script>
-
-	<!-- Projects JS Controller -->
-    <script src="/src/js/projects.js"></script>
-	
-
-    
 
 
 </body>

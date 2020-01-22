@@ -214,7 +214,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Nathan'>Nathan Krawza</span><span id='Kathy'>Kathy Dooley</span></div>" },
+		"properties": {"popupContent": "<div class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Chris Sanocki</span><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Nathan'>Nathan Krawza</span><span id='Kathy'>Kathy Dooley</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
