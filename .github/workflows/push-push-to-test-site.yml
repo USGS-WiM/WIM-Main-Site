@@ -16,6 +16,7 @@ jobs:
         node-version: '10.15'
     - run: npm run-script build
       
+
     - name: GitHub Action for AWS-1
       uses: actions/aws/cli@efb074ae4510f2d12c7801e4461b65bf5e8317e6
       env:
@@ -24,6 +25,16 @@ jobs:
       with:
         args: s3 cp /github/workspace/builds/production/ s3://test.wim.usgs.gov/
           --recursive
+
+    - name: Failure Message
+      if: failure()
+      uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      with:
+        args: "Failed pushing build to TEST site :warning:"
+
+
     - name: GitHub Action for Slack
       uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
       env:
