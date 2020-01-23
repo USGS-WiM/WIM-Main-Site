@@ -2,7 +2,7 @@ on:
   push:
     branches:
     - master
-name: "Push to wim.usgs.gov (PRODUCTION)"
+name: "Production"
 jobs:
   pushToProd:
     name: Push to PRODUCTION
@@ -29,7 +29,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: ":warning::warning: Error deploying *wim-main-site* to :prod:wim.usgs.gov - GitHub Action Failed"
+        args: ":warning::production: Error deploying *wim-main-site* to wim.usgs.gov - GitHub Action Failed"
 
 
     - name: GitHub Action for Slack
@@ -37,7 +37,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: ":production: Successfully deployed PRODUCTION to wim.usgs.gov :fire:"
+        args: ":production: Successfully deployed *wim-main-site* to wim.usgs.gov :fire:"
       
 
 
