@@ -2,7 +2,7 @@ on:
   push:
     branches:
     - master
-name: "Push to wim.usgs.gov (PRODUCTION)"
+name: "Production"
 jobs:
   pushToProd:
     name: Push to PRODUCTION
@@ -23,12 +23,21 @@ jobs:
         aws-region: us-east-2
     - run: aws s3 cp /home/runner/work/WIM-Main-Site/WIM-Main-Site/builds/production/ s3://wim.usgs.gov/ --recursive
     
+    - name: AWS Prod Failure
+      if: failure()
+      uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      with:
+        args: ":warning::production: Error deploying *wim-main-site* to wim.usgs.gov - GitHub Action Failed"
+
+
     - name: GitHub Action for Slack
       uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        args: ":production: Successfully deployed PRODUCTION to wim.usgs.gov :fire:"
+        args: ":production: Successfully deployed *wim-main-site* to wim.usgs.gov :fire:"
       
 
 

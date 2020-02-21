@@ -244,7 +244,7 @@ teamMembers.alumni = {
 		years: "2009-2014",
 		alumniLink: "https://www.usgs.gov/staff-profiles/marie-c-peppler?qt-staff_profile_science_products=0#qt-staff_profile_science_products"
 	},
-	jonathtan: {
+	jonathan: {
 		first_name: "Jonathan",
 		last_name: "Baier",
 		title: "Software Developer",

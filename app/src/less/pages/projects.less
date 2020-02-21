@@ -160,7 +160,8 @@
         flex-wrap: wrap;
         position: relative;
         text-decoration: none;
-        min-height: 200px;
+		transform: scale(1.0);
+		min-height: 200px;
 
         @media (min-width: @screen_mobile) {
             flex-wrap: nowrap;
@@ -172,9 +173,8 @@
             flex-grow: 3;
             height: 100%;
             min-height: 230px;
-            background-color: @grey; 
-            border-radius: @border_radius;
-            background-position: center;
+			background-color: transparent;
+            background-position: center bottom;
             background-size: cover;
             box-shadow: @shadow;
             transition: @transition;
@@ -217,7 +217,7 @@
             color: inherit;
 
             .project-image{
-                filter: grayscale(75%);
+				transform: scale(1.015);
                 transition: @transition;
             }
 
@@ -569,7 +569,7 @@
         }
 
         .thumbnail{
-            width: 33%;
+			width: 33%;
 
             @media (max-width: @screen_mobile) {
                 width: 42%;
@@ -580,7 +580,8 @@
                 width: 100%;
                 object-fit: cover;
                 object-position: top left;
-                box-shadow: @shadow_lg;
+				box-shadow: @shadow_lg;
+				
 
                 &:focus{
 
@@ -667,13 +668,19 @@
 	z-index: 500;
 	transition: 0.3s all ease;
 	overflow: auto;
-
+	box-sizing: border-box;
+	padding-bottom: 25px;
+	
+	@media (max-width: @screen_mobile) {
+		padding-bottom: 75px;
+	}
 
 	// Close Featured Popup
 	#featured-popup-close{
 		position: fixed;
 		top: 100vh;
 		left: 15px;
+		bottom: 0px;
 		border-radius: 4px;
 		box-sizing: border-box;
 		font-size: 14px;
@@ -685,9 +692,8 @@
 		transition: 0.3s all ease;
 		z-index: 501;
 		height: 38px;
-
-		@media (max-width: @screen_mobile) {
-		}
+		padding: 0 16px;
+		letter-spacing: 0.05px;
 
 		&:hover span{
 			text-decoration: underline;
@@ -704,6 +710,21 @@
 			font-size: 18px;
 			margin-right: 8px;
 		}
+
+		// Mobile - button positioned on bottom left, larger
+		@media (max-width: @screen_mobile) {
+			background-color: @primary;
+			color: @white;
+			font-size: 18px;
+			height: 48px;
+			letter-spacing: 0.1px;
+			border-color: @primary_darker;
+
+			i{
+				font-size: 24px;
+				margin-right: 10px;
+			}
+		}
 	}
 
 	// When popup is visible
@@ -714,6 +735,12 @@
 		#featured-popup-close{
 			transition: 0.3s all ease;
 			top: 15px;
+
+			@media (max-width: @screen_mobile) {
+				transition: 0.3s all ease;
+				top: 91%;
+				bottom: 15px;
+			}
 		}
 	}
 }
