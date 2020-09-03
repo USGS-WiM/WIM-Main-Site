@@ -100,14 +100,6 @@ teamMembers.members = {
 		bio: "Hans got his start as a CH-53 Super Stallion Helicopter Crew Chief from the USMC, callsign: 'Wedgie.' He turned ITIL disciple at the UW-Madison Division of Information Technology (DoIT) while earning a BS in Computer Engineering and Computer Science. After a 8 years at DoIT wearing Configuration, Incident, and Change Management hats, Hans moved to USGS-WIM to head up Project Management duties and earned a PMP certification. Hans currently spends most of his day coordinating a highly skilled and motivated team of developers, doing his best not to slow them down too much. Outside of work, Hans enjoys a good game of ultimate, hiking, camping and the occasional novel.",
 		coordinates: "-93.265011, 44.977753"
 	},
-	blake: {
-		first_name: "Blake",
-		last_name: "Draper",
-		title: "Software Developer",
-		email: "bdraper@usgs.gov",
-		bio: "Blake is a software developer for WIM. He has a B.A. and M.A. from Florida State University and a GIS/Cartography certificate from the University of Wisconsin-Madison. Blake works primarily client-side, developing web apps in JavaScript, but also enjoys working with Python whenever the need arises. He also spends a lot of time configuring server environments and preparing GIS data for use in web services. His main professional goal is to create useful, intuitive, geographically focused data products that advance USGS science. Outside of work, Blake enjoys cooking good food, woodworking, and spending time in the woods hiking and canoe camping.",
-		coordinates: "-92.723246, 41.743409"
-	},
 	nick: {
 		first_name: "Nick",
 		last_name: "Estes",
@@ -116,21 +108,21 @@ teamMembers.members = {
 		bio: "Nick is a senior developer with WIM. He received his B.S. in mechanical engineering from Purdue University in 2001. His work with the USGS was initially focused on publishing, but has since developed an interest in and a knack for developing mapping applications and optimizing GIS services used by those applications. While most of his free time is spent with his family, he finds time here and there to write and record music.",
 		coordinates: "-121.740517, 38.544907"
 	},
-	katrin: {
-		first_name: "Katrin",
-		last_name: "Jacobsen",
+	blake: {
+		first_name: "Blake",
+		last_name: "Draper",
 		title: "Software Developer",
-		email: "kjacobsen@usgs.gov",
-		bio: "Katrin has a BA in Anthropology from the University of Minnesota - Twin Cities. While going to school there, she began an internship with the USGS in Mounds View, MN performing GIS and database work, which eventually led her to WIM. She's always had a passion for maps - they're all over her home. Outside of work, she enjoys volunteering, playing with her puppy, reading, and hosting small get-togethers at her home.",
-		coordinates: "-93.265011, 44.977753"
+		email: "bdraper@usgs.gov",
+		bio: "Blake is a software developer for WIM. He has a B.A. and M.A. from Florida State University and a GIS/Cartography certificate from the University of Wisconsin-Madison. Blake works primarily client-side, developing web apps in JavaScript, but also enjoys working with Python whenever the need arises. He also spends a lot of time configuring server environments and preparing GIS data for use in web services. His main professional goal is to create useful, intuitive, geographically focused data products that advance USGS science. Outside of work, Blake enjoys cooking good food, woodworking, and spending time in the woods hiking and canoe camping.",
+		coordinates: "-92.723246, 41.743409"
 	},
-	daniel: {
-		first_name: "Daniel",
-		last_name: "Beckman",
-		title: "Software Developer",
-		email: "dbeckman@usgs.gov",
-		bio: "Daniel Beckman is a career intern at the USGS. He holds a bachelors degree from the University of Colorado in Ecology and Evolutionary Biology and minors in Chemistry and Computer Science. He currently attends Graduate school at the University of Colorado School of Engineering and Applied Science where he studies Machine Learning and Artificial Intelligence. Daniel is a combat Veteran and former paratrooper with Special Forces. He has worked in data for almost two decades in a variety of fields including, counterintelligence, research & development, forensic chemistry, and genomics. Daniel joined the USGS in 2017 and WIM in 2018. Currently, he works in cloud integration. He and his wife Sarah live in Colorado with their two dogs and cat. They enjoy climbing, hiking 14ers, craft IPAs, snowshoeing, cross country skiing, and paddle boarding.",
-		coordinates: "-104.990251, 39.739236"
+	aaron: {
+		first_name: "Aaron",
+		last_name: "Stephenson",
+		title: "Solutions Architect",
+		email: "astephenson@usgs.gov",
+		bio: "Aaron Stephenson is a full stack developer and solutions architect at WIM, but essentially he is their jack-of-all-trades. He has a decade of experience in system administration, database administration, information management, systems analysis, as well as back end and front end development, almost all of which have been in support of GIS data, services, and applications. Currently, most of his time is engaged in supporting WIM's migration to a service-oriented architecture and cloud computing. In his free time, Aaron loves reading, getting outdoors to hike and canoe, and attempting to become a decent cook.",
+		coordinates: "-89.4012302, 43.0730517"
 	},
 	erik: {
 		first_name: "Erik",
@@ -148,14 +140,6 @@ teamMembers.members = {
 		bio: "Lauren is a software developer with WIM. She received her B.S in Geographic Science from James Madison University. While she enjoys work centered around GIS and cartography, her interests have expanded into the world of open source internet mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren enjoys snowboarding and ultimate frisbee.",
 		coordinates: "-77.036871, 38.907192"
 	},
-	mitch: {
-		first_name: "Mitch",
-		last_name: "Samuels",
-		title: "Frontend Developer",
-		email: "msamuels@contractor.usgs.gov",
-		bio: "Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
-		coordinates: "-93.265011, 44.977753"
-	},
 	martyn: {
 		first_name: "Martyn",
 		last_name: "Smith",
@@ -164,21 +148,37 @@ teamMembers.members = {
 		bio: "Marty is a software developer with WIM. He received his M.A. in geography from the University of Connecticut. While his work with the USGS initially centered around GIS and Cartography, his main focus now is internet mapping, and he is committed to improving the mapping presence of the USGS. Within the internet mapping application realm, he is primarily focused on open-source solutions. Most of his free time is spent with his family and german shorthair, or with a chainsaw.",
 		coordinates: "-73.691785, 42.728412"
 	},
-	aaron: {
-		first_name: "Aaron",
-		last_name: "Stephenson",
-		title: "Solutions Architect",
-		email: "astephenson@usgs.gov",
-		bio: "Aaron Stephenson is a full stack developer and solutions architect at WIM, but essentially he is their jack-of-all-trades. He has a decade of experience in system administration, database administration, information management, systems analysis, as well as back end and front end development, almost all of which have been in support of GIS data, services, and applications. Currently, most of his time is engaged in supporting WIM's migration to a service-oriented architecture and cloud computing. In his free time, Aaron loves reading, getting outdoors to hike and canoe, and attempting to become a decent cook.",
-		coordinates: "-89.4012302, 43.0730517"
-	},
-	nathan: {
-		first_name: "Nathan",
-		last_name: "Krawza",
-		title: "Student Developer",
-		email: "nkrawza@contractor.usgs.gov",
-		bio: "Nathan is a student developer for WIM. He is studying Management Information Systems at the Carlson School of Management,  University of Minnesota. He built his first computer in the 7th grade and has had a passion for computers and technology ever since.  Nathan's previous experiences include being a computer sales associate at Best Buy, a camp counselor, and a grocery bagger.  He enjoys going for runs, playing multiple rhythm instruments, traveling,  and driving his stick-shift 2001 Honda Accord.",
+	katrin: {
+		first_name: "Katrin",
+		last_name: "Jacobsen",
+		title: "Software Developer",
+		email: "kjacobsen@usgs.gov",
+		bio: "Katrin has a BA in Anthropology from the University of Minnesota - Twin Cities. While going to school there, she began an internship with the USGS in Mounds View, MN performing GIS and database work, which eventually led her to WIM. She's always had a passion for maps - they're all over her home. Outside of work, she enjoys volunteering, playing with her puppy, reading, and hosting small get-togethers at her home.",
 		coordinates: "-93.265011, 44.977753"
+	},
+	mitch: {
+		first_name: "Mitch",
+		last_name: "Samuels",
+		title: "Frontend Developer",
+		email: "msamuels@contractor.usgs.gov",
+		bio: "Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
+		coordinates: "-93.265011, 44.977753"
+	},
+	daniel: {
+		first_name: "Daniel",
+		last_name: "Beckman",
+		title: "Software Developer",
+		email: "dbeckman@usgs.gov",
+		bio: "Daniel Beckman is a career intern at the USGS. He holds a bachelors degree from the University of Colorado in Ecology and Evolutionary Biology and minors in Chemistry and Computer Science. He currently attends Graduate school at the University of Colorado School of Engineering and Applied Science where he studies Machine Learning and Artificial Intelligence. Daniel is a combat Veteran and former paratrooper with Special Forces. He has worked in data for almost two decades in a variety of fields including, counterintelligence, research & development, forensic chemistry, and genomics. Daniel joined the USGS in 2017 and WIM in 2018. Currently, he works in cloud integration. He and his wife Sarah live in Colorado with their two dogs and cat. They enjoy climbing, hiking 14ers, craft IPAs, snowshoeing, cross country skiing, and paddle boarding.",
+		coordinates: "-104.990251, 39.739236"
+	},
+	lorraine: {
+		first_name: "Lorraine",
+		last_name: "Metz",
+		title: "Developer & Operations Coordinator",
+		email: "lmetz@usgs.gov",
+		bio: "Lorraine has a B.S. from Northland College in Geoscicence and Water Science and a graduate certificate in GIS from the University of Denver. She is currently working on her master's degree in GISc at the University of Denver. Lorraine joined the USGS in 2018 and then joined the WIM team in 2020. Outside of work, she enjoys spending time in the outdoors, listening to podcasts, reading, and hanging out with family and friends.",
+		coordinates: "-89.4012302, 43.0730517"
 	},
 	mackenzie: {
 		first_name: "Mackenzie",
@@ -195,7 +195,23 @@ teamMembers.members = {
 		email: "kdooley@contractor.usgs.gov",
 		bio: "Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.",
 		coordinates: "-93.265011, 44.977753"
-	}	
+	},
+	anders: {
+		first_name: "Anders",
+		last_name: "Hopkins",
+		title: "Student Developer",
+		email: "ahopkins@contractor.usgs.gov",
+		bio: "Anders is a student developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.",
+		coordinates: "-93.265011, 44.977753"
+	},
+	patrick: {
+		first_name: "Patrick",
+		last_name: "Moore",
+		title: "Sysops Specialist",
+		email: "pmoore@usgs.gov",
+		bio: "After becoming his Unit's \"fat kid in dodgeball\" for being wounded in Iraq, Patrick returned home and became a professional student. Dabbling within Game Design, Electronics, and Metal Fabrication, until finally discovering IT Systems Administration. Patrick has been working as an IT Support Staffer and self-described \"Donut King\" for Middleton's Water Science Center for over a year now. Recently being able to split his time to assist with WIM's IT Cloud needs. When Patrick isn't working, he prefers to spend his free time playing board games, video games, attempting to create art, perfecting cheesecake recipes, and learning new costume designer skills.",
+		coordinates: "-89.4012302, 43.0730517"
+	}
 }
 
 
@@ -254,7 +270,18 @@ teamMembers.alumni = {
 		alumni: true,
 		years: "2009-2014",
 		alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
-	}
+	},
+	// nathan: {
+	// 	first_name: "Nathan",
+	// 	last_name: "Krawza",
+	// 	title: "Student Developer",
+	// 	email: "",
+	// 	bio: "Nathan was a student developer for WIM. He is studying Management Information Systems at the Carlson School of Management,  University of Minnesota. He built his first computer in the 7th grade and has had a passion for computers and technology ever since.  Nathan's previous experiences include being a computer sales associate at Best Buy, a camp counselor, and a grocery bagger.  He enjoys going for runs, playing multiple rhythm instruments, traveling,  and driving his stick-shift 2001 Honda Accord.",
+	// 	coordinates: "-93.265011, 44.977753",
+	// alumni: true,
+	// years: "2018-2020",
+	// alumniLink: "https://www.linkedin.com/in/nathan-krawza-1a86a5140"
+	// },
 }
 
 
@@ -333,12 +360,12 @@ var centerMap = function(){
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Bruce'>Bruce Droster</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Bruce'>Bruce Droster</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Lorraine'>Lorraine Metz</span><span id='Patrick'>Patrick Moore</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Chris Sanocki</span><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Nathan'>Nathan Krawza</span><span id='Kathy'>Kathy Dooley</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Minneapolis, MN</b><span id='Hans'>Chris Sanocki</span><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Kathy'>Kathy Dooley</span><span id='Anders'>Anders Hopkins</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
