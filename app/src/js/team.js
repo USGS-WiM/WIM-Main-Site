@@ -178,7 +178,7 @@ teamMembers.members = {
 		title: "Developer & Operations Coordinator",
 		email: "lmetz@usgs.gov",
 		bio: "Lorraine has a B.S. from Northland College in Geoscicence and Water Science and a graduate certificate in GIS from the University of Denver. She is currently working on her master's degree in GISc at the University of Denver. Lorraine joined the USGS in 2018 and then joined the WIM team in 2020. Outside of work, she enjoys spending time in the outdoors, listening to podcasts, reading, and hanging out with family and friends.",
-		coordinates: "-89.4012302, 43.0730517"
+		coordinates: "-87.88739, 41.83789"
 	},
 	mackenzie: {
 		first_name: "Mackenzie",
@@ -360,7 +360,7 @@ var centerMap = function(){
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Bruce'>Bruce Droster</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Lorraine'>Lorraine Metz</span><span id='Patrick'>Patrick Moore</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Bruce'>Bruce Droster</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Patrick'>Patrick Moore</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
@@ -387,6 +387,11 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Albany, NY</b><span id='Martyn'>Martyn Smith</span>" },
 		"geometry": {"type": "Point", "coordinates": [-73.691785, 42.728412]},
+	},
+	{
+		"type": "Feature",
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Elgin, IL</b><span id='Lorraine'>Lorraine Metz</span>" },
+		"geometry": {"type": "Point", "coordinates": [-87.88739, 41.83789]},
 	},
 	{
 		"type": "Feature",
