@@ -174,7 +174,7 @@ teamMembers.members = {
 	mackenzie: {
 		first_name: "Mackenzie",
 		last_name: "Meni",
-		title: "Student Developer",
+		title: "Software Developer",
 		email: "mmeni@contractor.usgs.gov",
 		bio: "Mackenzie is a junior developer for WIM. She is currently working towards a B.S in Mathematics with a Minor in Engineering Physics at McKendree University. Mackenzie loves everything math and has recently entered the world of coding. Although she spends the majority of her time working or at school, she enjoys playing coed soccer, volunteering, and spending time with her family.",
 		coordinates: "-89.808691, 38.6035269"
@@ -182,7 +182,7 @@ teamMembers.members = {
 	kathy: {
 		first_name: "Kathy",
 		last_name: "Dooley",
-		title: "Student Developer",
+		title: "Software Developer",
 		email: "kdooley@contractor.usgs.gov",
 		bio: "Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.",
 		coordinates: "-93.265011, 44.977753"
@@ -190,10 +190,18 @@ teamMembers.members = {
 	anders: {
 		first_name: "Anders",
 		last_name: "Hopkins",
-		title: "Student Developer",
+		title: "Software Developer",
 		email: "ahopkins@contractor.usgs.gov",
 		bio: "Anders is a student developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.",
 		coordinates: "-93.265011, 44.977753"
+	},
+	milan: {
+		first_name: "Milan",
+		last_name: "Liu",
+		title: "Software Developer",
+		email: "msliu@contractor.usgs.gov",
+		bio: "Milan has degrees in International Politics and Geography from Penn State University. Her interest in GIS and cartography brought her to WIM, where she works on projects involving data visualization and geonarrative design. Outside of work, Milan enjoys traveling and spending time outside. In her free time, you can usually find her on a run, reading a novel, or cooking a new recipe.",
+		coordinates: "-77.8731374, 40.8080916"
 	},
 	// patrick: {
 	// 	first_name: "Patrick",
@@ -211,7 +219,6 @@ teamMembers.alumni = {
 		first_name: "Bruce",
 		last_name: "Droster",
 		title: "Operations Coordinator",
-		phone: "(703)648-5760",
 		email: "",
 		bio: "A foundational member of WIM, Bruce Droster coordinated operations from inception through 2020 before retiring from Federal Service. His reliability, no-nonsense approach, and experience operating in the Federal sector helped WIM set itself apart from other groups. Bruce enjoys many outside activities including being a volunteer firefighter, volunteer ski patroller, SCUBA diver, wilderness camper, cyclist, hot tubbing, and others; there is no concern that Bruce will lack for things to do during his retirement.",
 		// bio: "Bruce began as a traditional cartographer working on the USGS Ground Water Atlas of the United States. He considers himself fortunate that he was able to experience both the traditional methods of map making (scribing and darkrooms) and modern GIS and digital mapping. He is currently the administrative and operations coordinator for WIM. Bruce enjoys many outside activities including being a volunteer firefighter, volunteer ski patroller, SCUBA diver, wilderness camper, cyclist, and many other outdoor activities.",
@@ -401,6 +408,11 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Lebanon, IL</b><span id='Mackenzie'>Mackenzie Meni</span>" },
 		"geometry": {"type": "Point", "coordinates": [-89.808691, 38.6035269]},
+	},
+	{
+		"type": "Feature",
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>University Park, PA</b><span id='Milan'>Milan Liu</span>" },
+		"geometry": {"type": "Point", "coordinates": [-77.8731374, 40.8080916]},
 	}
 ];
 
