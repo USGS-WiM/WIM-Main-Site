@@ -10,7 +10,7 @@ var urlsToCache = [
 	// '/team/index.html',
 	// '/src/js/projects.js',
 	// '/src/js/team.js',
-	'/src/js/vendor/jquery-3.3.1.min.js',
+	'/src/js/vendor/jquery-3.5.1.min.js',
 	// Images
 	'/src/images/hero.jpg',
 	'/src/images/map_pin.png',

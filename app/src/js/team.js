@@ -82,15 +82,6 @@ teamMembers.members = {
 		bio: "Gary has his degree in Cartography from Northern Illinois University and 27 years of cartographic experience in the USGS. His specialties include cartographic design and communication, digital application design, and implementation of cloud infrastructures for geospatial applications. In addition WIM, Gary serves on the staff of the Information and Technology Management Director for the Department of the Interior, leading and assisting in special projects for the Department. Outside of work Gary enjoys golfing, writing music and making unique cocktails with his wife in their home lounge.", 
 		coordinates: "-89.4012302, 43.0730517"
 	},
-	bruce: {
-		first_name: "Bruce",
-		last_name: "Droster",
-		title: "Operations Coordinator",
-		phone: "(703)648-5760",
-		email: "bdroster@usgs.gov",
-		bio: "Bruce began as a traditional cartographer working on the USGS Ground Water Atlas of the United States. He considers himself fortunate that he was able to experience both the traditional methods of map making (scribing and darkrooms) and modern GIS and digital mapping. He is currently the administrative and operations coordinator for WIM. Bruce enjoys many outside activities including being a volunteer firefighter, volunteer ski patroller, SCUBA diver, wilderness camper, cyclist, and many other outdoor activities.",
-		coordinates: "-89.4012302, 43.0730517"
-	},
 	hans: {
 		first_name: "Hans",
 		last_name: "Vraga",
@@ -204,18 +195,31 @@ teamMembers.members = {
 		bio: "Anders is a student developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.",
 		coordinates: "-93.265011, 44.977753"
 	},
-	patrick: {
-		first_name: "Patrick",
-		last_name: "Moore",
-		title: "Sysops Specialist",
-		email: "pmoore@usgs.gov",
-		bio: "After becoming his Unit's \"fat kid in dodgeball\" for being wounded in Iraq, Patrick returned home and became a professional student. Dabbling within Game Design, Electronics, and Metal Fabrication, until finally discovering IT Systems Administration. Patrick has been working as an IT Support Staffer and self-described \"Donut King\" for Middleton's Water Science Center for over a year now. Recently being able to split his time to assist with WIM's IT Cloud needs. When Patrick isn't working, he prefers to spend his free time playing board games, video games, attempting to create art, perfecting cheesecake recipes, and learning new costume designer skills.",
-		coordinates: "-89.4012302, 43.0730517"
-	}
+	// patrick: {
+	// 	first_name: "Patrick",
+	// 	last_name: "Moore",
+	// 	title: "Sysops Specialist",
+	// 	email: "pmoore@usgs.gov",
+	// 	bio: "After becoming his Unit's \"fat kid in dodgeball\" for being wounded in Iraq, Patrick returned home and became a professional student. Dabbling within Game Design, Electronics, and Metal Fabrication, until finally discovering IT Systems Administration. Patrick has been working as an IT Support Staffer and self-described \"Donut King\" for Middleton's Water Science Center for over a year now. Recently being able to split his time to assist with WIM's IT Cloud needs. When Patrick isn't working, he prefers to spend his free time playing board games, video games, attempting to create art, perfecting cheesecake recipes, and learning new costume designer skills.",
+	// 	coordinates: "-89.4012302, 43.0730517"
+	// }
 }
 
 
 teamMembers.alumni = {
+	bruce: {
+		first_name: "Bruce",
+		last_name: "Droster",
+		title: "Operations Coordinator",
+		phone: "(703)648-5760",
+		email: "",
+		bio: "A foundational member of WIM, Bruce Droster coordinated operations from inception through 2020 before retiring from Federal Service. His reliability, no-nonsense approach, and experience operating in the Federal sector helped WIM set itself apart from other groups. Bruce enjoys many outside activities including being a volunteer firefighter, volunteer ski patroller, SCUBA diver, wilderness camper, cyclist, hot tubbing, and others; there is no concern that Bruce will lack for things to do during his retirement.",
+		// bio: "Bruce began as a traditional cartographer working on the USGS Ground Water Atlas of the United States. He considers himself fortunate that he was able to experience both the traditional methods of map making (scribing and darkrooms) and modern GIS and digital mapping. He is currently the administrative and operations coordinator for WIM. Bruce enjoys many outside activities including being a volunteer firefighter, volunteer ski patroller, SCUBA diver, wilderness camper, cyclist, and many other outdoor activities.",
+		coordinates: "",
+		alumni: true,
+		years: "2009-2020",
+		alumniLink: ""
+	},
 	jeremy: {
 		first_name: "Jeremy",
 		last_name: "Newson",
@@ -360,7 +364,7 @@ var centerMap = function(){
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Bruce'>Bruce Droster</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Patrick'>Patrick Moore</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
