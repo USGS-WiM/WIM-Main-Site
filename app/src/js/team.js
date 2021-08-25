@@ -163,14 +163,6 @@ teamMembers.members = {
 		bio: "Lorraine has a B.S. from Northland College in Geoscicence and Water Science and a graduate certificate in GIS from the University of Denver. She is currently working on her master's degree in GISc at the University of Denver. Lorraine joined the USGS in 2018 and then joined the WIM team in 2020. Outside of work, she enjoys spending time in the outdoors, listening to podcasts, reading, and hanging out with family and friends.",
 		coordinates: "-87.88739, 41.83789"
 	},
-	mackenzie: {
-		first_name: "Mackenzie",
-		last_name: "Meni",
-		title: "Software Developer",
-		email: "mmeni@contractor.usgs.gov",
-		bio: "Mackenzie is a junior developer for WIM. She is currently working towards a B.S in Mathematics with a Minor in Engineering Physics at McKendree University. Mackenzie loves everything math and has recently entered the world of coding. Although she spends the majority of her time working or at school, she enjoys playing coed soccer, volunteering, and spending time with her family.",
-		coordinates: "-89.808691, 38.6035269"
-	}, 
 	kathy: {
 		first_name: "Kathy",
 		last_name: "Dooley",
@@ -429,11 +421,6 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Elgin, IL</b><span id='Lorraine'>Lorraine Metz</span>" },
 		"geometry": {"type": "Point", "coordinates": [-87.88739, 41.83789]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Lebanon, IL</b><span id='Mackenzie'>Mackenzie Meni</span>" },
-		"geometry": {"type": "Point", "coordinates": [-89.808691, 38.6035269]},
 	},
 	{
 		"type": "Feature",
