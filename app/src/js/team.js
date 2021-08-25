@@ -147,8 +147,8 @@ teamMembers.members = {
 		bio: "Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
 		coordinates: "-93.265011, 44.977753"
 	},
-	dan: {
-		first_name: "Dan",
+	daniel: {
+		first_name: "Daniel",
 		last_name: "Beckman",
 		title: "Software Developer",
 		email: "dbeckman@usgs.gov",
@@ -203,12 +203,12 @@ teamMembers.members = {
 		bio: "Kip is currently a student at the University of Wisconsin-Madison pursuing a bachelor's degree in Computer Engineering and Computer Science with a certificate in Criminal Justice. Kip has been programming since middle school and has developed many individual programming projects before joining WIM, including applications for both desktop and mobile devices. His other interests include golfing, learning guitar, and working on cars.",
 		coordinates: "-89.4012302, 43.0730517"
 	},
-	daniel: {
-		first_name: "Daniel",
+	danny: {
+		first_name: "Danny",
 		last_name: "Rubin",
 		title: "Software Developer",
 		email: "drubin@contractor.usgs.gov",
-		bio: "Daniel has a B.S. in Public Affairs from Indiana University and is currently pursuing a Masters in Public Affairs from Indiana University. Prior to joining USGS Daniel worked as a software designer and business analyst helping state and federal agencies solve challenges involving training, compliance, personnel management, organizational management, and more. Daniel loves the outdoors and has a lifelong goal of visiting all the national parks.",
+		bio: "Daniel has a B.S. in Public Affairs from Indiana University and is currently pursuing a Masters in Public Affairs from Indiana University. Prior to joining USGS Danny worked as a software designer and business analyst helping state and federal agencies solve challenges involving training, compliance, personnel management, organizational management, and more. Danny loves the outdoors and has a lifelong goal of visiting all the national parks.",
 		coordinates: "-86.512627,39.1754487"
 	},
 	lily: {
@@ -442,7 +442,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Bloomington, IN</b><span id='Daniel'>Daniel Rubin</span>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Bloomington, IN</b><span id='Danny'>Danny Rubin</span>" },
 		"geometry": {"type": "Point", "coordinates": [-86.512627, 39.1754487]},
 	}
 ];
