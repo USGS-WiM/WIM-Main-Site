@@ -131,14 +131,6 @@ teamMembers.members = {
 		bio: "Lauren is a software developer with WIM. She received her B.S in Geographic Science from James Madison University. While she enjoys work centered around GIS and cartography, her interests have expanded into the world of open source internet mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren enjoys snowboarding and ultimate frisbee.",
 		coordinates: "-77.036871, 38.907192"
 	},
-	martyn: {
-		first_name: "Martyn",
-		last_name: "Smith",
-		title: "Software Developer",
-		email: "marsmith@usgs.gov",
-		bio: "Marty is a software developer with WIM. He received his M.A. in geography from the University of Connecticut. While his work with the USGS initially centered around GIS and Cartography, his main focus now is internet mapping, and he is committed to improving the mapping presence of the USGS. Within the internet mapping application realm, he is primarily focused on open-source solutions. Most of his free time is spent with his family and german shorthair, or with a chainsaw.",
-		coordinates: "-73.691785, 42.728412"
-	},
 	mitch: {
 		first_name: "Mitch",
 		last_name: "Samuels",
@@ -146,14 +138,6 @@ teamMembers.members = {
 		email: "msamuels@contractor.usgs.gov",
 		bio: "Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
 		coordinates: "-93.265011, 44.977753"
-	},
-	daniel: {
-		first_name: "Daniel",
-		last_name: "Beckman",
-		title: "Software Developer",
-		email: "dbeckman@usgs.gov",
-		bio: "Daniel Beckman is a career intern at the USGS. He holds a bachelors degree from the University of Colorado in Ecology and Evolutionary Biology and minors in Chemistry and Computer Science. He currently attends Graduate school at the University of Colorado School of Engineering and Applied Science where he studies Machine Learning and Artificial Intelligence. Daniel is a combat Veteran and former paratrooper with Special Forces. He has worked in data for almost two decades in a variety of fields including, counterintelligence, research & development, forensic chemistry, and genomics. Daniel joined the USGS in 2017 and WIM in 2018. Currently, he works in cloud integration. He and his wife Sarah live in Colorado with their two dogs and cat. They enjoy climbing, hiking 14ers, craft IPAs, snowshoeing, cross country skiing, and paddle boarding.",
-		coordinates: "-104.990251, 39.739236"
 	},
 	lorraine: {
 		first_name: "Lorraine",
@@ -182,7 +166,7 @@ teamMembers.members = {
 	milan: {
 		first_name: "Milan",
 		last_name: "Liu",
-		title: "GIS Specialist",
+		title: "Student GIS Specialist",
 		email: "msliu@contractor.usgs.gov",
 		bio: "Milan has degrees in International Politics and Geography from Penn State University. Her interest in GIS and cartography brought her to WIM, where she works on projects involving data visualization and geonarrative design. Outside of work, Milan enjoys traveling and spending time outside. In her free time, you can usually find her on a run, reading a novel, or cooking a new recipe.",
 		coordinates: "-77.8731374, 40.8080916"
@@ -190,7 +174,7 @@ teamMembers.members = {
 	kip: {
 		first_name: "Kip",
 		last_name: "Sullivan",
-		title: "Software Developer",
+		title: "Student Software Developer",
 		email: "cdsullivan@contractor.usgs.gov",
 		bio: "Kip is currently a student at the University of Wisconsin-Madison pursuing a bachelor's degree in Computer Engineering and Computer Science with a certificate in Criminal Justice. Kip has been programming since middle school and has developed many individual programming projects before joining WIM, including applications for both desktop and mobile devices. His other interests include golfing, learning guitar, and working on cars.",
 		coordinates: "-89.4012302, 43.0730517"
@@ -198,7 +182,7 @@ teamMembers.members = {
 	danny: {
 		first_name: "Danny",
 		last_name: "Rubin",
-		title: "Software Developer",
+		title: "Student Project Manager",
 		email: "drubin@contractor.usgs.gov",
 		bio: "Daniel has a B.S. in Public Affairs from Indiana University and is currently pursuing a Masters in Public Affairs from Indiana University. Prior to joining USGS Danny worked as a software designer and business analyst helping state and federal agencies solve challenges involving training, compliance, personnel management, organizational management, and more. Danny loves the outdoors and has a lifelong goal of visiting all the national parks.",
 		coordinates: "-86.512627,39.1754487"
@@ -206,7 +190,7 @@ teamMembers.members = {
 	lily: {
 		first_name: "Lily",
 		last_name: "Houtman",
-		title: "Software Developer",
+		title: "Student Software Developer",
 		email: "lhoutman@contractor.usgs.gov",
 		bio: "Lily is currently pursuing degrees in Cartography/GIS and Biological Anthropology at the University of Wisconsin-Madison. She is particularly interested in data journalism, science communication, and pedagogical teaching. She loves designing both static and web maps, and is always excited to explore the intersection of science and art that is inherent to cartography. In her free time, she enjoys running in the forest, reading fantasy novels, tending to her houseplants, and cooking vegetarian food.",
 		coordinates: "-89.4012302, 43.0730517"
@@ -233,6 +217,17 @@ teamMembers.alumni = {
 		years: "2018-2021",
 		alumniLink: ""
 	},
+	martyn: {
+		first_name: "Martyn",
+		last_name: "Smith",
+		title: "Software Developer",
+		email: "",
+		bio: "Marty is a software developer with WIM. He received his M.A. in geography from the University of Connecticut. While his work with the USGS initially centered around GIS and Cartography, his main focus now is internet mapping, and he is committed to improving the mapping presence of the USGS. Within the internet mapping application realm, he is primarily focused on open-source solutions. Most of his free time is spent with his family and german shorthair, or with a chainsaw.",
+		coordinates: "",
+		alumni: true,
+		years: "2013-2020",
+		alumniLink: ""
+	},
 	bruce: {
 		first_name: "Bruce",
 		last_name: "Droster",
@@ -243,6 +238,17 @@ teamMembers.alumni = {
 		coordinates: "",
 		alumni: true,
 		years: "2009-2020",
+		alumniLink: ""
+	},
+	daniel: {
+		first_name: "Daniel",
+		last_name: "Beckman",
+		title: "Software Developer",
+		email: "",
+		bio: "Daniel Beckman is a career intern at the USGS. He holds a bachelors degree from the University of Colorado in Ecology and Evolutionary Biology and minors in Chemistry and Computer Science. He currently attends Graduate school at the University of Colorado School of Engineering and Applied Science where he studies Machine Learning and Artificial Intelligence. Daniel is a combat Veteran and former paratrooper with Special Forces. He has worked in data for almost two decades in a variety of fields including, counterintelligence, research & development, forensic chemistry, and genomics. Daniel joined the USGS in 2017 and WIM in 2018. Currently, he works in cloud integration. He and his wife Sarah live in Colorado with their two dogs and cat. They enjoy climbing, hiking 14ers, craft IPAs, snowshoeing, cross country skiing, and paddle boarding.",
+		coordinates: "",
+		alumni: true,
+		years: "2018-2020",
 		alumniLink: ""
 	},
 	jeremy: {
@@ -389,7 +395,7 @@ var centerMap = function(){
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Kip'>Kip Sullivan</span></div><span id='Lily'>Lily Houtman</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Kip'>Kip Sullivan</span></div><span id='Lily'>Lily Houtman</span><span id='Milan'>Milan Liu</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
@@ -409,23 +415,8 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Denver, CO</b><span id='Dan'>Daniel Beckman</span>" },
-		"geometry": {"type": "Point", "coordinates": [-104.990251, 39.739236]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Albany, NY</b><span id='Martyn'>Martyn Smith</span>" },
-		"geometry": {"type": "Point", "coordinates": [-73.691785, 42.728412]},
-	},
-	{
-		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Elgin, IL</b><span id='Lorraine'>Lorraine Metz</span>" },
 		"geometry": {"type": "Point", "coordinates": [-87.88739, 41.83789]},
-	},
-	{
-		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>University Park, PA</b><span id='Milan'>Milan Liu</span>" },
-		"geometry": {"type": "Point", "coordinates": [-77.8731374, 40.8080916]},
 	},
 	{
 		"type": "Feature",
