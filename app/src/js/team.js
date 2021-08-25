@@ -139,14 +139,6 @@ teamMembers.members = {
 		bio: "Marty is a software developer with WIM. He received his M.A. in geography from the University of Connecticut. While his work with the USGS initially centered around GIS and Cartography, his main focus now is internet mapping, and he is committed to improving the mapping presence of the USGS. Within the internet mapping application realm, he is primarily focused on open-source solutions. Most of his free time is spent with his family and german shorthair, or with a chainsaw.",
 		coordinates: "-73.691785, 42.728412"
 	},
-	katrin: {
-		first_name: "Katrin",
-		last_name: "Jacobsen",
-		title: "Software Developer",
-		email: "kjacobsen@usgs.gov",
-		bio: "Katrin has a BA in Anthropology from the University of Minnesota - Twin Cities. While going to school there, she began an internship with the USGS in Mounds View, MN performing GIS and database work, which eventually led her to WIM. She's always had a passion for maps - they're all over her home. Outside of work, she enjoys volunteering, playing with her puppy, reading, and hosting small get-togethers at her home.",
-		coordinates: "-93.265011, 44.977753"
-	},
 	mitch: {
 		first_name: "Mitch",
 		last_name: "Samuels",
@@ -155,8 +147,8 @@ teamMembers.members = {
 		bio: "Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.",
 		coordinates: "-93.265011, 44.977753"
 	},
-	daniel: {
-		first_name: "Daniel",
+	dan: {
+		first_name: "Dan",
 		last_name: "Beckman",
 		title: "Software Developer",
 		email: "dbeckman@usgs.gov",
@@ -192,17 +184,41 @@ teamMembers.members = {
 		last_name: "Hopkins",
 		title: "Software Developer",
 		email: "ahopkins@contractor.usgs.gov",
-		bio: "Anders is a student developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.",
+		bio: "Anders is a developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.",
 		coordinates: "-93.265011, 44.977753"
 	},
 	milan: {
 		first_name: "Milan",
 		last_name: "Liu",
-		title: "Software Developer",
+		title: "GIS Specialist",
 		email: "msliu@contractor.usgs.gov",
 		bio: "Milan has degrees in International Politics and Geography from Penn State University. Her interest in GIS and cartography brought her to WIM, where she works on projects involving data visualization and geonarrative design. Outside of work, Milan enjoys traveling and spending time outside. In her free time, you can usually find her on a run, reading a novel, or cooking a new recipe.",
 		coordinates: "-77.8731374, 40.8080916"
 	},
+	kip: {
+		first_name: "Kip",
+		last_name: "Sullivan",
+		title: "Software Developer",
+		email: "cdsullivan@contractor.usgs.gov",
+		bio: "Kip is currently a student at the University of Wisconsin-Madison pursuing a bachelor's degree in Computer Engineering and Computer Science with a certificate in Criminal Justice. Kip has been programming since middle school and has developed many individual programming projects before joining WIM, including applications for both desktop and mobile devices. His other interests include golfing, learning guitar, and working on cars.",
+		coordinates: "-89.4012302, 43.0730517"
+	},
+	daniel: {
+		first_name: "Daniel",
+		last_name: "Rubin",
+		title: "Software Developer",
+		email: "drubin@contractor.usgs.gov",
+		bio: "Daniel has a B.S. in Public Affairs from Indiana University and is currently pursuing a Masters in Public Affairs from Indiana University. Prior to joining USGS Daniel worked as a software designer and business analyst helping state and federal agencies solve challenges involving training, compliance, personnel management, organizational management, and more. Daniel loves the outdoors and has a lifelong goal of visiting all the national parks.",
+		coordinates: "-86.512627,39.1754487"
+	},
+	lily: {
+		first_name: "Lily",
+		last_name: "Houtman",
+		title: "Software Developer",
+		email: "lhoutman@contractor.usgs.gov",
+		bio: "Lily is currently pursuing degrees in Cartography/GIS and Biological Anthropology at the University of Wisconsin-Madison. She is particularly interested in data journalism, science communication, and pedagogical teaching. She loves designing both static and web maps, and is always excited to explore the intersection of science and art that is inherent to cartography. In her free time, she enjoys running in the forest, reading fantasy novels, tending to her houseplants, and cooking vegetarian food.",
+		coordinates: "-89.4012302, 43.0730517"
+	}
 	// patrick: {
 	// 	first_name: "Patrick",
 	// 	last_name: "Moore",
@@ -215,6 +231,16 @@ teamMembers.members = {
 
 
 teamMembers.alumni = {
+	katrin: {
+		first_name: "Katrin",
+		last_name: "Jacobsen",
+		title: "Software Developer",
+		email: "",
+		bio: "Katrin has a BA in Anthropology from the University of Minnesota - Twin Cities. While going to school there, she began an internship with the USGS in Mounds View, MN performing GIS and database work, which eventually led her to WIM. She's always had a passion for maps - they're all over her home. Outside of work, she enjoys volunteering, playing with her puppy, reading, and hosting small get-togethers at her home.",
+		alumni: true,
+		years: "2018-2021",
+		alumniLink: ""
+	},
 	bruce: {
 		first_name: "Bruce",
 		last_name: "Droster",
@@ -371,12 +397,12 @@ var centerMap = function(){
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Kip'>Kip Sullivan</span></div><span id='Lily'>Lily Houtman</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Twin Cities, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Katrin'>Katrin Jacobson</span><span id='Kathy'>Kathy Dooley</span><span id='Anders'>Anders Hopkins</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Twin Cities, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Kathy'>Kathy Dooley</span><span id='Anders'>Anders Hopkins</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
@@ -391,7 +417,7 @@ var geojsonFeature = [
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Denver, CO</b><span id='Daniel'>Daniel Beckman</span>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Denver, CO</b><span id='Dan'>Daniel Beckman</span>" },
 		"geometry": {"type": "Point", "coordinates": [-104.990251, 39.739236]},
 	},
 	{
@@ -413,6 +439,11 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>University Park, PA</b><span id='Milan'>Milan Liu</span>" },
 		"geometry": {"type": "Point", "coordinates": [-77.8731374, 40.8080916]},
+	},
+	{
+		"type": "Feature",
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Bloomington, IN</b><span id='Daniel'>Daniel Rubin</span>" },
+		"geometry": {"type": "Point", "coordinates": [-86.512627, 39.1754487]},
 	}
 ];
 

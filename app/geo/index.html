@@ -16,8 +16,19 @@
 	<!-- Manifest -->
 	<link rel="manifest" href="../manifest.json">
 
+	<!-- Vue required only on team and project pages -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router"></script>
+
 </head>
 <body>
+
+	<!-- 
+		***IMPORTANT***
+		DEPLOYMENT:
+		This page is developed and auto-deployed at /geo
+		It needs to be manually uploaded to /geonarrative/ in S3
+	 -->
 
 
 		<!-- 
@@ -28,16 +39,24 @@
 		
 
 
-	
-		<!-- Main Content -->
-		<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 home-body">
-	
+		<!-- 
+			__   __ _   _   ___      (_) ___ 
+			\ \ / /| | | | / _ \     | |/ __|
+			\ V / | |_| ||  __/ _   | |\__ \
+			\_/   \__,_| \___|(_) _/ ||___/
+								|__/      
+			Vue tags are wrapped with ${ TAG } instead of double brackets
+		-->
+
+		<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50 projects-background">
+		
 			<h2>Geonarratives</h2>
 			<div class="text-body xs-pt-15 lg-pt-25 home-paragraph">
-				Geonarratives are web applications that combine interactive web maps with narrative text, images, and multimedia content.  WiM utilizes ESRI’s <a href="http://storymaps.arcgis.com/" target="_blank">story maps</a> templates, which are useful in disseminating science and data in an effective, user-friendly format to educate, engage and connect with other scientists, cooperators, and the public.
+				Geonarratives are web applications that combine interactive web maps with narrative text, images, and multimedia content.  WIM utilizes ESRI’s <a href="http://storymaps.arcgis.com/" target="_blank">story maps</a> templates, which are useful in disseminating science and data in an effective, user-friendly format to educate, engage and connect with other scientists, cooperators, and the public.
 			</div>
-			
-			<!-- Projects -->
+
+
+			<!-- Featured Geonarratives -->
 			<h2 class="xs-pt-50 lg-pt-75 xs-pb-25 lg-pb-40 home-featured-header">Featured Geonarratives</h2>
 	
 			<div class="home-featured">
@@ -54,13 +73,47 @@
 					<small>Learn about how the Climate Adaptation Science Centers have been exploring the topic of ecological drought across the country.</small>
 				</a>
 			</div>
-	
+
+			<!-- 
+				All Geonarratives
+				VUE JS Component
+			-->
+			<h2 class="xs-pt-50 lg-pt-75">Browse Geonarratives</h2>
 		
-	
-	
-	
-	
-			<!-- Interested in working with us? -->
+			<div class="standard-width" id="geonarrativeList">
+
+
+				<div class="project-search xs-mt-10 lg-mt-15">
+					<input type="text" v-model="projectSearch" aria-label="Search Geeonarratives" id="projectSearch" placeholder="Type to start searching..."/>
+				</div>
+
+				<div class="projects-compact xs-mt-10 lg-mt-20 show-all" v-if="geoList.length">
+
+					<!-- All Projects Loop -->
+					<div class="project-item xs-mb-20 lg-mb-25" v-for="geo in filteredList.slice().reverse()">
+						<div class="heading">${ geo.name }</div>
+						<div class="caption">${ geo.description }</div>
+						<div class="tags" v-if="geo.tag">
+							<span class="tag"  v-on:click="projectSearch = geo.tag">${ geo.tag }</span>
+						</div>
+						<div class="project-links">
+							<a v-bind:href="'https://wim.usgs.gov/geonarrative/'+geo.url" target="_blank" class="github-link">
+								<i class="far fa-external-link"></i>
+								<span>Open</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- No Projects -->
+					<div class="no-projects" v-if="!filteredList.length">
+						<i class="far fa-empty-set"></i>
+						<div class="xs-mt-15">No Results</div>
+					</div>
+
+				</div>
+			</div>
+
+
 			<h2 class="xs-pt-75 lg-pt-100">Want to know more about Geonarratives?</h2>
 			<div class="text-body xs-pt-15 lg-pt-25 home-paragraph">
 				If you think you have a project that could benefit from a geonarrative, please don't hesitate to contact Jamie Velkoverh with any questions or inquiries.
@@ -73,10 +126,9 @@
 				</div>
 				
 			</div>
-	
-	
+
 		</div>
-	
+		
 		<!-- 
 		Footer
 		-->
@@ -86,7 +138,7 @@
 
 
 	<!-- Team JS Controller -->
-	<!-- <script src="../src/js/team.js"></script> -->
+	<script src="../src/js/geo.js"></script>
 	<script>
 	</script>
 
