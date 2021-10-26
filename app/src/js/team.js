@@ -151,7 +151,7 @@ teamMembers.members = {
 		first_name: "Kathy",
 		last_name: "Dooley",
 		title: "Software Developer",
-		email: "kdooley@contractor.usgs.gov",
+		email: "kdooley@usgs.gov",
 		bio: "Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.",
 		coordinates: "-93.265011, 44.977753"
 	},
@@ -159,9 +159,33 @@ teamMembers.members = {
 		first_name: "Anders",
 		last_name: "Hopkins",
 		title: "Software Developer",
-		email: "ahopkins@contractor.usgs.gov",
+		email: "ahopkins@usgs.gov",
 		bio: "Anders is a developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.",
 		coordinates: "-93.265011, 44.977753"
+	},
+	julia: {
+		first_name: "Julia",
+		last_name: "Prokopec",
+		title:  "Hydrologist & Project Manager",
+		email: "jprokopec@usgs.gov",
+		bio: "Julia Prokopec is a hydrologist, project manager, and USGS Water Mission Area liaison for WIM. She received her B.S. in Environmental Studies with an emphasis in Geohydrology from Bemidji State. Julia has worked on projects studying groundwater and surface water interaction, persistence of pesticides in groundwater and surface water, and water quality monitoring. Her focus is hydraulic modeling and flood-inundation mapping where she has led studies to be used by communities for hazard mitigation. Outside of work, Julia enjoys being outdoors, canning and spending time with family.",
+		coordinates: "-93.265011, 44.977753"
+	},
+	andrea: {
+		first_name: "Andrea",
+		last_name: "Medenblik",
+		title: "Software Developer",
+		email: "amedenblik@usgs.gov",
+		bio: "Andrea is a software developer for WIM. She received a B.S. in Environmental Science from the University of North Carolina and an M.S. in Natural Resources from North Carolina State University, gaining GIS and programming skills along the way. Since joining WIM in 2021, she has developed web mapping applications to increase accessibility to USGS science. Outside of work, Andrea enjoys geocaching, gardening, and volunteering for conservation efforts.",
+		coordinates: "-78.785484, 35.843964"
+	},
+	abby: {
+		first_name: "Abby",
+		last_name: "Gleason",
+		title: "Student Developer",
+		email: "agleason@contractor.usgs.gov",
+		bio: "Abby has a B.A. in Geography and M.S. in GIS and Web Map Programming from the University of Wisconsin-Madison. Before pursuing her Master’s degree, she worked at a geospatial company specializing in LiDAR and pavement data collection. While completing her Master’s program she held GIS positions at the Wisconsin State Cartographer’s Office and Wisconsin Emergency Management, creating both interactive and static maps. In her free time, Abby enjoys running, exploring new trails in Wisconsin, painting, and volunteering with animals at the Humane Society.",
+		coordinates: "-89.4012302, 43.0730517"
 	},
 	milan: {
 		first_name: "Milan",
@@ -306,17 +330,6 @@ teamMembers.alumni = {
 		years: "2009-2014",
 		alumniLink: "https://www.linkedin.com/in/jonathanbaier/"
 	},
-	// nathan: {
-	// 	first_name: "Nathan",
-	// 	last_name: "Krawza",
-	// 	title: "Student Developer",
-	// 	email: "",
-	// 	bio: "Nathan was a student developer for WIM. He is studying Management Information Systems at the Carlson School of Management,  University of Minnesota. He built his first computer in the 7th grade and has had a passion for computers and technology ever since.  Nathan's previous experiences include being a computer sales associate at Best Buy, a camp counselor, and a grocery bagger.  He enjoys going for runs, playing multiple rhythm instruments, traveling,  and driving his stick-shift 2001 Honda Accord.",
-	// 	coordinates: "-93.265011, 44.977753",
-	// alumni: true,
-	// years: "2018-2020",
-	// alumniLink: "https://www.linkedin.com/in/nathan-krawza-1a86a5140"
-	// },
 }
 
 
@@ -395,12 +408,12 @@ var centerMap = function(){
 var geojsonFeature = [ 
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Kip'>Kip Sullivan</span></div><span id='Lily'>Lily Houtman</span><span id='Milan'>Milan Liu</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Madison, WI</b><span id='Gary'>Gary Latzke</span><span id='Blake'>Blake Draper</span><span id='Erik'>Erik Myers</span><span id='Aaron'>Aaron Stephenson</span><span id='Abby'>Abby Gleason</span><span id='Kip'>Kip Sullivan</span></div><span id='Lily'>Lily Houtman</span><span id='Milan'>Milan Liu</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 	},
 	{
 		"type": "Feature",
-		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Twin Cities, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Kathy'>Kathy Dooley</span><span id='Anders'>Anders Hopkins</span></div>" },
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Twin Cities, MN</b><span id='Hans'>Hans Vraga</span><span id='Mitch'>Mitch Samuels</span><span id='Kathy'>Kathy Dooley</span><span id='Anders'>Anders Hopkins</span><span id='Julia'>Julia Prokopec</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 	},
 	{
@@ -422,7 +435,12 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Bloomington, IN</b><span id='Danny'>Danny Rubin</span>" },
 		"geometry": {"type": "Point", "coordinates": [-86.512627, 39.1754487]},
-	}
+	},
+	{
+		"type": "Feature",
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Raleigh, NC</b><span id='Andrea'>Andrea Medenblik</span></div>" },
+		"geometry": {"type": "Point", "coordinates": [-78.785484, 35.843964]},
+	},
 ];
 
 var mapPopupClick = function(){
