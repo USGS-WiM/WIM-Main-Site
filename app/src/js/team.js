@@ -179,6 +179,14 @@ teamMembers.members = {
 		bio: "Andrea is a software developer for WIM. She received a B.S. in Environmental Science from the University of North Carolina and an M.S. in Natural Resources from North Carolina State University, gaining GIS and programming skills along the way. Since joining WIM in 2021, she has developed web mapping applications to increase accessibility to USGS science. Outside of work, Andrea enjoys geocaching, gardening, and volunteering for conservation efforts.",
 		coordinates: "-78.785484, 35.843964"
 	},
+	harper: {
+		first_name: "Harper",
+		last_name: "Wavra",
+		title: "Software Developer",
+		email: "hwavra@usgs.gov",
+		bio: "Harper is a software developer for WIM. She received a B.S. in Computer Science from the University of North Dakota. She joined the USGS in 2015 and then joined the WIM team in 2021. Outside of work, Harper enjoys playing board games, sewing crafts, and hanging with her pets.",
+		coordinates: "-100.810489, 46.8115136"
+	},
 	abby: {
 		first_name: "Abby",
 		last_name: "Gleason",
@@ -219,14 +227,7 @@ teamMembers.members = {
 		bio: "Lily is currently pursuing degrees in Cartography/GIS and Biological Anthropology at the University of Wisconsin-Madison. She is particularly interested in data journalism, science communication, and pedagogical teaching. She loves designing both static and web maps, and is always excited to explore the intersection of science and art that is inherent to cartography. In her free time, she enjoys running in the forest, reading fantasy novels, tending to her houseplants, and cooking vegetarian food.",
 		coordinates: "-89.4012302, 43.0730517"
 	},
-	harper: {
-		first_name: "Harper",
-		last_name: "Wavra",
-		title: "Software Developer",
-		email: "hwavra@usgs.gov",
-		bio: "Harper is a software developer for WIM. She received a B.S. in Computer Science from the University of North Dakota. She joined the USGS in 2015 and then joined the WIM team in 2021. Outside of work, Harper enjoys playing board games, sewing crafts, and hanging with her pets.",
-		coordinates: "-100.810489, 46.8115136"
-	}
+	
 	// patrick: {
 	// 	first_name: "Patrick",
 	// 	last_name: "Moore",
