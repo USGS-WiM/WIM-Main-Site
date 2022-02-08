@@ -9,7 +9,6 @@ var less = require('gulp-less');
 var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
 var newer = require('gulp-newer');
-var imagemin = require('gulp-imagemin');
 var minify = require('gulp-minify');
 var cleanCSS = require('gulp-clean-css');
 var inject = require('gulp-inject-string');
@@ -166,7 +165,6 @@ gulp.task('images', function () {
     var out = folder.production + 'src/images/';
     return gulp.src(folder.source + 'src/images/**/*')
         .pipe(newer(out))
-        .pipe(imagemin({ optimizationLevel: 5 }))
         .pipe(gulp.dest(out));
 });
 
