@@ -227,6 +227,14 @@ teamMembers.members = {
 		bio: "Lily is currently pursuing degrees in Cartography/GIS and Biological Anthropology at the University of Wisconsin-Madison. She is particularly interested in data journalism, science communication, and pedagogical teaching. She loves designing both static and web maps, and is always excited to explore the intersection of science and art that is inherent to cartography. In her free time, she enjoys running in the forest, reading fantasy novels, tending to her houseplants, and cooking vegetarian food.",
 		coordinates: "-89.4012302, 43.0730517"
 	},
+	chad: {
+		first_name: "Chad",
+		last_name: "Fanguy",
+		title: "Sysops Specialist",
+		email: "cfanguy@usgs.gov",
+		bio: "Chad has a B.S. in Computer Science from Nicholls State University. He has been with USGS since 2011 and with WIM since 2021. Outside of work, his interests include video games, drawing, writing, and anime.",
+		coordinates: "-81.379234, 28.538336"
+	},
 	
 	// patrick: {
 	// 	first_name: "Patrick",
