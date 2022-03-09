@@ -187,6 +187,14 @@ teamMembers.members = {
 		bio: "Harper is a software developer for WIM. She received a B.S. in Computer Science from the University of North Dakota. She joined the USGS in 2015 and then joined the WIM team in 2021. Outside of work, Harper enjoys playing board games, sewing crafts, and hanging with her pets.",
 		coordinates: "-100.810489, 46.8115136"
 	},
+	chad: {
+		first_name: "Chad",
+		last_name: "Fanguy",
+		title: "Sysops Specialist",
+		email: "cfanguy@usgs.gov",
+		bio: "Chad has a B.S. in Computer Science from Nicholls State University. He has been with USGS since 2011 and with WIM since 2021. Outside of work, his interests include video games, drawing, writing, and anime.",
+		coordinates: "-81.379234, 28.538336"
+	},
 	abby: {
 		first_name: "Abby",
 		last_name: "Gleason",
@@ -351,7 +359,7 @@ teamMembers.alumni = {
 // ========================= //
 // ========================= //
 
-var zoomlvl = 4
+var zoomlvl = 3
 var mapCenter = [29.76, -95.38]
 // Leaflet map & disabling all map funtionality
 var map = L.map('mapid', { 
@@ -454,6 +462,11 @@ var geojsonFeature = [
 		"type": "Feature",
 		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Bismarck, ND</b><span id='Harper'>Harper Wavra</span></div>" },
 		"geometry": {"type": "Point", "coordinates": [-100.810489, 46.8115136]},
+	},
+	{
+		"type": "Feature",
+		"properties": {"popupContent": "<div onclick='mapPopupClick(event)' class='map-popup'><b>Orlando, FL</b><span id='Chad'>Chad Fanguy</span></div>" },
+		"geometry": {"type": "Point", "coordinates": [-81.379234, 28.538336]},
 	},
 ];
 
