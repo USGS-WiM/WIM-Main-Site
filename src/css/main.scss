@@ -1,0 +1,14 @@
+//! Main 
+// Main SCSS file to import all others
+
+// Variables
+@import 'variables.scss';
+// Then reset
+@import 'reset.scss';
+// Then base
+@import 'base.scss';
+// Then everything else
+@import 'typography.scss';
+@import 'structure.scss';
+// Pages
+@import 'pages/home.scss';

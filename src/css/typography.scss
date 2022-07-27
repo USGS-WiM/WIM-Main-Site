@@ -1,0 +1,89 @@
+a{
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+blockquote {
+	line-height: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+  }
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+	font-family: var(--sans);
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	line-height: 1.5rem;
+  }
+  h1 {
+	font-size: 4.242rem;
+	line-height: 4.5rem;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+  }
+  h2 {
+	font-size: 3.228rem;
+	line-height: 3.5rem;
+	margin-top: 3rem;
+	margin-bottom: 0.9rem;
+  }
+  h3 {
+	font-size: 2.214rem;
+	margin-bottom: 0.8rem;
+	line-height: 2.5rem;
+}
+  h4 {
+	font-size: 1.407rem;
+	margin-bottom: 0.7rem;
+	line-height: 1.5rem;
+}
+  h5 {
+	font-size: 1.01333333rem;
+	margin-bottom: 0.6rem;
+}
+  h6 {
+	font-size: 0.79rem;
+	margin-bottom: 0.5rem;
+}
+  /* Tables */
+  table {
+	margin-top: 1.5rem;
+	border-spacing: 0px;
+	border-collapse: collapse;
+  }
+  table td,
+  table th {
+	padding: 0;
+	line-height: 33px;
+  }
+  /* Code blocks */
+  code {
+	vertical-align: bottom;
+  }
+  /* Leading paragraph text */
+  .lead {
+	font-size: 1.414rem;
+  }
+  p{
+	font-size: 1rem;
+	line-height: 2rem;
+  }
+  p,li{
+	font-family: var(--systemFont);
+  }
+
+  .button{
+	background-color: var(--primary);
+	color: var(--white);
+	box-sizing: border-box;
+	padding: 10px 15px;
+	border-radius: var(--borderRadius);
+	display: inline-block;
+  }
