@@ -5,8 +5,8 @@
 	"source": "src/index.html",
 	"scripts": {
 		"start": "parcel",
-		"build": "parcel build './src/*.html'",
-		"serve": "npx parcel './src/*.html'",
+		"build": "parcel build ./src/index.html ./src/team/index.html ./src/projects/index.html ./src/geonarrative/index.html",
+		"serve": "npx parcel ./src/index.html ./src/team/index.html ./src/projects/index.html ./src/geonarrative/index.html",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
