@@ -1,6 +1,12 @@
 {
   "plugins": {
 	"posthtml-doctype": { "doctype": "HTML 5" },
-    "posthtml-include": {}
+    "posthtml-include": {
+		"root": "./src"
+	},
+	"posthtml-modules": {
+		"root": "./src"
+	  }
   }
 }
+

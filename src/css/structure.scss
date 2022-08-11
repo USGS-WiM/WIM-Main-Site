@@ -1,0 +1,114 @@
+// Main structure / body setup
+// Header and footer below
+
+main{
+	display: block;
+
+	section{
+		display: block;
+		box-sizing: border-box;
+		padding: 0 var(--sidePadding);
+	}
+}
+.padded{
+	box-sizing: border-box;
+	padding: 0 var(--sidePadding);
+}
+
+// Required USGS Top Bar
+#USGS_nav{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px var(--sidePadding) 10px var(--sidePadding);
+	background-color: #02274b;
+	a{
+		display: block;
+	}
+
+	img{
+		height: 58px;
+		width: auto;
+	}
+}
+
+// Main WIM Top Bar
+// And Navigation
+#WIM_nav{
+	display: flex;
+	width: 100%;
+	background-color: var(--grey);
+	box-sizing: border-box;
+	padding: 15px var(--sidePadding) 12px var(--sidePadding);
+	justify-content: space-between;
+	gap: 30px;
+	border-bottom: 1px solid var(--border);
+
+	// WIM Logo
+	#WIM_branding{
+		a{
+			display: block;
+		}
+
+		img{
+			height: 40px;
+			width: auto;
+		}
+	}
+
+	// Navigation Links
+	nav#main{
+		display: flex;
+		gap: 35px;
+		
+		a{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			box-sizing: border-box;
+			padding-bottom: 5px;
+			font-size: 1.2em;
+			font-weight: 500;
+			color: var(--text);
+
+			i{
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+
+// WIM Footer
+#WIM_footer{
+	background-color: var(--grey);
+	box-sizing: border-box;
+	padding: 35px var(--sidePadding);
+	border-top: 1px solid var(--border);
+	display: flex;
+	gap: 50px;
+
+	#WIM_footer_branding{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		img{
+			height: 60px;
+			width: auto;
+		}
+	}
+}
+
+// USGS Footer
+#USGS_footer{
+	background-color: #02274b;
+	box-sizing: border-box;
+	padding: 8px var(--sidePadding);
+	a{
+		color: white;
+		font-size: 0.8em;
+		margin-right: 18px;
+		position: relative;
+		text-decoration: none;
+	}
+}

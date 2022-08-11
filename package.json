@@ -15,7 +15,8 @@
 		"@parcel/transformer-sass": "^2.6.2",
 		"parcel": "^2.6.2",
 		"posthtml-doctype": "^1.1.1",
-		"posthtml-include": "^1.7.4"
+		"posthtml-include": "^1.7.4",
+		"posthtml-modules": "^0.9.0"
 	},
 	"dependencies": {
 		"@uswds/uswds": "^3.0.2"
