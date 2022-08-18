@@ -13,6 +13,7 @@
 	<!-- Leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" crossorigin=""></script>
 
 	<!-- Javascript -->
 	<script type="module" src="team.js"></script>
@@ -42,6 +43,10 @@
 			<h5>We are geographers, cartographers, and scientists who are passionate about science communication.</h5>
 		</section>
 
+		<button id="testButton">
+			Click Me to Highlight
+		</button>
+
 		<!-- Team member loop - Current team -->
 		<div id="teamGrid" class="padded">
 
@@ -56,7 +61,7 @@
 						<a href="tel:6088213805">(608)821-3805</span>
 					</div>
 				</div>
-				<button class="photo-bio">
+				<button class="photo-bio"  id="gary">
 					<img src="../assets/images/team/Gary.jpg" alt="Gary Latzke"/>
 					<p class="bio">Gary has his degree in Cartography from Northern Illinois University and 27 years of cartographic experience in the USGS. His specialties include cartographic design and communication, digital application design, and implementation of cloud infrastructures for geospatial applications. In addition WIM, Gary serves on the staff of the Information and Technology Management Director for the Department of the Interior, leading and assisting in special projects for the Department. Outside of work Gary enjoys golfing, writing music and making unique cocktails with his wife in their home lounge.</p>
 				</button>
@@ -71,7 +76,7 @@
 						<a href="tel:7036485670">(703)648-5670</span>
 					</div>
 				</div>
-				<button class="photo-bio">
+				<button class="photo-bio" id="hans">
 					<img src="../assets/images/team/Hans.jpg" alt="Hans Vraga"/>
 					<p class="bio">Hans got his start as a CH-53 Super Stallion Helicopter Crew Chief from the USMC, callsign: 'Wedgie.' He turned ITIL disciple at the UW-Madison Division of Information Technology (DoIT) while earning a BS in Computer Engineering and Computer Science. After a 8 years at DoIT wearing Configuration, Incident, and Change Management hats, Hans moved to USGS-WIM to head up Project Management duties and earned a PMP certification. Hans currently spends most of his day coordinating a highly skilled and motivated team of developers, doing his best not to slow them down too much. Outside of work, Hans enjoys a good game of ultimate, hiking, camping and the occasional novel.</p>
 				</button>
