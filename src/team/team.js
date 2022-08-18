@@ -1,3 +1,23 @@
+// Define WIM Team
+var members = {
+	gary: {
+		name: "Gary Latzke",
+		title: "Program Coordinator",
+		phone: "(608)821-3805",
+		email: "gdlatzke@usgs.gov",
+		bio: "Gary has his degree in Cartography from Northern Illinois University and 27 years of cartographic experience in the USGS. His specialties include cartographic design and communication, digital application design, and implementation of cloud infrastructures for geospatial applications. In addition WIM, Gary serves on the staff of the Information and Technology Management Director for the Department of the Interior, leading and assisting in special projects for the Department. Outside of work Gary enjoys golfing, writing music and making unique cocktails with his wife in their home lounge.", 
+		coordinates: "-89.4012302, 43.0730517"
+	},
+	hans: {
+		name: "Hans Vraga",
+		title: "Project Manager",
+		phone: "(703)648-5670",
+		email: "hvraga@usgs.gov",
+		bio: "Hans got his start as a CH-53 Super Stallion Helicopter Crew Chief from the USMC, callsign: 'Wedgie.' He turned ITIL disciple at the UW-Madison Division of Information Technology (DoIT) while earning a BS in Computer Engineering and Computer Science. After a 8 years at DoIT wearing Configuration, Incident, and Change Management hats, Hans moved to USGS-WIM to head up Project Management duties and earned a PMP certification. Hans currently spends most of his day coordinating a highly skilled and motivated team of developers, doing his best not to slow them down too much. Outside of work, Hans enjoys a good game of ultimate, hiking, camping and the occasional novel.",
+		coordinates: "-93.265011, 44.977753"
+	},
+};
+
 
 // Team Page Map
 var mapZoomLevel = 4;
