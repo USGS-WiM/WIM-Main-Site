@@ -3,11 +3,13 @@
 // Team member display & router
 // Team member display & router
 ////////////////////////////////////
+
 var router = new VueRouter({
 	routes: [
 	  	{ path: '/:member', component: teamMembers }
 	]
 })
+
 var teamMembers = new Vue({
 	el: '#team',
 	router,
