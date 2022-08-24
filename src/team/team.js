@@ -136,7 +136,7 @@ window.onload=function(){
 	// WimIcon & popup
 	var myIcon = L.Icon.extend({});
 	var wimIcon = new myIcon({
-		iconUrl: require('../assets/images/map_pin.png'),
+		iconUrl: require("../assets/images/map_pin.png"),
 		iconSize: [24.9, 28.95],
 		iconAnchor: [12.45,28.95],
 		popupAnchor: [0,-28.95],
@@ -151,22 +151,23 @@ window.onload=function(){
 					duration: 0.7
 				});
 			}).addTo(map).bindPopup(feature.properties.popupContent);
-
 		}
 	}).addTo(map);
 
-	// Add Markers
+	// Markers
 	var markers = L.markerClusterGroup({maxClusterRadius: 1 });
 	markers.addLayer(geoJsonLayer);
+
 	// On popup close, center map
-	markers.on('popupclose', function(e) {
+	map.on('popupclose', function(e) {
+		console.log('popup CLOSED');
 		centerMap();
 	});
 
 	// On popup open, listen for clicks
-	markers.on('popupopen', function(e) {
+	map.on('popupopen', function(e) {
 		document.getElementsByClassName("map-popup")[0].addEventListener('click', highlightMember, false);
-	console.log('popupopen');
+		console.log('popupopen');
 	});
 
 	// Highlight member when name is clicked
@@ -176,11 +177,17 @@ window.onload=function(){
 		if(event.target.id){
 			var memberID = event.target.id.toLowerCase();
 			console.log("Clicked Member")
-			console.log(memberID);
+			// Scroll to member
 			document.getElementById(memberID).scrollIntoView({behavior: 'smooth'}, true);
-			console.log(document.getElementById(memberID));
+			// Highlight member photo
+			// Add class to highlight
+			document.getElementById(memberID).classList.add("highlight");
+			// Remove highlight after 2 seconds
+			setTimeout(function(){
+				document.getElementById(memberID).classList.remove("highlight");
+			}, 2000); //wait 2 seconds - 2000 milliseconds
+
 		};
-		}
 	}
 
 	// Add markers to map and set bounds, zoom
@@ -189,6 +196,8 @@ window.onload=function(){
 	map.setZoom(mapZoomLevel);
 	map.setView([43,-97]);
 
+
+}
 
 // End Window Onload
 
