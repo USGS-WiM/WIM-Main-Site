@@ -13,6 +13,7 @@
 	<!-- Leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" crossorigin=""></script>
 
 	<!-- Javascript -->
 	<script type="module" src="team.js"></script>
@@ -56,22 +57,348 @@
 		<section>
 			<h1>Team Page</h1>
 			<div class="standard-width xs-p-15 sm-p-20 md-p-30 lg-p-50"></div>
-		</section>
-			<!-- Team Display/Loop -->
-				<div class="team-display xs-f-start xs-f-wrap">
 
-					<div class="member" v-for="member in members" v-bind:id="member.first_name" tabindex="0" v-on:click="openMemberPopup(member.first_name)">
-						
-						<div class="member-image" v-bind:style="'background-image: url(/src/images/team/' + member.first_name + '.jpg);'">
-							<img v-bind:src="'/src/images/team/' + member.first_name + '.jpg'" class="member-image-element" v-bind:alt="member.first_name + ' ' + member.last_name + '\'s Photo'" v-bind:title="member.first_name + ' ' + member.last_name" />
-						</div>
-						<div class="member-meta">
-							<b class="text-sm">${ member.first_name} ${ member.last_name }</b>
-							<span class="text-body member-title">${ member.title }</span>
-						</div>
+			<h2>Our Team</h2>
+			<h3>Modern web development delivering the best of the USGS to the public.</h3>
+			<h5>We are geographers, cartographers, and scientists who are passionate about science communication.</h5>
+		</section>
+
+
+		<button id="testButton">
+			Click Me to Highlight
+		</button>
+
+		<!-- Team member loop - Current team -->
+		<div id="teamGrid" class="padded">
+
+			<!-- Individual member display - looped with Javascript -->
+			<!-- Gary Latzke -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Gary Latzke</span>
+					<span class="title">Program Coordinator</span>
+					<div class="links">
+						<a href="mailto:gdlatzke@usgs.gov">gdlatzke@usgs.gov</span>
+						<a href="tel:6088213805">(608)821-3805</span>
 					</div>
 				</div>
-		
+				<button class="photo-bio"  id="gary">
+					<img src="../assets/images/team/Gary.jpg" alt="Gary Latzke"/>
+					<p class="bio">Gary has his degree in Cartography from Northern Illinois University and 27 years of cartographic experience in the USGS. His specialties include cartographic design and communication, digital application design, and implementation of cloud infrastructures for geospatial applications. In addition WIM, Gary serves on the staff of the Information and Technology Management Director for the Department of the Interior, leading and assisting in special projects for the Department. Outside of work Gary enjoys golfing, writing music and making unique cocktails with his wife in their home lounge.</p>
+				</button>
+			</div>
+			<!-- Hans Vraga -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Hans Vraga</span>
+					<span class="title">Project Manager</span>
+					<div class="links">
+						<a href="mailto:hvraga@usgs.gov">hvraga@usgs.gov</span>
+						<a href="tel:7036485670">(703)648-5670</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="hans">
+					<img src="../assets/images/team/Hans.jpg" alt="Hans Vraga"/>
+					<p class="bio">Hans got his start as a CH-53 Super Stallion Helicopter Crew Chief from the USMC, callsign: 'Wedgie.' He turned ITIL disciple at the UW-Madison Division of Information Technology (DoIT) while earning a BS in Computer Engineering and Computer Science. After a 8 years at DoIT wearing Configuration, Incident, and Change Management hats, Hans moved to USGS-WIM to head up Project Management duties and earned a PMP certification. Hans currently spends most of his day coordinating a highly skilled and motivated team of developers, doing his best not to slow them down too much. Outside of work, Hans enjoys a good game of ultimate, hiking, camping and the occasional novel.</p>
+				</button>
+			</div>
+			<!-- Nick Estes -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Nick Estes</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:njestes@usgs.gov">njestes@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="nick">
+					<img src="../assets/images/team/Nick.jpg" alt="Nick Estes"/>
+					<p class="bio">Nick is a senior developer with WIM. He received his B.S. in mechanical engineering from Purdue University in 2001. His work with the USGS was initially focused on publishing, but has since developed an interest in and a knack for developing mapping applications and optimizing GIS services used by those applications. While most of his free time is spent with his family, he finds time here and there to write and record music.</p>
+				</button>
+			</div>
+			<!-- Blake Draper -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Blake Draper</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:bdraper@usgs.gov">bdraper@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="blake">
+					<img src="../assets/images/team/Blake.jpg" alt="Blake Draper"/>
+					<p class="bio">Blake is a software developer for WIM. He has a B.A. and M.A. from Florida State University and a GIS/Cartography certificate from the University of Wisconsin-Madison. Blake works primarily client-side, developing web apps in JavaScript, but also enjoys working with Python whenever the need arises. He also spends a lot of time configuring server environments and preparing GIS data for use in web services. His main professional goal is to create useful, intuitive, geographically focused data products that advance USGS science. Outside of work, Blake enjoys cooking good food, woodworking, and spending time in the woods hiking and canoe camping.</p>
+				</button>
+			</div>
+			<!-- Aaron Stephenson -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Aaron Stephenson</span>
+					<span class="title">Solutions Architect</span>
+					<div class="links">
+						<a href="mailto:astephenson@usgs.gov">astephenson@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="aaron">
+					<img src="../assets/images/team/Aaron.jpg" alt="Aaron Stephenson"/>
+					<p class="bio">Aaron Stephenson is a full stack developer and solutions architect at WIM, but essentially he is their jack-of-all-trades. He has a decade of experience in system administration, database administration, information management, systems analysis, as well as back end and front end development, almost all of which have been in support of GIS data, services, and applications. Currently, most of his time is engaged in supporting WIM's migration to a service-oriented architecture and cloud computing. In his free time, Aaron loves reading, getting outdoors to hike and canoe, and attempting to become a decent cook.</p>
+				</button>
+			</div>
+			<!-- Erik Myers -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Erik Myers</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:emyers@usgs.gov">emyers@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="erik">
+					<img src="../assets/images/team/Erik.jpg" alt="Erik Myers"/>
+					<p class="bio">Erik is a software developer for WIM. He earned bachelor's degrees in geography and Asian studies from Augustana College in Illinois, and a master's degree in geography from Ohio University. He also holds a GIS Certificate from the University of Wisconsin-Madison. In addition to Erik's work developing web applications for WIM, his major areas of interest are cartographic and user experience design. Erik enjoys travel, photography, and outdoor sports. In his free time, he can usually be found rock climbing, skiing, cycling, canoeing, or kayak touring.</p>
+				</button>
+			</div>			
+			<!-- Lauren Privette -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Lauren Privette</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:lprivette@usgs.gov">lprivette@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="lauren">
+					<img src="../assets/images/team/Lauren.jpg" alt="Lauren Privette"/>
+					<p class="bio">Lauren is a software developer with WIM. She received her B.S in Geographic Science from James Madison University. While she enjoys work centered around GIS and cartography, her interests have expanded into the world of open source internet mapping. She currently resides in Northern Virginia and is working out of USGS HQ in Reston. Outside of work, Lauren enjoys snowboarding and ultimate frisbee.</p>
+				</button>
+			</div>		
+			<!-- Mitch Samuels -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Mitch Samuels</span>
+					<span class="title">Frontend Developer</span>
+					<div class="links">
+						<a href="mailto:msamuels@contractor.usgs.gov">msamuels@contractor.usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="mitch">
+					<img src="../assets/images/team/Mitch.jpg" alt="Mitch Samuels"/>
+					<p class="bio">Mitch is a frontend and UI/UX developer with WIM. He has 8 years of experience creating websites and other software, having started as a freelancer before coming to WIM. Outside of work and school, he enjoys traveling, snowboarding, and hiking.</p>
+				</button>
+			</div>	
+			<!-- Lorraine Metz -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Lorraine Metz</span>
+					<span class="title">Developer & Operations Coordinator</span>
+					<div class="links">
+						<a href="mailto:lmetz@usgs.gov">lmetz@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="lorraine">
+					<img src="../assets/images/team/Lorraine.jpg" alt="Lorraine Metz"/>
+					<p class="bio">Lorraine has a B.S. from Northland College in Geoscicence and Water Science and a graduate certificate in GIS from the University of Denver. She is currently working on her master's degree in GISc at the University of Denver. Lorraine joined the USGS in 2018 and then joined the WIM team in 2020. Outside of work, she enjoys spending time in the outdoors, listening to podcasts, reading, and hanging out with family and friends.</p>
+				</button>
+			</div>
+			<!-- Kathy Dooley -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Kathy Dooley</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:kdooley@usgs.gov">kdooley@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="kathy">
+					<img src="../assets/images/team/Kathy.jpg" alt="Kathy Dooley"/>
+					<p class="bio">Kathy's interests in GIS and computer science led her to join WIM in 2019. She has a B.A. from Carleton College and a Master of GIS from the University of Minnesota. Outside of work, Kathy enjoys cooking, walking, canoeing, and solving puzzles.</p>
+				</button>
+			</div>
+			<!-- Anders Hopkins -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Anders Hopkins</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:ahopkins@usgs.gov">ahopkins@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="anders">
+					<img src="../assets/images/team/Anders.jpg" alt="Anders Hopkins"/>
+					<p class="bio">Anders is a developer for WIM. He has a BA from Luther College and a Masters of GIS from the University of Minnesota. Anders' interests include designing maps, drawing conclusions from raw datasets and solving spatial problems. When not working, he can be found riding one of his many bikes, rock climbing or reading.</p>
+				</button>
+			</div>
+			<!-- Julia Prokopec -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Julia Prokopec</span>
+					<span class="title">Hydrologist & Project Manager</span>
+					<div class="links">
+						<a href="mailto:jprokopec@usgs.gov">jprokopec@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="julia">
+					<img src="../assets/images/team/Julia.jpg" alt="Julia Prokopec"/>
+					<p class="bio">Julia Prokopec is a hydrologist, project manager, and USGS Water Mission Area liaison for WIM. She received her B.S. in Environmental Studies with an emphasis in Geohydrology from Bemidji State. Julia has worked on projects studying groundwater and surface water interaction, persistence of pesticides in groundwater and surface water, and water quality monitoring. Her focus is hydraulic modeling and flood-inundation mapping where she has led studies to be used by communities for hazard mitigation. Outside of work, Julia enjoys being outdoors, canning and spending time with family.</p>
+				</button>
+			</div>
+			<!-- Andrea Medenblik -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Andrea Medenblik</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:amedenblik@usgs.gov">amedenblik@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="andrea">
+					<img src="../assets/images/team/Andrea.jpg" alt="Andrea Medenblik"/>
+					<p class="bio">Andrea is a software developer for WIM. She received a B.S. in Environmental Science from the University of North Carolina and an M.S. in Natural Resources from North Carolina State University, gaining GIS and programming skills along the way. Since joining WIM in 2021, she has developed web mapping applications to increase accessibility to USGS science. Outside of work, Andrea enjoys geocaching, gardening, and volunteering for conservation efforts.</p>
+				</button>
+			</div>
+			<!-- Harper Wavra -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Harper Wavra</span>
+					<span class="title">Software Developer</span>
+					<div class="links">
+						<a href="mailto:hwavra@usgs.gov">hwavra@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="harper">
+					<img src="../assets/images/team/Harper.jpg" alt="Harper Wavra"/>
+					<p class="bio">Harper is a software developer for WIM. She received a B.S. in Computer Science from the University of North Dakota. She joined the USGS in 2015 and then joined the WIM team in 2021. Outside of work, Harper enjoys playing board games, sewing crafts, and hanging with her pets.</p>
+				</button>
+			</div>
+			<!-- Chad Fanguy -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Chad Fanguy</span>
+					<span class="title">Sysops Specialist</span>
+					<div class="links">
+						<a href="mailto:cfanguy@usgs.gov">cfanguy@usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="chad">
+					<img src="../assets/images/team/Chad.jpg" alt="Chad Fanguy"/>
+					<p class="bio">Chad has a B.S. in Computer Science from Nicholls State University. He has been with USGS since 2011 and with WIM since 2021. Outside of work, his interests include video games, drawing, writing, and anime.</p>
+				</button>
+			</div>
+			<!-- Milan Liu -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Milan Liu</span>
+					<span class="title">Cartographer & Enterprise Tools Specialist</span>
+					<div class="links">
+						<a href="mailto:msliu@contractor.usgs.gov">msliu@contractor.usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="milan">
+					<img src="../assets/images/team/Milan.jpg" alt="Milan Liu"/>
+					<p class="bio">Milan has degrees in International Politics and Geography from Penn State University. Her interest in GIS and cartography brought her to WIM, where she works on projects involving data visualization and geonarrative design. Outside of work, Milan enjoys traveling and spending time outside. In her free time, you can usually find her on a run, reading a novel, or cooking a new recipe.</p>
+				</button>
+			</div>
+			<!-- Kip Sullivan -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Kip Sullivan</span>
+					<span class="title">Student Software Developer</span>
+					<div class="links">
+						<a href="mailto:cdsullivan@contractor.usgs.gov">cdsullivan@contractor.usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="kip">
+					<img src="../assets/images/team/Kip.jpg" alt="Kip Sullivan"/>
+					<p class="bio">Kip is currently a student at the University of Wisconsin-Madison pursuing a bachelor's degree in Computer Engineering and Computer Science with a certificate in Criminal Justice. Kip has been programming since middle school and has developed many individual programming projects before joining WIM, including applications for both desktop and mobile devices. His other interests include golfing, learning guitar, and working on cars.</p>
+				</button>
+			</div>
+			<!-- Danny Rubin -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Danny Rubin</span>
+					<span class="title">Student Project Manager</span>
+					<div class="links">
+						<a href="mailto:drubin@contractor.usgs.gov">drubin@contractor.usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="danny">
+					<img src="../assets/images/team/Danny.jpg" alt="Danny Rubin"/>
+					<p class="bio">Daniel has a B.S. in Public Affairs from Indiana University and is currently pursuing a Masters in Public Affairs from Indiana University. Prior to joining USGS Danny worked as a software designer and business analyst helping state and federal agencies solve challenges involving training, compliance, personnel management, organizational management, and more. Danny loves the outdoors and has a lifelong goal of visiting all the national parks.</p>
+				</button>
+			</div>
+			<!-- Lily Houtman -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Lily Houtman</span>
+					<span class="title">Student Software Developer</span>
+					<div class="links">
+						<a href="mailto:lhoutman@contractor.usgs.gov">lhoutman@contractor.usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="lily">
+					<img src="../assets/images/team/Lily.jpg" alt="Lily Houtman"/>
+					<p class="bio">Lily is currently pursuing degrees in Cartography/GIS and Biological Anthropology at the University of Wisconsin-Madison. She is particularly interested in data journalism, science communication, and pedagogical teaching. She loves designing both static and web maps, and is always excited to explore the intersection of science and art that is inherent to cartography. In her free time, she enjoys running in the forest, reading fantasy novels, tending to her houseplants, and cooking vegetarian food.</p>
+				</button>
+			</div>
+			<!-- Andrew Laws -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Andrew Laws</span>
+					<span class="title">Junior Software Developer</span>
+					<div class="links">
+						<a href="mailto:alaws@contractor.usgs.gov">alaws@contractor.usgs.gov</span>
+					</div>
+				</div>
+				<button class="photo-bio" id="andrew">
+					<img src="../assets/images/team/Andrew.jpg" alt="Andrew Laws"/>
+					<p class="bio">In 2017 I was working as a plant geneticist and not feeling like I was in the right lane when an opportunity to work as a GIS intern with the BLM opened up. After having done a GIS course in undergrad, I knew the field interested me so I took a chance and took the leap. I was blessed with a mentor who also pushed me to learn Python at the same time and I was hooked on programming. Recently, I received my M.S. in Natural Resource Science (GIS and Remote Sensing) from the University of Nebraska - Lincoln. I used Google Earth Engine and its Javascript API and loved the ability to share my code with collaborators to solve problems, further enabling my coding addiction. I've worked for the federal government in the past, first as the aformentioned GIS intern and then as a spatial coordinator (contractor) with the NRCS, and greatly enjoyed my experieces. I describe myself as a geospatial nerd as I think the discipline has so many interesting facets and constantly provides opportunities to learn new things.
+
+						Out in the wild, I am an avid partaker in too many hobbies. I spend most of my time hiking, playing sports, reading, culinary (baking, cooking, cheesemaking), and getting my hands dirty in the garden or in the woodshop. I also have two adorable cats, Merwin and Yzma, who earn their keep by cuddling either me or my partner Mirae.</p>
+				</button>
+			</div>
+			<!-- Gene Trantham -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Gene Trantham</span>
+					<span class="title">Junior Software Developer</span>
+					<div class="links">
+					</div>
+				</div>
+				<button class="photo-bio" id="gene">
+					<img src="../assets/images/team/Gene.jpg" alt="Gene Trantham"/>
+					<p class="bio">Recent MGIS graduate from Penn State. Have applied that mostly as a GIS analyst and technician in municipal setting. On the side, I work a lot with python and related technologies to make custom analytic cartography toolsets, mostly for terrain representations (this was the focus of my MGIS, and I can't seem to set it down).
+						In an earlier phase of life, I worked abroad (Chile, Mexico, Norway, India) in remote wilderness areas as an outdoor educator and guide -- Sea Kayaking, River Rafting, Sailing.</p>
+				</button>
+			</div>
+			<!-- Ethan Bott -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Ethan Bott</span>
+					<span class="title">Junior Software Developer</span>
+					<div class="links">
+					</div>
+				</div>
+				<button class="photo-bio" id="ethan">
+					<img src="../assets/images/team/Ethan.jpg" alt="Ethan Bott"/>
+					<p class="bio">I got my undergraduate at the University of Wisconsin Stevens Point where I majored in Hydrology and minored in GIS with a strong passion for nature and for sharing that with others. I then spent the next few years working for an environmental community center (Urban Ecology Center) as their GIS and Field Data Coordinator in Milwaukee, WI where I worked on engaging the community in helping monitor wildlife and conducting research as a means of understanding biodiversity change in an urban area. While I really enjoyed doing this work and got to dabble in some technical work, I was left with a desire to dive deeper into web development, databases, and programming. This led me to pursue a Masters of GIS at the University of Minnesota that I started in January of 2022. I attended a virtual job fair where I was able to chat with the WIM team and now here I am! Other than that, I am an avid birder and disc golfer and like to cross-country ski in the winter. I think it would be awesome to start a biathlon club centered around xc skiing and putting with frisbees!</p>
+				</button>
+			</div>			
+			<!-- Will Bazell -->
+			<div class="member">
+				<div class="member-info">
+					<span class="name">Will Bazell</span>
+					<span class="title">Junior Software Developer</span>
+					<div class="links">
+					</div>
+				</div>
+				<button class="photo-bio" id="will">
+					<img src="../assets/images/team/Will.jpg" alt="Will Bazell"/>
+					<p class="bio">I am an undergraduate student at University of Minnesota currently pursuing a BS in Computer Science and a minor in Finance so I'm technically still "starting". In the last year, I've done satellite programming in C++ for a Supernova Satellite research team and backend automation (mostly scripts) as a Junior Developer for a credit firm in Chicago, which is where I'm originally from. I'm really into music, a wide variety of video games, and poker (I can quit whenever I want).</p>
+				</button>
+			</div>		
+
+
+		</div>
 
 
 	</main>
