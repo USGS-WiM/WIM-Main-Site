@@ -38,10 +38,33 @@
 	}
 }
 
+// text for team body page
+#Team_Page{
+	.header1{
+		font-size: 2.0em;
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+		text-align: center;
+		font-weight: bold;
+		display: block;
+		box-sizing: border-box;
+		padding: 10px;
+		margin: 0;
+	}
+	.header2{
+		font-size: 1.3em;
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+		line-height: 1.4em;
+		text-align: center;
+		display: block;
+		box-sizing: border-box;
+		padding: 15px;
+		margin: 0;
+	}
+}
 
 // Grid for team members
 #teamGrid{
-	margin: 55px 0;
+	margin: 20px 0;
 	display: flex;
 	gap: 50px;
 	flex-wrap: wrap;
