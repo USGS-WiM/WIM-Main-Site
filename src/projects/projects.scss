@@ -1,6 +1,31 @@
 
+.project-grid{
+
+	.project{
+		display: flex;
+		gap: 30px;
+		margin: 85px 0;
+
+		.project-image{
+			width: 200px;
+			height: auto;
+
+			img{
+				width: 100%;
+				height: auto;
+				border-radius: var(--borderRadius);
+			}
+		}
+
+		.project_info{
+
+		}
+	}
+}
+
+
+
 #projectGrid{
-	margin: 75px 350px;
 	display: flex;
     flex-direction: column;
 	gap: 35px;

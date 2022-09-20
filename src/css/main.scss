@@ -1,6 +1,9 @@
 //! Main 
 // Main SCSS file to import all others
 
+// USWDS 
+@import '../../node_modules/@uswds/uswds/dist/css/uswds.min.css';
+
 // Variables
 @import 'variables.scss';
 // Then reset
@@ -10,9 +13,10 @@
 // Then everything else
 @import 'typography.scss';
 @import 'structure.scss';
+@import 'helpers.scss';
+
+
 // Pages
 @import 'pages/home.scss';
 @import '../team/team.scss';
 @import '../projects/projects.scss';
-// Pages
-@import '../../node_modules/@uswds/uswds/dist/css/uswds.min.css';

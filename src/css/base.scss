@@ -20,6 +20,9 @@ body, html{
 body{
 	max-height: none;
 	box-sizing: border-box;
+	position: relative;
+	height: 100vh;
+	overflow: auto;
 }
 *{
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);

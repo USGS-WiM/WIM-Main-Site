@@ -14,7 +14,18 @@ main{
 	box-sizing: border-box;
 	padding: 0 var(--sidePadding);
 }
+// Main page size
+.page{
+	max-width: var(--maxWidthSmall);
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	padding-left: var(--sidePadding);
+	padding-right: var(--sidePadding);
+}
 
+// Required USGS Top Bar
+// Required USGS Top Bar
 // Required USGS Top Bar
 #USGS_nav{
 	display: block;
@@ -24,6 +35,7 @@ main{
 	background-color: #02274b;
 	a{
 		display: block;
+		width: fit-content;
 	}
 
 	img{
@@ -33,16 +45,22 @@ main{
 }
 
 // Main WIM Top Bar
+// Main WIM Top Bar
+// Main WIM Top Bar
 // And Navigation
 #WIM_nav{
 	display: flex;
 	width: 100%;
-	background-color: var(--grey);
+	background-color: var(--background);
 	box-sizing: border-box;
-	padding: 15px var(--sidePadding) 12px var(--sidePadding);
+	padding: 0 var(--sidePadding) 0 var(--sidePadding);
 	justify-content: space-between;
 	gap: 30px;
-	border-bottom: 1px solid var(--border);
+	border-top: 2px solid var(--borderFade);
+	border-bottom: 2px solid var(--borderFade);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 
 	// WIM Logo
 	#WIM_branding{
@@ -51,7 +69,8 @@ main{
 		}
 
 		img{
-			height: 40px;
+			margin: 8px 0;
+			height: 36px;
 			width: auto;
 		}
 	}
@@ -66,26 +85,52 @@ main{
 			flex-direction: column;
 			justify-content: center;
 			box-sizing: border-box;
-			padding-bottom: 5px;
-			font-size: 1.2em;
-			font-weight: 500;
+			font-size: 1em;
+			font-weight: 600;
 			color: var(--text);
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
 
 			i{
 				margin-right: 5px;
 			}
+
+			// Hover nav links
+			&:hover,
+			&:focus{
+				color: var(--primary);
+				text-decoration: none;
+				border-bottom-color: var(--primary);
+			}
+
 		}
+
+		// Active Classes
+		&.active-home #nl__h,
+		&.active-team #nl__t,
+		&.active-projects #nl__p,
+		&.active-geonarratives #nl__g{
+			border-bottom-color: var(--primary);
+			color: var(--text);
+		}
+
 	}
+
+
 }
 
 
 // WIM Footer
+// WIM Footer
+// WIM Footer
 #WIM_footer{
-	background-color: var(--grey);
+	background-color: var(--background);
 	box-sizing: border-box;
 	padding: 35px var(--sidePadding);
-	border-top: 1px solid var(--border);
+	border-top: 2px solid var(--borderFade);
+	border-bottom: 2px solid var(--borderFade);
 	display: flex;
+	justify-content: center;
 	gap: 50px;
 
 	#WIM_footer_branding{
@@ -96,19 +141,41 @@ main{
 			height: 60px;
 			width: auto;
 		}
+		
+	}
+
+	p{
+		line-height: 1.4em;
+	}
+}
+
+
+
+// USWDS Footer
+// USWDS Footer
+// Tweaks
+.usa-identifier{
+	background-color: #02274b;
+
+	a{
+		color: var(--white) !important;
+		opacity: 0.8;
+		text-decoration: none;
 	}
 }
 
 // USGS Footer
-#USGS_footer{
-	background-color: #02274b;
-	box-sizing: border-box;
-	padding: 8px var(--sidePadding);
-	a{
-		color: white;
-		font-size: 0.8em;
-		margin-right: 18px;
-		position: relative;
-		text-decoration: none;
-	}
-}
+// USGS Footer
+// USGS Footer
+// #USGS_footer{
+// 	background-color: #02274b;
+// 	box-sizing: border-box;
+// 	padding: 8px var(--sidePadding);
+// 	a{
+// 		color: white;
+// 		font-size: 0.8em;
+// 		margin-right: 18px;
+// 		position: relative;
+// 		text-decoration: none;
+// 	}
+// }

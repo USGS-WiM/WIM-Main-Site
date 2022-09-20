@@ -20,15 +20,8 @@ $screenXL: 1400px;
 	--borderRadius: 4px;
 
 	// Sizes 
-	--inputHeight: 40px;
-	 @media (max-width: $screenSM) {
-		--inputHeight: 50px;
-	} 
-
-	--topBarHeight: 74px;
-	 @media (max-width: $screenSM) {
-		--topBarHeight: 54px;
-	} 
+	--maxWidth: 1600px;
+	--maxWidthSmall: 1050px;
 	--sidePadding: 3.5rem;
 	 @media (max-width: $screenSM) {--sidePadding: 2.5rem;}
 	@media (max-width: $screenSM) {--sidePadding: 1.5rem;} 
@@ -62,7 +55,7 @@ $screenXL: 1400px;
 		--textLight: rgba(3, 46, 86, 0.75);
 	 // Borders 
 	--border: rgba(3, 3, 41, 0.45);
-		--borderLight: rgba(3, 3, 41, 0.2);
+		--borderFade: rgba(3, 3, 41, 0.2);
 
 	 // Links 
 	--links: #4437f5;
@@ -92,7 +85,7 @@ $screenXL: 1400px;
 		--textLight: rgba(255,255,255, 0.82);
 	 // Borders 
 	--border: rgba(148, 148, 163, 0.5);
-		--borderLight: rgba(148, 148, 163, 0.35);
+		--borderFade: rgba(148, 148, 163, 0.35);
 
 	 // Misc 
 	--outline: var(--blue);

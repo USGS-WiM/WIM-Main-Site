@@ -3,16 +3,16 @@ window.onload=function(){
 	console.log("Team Page Loaded 👍")
 
 
-	// Highlight member with class
-	document.getElementById("testButton").onclick = function() {
-		// Add class to highlight
-		document.getElementById("hans").classList.add("highlight");
+	// // Highlight member with class
+	// document.getElementById("testButton").onclick = function() {
+	// 	// Add class to highlight
+	// 	document.getElementById("hans").classList.add("highlight");
 
-		// Remove highlight after 2 seconds
-		setTimeout(function(){
-			document.getElementById("hans").classList.remove("highlight");
-		}, 2000); //wait 2 seconds - 2000 milliseconds
-	};
+	// 	// Remove highlight after 2 seconds
+	// 	setTimeout(function(){
+	// 		document.getElementById("hans").classList.remove("highlight");
+	// 	}, 2000); //wait 2 seconds - 2000 milliseconds
+	// };
 
 
 
@@ -23,7 +23,8 @@ window.onload=function(){
 	// Team Page Map
 	// 
 	var mapZoomLevel = 4;
-	var mapCenter = [37.76, -95.38];
+	var mapCenter = [37.0, -95.38];
+	// var mapCenter = [37.76, -95.38];
 
 	// Create Map
 	var map = L.map('teamMap', {zoomControl: false, defaultExtentControl: false}).setView(mapCenter, mapZoomLevel);
@@ -58,19 +59,21 @@ window.onload=function(){
 	// Set basemap based on time
 	// 7am-8pm, light theme
 	// 8pm-7am, Night theme
-	var today = new Date()
-	var curHr = today.getHours()
-	if (curHr < 8) {
-		NASAGIBS_ViirsEarthAtNight2012.addTo(map);
-	} else if (curHr < 20) {
-		CartoDB_PositronNoLabels.addTo(map);
-	} else {
-		NASAGIBS_ViirsEarthAtNight2012.addTo(map);
-	}
+	// var today = new Date()
+	// var curHr = today.getHours()
+	// if (curHr < 8) {
+	// 	NASAGIBS_ViirsEarthAtNight2012.addTo(map);
+	// } else if (curHr < 20) {
+	// 	CartoDB_PositronNoLabels.addTo(map);
+	// } else {
+	// 	NASAGIBS_ViirsEarthAtNight2012.addTo(map);
+	// }
+	
+	CartoDB_PositronNoLabels.addTo(map);
 
 	// // Center Map
 	var centerMap = function(){
-		map.flyTo([43, -97], mapZoomLevel, {
+		map.flyTo(mapCenter, mapZoomLevel, {
 			animate: true,
 			duration: 0.7
 		});
@@ -82,17 +85,22 @@ window.onload=function(){
 	var geojsonFeature = [ 
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup' onclick='popupClick'><b>Madison, WI</b><button id='Gary'>Gary Latzke</button><button id='Blake'>Blake Draper</button><button id='Erik'>Erik Myers</button><button id='Aaron'>Aaron Stephenson</button><button id='Abby'>Abby Gleason</button><button id='Kip'>Kip Sullivan</button><button id='Lily'>Lily Houtman</button><button id='Milan'>Milan Liu</button></div>" },
+			"properties": {"popupContent": "<div class='map-popup'><b>Madison, WI</b><button id='Gary'>Gary Latzke</button><button id='Blake'>Blake Draper</button><button id='Erik'>Erik Myers</button><button id='Aaron'>Aaron Stephenson</button><button id='Kip'>Kip Sullivan</button><button id='Lily'>Lily Houtman</button></div>" },
 			"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 		},
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup'><b>Twin Cities, MN</b><button id='Hans'>Hans Vraga</button><button id='Mitch'>Mitch Samuels</button><button id='Kathy'>Kathy Dooley</button><button id='Anders'>Anders Hopkins</button><button id='Julia'>Julia Prokopec</button></div>" },
+			"properties": {"popupContent": "<div class='map-popup'><b>Twin Cities, MN</b><button id='Hans'>Hans Vraga</button><button id='Mitch'>Mitch Samuels</button><button id='Kathy'>Kathy Dooley</button><button id='Anders'>Anders Hopkins</button><button id='Julia'>Julia Prokopec</button><button id='Andrew'>Andrew Laws</button><button id='Gene'>Gene Trantham</button><button id='Ethan'>Ethan Bott</button><button id='Will'>Will Bazell</button></div>" },
 			"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 		},
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><button id='Lauren'>Lauren Privette</button>" },
+			"properties": {"popupContent": "<div class='map-popup'><b>Denver, CO</b><button id='Milan'>Milan Liu </button></div>"},
+			"geometry": {"type": "Point", "coordinates": [-104.9903, 39.7392]},
+		},
+		{
+			"type": "Feature",
+			"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><button id='Lauren'>Lauren Privette</button><button id='Hannah'>Hannah Ridgon</button>"},
 			"geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
 		},
 		{
@@ -131,7 +139,7 @@ window.onload=function(){
 	// WimIcon & popup
 	var myIcon = L.Icon.extend({});
 	var wimIcon = new myIcon({
-		iconUrl: require('../assets/images/map_pin.png'),
+		iconUrl: require("../assets/icons/map_pin.png"),
 		iconSize: [24.9, 28.95],
 		iconAnchor: [12.45,28.95],
 		popupAnchor: [0,-28.95],
@@ -146,22 +154,25 @@ window.onload=function(){
 					duration: 0.7
 				});
 			}).addTo(map).bindPopup(feature.properties.popupContent);
-
 		}
 	}).addTo(map);
 
-	// Add Markers
+	// Markers
 	var markers = L.markerClusterGroup({maxClusterRadius: 1 });
 	markers.addLayer(geoJsonLayer);
+
 	// On popup close, center map
-	markers.on('popupclose', function(e) {
+	map.on('popupclose', function(e) {
+		console.log('popup CLOSED');
 		centerMap();
 	});
 
 	// On popup open, listen for clicks
-	markers.on('popupopen', function(e) {
+	map.on('popupopen', function(e) {
 		document.getElementsByClassName("map-popup")[0].addEventListener('click', highlightMember, false);
+		console.log('popupopen');
 	});
+
 	// Highlight member when name is clicked
 	var highlightMember = function(memberID) {
 		console.log("Clicked Popup")
@@ -169,16 +180,29 @@ window.onload=function(){
 		if(event.target.id){
 			var memberID = event.target.id.toLowerCase();
 			console.log("Clicked Member")
-			console.log(memberID)
-		}
-	};
+			// Scroll to member
+			document.getElementById(memberID).scrollIntoView({behavior: 'smooth'}, true);
+
+
+			// Highlight member photo
+			// Add class to highlight
+			document.getElementById(memberID + "Wrapper").classList.add("highlight");
+			// Remove highlight after 2 seconds
+			setTimeout(function(){
+				document.getElementById(memberID + "Wrapper").classList.remove("highlight");
+			}, 2000); //wait 2 seconds - 2000 milliseconds
+
+		};
+	}
 
 	// Add markers to map and set bounds, zoom
 	map.addLayer(markers);
 	map.fitBounds(markers.getBounds());
 	map.setZoom(mapZoomLevel);
-	map.setView([43,-97]);
+	map.setView([mapCenter]);
 
 
-} // End Window Onload
+}
+
+// End Window Onload
 

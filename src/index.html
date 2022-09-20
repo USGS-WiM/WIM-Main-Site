@@ -12,7 +12,7 @@
 	}'></include>
 
 	<!-- Javascript -->
-	<!-- <script type="module" src="./js/app.js"></script> -->
+	<script type="module" src="./app.js"></script>
 
 	<title>WIM - Home</title>
 
@@ -22,19 +22,90 @@
 
 	<!-- Top Bar / Navigation -->
 	<include src="./partials/header.html" locals='{
-        "path": "./"
+        "path": "./",
+        "active_nav": "home"
     }'></include>
 
 	<!-- Main Content -->
 	<main>
 
-		<section>
-			<h1>Home Page</h1>
-			<br/><br/>
 
-			<button class="usa-button">
-				USWDS Button
-			</button>
+		<!-- Hero -->
+		<div id="homeHero">
+			<div id="homeHeroOverlay">
+				<div class="page">
+					<h1>Modern Web Development in support of delivering the best of the USGS to the public</h1>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Content -->
+		<section class="page mtop-lg">
+
+			<!-- About -->
+			<h3>What is Web Informatics and Mapping?</h3>
+
+			<p class="mtop-sm mbottom-sm">
+				Web Informatics and Mapping (WIM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations. WIM team members combine collective expertise in cartography, science, and web technology to create custom products that are practical, intuitive, and focused on our cooperators' needs.
+			</p>
+
+			<p>
+				Our work includes digital cartography, data visualization, data management, data analysis, and decision support. All of our applications are created with the latest web technology, including Angular and ArcGIS. You can view the code for our public projects on our GitHub at <a href="https://github.com/USGS-WIM" target="_blank">github.com/USGS-WIM</a>.
+			</p>
+
+
+			<a class="usa-button mtop-sm" href="/projects">View our Projects</a>
+
+
+
+
+			<!-- Cooperators -->
+			<h3 class="mtop-lg mbottom-md">Who do we work with?</h3>
+			<div class="cooperator-logos">
+				<img src="./assets/cooperators/doi.png"/>
+				<img src="./assets/cooperators/fws.png"/>
+				<img src="./assets/cooperators/epa.png"/>
+				<img src="./assets/cooperators/noaa.png"/>
+				<img src="./assets/cooperators/glri.png"/>
+				<img src="./assets/cooperators/lcc.png"/>
+				<img src="./assets/cooperators/ijc.png"/>
+				<img src="./assets/cooperators/dhs.png"/>
+				<img src="./assets/cooperators/badriver.png"/>
+				<img src="./assets/cooperators/nawqa.png"/>
+				<img src="./assets/cooperators/ars.png"/>
+			</div>
+
+
+
+
+			<!-- Working with us -->
+			<h3 class="mtop-xl">Interested in working with us?</h3>
+
+			<p>
+				Our projects vary widely in scale, scope, and budget. To work with us or find out more about the individualized services we offer, please contact us.
+			</p>
+
+			<div class="flex gap mtop-sm">
+				<!-- Lorraine -->
+				<div class="home-contact">
+					<b>Lorraine Metz</b>
+					Operations Coordinator
+					<a href="mailto:lmetz@usgs.gov" target="_blank">lmetz@usgs.gov</a>
+				</div>
+				<!-- Hans -->
+				<div class="home-contact">
+					<b>Hans Vraga</b>
+					Acting WIM Chief
+					<a href="mailto:hvraga@usgs.gov" target="_blank">hvraga@usgs.gov</a>
+				</div>
+			</div>
+
+
+
+
+			<div class="mtop-xl"></div>
+
 		</section>
 
 	</main>

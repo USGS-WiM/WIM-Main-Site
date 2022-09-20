@@ -11,8 +11,8 @@
 	}'></include>
 
 	<!-- Javascript -->
-	 <script type="module" src="projects.js"></script>
-	 
+	<script type="module" src="projects.js"></script>
+
 	<title>WIM - Projects</title>
 
 </head>
@@ -20,374 +20,171 @@
 <body>
 
 	<!-- Top Bar / Navigation -->
-    <include src="./partials/header.html" locals='{
-        "path": "../"
+	<include src="./partials/header.html" locals='{
+        "path": "../",
+        "active_nav": "projects"
     }'></include>
 
 
 	<!-- Main Content -->
 	<main>
-		<section style="margin: 50px 300px;">
+		<section class="page mtop-lg">
 			<h1>Explore Our Projects</h1>
-			<p>Discover some of the tools we've developed. Click a thumbnail to learn more. 
-				All applications listed here are publicly available and have links to their 
-				product websites and additional information.</p>
-			</section>
+			<p class="big">
+				Discover some of the tools we've developed.
+				All applications listed here are publicly available and have links to their
+				product websites and additional information.
+			</p>
+		</section>
 
-			<div id= "projectGrid" class="projectGrid">	
+
+		<div class="project-grid page mtop-lg">
+
+
+			<!-- StreamStats -->
+			<div class="project">
+
+				<div class="project-image">
+					<img src="../assets/images/projects/streamstats.png" alt="StreamStats" />
+				</div>
 				
-				<button class= "project" id = "streamstats">
-					<img   src="../assets/images/projects/streamstats.png" alt="StreamStats"/>
-						<div class = "project-info">
-							<span class="title">StreamStats</span>
-							<p class="caption">StreamStats provides access to spatial analytical tools providing USGS water 
-							science-backed information that are useful for water-resources planning and management, 
-							and for engineering and design purposes.</p>
-						</div>
-					</button>
-
-
-				<div class="popup" id="streamstats-pop">
-					<div class= "overlay" id="streamstats-pop-overlay" ></div>
-					<div class="content" id = "streamstats-pop-content">
-						<button class = "close-btn" id = "close_streamstats" >Close</button>
-						<div class="project-hero" style="background-image: url(../assets/images/projects/streamstats_hero.jpeg");>
-						<h1>StreamStats</h1>
-						<div class="cooperator">
-							<span class="cooperator-label">In cooperation with</span>
-							<span class = "cooperator-name">USGS Water Mission Area</span>
-						</div>
-						<a class="repo-btn" href="https://streamstats.usgs.gov/ss/" target = "_blank">Open Stream Stats</a>
-						<a class="repo-btn" href="https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools" target=" _blank">View Project Page</a>
-						</div> 
-
-						<div class = "project-page">StreamStats is a Web-based Geographic Information
-							 Systems (GIS) application that provides users with access to an assortment of analytical tools that are useful for a variety of water-resources planning and management purposes, and for engineering and design purposes. StreamStats users can select USGS data-collection station locations shown on a map and obtain previously published information for the stations. Users also can select any location along a stream and obtain the drainage-basin boundary, basin characteristics, and estimates of streamflow statistics for the location. The streamflow statistics that StreamStats can provide for data-collection stations and for user-selected ungaged sites vary among the implemented states and among data-collection stations within states.
-							<br><br>WIM began collaborating with the USGS Water Mission Area StreamStats development team in 2014, and has since taken the technical and architecture lead in web development. To keep StreamStats on the forefront of web technology, WIM has moved StreamStats away from a proprietary monolithic application to an ecosystem of web applications and services allowing for more flexibility and extensibility. Adapting an industry-standard database, web service, and client architecture model has allowed development of numerous APIs and clients to allow for external development on this key system as well better integration possibilities within the USGS. WIM looks forward to continued involvement in the project, adding additional features and functionality to StreamStats as well as integrating with other Water Mission Area systems and services.
-						<div class = "project-images">	
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/streamstats.png" alt="StreamStats"/>
-								<div class = "caption">Primary StreamStats Client Interface showing large basin in IA</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/streamstats_2.png" alt="StreamStats"/>
-								<div class = "caption">API documentation for National Streamflow Statistics</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/streamstats_3.png" alt="StreamStats"/>
-								<div class = "caption">Upstream flow trace from pourpoint in an OH basin</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/streamstats_4.png" alt="StreamStats"/>
-								<div class = "caption">Flow Statistics available in Streamstats report</div>
-							</div>
-							</div>
-						
-						</div>
+				<div class="project-info">
+					<h3>StreamStats</h3>
+					<p>
+						StreamStats provides access to spatial analytical tools providing USGS water
+						science-backed information that are useful for water-resources planning and management,
+						and for engineering and design purposes
+					</p>
+					<div class="flex gap">
+						<a class="usa-button" href="https://streamstats.usgs.gov/ss/" target="_blank">Open StreamStats</a>
+						<a class="usa-button usa-button--base" href="https://www.usgs.gov/mission-areas/water-resources/science/streamstats-streamflow-statistics-and-spatial-analysis-tools" target="_blank">Project Page</a>
 					</div>
 				</div>
-
-
-		
-				<button class= "project" id = "fim">
-					<img src="../assets/images/projects/fim_1.png" alt="Flood Inundation Mapper"/>
-					<div class="project-info">
-						<span class="title">Flood Inundation Mapper</span>
-						<p class="caption">The USGS Flood Inundation Mapper combines flood inundation map libraries with real-time 
-						USGS river-level data and National Weather Service flood forecasts into a powerful tool that helps 
-						communicate when and where flooding may occur and better inform local responses that can protect lives 
-						and property. </p>
-					</div>
-				</button>
-
-				<div class="popup" id="fim-pop">
-					<div class= "overlay" id="fim-pop-overlay" ></div>
-					<div class="content" id = "fim-pop-content">
-						<button class = "close-btn" id = "close_fim" >Close</button>
-						<div class="project-hero" style="background-image: url(../assets/images/projects/fim_hero.jpeg");>
-						<h1>Flood Inundation Mapper</h1>
-						<div class="cooperator">
-							<span class="cooperator-label">In cooperation with</span>
-							<span class = "cooperator-name">USGS Water Mission Area</span>
-						</div>
-						<a class="repo-btn" href="https://github.com/usgs-wim/fim-js" target = "_blank">View on Github</a>
-						<a class="repo-btn" href="https://www.usgs.gov/mission-areas/water-resources/science/flood-inundation-mapping-fim-program?qt-science_center_objects=0#qt-science_center_objects" target=" _blank">View Project Page</a>
-						</div> 
-
-						<div class = "project-page"> The USGS Flood Inundation Mapping Program has two main functions: <br><br>
-							1) Partner with local communities to assist with the development and validation of flood inundation map libraries. A flood inundation map library is a set of maps that shows where flooding may occur over a range of water levels in the community's local stream or river. The USGS works with communities to identify an appropriate stream section, gather the necessary data to model where flooding will likely occur, and verify that the maps produced are scientifically sound.
-							<br><br>
-							2) Provide online access to flood inundation maps along with real-time streamflow data, flood forecasts, and potential loss estimates. Once a community's map library is complete, it is uploaded to the FIM Web application, an online public mapping application. This web application allows users to explore the full set of inundation maps that shows where flooding would occur given a selected stream condition. Users can also access historical flood information and potential loss estimates based on the severity of the flood. The FIM Web Application helps communities visualize potential flooding scenarios, identify areas and resources that may be at risk, and enhance their local response effort during a flooding event.
-							<br><br>
-							WIM has lead development and technical operations of the USGS FIM program since inception. In collaboration with the Water Mission Area and other Water Science Center personnel, WIM has provided FIM map services, supported the development and deployment of new FIM sites, and maintained an interactive web application to serve the public.
-							<br><br>
-
-						<div class = "project-images">	
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/fim_1.png" alt="FIM Flood Tools"/>
-								<div class = "caption">FIM Flood Tools</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/fim_2.png" alt="FIM hydrograph"/>
-								<div class = "caption">Site Hydrograph</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/fim_3.png" alt="FIM forecast sites"/>
-								<div class = "caption">AHPS Forecast Sites & Explanation</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/fim_4.png" alt="FIM Minimized flood tools"/>
-								<div class = "caption">Minimized Flood Tools</div>
-							</div>
-							</div>
-						
-						</div>
-					</div>
-				</div>
-
-
-				<button class= "project" id="sparrow">
-				<img src="../assets/images/projects/sparrow_1.png" alt="SPARROW"/>
 				
-					<div class= "project-info">
-					<span class="title">SPARROW</span>
-					<p class="caption">SPARROW is a collection of tools for relating water-quality monitoring data 
-						and watershed attributes. Sparrow models are designed to describe the spatial patterns of 
-						water quality and the factors that affect it. WIM has partnered with SPARROW scientists to 
-						provide a suite of map applications depicting SPARROW models for different regions of the 
-						U.S. and parts of Canada.</p>
-						</div>
-					</button>
-
-					<div class="popup" id="sparrow-pop">
-						<div class= "overlay" id="sparrow-pop-overlay" ></div>
-						<div class="content" id = "sparrow-pop-content">
-							<button class = "close-btn" id = "close_sparrow" >Close</button>
-							<div class="project-hero" style="background-image: url(../assets/images/projects/sparrow_hero.jpeg");>
-							<h1>SPARROW</h1>
-							<div class="cooperator">
-								<span class="cooperator-label">In cooperation with</span>
-								<span class = "cooperator-name">National Water-Quality Assessment</span>
-							</div>
-							<a class="repo-btn" href="https://github.com/USGS-WiM?utf8=%E2%9C%93&q=sparrow" target = "_blank">View on Github</a>
-							<a class="repo-btn" href="https://www.usgs.gov/mission-areas/water-resources/science/sparrow-modeling-estimating-nutrient-sediment-and-dissolved?qt-science_center_objects=4#qt-science_center_objects" target=" _blank">View Project Page</a>
-							</div> 
-	
-							<div class = "project-page">SPARROW (SPAtially Referenced Regressions On Watershed attributes) models estimate the amount of a contaminant transported from inland watersheds to larger water bodies by linking monitoring data with information on watershed characteristics and contaminant sources. SPARROW models are used to estimate long-term average values of water characteristics, such as the amount of a contaminant that is delivered downstream, on the basis of existing monitoring data, location and strength of contaminant sources, and characteristics of the landscape. <br><br>
-								These interactive map applications are designed around comprehensive user-defined map selections with dynamic graphs and tables to visualize underlying data. The flexible, map-based approach to viewing SPARROW models helps managers visualize thousands to millions of data points to determine how to reduce loads of contaminants and design protection strategies; design strategies to meet regulatory requirements; predict changes in water quality that might result from management actions; and identify gaps and priorities in monitoring.
-								<br><br>
-								In collaboration with local and national SPARROW modelers, WIM has produced several generations of SPARROW online interactive map viewers to highlight the amount of data produced by this powerful model.
-								<br><br>
-								
-	
-							<div class = "project-images">	
-								<div class="project-thumbnail">
-									<img class = "thumbnail" src="../assets/images/projects/sparrow_1.png" alt="Sparrow Interface"/>
-									<div class = "caption">The main interface of a SPARROW application allows flexible map selections and customizable data views</div>
-								</div>
-	
-								<div class="project-thumbnail">
-									<img class = "thumbnail" src="../assets/images/projects/sparrow_2.png" alt="Sparrow National Model"/>
-									<div class = "caption">An example of a SPARROW national model</div>
-								</div>
-	
-								<div class="project-thumbnail">
-									<img class = "thumbnail" src="../assets/images/projects/sparrow_3.png" alt="Sparrow interactive chart"/>
-									<div class = "caption">Interactive chart depicting nutrient sources and quantities within a specified region</div>
-								</div>
-	
-								<div class="project-thumbnail">
-									<img class = "thumbnail" src="../assets/images/projects/sparrow_4.png" alt="Sparrow downloadable table"/>
-									<div class = "caption">Downloadable table view for all nutrient source values in a user-selected region</div>
-								</div>
-								</div>
-							
-							</div>
-						</div>
-					</div>
-
-				
-				<button class= "project" id="whispers">
-					<img src="../assets/images/projects/whispers_1.png" alt="WHISPers"/>
-					<div class="project-info">
-						<span class="title">WHISPers</span>
-						<p class="caption">WHISPers is the Wildlife Health Information Sharing Partnership event
-						 reporting system. It web application exposing wildlife mortality data submitted by 
-						 partners across North America and verified by trained biologists.</p>
-					</div>
-				</button>
-
-				<div class="popup" id="whispers-pop">
-					<div class= "overlay" id="whispers-pop-overlay" ></div>
-					<div class="content" id = "whispers-pop-content">
-						<button class = "close-btn" id = "close_whispers" >Close</button>
-						<div class="project-hero" style="background-image: url(../assets/images/projects/whispers_hero.jpeg");>
-						<h1>WHISPers</h1>
-						<div class="cooperator">
-							<span class="cooperator-label">In cooperation with</span>
-							<span class = "cooperator-name">USGS National Wildlife Health Center</span>
-						</div>
-						</div>
-						<div class = "project-page">
-							WHISPers (Wildlife Health Information Sharing Partnership event reporting system) is a partner-driven, web-based repository for sharing current and historic data on wildlife morbidity or mortality events in North America and beyond. The data, including event locations, onset and ending dates, species affected, and diagnosis has generously been shared with the USGS National Wildlife Health Center over time by hundreds of natural resource managers and stakeholders across the U.S. and beyond to enhance collective understanding of disease in wildlife populations.
-							<br><br>
-							In collaboration with the National Wildlife Health Center and with a grant from the National Biosurveillance Integration Center, WIM developed WHISPers version 2 to modernize the application architecture, user interface, and increase the data management and data sharing capabilities of the system; with the ultimate goal of making wildlife mortality and morbidity data more accessible to all interested parties.
-							<br><br>
-
-		
-						<div class = "project-images">	
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/whispers_1.png" alt="WHISPers map search results"/>
-								<div class = "caption">WHISPers maps search results as well as providing tabular results for easy review</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/whispers_2.png" alt="WHISPers search"/>
-								<div class = "caption">Users can search the WHISPers with a number of parameters relating to location and nature of the infection.</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/whispers_3.png" alt="WHISPers event details"/>
-								<div class = "caption">A dedicated event details page for each event provides all event details available. Availability is based on permissions required for more sensitive data.</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/whispers_4.png" alt="WHISPers user dashboard"/>
-								<div class = "caption">A user dashboard allows for special actions for data and contact management that allow the user to personalize their experience.</div>
-							</div>
-							</div>
-						
-						</div>
-					</div>
-				</div>
-
-				
-				<button class= "project" id="wetlands">
-					<img src="../assets/images/projects/wetlands_1.png" alt="Wetlands Inventory"/>
-					<div class="project-info">
-					<span class="title">Wetlands Inventory</span>
-					<p class="caption">The U.S. Fish and Wildlife Service is the principal federal agency that 
-						provides information to the public on the extent and status of the Nation's wetlands. 
-						The agency has developed a series of topical maps to show wetlands and deepwater habitats 
-						which can be viewed and downloaded through the wetlands mapper.</p>
-					</div>
-				</button>
-
-				<div class="popup" id="wetlands-pop">
-					<div class= "overlay" id="wetlands-pop-overlay" ></div>
-					<div class="content" id = "wetlands-pop-content">
-						<button class = "close-btn" id = "close_wetlands" >Close</button>
-						<div class="project-hero" style="background-image: url(../assets/images/projects/wetlands_hero.jpeg");>
-						<h1>Wetlands Inventory</h1>
-						<div class="cooperator">
-							<span class="cooperator-label">In cooperation with</span>
-							<span class = "cooperator-name">US Fish and Wildlife Service</span>
-						</div>
-						<a class="repo-btn" href="https://github.com/usgs-wim/swi" target = "_blank">View on Github</a>
-			
-						</div>
-						<div class = "project-page">
-							The Wetlands mapper is designed to deliver easy-to-use, map like views of America's Wetland resources. It integrates digital map data along with other resource information to produce current information on the status, extent, characteristics and functions of wetlands, riparian, and deepwater habitats. The Wetlands Mapper fulfills the U.S. Fish and Wildlife Service's strategic plan for the development, revision and dissemination of wetlands data and information to resource managers and the public. This information is intended to promote the understanding and conservation of wetland resources through discovery and education as well as to aid in resource management, research and decision making.
-							<br><br>
-							WIM personnel and the FWS wetlands group made use of an inter-agency agreement in 2000s to co-develop this key resource. This Federal partnership has yielded tremendous benefits in ongoing efforts to configure, improve and distribute the wetlands map information using newer technologies in digital mapping and web-serving capabilities.
-							<br><br>
-
-		
-						<div class = "project-images">	
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/wetlands_1.png" alt="Wetlands 1"/>
-								<div class = "caption">Wetlands Screenshot 1 Caption</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/wetlands_2.png" alt="Wetlands 2"/>
-								<div class = "caption">Wetlands Screenshot 2 Caption</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/wetlands_3.png" alt="Wetlands 3"/>
-								<div class = "caption">Wetlands Screenshot 3 Caption</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/wetlands_4.png" alt="Wetlands 4"/>
-								<div class = "caption">Wetlands Screenshot Caption 4</div>
-							</div>
-							</div>
-						
-						</div>
-					</div>
-				</div>
-
-
-			
-				<button class= "project" id="nawqa">
-					<img src="../assets/images/projects/nawqa_1.png" alt="NAWQA Surface Water Quality Trends"/>
-					<div class="project-info">
-						<span class="title">NAWQA Surface Water Quality Trends</span>
-						<p class="caption">This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper 
-						provides results from the largest-ever assessment of water-quality changes in the Nation's 
-						streams and rivers. More than 185 million water-quality records from over 600 Federal, State, 
-						Tribal, and local organizations were screened as part of this assessment.</p>
-					</div>
-				</button>
-
-				<div class="popup" id="nawqa-pop">
-					<div class= "overlay" id="nawqa-pop-overlay" ></div>
-					<div class="content" id = "nawqa-pop-content">
-						<button class = "close-btn" id = "close_nawqa" >Close</button>
-						<div class="project-hero" style="background-image: url(../assets/images/projects/nawqa_hero.jpeg");>
-						<h1>NAWQA Surface Water Quality Trends</h1>
-						<div class="cooperator">
-							<span class="cooperator-label">In cooperation with</span>
-							<span class = "cooperator-name">National Water Quality Assessment</span>
-						</div>
-						<a class="repo-btn" href="https://github.com/USGS-WiM/nawqa-sw-trends" target = "_blank">View on Github</a>
-			
-						</div>
-						<div class = "project-page">
-							One of the major goals of the U.S. Geological Survey's (USGS) National Water-Quality Assessment project is to answer the question “Has water quality been changing over time?”. To support that goal, they have conducted long-term consistent and comparable monitoring on streams and rivers throughout the Nation since 1992. Other USGS programs, as well as many other Federal, State, regional, and local monitoring organizations, also have collected long-term water-quality data to support their own assessments of changing water- quality conditions. Data from these organizations have been aggregated, screened, standardized, and used to support the most comprehensive assessment of stream-quality trends conducted to date in the United States. Collectively, these trend results will be used to provide insight into how natural features and human activities have contributed to water-quality changes over time in the Nation's streams and rivers.
-							<br><br>
-							WIM worked closely with USGS scientists to develop and release this interactive map interface with the release of their trends report.
-							<br><br>
-
-		
-						<div class = "project-images">	
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/nawqa_1.png" alt="Nawqa map"/>
-								<div class = "caption">Map icons indicating trend results</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/nawqa_2.png" alt="Highlighted HUC"/>
-								<div class = "caption">Highlighted HUC and site information</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/nawqa_3.png" alt="Results table"/>
-								<div class = "caption">Trend results table for a site</div>
-							</div>
-
-							<div class="project-thumbnail">
-								<img class = "thumbnail" src="../assets/images/projects/nawqa_4.png" alt="Constituent Select Menu"/>
-								<div class = "caption">Constituent Select Menu</div>
-							</div>
-							</div>
-						
-						</div>
-					</div>
-				</div>
 			</div>
+
+
+			<!-- FIM -->
+			<div class="project">
+
+				<div class="project-image">
+					<img src="../assets/images/projects/fim_1.png" alt="Flood Inundation Mapper" />
+				</div>
+				
+				<div class="project-info">
+					<h3>Flood Inundation Mapper</h3>
+					<p>
+						The USGS Flood Inundation Mapper combines flood inundation map libraries with real-time
+						USGS river-level data and National Weather Service flood forecasts into a powerful tool that helps
+						communicate when and where flooding may occur and better inform local responses that can protect lives and property. 
+					</p>
+					<div class="flex gap">
+						<a class="usa-button" href="https://fim.wim.usgs.gov/fim/" target="_blank">Open FIM</a>
+						<a class="usa-button usa-button--base" href="https://www.usgs.gov/mission-areas/water-resources/science/flood-inundation-mapping-fim-program?qt-science_center_objects=0#qt-science_center_objects" target="_blank">Project Page</a>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- SPARROW -->
+			<div class="project">
+
+				<div class="project-image">
+					<img src="../assets/images/projects/sparrow_1.png" alt="SPARROW" />
+				</div>
+				
+				<div class="project-info">
+					<h3>SPARROW</h3>
+					<p>
+						SPARROW is a collection of tools for relating water-quality monitoring data
+						and watershed attributes. Sparrow models are designed to describe the spatial patterns of
+						water quality and the factors that affect it. WIM has partnered with SPARROW scientists to
+						provide a suite of map applications depicting SPARROW models for different regions of the
+						U.S. and parts of Canada.
+					</p>
+					<div class="flex gap">
+						<a class="usa-button usa-button--base" href="https://www.usgs.gov/mission-areas/water-resources/science/sparrow-modeling-estimating-nutrient-sediment-and-dissolved?qt-science_center_objects=4#qt-science_center_objects" target="_blank">Project Page</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- WHISPers -->
+			<div class="project">
+
+				<div class="project-image">
+					<img src="../assets/images/projects/whispers_1.png" alt="WHISPers" />
+				</div>
+				
+				<div class="project-info">
+					<h3>WHISPers</h3>
+					<p>
+						WHISPers is the Wildlife Health Information Sharing Partnership event
+						reporting system. It web application exposing wildlife mortality data submitted by
+						partners across North America and verified by trained biologists.
+					</p>
+					<div class="flex gap">
+						<a class="usa-button" href="https://whispers.usgs.gov/" target="_blank">Open WHISPers</a>
+						<a class="usa-button usa-button--base" href="https://www.usgs.gov/centers/nwhc/science/whispers" target="_blank">Project Page</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Wetlands -->
+			<div class="project">
+
+				<div class="project-image">
+					<img src="../assets/images/projects/wetlands_1.png" alt="Wetlands Inventory" />
+				</div>
+				
+				<div class="project-info">
+					<h3>Wetlands Inventory</h3>
+					<p>
+						The U.S. Fish and Wildlife Service is the principal federal agency that
+						provides information to the public on the extent and status of the Nation's wetlands.
+						The agency has developed a series of topical maps to show wetlands and deepwater habitats
+						which can be viewed and downloaded through the wetlands mapper.
+					</p>
+					<div class="flex gap">
+						<!-- <a class="usa-button usa-button--base" href="https://www.usgs.gov/centers/nwhc/science/whispers" target="_blank">Project Page</a> -->
+					</div>
+				</div>
+
+			</div>
+
+			<!-- NAWQA Surface Water Quality Trends -->
+			<div class="project">
+
+				<div class="project-image">
+					<img src="../assets/images/projects/nawqa_1.png" alt="NAWQA Surface Water Quality Trends" />
+				</div>
+				
+				<div class="project-info">
+					<h3>NAWQA Surface Water Quality Trends</h3>
+					<p>
+						This USGS Water-Quality Changes in the Nation’s Streams and Rivers mapper
+						provides results from the largest-ever assessment of water-quality changes in the Nation's
+						streams and rivers. More than 185 million water-quality records from over 600 Federal, State,
+						Tribal, and local organizations were screened as part of this assessment.
+					</p>
+					<div class="flex gap">
+						<!-- <a class="usa-button usa-button--base" href="https://www.usgs.gov/centers/nwhc/science/whispers" target="_blank">Project Page</a> -->
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+		</div>
+
 	</main>
 
 	<!-- Footer -->
-    <include src="./partials/footer.html" locals='{
+	<include src="./partials/footer.html" locals='{
         "path": "../"
     }'></include>
 </body>
