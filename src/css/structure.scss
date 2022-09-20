@@ -27,6 +27,12 @@ main{
 	box-sizing: border-box;
 	padding: 15px var(--sidePadding) 10px var(--sidePadding);
 	background-color: #02274b;
+
+	#USGS_nav_fixedWidth{
+		max-width: var(--maxWidth);
+		padding: 0 var(--sidePadding) 0 var(--sidePadding);
+		margin: 0 auto;
+	}
 	a{
 		display: block;
 		width: fit-content;
@@ -43,18 +49,23 @@ main{
 // Main WIM Top Bar
 // And Navigation
 #WIM_nav{
-	display: flex;
-	width: 100%;
 	background-color: var(--background);
 	box-sizing: border-box;
-	padding: 0 var(--sidePadding) 0 var(--sidePadding);
-	justify-content: space-between;
-	gap: 30px;
 	border-top: 2px solid var(--borderFade);
 	border-bottom: 2px solid var(--borderFade);
 	position: sticky;
 	top: 0;
 	z-index: 100;
+
+	#WIM_nav_fixedWidth{
+		margin: 0 auto;
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0 var(--sidePadding) 0 var(--sidePadding);
+		max-width: var(--maxWidth);
+	}
 
 	// WIM Logo
 	#WIM_branding{

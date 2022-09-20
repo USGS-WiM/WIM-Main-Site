@@ -64,9 +64,11 @@
 <!-- USGS BANNER -->
 <!-- USGS BANNER -->
 <div id="USGS_nav">
-	<a href="https://usgs.gov" title="USGS Home">
-		<img src="{{path}}assets/branding/usgs.png" alt="USGS Logo" />
-	</a>
+	<div id="USGS_nav_fixedWidth">
+		<a href="https://usgs.gov" title="USGS Home">
+			<img src="{{path}}assets/branding/usgs.png" alt="USGS Logo" />
+		</a>
+	</div>
 </div>
 
 
@@ -75,25 +77,29 @@
 <!-- MAIN WIM NAV -->
 <div id="WIM_nav">
 
-	<div id="WIM_branding">
-		<a href="/" title="WIM Home">
-			<img src="{{path}}assets/branding/logo_horizontal.png" alt="WIM Logo" />
-		</a>
+	<div id="WIM_nav_fixedWidth">
+
+		<div id="WIM_branding">
+			<a href="/" title="WIM Home">
+				<img src="{{path}}assets/branding/logo_horizontal.png" alt="WIM Logo" />
+			</a>
+		</div>
+
+
+		<nav id="main" class="active-{{active_nav}}">
+			<a href="/" id="nl__h">
+				Home
+			</a>
+			<a href="/team" id="nl__t">
+				Team
+			</a>
+			<a href="/projects" id="nl__p">
+				Projects
+			</a>
+			<a href="/geonarrative" id="nl__g">
+				Geonarratives
+			</a>
+		</nav>
+
 	</div>
-
-
-	<nav id="main" class="active-{{active_nav}}">
-		<a href="/" id="nl__h">
-			Home
-		</a>
-		<a href="/team" id="nl__t">
-			Team
-		</a>
-		<a href="/projects" id="nl__p">
-			Projects
-		</a>
-		<a href="/geonarrative" id="nl__g">
-			Geonarratives
-		</a>
-	</nav>
 </div>
