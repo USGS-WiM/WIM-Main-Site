@@ -27,14 +27,18 @@ window.onload=function(){
 	// var mapCenter = [37.76, -95.38];
 
 	// Create Map
-	var map = L.map('teamMap', {zoomControl: false, defaultExtentControl: false}).setView(mapCenter, mapZoomLevel);
+	var map = L.map('teamMap', {
+		zoomControl: false, 
+		defaultExtentControl: false,
+		minZoom: 4,
+	}).setView(mapCenter, mapZoomLevel);
 
 	// // Set Map Options
 	var layerLabels;
-	map.dragging.disable();
+	// map.dragging.disable();
 	map.touchZoom.disable();
 	map.doubleClickZoom.disable();
-	map.scrollWheelZoom.disable();
+	// map.scrollWheelZoom.disable();
 	map.boxZoom.disable();
 	map.keyboard.disable();
 	if (map.tap) map.tap.disable();
@@ -95,8 +99,8 @@ window.onload=function(){
 		},
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup'><b>Denver, CO</b><button id='Milan'>Milan Liu </button></div>"},
-			"geometry": {"type": "Point", "coordinates": [-104.9903, 39.7392]},
+			"properties": {"popupContent": "<div class='map-popup'><b>Boulder, CO</b><button id='Milan'>Milan Liu </button></div>"},
+			"geometry": {"type": "Point", "coordinates": [-105.2705, 40.0150]},
 		},
 		{
 			"type": "Feature",

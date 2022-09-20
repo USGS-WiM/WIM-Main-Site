@@ -3,12 +3,6 @@
 
 main{
 	display: block;
-
-	section{
-		display: block;
-		box-sizing: border-box;
-		padding: 0 var(--sidePadding);
-	}
 }
 .padded{
 	box-sizing: border-box;
