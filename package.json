@@ -1,24 +1,37 @@
 {
-	"name": "wim-main-site",
-	"version": "1.0.0",
-	"description": "Static landing site for WIM",
-	"source": "src/index.html",
-	"scripts": {
-		"start": "parcel",
-		"build": "parcel build ./src/index.html ./src/team/index.html ./src/projects/index.html ./src/geonarrative/index.html",
-		"serve": "npx parcel ./src/index.html ./src/team/index.html ./src/projects/index.html ./src/geonarrative/index.html",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@parcel/transformer-sass": "^2.6.2",
-		"parcel": "^2.6.2",
-		"posthtml-doctype": "^1.1.1",
-		"posthtml-include": "^1.7.4",
-		"posthtml-modules": "^0.9.0"
-	},
-	"dependencies": {
-		"@uswds/uswds": "^3.0.2"
-	}
+  "name": "wim-main-site",
+  "version": "1.0.0",
+  "description": "Static WIM Home Page",
+  "scripts": {
+    "watch:sass": "sass --no-source-map --watch src/assets/styles:dist/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass --no-source-map src/assets/styles:dist/css",
+    "build:eleventy": "eleventy",
+    "clean": "del-cli dist",
+    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r",
+    "serve": "npm-run-all clean build:sass --parallel watch:*",
+    "build": "npm-run-all clean build:sass build:eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usgs-wim/WIM-Main-Site"
+  },
+  "author": "Mitch Samuels",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.3.0",
+    "sass": "^1.30.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "uswds": "^2.13.3"
+  }
 }

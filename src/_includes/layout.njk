@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>WIM - Web Informatics & Mapping</title>
+    {% include "favicon.njk" %}
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
+  </head>
+  <body>
+	
+    {% include "components/header.njk" %}
+    
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {% include "components/footer.njk" %}
+
+    <script type="text/javascript" src="{{ '/js/main.js' | url }}"></script>
+	<script type="module" src="/js/uswds.min.js"></script>
+	<script type="module" src="/js/uswds-init.min.js"></script>
+
+
+  </body>
+</html>

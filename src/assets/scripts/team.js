@@ -143,7 +143,7 @@ window.onload=function(){
 	// WimIcon & popup
 	var myIcon = L.Icon.extend({});
 	var wimIcon = new myIcon({
-		iconUrl: require("../assets/icons/map_pin.png"),
+		iconUrl: "/img/icons/map_pin.png",
 		iconSize: [24.9, 28.95],
 		iconAnchor: [12.45,28.95],
 		popupAnchor: [0,-28.95],

@@ -29,19 +29,16 @@ Uses [Parcel](https://parceljs.org) to compile and serve at localhost:1234
 ```bash
 npm run build
 ```
-Uses [Parcel](https://parceljs.org) to compile to the `/dist/` folder.
+Uses [11ty](https://11ty.dev) to compile to the `/dist/` folder using [Nunchucks](https://mozilla.github.io/nunjucks/) templating.
 
 ## Deployment
 
-Pushing to `staging` deploys site to test.wim.usgs.gov.
-Pushing to `master` deploys site to wim.usgs.gov.
-
-Alternatively, upload the `/dist/` folder contents manually.
 
 ## Built With
 
 * HTML
-* [ParcelJS](https://parceljs.org/) - Build tool
+* [11ty](https://11ty.dev/) - Build tool
+* [Nunchucks](https://mozilla.github.io/nunjucks/) - Templating
 * [SCSS](https://sass-lang.com/) - Styles
 * [USWDS](https://designsystem.digital.gov/) - Design System
 
