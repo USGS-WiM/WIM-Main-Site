@@ -1,10 +1,19 @@
+@import '../screen-breaks.scss';
+
 
 .project-grid{
 
 	.project{
 		display: flex;
 		gap: 30px;
-		margin: 85px 0;
+		margin: 25px 0 45px 0;
+
+		@media (max-width: $screenLG) {
+			gap: 8px 15px;
+		}
+		@media (max-width: $screenSM) {
+			flex-wrap: wrap;
+		}
 
 		.project-image{
 			width: 200px;
@@ -14,6 +23,10 @@
 				width: 100%;
 				height: auto;
 				border-radius: var(--borderRadius);
+
+				@media (max-width: $screenSM) {
+					margin: 0 auto;
+				}
 			}
 		}
 
@@ -28,7 +41,11 @@
 #projectGrid{
 	display: flex;
     flex-direction: column;
-	gap: 35px;
+	gap: 0 35px;
+
+	@media (max-width: $screenLG) {
+		gap: 0 15px;
+	}
 
     
 	.project{
@@ -43,18 +60,22 @@
             justify-content: flex-start;
             position: relative;
             padding-left: 20px;
+
+			@media (max-width: $screenLG) {
+				padding-left: 10px;
+			}
         
             .title{
-            		font-size: 1.6em;
-            		display: block;
-            		box-sizing: border-box;
-            		padding-top: 20px;
+				font-size: 1.6em;
+				display: block;
+				box-sizing: border-box;
+				padding-top: 20px;
 
-                    &:hover{
-                        //text-decoration: underline;   
-                    }
-                    
-            	}
+				&:hover{
+					//text-decoration: underline;   
+				}
+				
+			}
 
             .caption{
             

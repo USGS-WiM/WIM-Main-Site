@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>WIM - Web Informatics & Mapping</title>
-    {% include "favicon.njk" %}
-    <link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
-  </head>
-  <body>
-	
-    {% include "components/header.njk" %}
-    
-    <main>
-      {{ content | safe }}
-    </main>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Web Informatics & Mapping</title>
+		<meta name="description" content="Web Informatics and Mapping (WIM) develops web-based tools that support USGS science and other federal science initiatives. Our projects range from full-featured database applications to limited-scope data visualizations." />
+		<meta name="theme-color" content="#030508">
 
-    {% include "components/footer.njk" %}
+        {% include "favicon.njk" %}
+        <link rel="stylesheet" href="{{ '/css/main.css' | url }}"/>
+    </head>
+    <body>
 
-    <script type="text/javascript" src="{{ '/js/main.js' | url }}"></script>
-	<script type="module" src="/js/uswds.min.js"></script>
-	<script type="module" src="/js/uswds-init.min.js"></script>
+        {% include "components/header.njk" %}
+
+        <main>
+            {{ content | safe }}
+        </main>
+
+        {% include "components/footer.njk" %}
+
+        <script type="text/javascript" src="{{ '/js/main.js' | url }}"></script>
+        <script type="module" src="/js/uswds.min.js"></script>
+        <script type="module" src="/js/uswds-init.min.js"></script>
 
 
-  </body>
+    </body>
 </html>

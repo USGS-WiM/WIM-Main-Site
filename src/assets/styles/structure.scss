@@ -1,3 +1,6 @@
+
+@import 'screen-breaks.scss';
+
 // Main structure / body setup
 // Header and footer below
 
@@ -28,9 +31,12 @@ main{
 	padding: 15px var(--sidePadding) 10px var(--sidePadding);
 	background-color: #02274b;
 
+	@media (max-width: $screenLG) {
+		padding: 8px var(--sidePadding) 5px var(--sidePadding);
+	}
+
 	#USGS_nav_fixedWidth{
 		max-width: var(--maxWidth);
-		padding: 0 var(--sidePadding) 0 var(--sidePadding);
 		margin: 0 auto;
 	}
 	a{
@@ -41,6 +47,9 @@ main{
 	img{
 		height: 58px;
 		width: auto;
+		@media (max-width: $screenLG) {
+			height: 40px;
+		}
 	}
 }
 
@@ -51,8 +60,7 @@ main{
 #WIM_nav{
 	background-color: var(--background);
 	box-sizing: border-box;
-	border-top: 2px solid var(--borderFade);
-	border-bottom: 2px solid var(--borderFade);
+	border-bottom: 1.5px solid var(--borderFade);
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -60,11 +68,15 @@ main{
 	#WIM_nav_fixedWidth{
 		margin: 0 auto;
 		display: flex;
-		gap: 30px;
+		gap: 0 30px;
 		justify-content: space-between;
 		width: 100%;
 		padding: 0 var(--sidePadding) 0 var(--sidePadding);
 		max-width: var(--maxWidth);
+
+		@media (max-width: $screenLG) {
+			flex-wrap: wrap;
+		}
 	}
 
 	// WIM Logo
@@ -78,12 +90,31 @@ main{
 			height: 36px;
 			width: auto;
 		}
+
+		@media (max-width: $screenLG) {
+			flex-grow: 3;
+			width: 100%;
+			text-align: center;
+
+			img{
+				height: 30px;
+				width: auto;
+				margin: 8px 0 0 0;
+			}
+		}
 	}
 
 	// Navigation Links
 	nav#main{
 		display: flex;
-		gap: 35px;
+		gap: 0 35px;
+
+		@media (max-width: $screenLG) {
+			justify-content: center;
+			flex-grow: 3;
+			flex-wrap: wrap;
+			gap: 0 20px;
+		}
 		
 		a{
 			display: flex;
@@ -95,6 +126,13 @@ main{
 			color: var(--text);
 			border-top: 5px solid transparent;
 			border-bottom: 5px solid transparent;
+			width: fit-content;
+			min-width: fit-content;
+
+			@media (max-width: $screenLG) {
+				height: 40px;
+				font-size: 0.8em;
+			}
 
 			i{
 				margin-right: 5px;
@@ -136,7 +174,11 @@ main{
 	border-bottom: 2px solid var(--borderFade);
 	display: flex;
 	justify-content: center;
-	gap: 50px;
+	gap: 0 50px;
+
+	@media (max-width: $screenLG) {
+		flex-wrap: wrap;
+	}
 
 	#WIM_footer_branding{
 		display: flex;
@@ -184,3 +226,10 @@ main{
 // 		text-decoration: none;
 // 	}
 // }
+
+
+// USWDS Fixes
+.usa-banner__inner p{
+	padding: 0 !important;
+	margin: 0 !important;
+}

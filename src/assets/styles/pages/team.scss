@@ -1,3 +1,5 @@
+@import '../screen-breaks.scss';
+
 // Top of Team page
 // Top of Team page
 // Top of Team page
@@ -28,6 +30,11 @@
 			font-weight: 700;
 			letter-spacing: 0.2px;
 			color: var(--text);
+
+			@media (max-width: $screenLG) {
+				font-size: 1.7em;
+				line-height: 1.1em;
+			}
 		}
 
 		// Position differently on mobile
@@ -186,6 +193,11 @@
 				backdrop-filter: blur(3px) grayscale(100%) brightness(75%);
 				border-radius: var(--borderRadius);
 				overflow: auto;
+
+				@media (max-width: $screenLG) {
+					font-size: 1.25em;
+					line-height: 1.55em;
+				}
 			}
 
 			&:focus,
