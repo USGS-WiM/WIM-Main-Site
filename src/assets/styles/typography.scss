@@ -1,0 +1,284 @@
+@import 'screen-breaks.scss';
+
+//! Typography
+// Header, Paragraph, and other text styles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  position: relative;
+}
+h1 {
+	font-size: 3.4rem;
+	line-height: 3.8rem;
+	font-weight: 700;
+	letter-spacing: -1.5px;
+	@media(max-width: $screenSM) {
+		font-size: 2.2rem;
+		line-height: 2.75rem;
+	}
+}
+h2 {
+	font-size: 2.8rem;
+	line-height: 3.2rem;
+	font-weight: 700;
+	@media(max-width: $screenSM) {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+	}
+}
+h3 {
+	font-size: 2.214rem;
+	line-height: 2.75rem;
+	font-weight: 700;
+	@media(max-width: $screenSM) {
+		font-size: 1.4rem;
+		line-height: 1.5rem;
+	}
+}
+h4 {
+	font-size: 1.407rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	@media(max-width: $screenSM) {
+		font-size: 1.2rem;
+		line-height: 1.3rem;
+	}
+}
+h5 {
+	font-size: 1.01333333rem;
+	font-weight: 700;
+}
+h6 {
+	font-size: 0.89rem;
+	font-weight: 700;
+	color: var(--textFade)
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small{
+	font-size: 0.55em;
+	display: block;
+	font-weight: 500;
+}
+
+
+//   Text Elements 
+// Paragraphs
+p,
+.paragraph{
+	font-size: 1rem;
+	line-height: 1.75rem;
+	max-width: 700px;
+	padding: 12px 0;
+	color: inherit;
+	font-weight: 400;
+
+	@media(max-width: $screenSM) {
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+	}
+
+	&.tight{
+		line-height: 1.25rem;
+	}
+
+	// Decrease sizing
+	&.small{
+		font-size: 0.8rem;
+		line-height: 1.4rem;
+
+		&.tight{
+			line-height: 1.1em;
+		}
+	}
+	// Increase sizing
+	&.big{
+		font-size: 1.2rem;
+		line-height: 2.0rem;
+
+		&.tight{
+			line-height: 1.6rem;;
+		}
+	}
+
+	// Bold
+	b{
+		font-weight: 700;
+	}
+}
+// Emphasis
+em,
+.italic{
+	font-style: italic;
+}
+
+// Links
+a{
+	color: var(--primary);
+	transition: var(--transition);
+	letter-spacing: -0.1px;
+	font-weight: bold;
+	text-decoration: none;
+	
+	&:hover{
+		cursor: pointer;
+		transition: var(--transition);
+		outline-color: transparent;
+
+		:not(i) :not(p){
+			text-decoration: underline;
+		}
+	}
+
+}
+
+
+// Lists
+ul,
+ol{
+	display: block;
+	box-sizing: border-box;
+	padding: 6px 0 6px 25px;
+
+	li{
+		line-height: 1.4rem;
+		padding: 2px 0;
+	}
+	p{
+		padding: 0;
+		margin: 0;
+	}
+}
+ol{
+	list-style-type: decimal;
+}
+ul{
+	list-style-type: disc;
+}
+
+
+// Blockquote
+blockquote{
+	box-sizing: border-box;
+	padding: 15px 0 15px 35px;
+	border-left: 4px solid var(--border);
+	background-color: var(--layer);
+	position: relative;
+
+	&:before{
+		content: "\f10d";
+		font-family: var(--fontAwesome);
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		font-size: 1.4em;
+		font-weight: bolder;
+		opacity: 0.25;
+	}
+}
+
+
+//   Modifiers
+
+.text-small{
+	font-size: 0.8em;
+}
+.text-smaller{
+	font-size: 0.7em !important;
+}
+.text-large{
+	font-size: 1.2em;
+}
+.text-larger{
+	font-size: 1.45em;
+}
+.text-largest{
+	font-size: 2em;
+}
+.text-light{
+	font-weight: 400;
+	color: var(--textFade);
+}
+.text-fade{
+	color: var(--textFade);
+}
+.text-bright{
+	color: var(--text);
+}
+// Colored Text
+.text-primary{color: var(--blue);}
+.text-red{color: var(--red);}
+.text-orange{color: var(--orange);}
+.text-yellow{color: var(--yellow);}
+.text-green{color: var(--green);}
+.text-blue{color: var(--blue);}
+.text-sky{color: var(--sky);}
+.text-purple{color: var(--purple);}
+.text-pink{color: var(--pink);}
+.text-grey{color: var(--grey);}
+
+
+// Horizontal Rule
+hr{
+	border: none;
+	border-top: var(--text) solid;
+	border-width: 2px;
+	border-color: var(--text);
+	overflow: hidden;
+	margin: 20px auto;
+}
+
+// Small
+small{
+	font-size: 0.85em;
+	line-height: 1.4em;
+}
+
+// Code & Pre
+code{
+	width: fit-content;
+	background-color: var(--greyLight);
+	font-family: var(--monospace);
+	box-sizing: border-box;
+	padding: 4px;
+	background-color: var(--grey);
+	border-radius: calc(var(--borderRadius) / 2);
+
+	b{
+		font-weight: 700;
+	}
+	i{
+		font-style: italic;
+	}
+
+	&.full-width{
+		width: 100%;
+	}
+}
+pre{
+	max-width: 80vw;
+	overflow: auto;
+	display: block;
+	scrollbar-width: none;
+	// Hidden
+	&::-webkit-scrollbar{
+		width: 0px;
+		display: none;
+	}
+	// Scrollbar handle/thumb
+	&::-webkit-scrollbar-thumb{
+		display: none;
+		width: 0px;
+	}
+}

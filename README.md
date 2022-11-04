@@ -3,7 +3,7 @@
 
 # WIM Website
 
-WIM Main website. About, team, projects, and contact info. 
+WIM Main website. About, team, projects, geonarratives, and contact info. 
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Node, npm, & gulp installed.
+Node, npm.
 
 Install with npm
 
@@ -22,36 +22,25 @@ npm install
 ## Building and testing
 
 ```bash
-gulp
+npm run serve
 ```
-Compiles HTML Twig tags into /dev/ folder & live reloads browser with BrowserSync from /dev/.
+Uses [Parcel](https://parceljs.org) to compile and serve at localhost:1234
 
 ```bash
-gulp build
+npm run build
 ```
-Builds the project into the /build/ folder - minifies JS, compiles TWIG and LESS, and compresses images (which takes some time).
-
-```bash
-gulp serve-build
-```
-Test the build by serving from the /build/ folder.
-
+Uses [11ty](https://11ty.dev) to compile to the `/dist/` folder using [Nunchucks](https://mozilla.github.io/nunjucks/) templating.
 
 ## Deployment
 
-Pushing to `staging` deploys site to test.wim.usgs.gov.
-Pushing to `master` deploys site to wim.usgs.gov.
-
-Alternatively, upload the /build/ folder contents manually.
 
 ## Built With
 
 * HTML
-* [Twig.js](https://github.com/twigjs) - Templating
-* [Vue.js](https://vuejs.org) - Data binding
-* [{less}](http://lesscss.org/) - Styling
-* [Gulp](https://gulpjs.com/) - Workflow Toolkit
-* [Browsersync](https://www.browsersync.io/) - Local server with live refresh
+* [11ty](https://11ty.dev/) - Build tool
+* [Nunchucks](https://mozilla.github.io/nunjucks/) - Templating
+* [SCSS](https://sass-lang.com/) - Styles
+* [USWDS](https://designsystem.digital.gov/) - Design System
 
 ## Contributing
 

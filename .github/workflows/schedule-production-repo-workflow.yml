@@ -1,40 +1,40 @@
-on:
-  schedule:
-  - cron: '05 17 * * *'
-name: Production Repo Workflow
-jobs:
-  graphQLQuery2:
-    name: GraphQL query2
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: GraphQL query2
-      uses: helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: --query .github/graph-ql.query2.yaml --output repos2.json
-    - name: GraphQL query
-      uses: helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: --query .github/graph-ql.query.yaml --output repos1.json
+# on:
+#   schedule:
+#   - cron: '05 17 * * *'
+# name: Production Repo Workflow
+# jobs:
+#   graphQLQuery2:
+#     name: GraphQL query2
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: GraphQL query2
+#       uses: helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       with:
+#         args: --query .github/graph-ql.query2.yaml --output repos2.json
+#     - name: GraphQL query
+#       uses: helaili/github-graphql-action@fb0ce78d56777b082e1a1659faf2b9f5a8832ed3
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       with:
+#         args: --query .github/graph-ql.query.yaml --output repos1.json
 
-    - name: Repos To AWS - Prod 1
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
-    - run: aws s3 cp /home/runner/work/WIM-Main-Site/WIM-Main-Site/repos1.json s3://wim.usgs.gov/src/repos1.json
+#     - name: Repos To AWS - Prod 1
+#       uses: aws-actions/configure-aws-credentials@v1
+#       with:
+#         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         aws-region: us-east-2
+#     - run: aws s3 cp /home/runner/work/WIM-Main-Site/WIM-Main-Site/repos1.json s3://wim.usgs.gov/src/repos1.json
 
-    - name: Repos To AWS - Prod 2
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
-    - run: aws s3 cp /home/runner/work/WIM-Main-Site/WIM-Main-Site/repos2.json s3://wim.usgs.gov/src/repos2.json
+#     - name: Repos To AWS - Prod 2
+#       uses: aws-actions/configure-aws-credentials@v1
+#       with:
+#         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         aws-region: us-east-2
+#     - run: aws s3 cp /home/runner/work/WIM-Main-Site/WIM-Main-Site/repos2.json s3://wim.usgs.gov/src/repos2.json
 
 

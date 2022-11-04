@@ -1,39 +1,37 @@
 {
   "name": "wim-main-site",
   "version": "1.0.0",
-  "description": "Web Informatics & Mapping main website.",
-  "main": "index.js",
+  "description": "Static WIM Home Page",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && gulp build"
+    "watch:sass": "sass --no-source-map --watch src/assets/styles:dist/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass --no-source-map src/assets/styles:dist/css",
+    "build:eleventy": "eleventy",
+    "clean": "del-cli dist",
+    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r",
+    "serve": "npm-run-all clean build:sass --parallel watch:*",
+    "build": "npm-run-all clean build:sass build:eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USGS-WIM/WIM-Main-Site.git"
+    "url": "https://github.com/usgs-wim/WIM-Main-Site"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/USGS-WIM/WIM-Main-Site/issues"
-  },
-  "homepage": "hthttps://github.com/USGS-WIM/WIM-Main-Site#readme",
+  "author": "Mitch Samuels",
+  "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-if": "^2.0.2",
-    "gulp-inject-string": "^1.1.2",
-    "gulp-less": "^4.0.1",
-    "gulp-minify": "^3.1.0",
-    "gulp-newer": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-uglify": "^3.0.0",
-    "less": "^3.8.0",
-    "run-sequence": "^2.2.1"
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.3.0",
+    "sass": "^1.30.0"
   },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "dependencies": {
-    "gulp-cssnano": "^2.1.3",
-    "gulp-file-include": "^2.1.0"
+    "uswds": "^2.13.3"
   }
 }

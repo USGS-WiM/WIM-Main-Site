@@ -24,11 +24,15 @@
 ######################
 node_modules/
 
+# Parcel
+.parcel-cache/
+
 # Build #
 ######################
 public/
 dev/
 builds/
+dist/
 
 # Logs and databases #
 ######################

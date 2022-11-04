@@ -1,0 +1,28 @@
+//! Main 
+// Main SCSS file to import all others
+
+// USWDS 
+// @import '../../../../node_modules/uswds/dist/css/uswds.min.css';
+
+
+
+// USWDS
+@import 'uswds.min.scss';
+
+
+// Variables
+@import 'variables.scss';
+// Then reset
+@import 'reset.scss';
+// Then base
+@import 'base.scss';
+// Then everything else
+@import 'typography.scss';
+@import 'structure.scss';
+@import 'helpers.scss';
+
+
+// Pages
+@import 'pages/home.scss';
+@import 'pages/team.scss';
+@import 'pages/projects.scss';
