@@ -193,6 +193,7 @@
 				backdrop-filter: blur(3px) grayscale(100%) brightness(75%);
 				border-radius: var(--borderRadius);
 				overflow: auto;
+				user-select: text;
 
 				@media (max-width: $screenLG) {
 					font-size: 1.25em;
