@@ -37,9 +37,9 @@ window.onload=function(){
 	var layerLabels;
 	// map.dragging.disable();
 	map.touchZoom.disable();
-	map.doubleClickZoom.disable();
-	// map.scrollWheelZoom.disable();
-	map.boxZoom.disable();
+	// map.doubleClickZoom.disable();
+	map.scrollWheelZoom.disable();
+	// map.boxZoom.disable();
 	map.keyboard.disable();
 	if (map.tap) map.tap.disable();
 
@@ -104,7 +104,7 @@ window.onload=function(){
 		},
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><button id='Lauren'>Lauren Privette</button><button id='Hannah'>Hannah Ridgon</button>"},
+			"properties": {"popupContent": "<div class='map-popup'><b>Washington, DC</b><button id='Lauren'>Lauren Privette</button>"},
 			"geometry": {"type": "Point", "coordinates": [-77.036871, 38.907192]},
 		},
 		{
