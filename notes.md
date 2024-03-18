@@ -1,10 +1,11 @@
 # WIM Public Website Notes
 
 ## Overview
-* Built with [Nunchucks](https://mozilla.github.io/nunjucks/) templating
+* Built with [Nunjucks](https://mozilla.github.io/nunjucks/) templating
 	 * Better for SEO, performance, than using Angular, Vue, etc. 
 	 * Regular, basic HTML, CSS, and Javascript.
 	 * It allows you to easily reuse components (header, footer) across pages - compiles everything on build.
+* Uses [11ty](https://www.11ty.dev) static site generator for compiling
 * Includes some parts of USWDS
 
 
@@ -12,15 +13,15 @@
 
 ### src
 * \> src/_data
-	* Config files for nunchucks. This is where you can define new page paths/routes if needed.
+	* Config files for Nunjucks. This is where you can define new page paths/routes if needed.
 	* Also can define multiple layouts if needed. Currently only one in use for all pages.
 * \> src/_includes
 	* All of the reusable components that are used on multiple pages.
 	* Layout, Favicon, Header, Footer
 * \> src/assets
-	* Non nunchuck-files. Any images, javascript, CSS.
+	* Non Nunjucks-files. Any images, javascript, CSS.
 * \> src/index.njk
-	* All of the `.njk` files in the root of the src folder are the nunchuck files for each page.
+	* All of the `.njk` files in the root of the src folder are the Nunjucks files for each page.
 
 
 ## Current Pages
