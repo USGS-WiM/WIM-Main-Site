@@ -180,12 +180,13 @@
 				left: 0;
 				height: 100%;
 				width: 100%;
-				font-size: 0.975em;
-				line-height: 1.35em;
+				font-size: 1.35em;
+				line-height: 1.2em;
 				box-sizing: border-box;
 				padding: 12px;
 				margin: 0;
-				background-color: rgba(0,0,0,0.45);
+				font-weight: 600;
+				background-color: rgba(0,0,0,0.75);
 				color: var(--white);
 				opacity: 0;
 				letter-spacing: -0.2px;

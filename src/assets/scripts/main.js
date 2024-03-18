@@ -1,2 +1,1 @@
-console.log('Hello, World!');
-
+// Main JS loaded on all pages. 

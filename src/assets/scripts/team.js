@@ -3,19 +3,6 @@ window.onload=function(){
 	console.log("Team Page Loaded 👍")
 
 
-	// // Highlight member with class
-	// document.getElementById("testButton").onclick = function() {
-	// 	// Add class to highlight
-	// 	document.getElementById("hans").classList.add("highlight");
-
-	// 	// Remove highlight after 2 seconds
-	// 	setTimeout(function(){
-	// 		document.getElementById("hans").classList.remove("highlight");
-	// 	}, 2000); //wait 2 seconds - 2000 milliseconds
-	// };
-
-
-
 
 	// 
 	// Team Page Map
@@ -89,12 +76,12 @@ window.onload=function(){
 	var geojsonFeature = [ 
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup'><b>Madison, WI</b><button id='Gary'>Gary Latzke</button><button id='Blake'>Blake Draper</button><button id='Erik'>Erik Myers</button><button id='Aaron'>Aaron Stephenson</button><button id='Kip'>Kip Sullivan</button></div>" },
+			"properties": {"popupContent": "<div class='map-popup'><b>Madison, WI</b><button id='Blake'>Blake Draper</button><button id='Erik'>Erik Myers</button><button id='Aaron'>Aaron Stephenson</button><button id='Kip'>Kip Sullivan</button></div>" },
 			"geometry": {"type": "Point", "coordinates": [-89.4012302, 43.0730517]},
 		},
 		{
 			"type": "Feature",
-			"properties": {"popupContent": "<div class='map-popup'><b>Twin Cities, MN</b><button id='Hans'>Hans Vraga</button><button id='Mitch'>Mitch Samuels</button><button id='Kathy'>Kathy Dooley</button><button id='Anders'>Anders Hopkins</button><button id='Julia'>Julia Prokopec</button><button id='Joe'>Joe Federer</button><button id='Andrew'>Andrew Laws</button><button id='Gene'>Gene Trantham</button><button id='Ethan'>Ethan Bott</button><button id='Maggie'>Maggie Jaenicke</button></div>" },
+			"properties": {"popupContent": "<div class='map-popup'><b>Twin Cities, MN</b><button id='Hans'>Hans Vraga</button><button id='Kathy'>Kathy Dooley</button><button id='Anders'>Anders Hopkins</button><button id='Julia'>Julia Prokopec</button><button id='Joe'>Joe Federer</button><button id='Andrew'>Andrew Laws</button><button id='Maggie'>Maggie Jaenicke</button></div>" },
 			"geometry": {"type": "Point", "coordinates": [-93.265011, 44.977753]},
 		},
 		{
